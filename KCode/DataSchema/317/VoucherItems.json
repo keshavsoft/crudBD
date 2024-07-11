@@ -1,0 +1,95 @@
+{
+  "ItemCode": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Code"
+      },
+      "Create": {
+        "title": "ItemCode"
+      }
+    }
+  },
+  "RefPK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "VoucherHeads",
+      "key": "id"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "RefPK"
+      },
+      "Create": {
+        "title": "RefPK"
+      }
+    }
+  },
+  "ItemName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "ItemName"
+      },
+      "Create": {
+        "title": "ItemName"
+      }
+    }
+  },
+  "BatchRefPk": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "BatchRefPK"
+      },
+      "Create": {
+        "title": "BatchRefPK"
+      }
+    }
+  },
+  "BatchNumber": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "BatchNumber"
+      },
+      "Create": {
+        "title": "BatchNumber"
+      }
+    }
+  },
+  "sno": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "sno"
+      },
+      "Create": {
+        "title": "sno"
+      }
+    }
+  },
+  "Qty": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Qty"
+      },
+      "Create": {
+        "title": "Qty"
+      }
+    }
+  },
+  "Amount": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Amount"
+      },
+      "Create": {
+        "title": "Amount"
+      }
+    }
+  }
+}

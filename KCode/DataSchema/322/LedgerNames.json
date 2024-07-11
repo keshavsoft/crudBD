@@ -1,0 +1,25 @@
+  {
+    "LedgerName": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Ledger Name"
+        },
+        "Create": {
+          "title": "Ledger Name"
+        }
+      }
+    },
+    "LedgerGuid": {
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "Ledger Guid"
+        },
+        "Create": {
+          "title": "Ledger Guid"
+        }
+      }
+    }
+  }

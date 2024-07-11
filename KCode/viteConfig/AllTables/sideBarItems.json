@@ -1,0 +1,37 @@
+[
+    {
+        "name": "ShowAll",
+        "url": "ShowSSRSerialPage.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Ceate",
+        "url": "CreateSimple.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "CreateSSRWithDataList",
+        "url": "CreateSSRWithDataList.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "DeleteSSR",
+        "url": "DeleteSSR.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "SubTableWSearch",
+        "url": "SubTableWSearch.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "ShowSSRBulkInsert",
+        "url": "ShowSSRBulkInsert.html",
+        "icon": "bi bi-grid"
+    }
+]

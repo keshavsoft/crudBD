@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Menu",
+        "isTitle": true,
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Create",
+        "url": "CreateClientSide.html",
+        "icon": "bi bi-plus-circle"
+    },
+    {
+        "name": "Show",
+        "url": "ShowSimple.html",
+        "icon": "bi bi-table"
+    },
+    {
+        "name": "Delete",
+        "url": "DeleteSimple.html",
+        "icon": "bi bi-trash"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterSimple.html",
+        "icon": "bi bi-pencil-square"
+    }
+]

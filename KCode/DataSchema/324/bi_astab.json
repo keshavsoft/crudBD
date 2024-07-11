@@ -1,0 +1,598 @@
+{
+    "bi_bok_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "bi_bok_cod"
+            },
+            "Create": {
+                "title": "bi_bok_cod"
+            }
+        }
+    },
+    "bl_no": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "bl_no"
+            },
+            "Create": {
+                "title": "bl_no"
+            }
+        }
+    },
+    "da": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "da"
+            },
+            "Create": {
+                "title": "da"
+            }
+        }
+    },
+    "acc_cod": {
+        "type": "INTEGER",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "references": {
+            "model": "acc_cod_tab",
+            "key": "acc_cod"
+        },
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod"
+            },
+            "Create": {
+                "title": "acc_cod"
+            }
+        }
+    },
+    "rec_amt": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "rec_amt"
+            },
+            "Create": {
+                "title": "rec_amt"
+            }
+        }
+    },
+    "des1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "des1"
+            },
+            "Create": {
+                "title": "des1"
+            }
+        }
+    },
+    "acc_cod1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod1"
+            },
+            "Create": {
+                "title": "acc_cod1"
+            }
+        }
+    },
+    "nam1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam1"
+            },
+            "Create": {
+                "title": "nam1"
+            }
+        }
+    },
+    "nam2": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam2"
+            },
+            "Create": {
+                "title": "nam2"
+            }
+        }
+    },
+    "nam3": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam3"
+            },
+            "Create": {
+                "title": "nam3"
+            }
+        }
+    },
+    "nam4": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam4"
+            },
+            "Create": {
+                "title": "nam4"
+            }
+        }
+    },
+    "nam5": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam5"
+            },
+            "Create": {
+                "title": "nam5"
+            }
+        }
+    },
+    "amt1": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "amt1"
+            },
+            "Create": {
+                "title": "amt1"
+            }
+        }
+    },
+    "amt2": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "amt2"
+            },
+            "Create": {
+                "title": "amt2"
+            }
+        }
+    },
+    "amt3": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "amt3"
+            },
+            "Create": {
+                "title": "amt3"
+            }
+        }
+    },
+    "sad_exp": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "sad_exp"
+            },
+            "Create": {
+                "title": "sad_exp"
+            }
+        }
+    },
+    "des2": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "des2"
+            },
+            "Create": {
+                "title": "des2"
+            }
+        }
+    },
+    "bl_no1": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "bl_no1"
+            },
+            "Create": {
+                "title": "bl_no1"
+            }
+        }
+    },
+    "da1": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "da1"
+            },
+            "Create": {
+                "title": "da1"
+            }
+        }
+    },
+    "ordref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "orderf"
+            },
+            "Create": {
+                "title": "orderf"
+            }
+        }
+    },
+    "confref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "confref"
+            },
+            "Create": {
+                "title": "confref"
+            }
+        }
+    },
+    "da2": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "da2"
+            },
+            "Create": {
+                "title": "da2"
+            }
+        }
+    },
+    "da3": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "da3"
+            },
+            "Create": {
+                "title": "da3"
+            }
+        }
+    },
+    "obi_bok_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "obi_bok_cod"
+            },
+            "Create": {
+                "title": "obi_bok_cod"
+            }
+        }
+    },
+    "obl_no": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "obl_no"
+            },
+            "Create": {
+                "title": "obl_no"
+            }
+        }
+    },
+    "oda": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "oda"
+            },
+            "Create": {
+                "title": "oda"
+            }
+        }
+    },
+    "acc_cod2": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": false,
+        "unique": false,
+        "references": {
+            "model": "cost_tab",
+            "key": "acc_cod"
+        },
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod2"
+            },
+            "Create": {
+                "title": "acc_cod2"
+            }
+        }
+    },
+    "acc_cod3": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod3"
+            },
+            "Create": {
+                "title": "acc_cod3"
+            }
+        }
+    },
+    "nam6": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam6"
+            },
+            "Create": {
+                "title": "nam6"
+            }
+        }
+    },
+    "nam7": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam7"
+            },
+            "Create": {
+                "title": "nam7"
+            }
+        }
+    },
+    "nam8": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam8"
+            },
+            "Create": {
+                "title": "nam8"
+            }
+        }
+    },
+    "amt50": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "amt50"
+            },
+            "Create": {
+                "title": "amt50"
+            }
+        }
+    },
+    "nam9": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam9"
+            },
+            "Create": {
+                "title": "nam9"
+            }
+        }
+    },
+    "acc_cod4": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod4"
+            },
+            "Create": {
+                "title": "acc_cod4"
+            }
+        }
+    },
+    "user_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "user_cod"
+            },
+            "Create": {
+                "title": "user_cod"
+            }
+        }
+    },
+    "user_da": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "user_da"
+            },
+            "Create": {
+                "title": "user_da"
+            }
+        }
+    },
+    "nam10": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam10"
+            },
+            "Create": {
+                "title": "nam10"
+            }
+        }
+    },
+    "acc_cod5": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "acc_cod5"
+            },
+            "Create": {
+                "title": "acc_cod5"
+            }
+        }
+    },
+    "nam11": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "nam11"
+            },
+            "Create": {
+                "title": "nam11"
+            }
+        }
+    },
+    "chkinref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "chkinref"
+            },
+            "Create": {
+                "title": "chkinref"
+            }
+        }
+    },
+    "img": {
+        "type": "blob(2147483647)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "img"
+            },
+            "Create": {
+                "title": "img"
+            }
+        }
+    },
+    "idno": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": true,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "idno"
+            },
+            "Create": {
+                "title": "idno"
+            }
+        }
+    }
+}

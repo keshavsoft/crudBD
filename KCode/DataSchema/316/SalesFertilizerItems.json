@@ -1,0 +1,98 @@
+  {
+    "ItemName": {
+      "type": "STRING",
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Item Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
+        }
+      }
+    },
+    "ItemRate": {
+      "type": "STRING",
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {},
+        "Show": {
+          "title": "Rate"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
+        }
+      }
+    },
+    "ItemQty": {
+      "type": "STRING",
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {},
+        "Show": {
+          "title": "Qty"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
+        }
+      }
+    },
+    "ItemAmount": {
+      "type": "STRING",
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {},
+        "Show": {
+          "title": "Amount"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
+        }
+      }
+    },
+    "RefPK": {
+      "type": "INTEGER",
+      "allowNull": false,
+      "references": {
+        "model": "SalesFertilizers",
+        "key": "id"
+      },
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Refrence PK"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
+        }
+      }
+    }
+  }

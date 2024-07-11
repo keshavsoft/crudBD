@@ -1,0 +1,91 @@
+  {
+    "JobId": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    },
+    "Status": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CustomerName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Address": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "MobileNo": {
+      "type": "NUMBER",
+      "allowNull": true
+    },
+    "ContactNo": {
+      "type": "NUMBER",
+      "allowNull": true
+    },
+    "ModelName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "JobClassification": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "ProductGroupName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "WarrantyType": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "JobType": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "AgentRemarks": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "DistanceType": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "DealerName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CallFromNo": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CreationDate": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Remarks": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Brand": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "InternalStatus": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Engineer": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "EngineerRemarks": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CompetedRemarks": {
+      "type": "STRING",
+      "allowNull": true
+    }
+  }

@@ -1,0 +1,63 @@
+  {
+    "CustomerName": {
+      "type": "STRING",
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Customer Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
+        }
+      }
+    },
+    "Aadhaar": {
+      "type": "STRING",
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isRequired": true,
+          "title": "Aadhaar"
+        },
+        "Show": {
+          "title": "Aadhaar"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
+        }
+      }
+    },
+    "Date": {
+      "type": "DATEONLY",
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Date"
+        }
+      }
+    },
+    "Remarks": {
+      "type": "STRING",
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {},
+        "Show": {
+          "title": "Remarks"
+        }
+      }
+    }
+  }
+     

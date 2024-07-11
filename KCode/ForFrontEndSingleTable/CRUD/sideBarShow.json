@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Show",
+        "isTitle": true,
+        "icon": "bi bi-app"
+    },
+    {
+        "name": "Show",
+        "key": "Show",
+        "icon": "bi bi-table",
+        "children": [
+            {
+                "name": "Show",
+                "url": "ShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Show",
+                "url": "ShowSimpleTB.html",
+                "icon": "bi bi-table"
+            }
+        ]
+    }
+]

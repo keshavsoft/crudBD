@@ -1,0 +1,18 @@
+  {
+    "ItemName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "ItemRate": {
+      "type": "NUMBER",
+      "allowNull": false
+    },
+    "Qty": {
+      "type": "NUMBER",
+      "allowNull": false
+    },
+    "GRate": {
+      "type": "NUMBER",
+      "allowNull": false
+    }
+  }

@@ -1,0 +1,23 @@
+{
+  "SupplierName": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "AliasName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "City": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "GST": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Phone": {
+    "type": "INTEGER",
+    "allowNull": true,
+    "unique": true
+  }
+}

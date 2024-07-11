@@ -1,0 +1,50 @@
+  {
+    "FriendName": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Name"
+        },
+        "Create": {
+          "title": "Name",
+          "AutoFocusTag": "autofocus"
+        }
+      }
+    },
+    "FriendMobile": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Mobile"
+        },
+        "Create": {
+          "title": "Mobile"
+        }
+      }
+    },
+    "FriendAlternateMobile": {
+      "type": "STRING",
+      "allowNull": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Alternate Mobile"
+        },
+        "Create": {
+          "title": "Alternate Mobile"
+        }
+      }
+    },
+    "FriendMDOB": {
+      "type": "DATEONLY",
+      "HtmlTags": {
+        "Show": {
+          "title": "Date of Birth"
+        },
+        "Create": {
+          "title": "Date of Birth"
+        }
+      }
+    }
+  }

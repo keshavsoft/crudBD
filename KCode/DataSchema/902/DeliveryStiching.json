@@ -1,0 +1,28 @@
+{
+    "ProductName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "UnitRate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Discount": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "GrossAmout": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "FK": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Itempk": {
+        "type": "NUMBER",
+        "allowNull": true,
+        "unique": true
+
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "ProductName": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "CostPrice": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "ProductAliasName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "SalePrice": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "PercentageValueAddition": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "UserDescription": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "InventorySerial": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "PurchasePk": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "SupplierName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "BillNumber": {
+    "type": "STRING",
+    "allowNull": true
+  }
+}

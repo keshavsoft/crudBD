@@ -1,0 +1,22 @@
+[
+    {
+        "name": "ShowAll",
+        "url": "ShowSSR.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "CreateNew",
+        "url": "CreateSSRMobile.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Import",
+        "url": "ShowBulkInsert.html",
+        "icon": "bi bi-grid"
+    }
+]

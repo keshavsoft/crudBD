@@ -1,0 +1,10 @@
+{
+    "ProductName": {
+      "type": "STRING",
+      "allowNull": false
+    },
+    "CostPrice": {
+      "type": "INTEGER",
+      "allowNull": true
+    }
+  }

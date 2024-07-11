@@ -1,0 +1,18 @@
+{
+  "AccountName": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "Date": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Description": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Credit": {
+    "type": "FLOAT",
+    "allowNull": true
+  }
+}

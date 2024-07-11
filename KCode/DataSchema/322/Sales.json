@@ -1,0 +1,39 @@
+{
+  "VoucherNumber": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherNumber"
+      },
+      "Create": {
+        "title": "VoucherNumber"
+      }
+    }
+  },
+  "VoucherType": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherType"
+      },
+      "Create": {
+        "title": "VoucherType"
+      }
+    }
+  },
+  "PartyName": {
+    "type": "STRING",
+    "references": {
+      "model": "LedgerNames",
+      "key": "LedgerName"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "PartyName"
+      },
+      "Create": {
+        "title": "PartyName"
+      }
+    }
+  }
+}

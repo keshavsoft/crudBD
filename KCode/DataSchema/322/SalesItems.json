@@ -1,0 +1,85 @@
+{
+  "Item Name": {
+    "type": "STRING",
+    "allowNull": false,
+    "references": {
+      "model": "ItemNames",
+      "key": "Item Name"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
+      }
+    }
+  },
+  "RefPK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "Sales",
+      "key": "id"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "RefPK"
+      },
+      "Create": {
+        "title": "RefPK"
+      }
+    }
+  },
+  "ItemRate": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      }
+    }
+  },
+  "ItemQty": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      }
+    }
+  },
+  "ItemAmount": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      }
+    }
+  }
+}

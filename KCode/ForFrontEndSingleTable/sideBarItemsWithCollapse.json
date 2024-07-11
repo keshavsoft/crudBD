@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Menu",
+        "isTitle": true,
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Create",
+        "key": "Create",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Insert New",
+                "url": "CreateClientSide.html",
+                "icon": "grid-fill"
+            }
+        ]
+    },
+    {
+        "name": "Show",
+        "key": "Show",
+        "icon": "bi bi-table",
+        "children": [
+            {
+                "name": "Show All",
+                "url": "ShowSimple.html"
+            }
+        ]
+    },
+    {
+        "name": "Delete",
+        "key": "Delete",
+        "icon": "bi bi-trash",
+        "children": [
+            {
+                "name": "Simple",
+                "url": "DeleteSimple.html"
+            }
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+{
+  "pk": {
+    "type": "STRING",
+    "allowNull": false,
+    "unique": true,
+    "references": {
+      "model": {
+        "tableName": "pos"
+      },
+      "key": "pk"
+    }
+  },
+  "Date": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "CustomerName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Description": {
+    "type": "STRING",
+    "allowNull": true
+  }
+}

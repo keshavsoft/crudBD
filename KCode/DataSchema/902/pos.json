@@ -1,0 +1,36 @@
+{
+    "BillNumber2425": {
+      "type": "INTEGER",
+      "allowNull": false,
+      "primaryKey": true,
+      "unique": true
+    },
+    "Date": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CustomerName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "ContactNumber": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CustomerNumber": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "PaymentMode": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "GSTNumber": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "DateTime": {
+      "type": "STRING",
+      "allowNull": true
+    }
+  }

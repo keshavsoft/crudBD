@@ -1,0 +1,38 @@
+{
+  "FK": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "sno": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Date": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Qty": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "UnitRate": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Amount": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "ItemName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "PercentageValueAddition": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "MRP": {
+    "type": "STRING",
+    "allowNull": true
+  }
+}

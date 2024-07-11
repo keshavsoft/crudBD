@@ -1,0 +1,35 @@
+{
+  "ProductName": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "CostPrice": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "ProductAliasName": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "SalePrice": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "PercentageValueAddition": {
+    "type": "INTEGER",
+    "allowNull": true
+  },
+  "UserDescription": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "SRRef": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "QrCode": {
+    "type": "STRING",
+    "allowNull": false,
+    "unique": true
+  }
+}

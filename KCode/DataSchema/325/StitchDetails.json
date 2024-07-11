@@ -1,0 +1,22 @@
+{
+  "BookingRef": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "Measurements": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Rate": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Pcs": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Amount": {
+    "type": "STRING",
+    "allowNull": true
+  }
+}

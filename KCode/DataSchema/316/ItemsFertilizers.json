@@ -1,0 +1,23 @@
+  {
+    "FertItemName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true,
+           "AutoFocusTag": "autofocus",
+           "title": "FertItem Name"
+        },
+        "Show": {
+          "title": "Fertilizer Item Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+              "title": "Customer Name",
+               "RequiredTag": "required"
+        }
+      }
+    }
+  }

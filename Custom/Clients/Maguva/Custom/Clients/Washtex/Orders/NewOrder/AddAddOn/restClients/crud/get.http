@@ -1,0 +1,5 @@
+###Get for as is data
+GET http://localhost:7016/Custom/Clients/Washtex/Qrcodes/ff9ec5f5-bcee-4a7e-be3e-7ea1007f6e41
+
+###
+GET http://localhost:7016/Custom/Clients/Washtex/Qrcodes/Table/Vizag/3

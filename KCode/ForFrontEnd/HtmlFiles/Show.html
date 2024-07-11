@@ -1,0 +1,17 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/FrontEnd/layouts/master.html' %}
+
+{% block content %}
+<a id="RefreshBSTableId">{{filename}}</a>
+<div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<table id="table">
+
+</table>
+{% endblock %}
+
+{% block js %}
+<script type="module" src="./assets/static/js/pages/Show/StartFunc.js"></script>
+{% endblock %}

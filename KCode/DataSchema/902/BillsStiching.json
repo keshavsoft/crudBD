@@ -1,0 +1,18 @@
+{
+    "ProductName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "UnitRate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Discount": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "GrossAmout": {
+        "type": "NUMBER",
+        "allowNull": true
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "ProductName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    },
+    "ProductRate": {
+      "type": "INTEGER",
+      "allowNull": true
+    },
+    "ProductDescription": {
+      "type": "STRING",
+      "allowNull": true
+    }
+  }

@@ -1,0 +1,134 @@
+{
+  "ParentVoucherName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "Parent Voucher Name"
+      },
+      "Create": {
+        "title": "Parent Voucher Name"
+      }
+    }
+  },
+  "VoucherName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "Voucher Name"
+      },
+      "Create": {
+        "title": "Voucher Name"
+      }
+    }
+  },
+  "VoucherNumber": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Voucher Number"
+      },
+      "Create": {
+        "title": "Voucher Number"
+      }
+    }
+  },
+  "Date": {
+    "type": "DATE",
+    "HtmlTags": {
+      "Show": {
+        "title": "Date"
+      },
+      "Create": {
+        "title": "Date"
+      }
+    }
+  },
+  "HeadAccCode": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "HeadAccCode"
+      },
+      "Create": {
+        "title": "HeadAccCode"
+      }
+    }
+  },
+  "nam1": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam1"
+      },
+      "Create": {
+        "title": "nam1"
+      }
+    }
+  },
+  "nam2": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam2"
+      },
+      "Create": {
+        "title": "nam2"
+      }
+    }
+  },
+  "nam3": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam3"
+      },
+      "Create": {
+        "title": "nam3"
+      }
+    }
+  },
+  "nam4": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam4"
+      },
+      "Create": {
+        "title": "nam4"
+      }
+    }
+  },
+  "nam6": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam6"
+      },
+      "Create": {
+        "title": "nam6"
+      }
+    }
+  },
+  "nam7": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "nam7"
+      },
+      "Create": {
+        "title": "nam7"
+      }
+    }
+  },
+  "HeadAccountName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "HeadAccountName"
+      },
+      "Create": {
+        "title": "Head Account Name"
+      }
+    }
+  }
+}

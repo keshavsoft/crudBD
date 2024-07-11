@@ -1,0 +1,12 @@
+  {
+    "TechnicianName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    },
+    "Mobile": {
+      "type": "NUMBER",
+      "unique": true,
+      "allowNull": false
+    }
+  }

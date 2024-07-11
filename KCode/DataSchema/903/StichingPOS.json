@@ -1,0 +1,15 @@
+{
+    
+    "CustomerName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Mobile": {
+      "type": "NUMBER",
+      "allowNull": true
+    },
+    "Place": {
+      "type": "STRING",
+      "allowNull": true
+    }
+  }

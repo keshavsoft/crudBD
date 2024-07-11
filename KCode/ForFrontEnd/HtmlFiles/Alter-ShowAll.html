@@ -1,0 +1,54 @@
+{% set title = 'Account Profile' %}
+{% set tableName = 'Accounts' %}
+{% set filename = '' %}
+
+{% extends 'src/FrontEnd/layouts/master.html' %}
+
+{% block content %}
+
+<div class="pagetitle">
+    <h1> <a href="#" id="RefreshBSTableId"></a>Delete</h1>
+
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../../../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../../../index.html">Accounts</a></li>
+            <li class="breadcrumb-item"><a href="../../index.html">Masters</a></li>
+            <li class="breadcrumb-item"><a href="../../index.html">Accounts</a></li>
+            <li class="breadcrumb-item active">Alter</li>
+            <li class="breadcrumb-item active">ShowAll</li>
+        </ol>
+    </nav>
+</div>
+<!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="spinner-border" id="SpinnerId" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <table id="table" data-toolbar="#toolbar" data-search="true" data-searchable="true"
+                        data-show-footer="true" data-show-columns="true" data-show-columns-toggle-all="true"
+                        data-click-to-select="true" data-filter-control="true" data-show-export="true"
+                        data-detail-formatter="detailFormatter" data-id-field="pk" data-show-toggle="true"
+                        data-url="/bin/Accounts/DataOnly">
+                        <thead>
+                            <tr id="tableHeadRow">
+                                <th data-field="id" data-formatter="jFGlobalSerialColumn">#</th>
+                                <th data-field="AccountName">Account Name</th>
+                                <th data-field="BSGroup">BS Group</th>
+                                <th data-field="SubGroup">SubGroup</th>
+                                <th data-formatter="jFLocalAlterColumn">Alter</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

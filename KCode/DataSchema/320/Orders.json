@@ -1,0 +1,14 @@
+  {
+    "OrderDate": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "CustomerName": {
+      "type": "NUMBER",
+      "allowNull": false
+    },
+    "CustomerMobile": {
+      "type": "NUMBER",
+      "allowNull": false
+    }
+  }

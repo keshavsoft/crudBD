@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Customers",
+        "isTitle": true,
+        "icon": "bi bi-app"
+    },
+    {
+        "name": "Create",
+        "key": "Create",
+        "icon": "bi bi-database-add",
+        "children": [
+            {
+                "name": "CreateSimple",
+                "url": "CreateSimple.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateClientSide",
+                "url": "CreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateWithSubTable",
+                "url": "CreateWithSubTable.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "ShowTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "TableFooterAddSSR",
+                "url": "ShowTableFooterAddSSR.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "SubTableWSearch",
+                "url": "SubTableWSearch.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "TableFooterAdd",
+                "url": "TableFooterAdd.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Show",
+        "key": "Show",
+        "icon": "bi bi-table",
+        "children": [
+            {
+                "name": "Show",
+                "url": "ShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "ShowTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithSerial",
+                "url": "ShowWithSerial.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowSerialPage",
+                "url": "ShowSerialPage.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowSimpleTB",
+                "url": "ShowSimpleTB.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "TableFooterAddSSR",
+                "url": "ShowTableFooterAddSSR.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "SubTableShow",
+                "url": "ShowSubTableShow.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "TableFooterAdd",
+                "url": "ShowTableFooterAdd.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowSSR",
+                "url": "ShowSSR.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowSSRSerialPage",
+                "url": "ShowSSRSerialPage.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "BulkInsert",
+                "url": "ShowBulkInsert.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Alter",
+        "key": "Alter",
+        "icon": "bi bi-pencil-square",
+        "children": [
+            {
+                "name": "Alter",
+                "url": "Alter.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSSR",
+                "url": "AlterSSR.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSimple",
+                "url": "AlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterWithSSR",
+                "url": "AlterWithSSR.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
+    },
+    {
+        "name": "Delete",
+        "key": "Delete",
+        "icon": "bi bi-trash",
+        "children": [
+            {
+                "name": "Delete",
+                "url": "DeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "DeleteSSR",
+                "url": "DeleteSSR.html",
+                "icon": "bi bi-trash"
+            }
+        ]
+    }
+]

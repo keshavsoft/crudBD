@@ -1,0 +1,15 @@
+{% set title = 'Account Profile' %}
+{% set tableName = 'Accounts' %}
+{% set filename = '' %}
+
+{% extends 'src/FrontEnd/layouts/master.html' %}
+
+{% block content %}
+<a id="RefreshBSTableId">{{filename}}</a>
+<div class="spinner-border" id="SpinnerId" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<table id="table">
+
+</table>
+{% endblock %}

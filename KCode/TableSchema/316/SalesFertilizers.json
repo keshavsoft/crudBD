@@ -1,0 +1,14 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      }
+    }
+  },
+  "DataLists": {
+    "CustomersDLId": {}
+  }
+}

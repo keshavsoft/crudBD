@@ -1,0 +1,15 @@
+{
+    "ItemName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    },
+    "GST": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Factor": {
+      "type": "INTEGER",
+      "allowNull": false
+    }
+  }

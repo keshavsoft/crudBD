@@ -1,0 +1,47 @@
+{
+    "ProductName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "UnitRate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "sno": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "DisPercentage": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "DisRate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "GrossAmout": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Barcode": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "BillPk": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "pk": {
+        "type": "INTEGER",
+        "unique": true,
+        "allowNull": false,
+        "onUpdate": "cascade",
+        "onDelete": "cascade",
+        "references": {
+            "model": {
+                "tableName": "Generate"
+            },
+            "key": "pk"
+        }
+    }
+}

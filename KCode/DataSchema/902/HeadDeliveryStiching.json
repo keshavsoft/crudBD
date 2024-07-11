@@ -1,0 +1,10 @@
+{
+    "Description": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "FK": {
+        "type": "NUMBER",
+        "allowNull": true
+    }
+}

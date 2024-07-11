@@ -1,0 +1,10 @@
+  {
+    "ItemName": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "ItemRate": {
+      "type": "NUMBER",
+      "allowNull": false
+    }
+  }
