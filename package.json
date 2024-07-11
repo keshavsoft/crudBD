@@ -1,0 +1,16 @@
+{
+  "name": "crudbd",
+  "version": "1.0.0",
+  "description": "generate backend and database from json schema",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directory-tree": "^3.5.1",
+    "fs-extra": "^11.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+###copy the table schema from step 1(GET)
+POST http://localhost:7019/src/BackEnd/ksSample/WithKeysCheck
+content-type: application/json
+
+{
+"Name":"1111111",
+"Mobile":88888,
+"City":"Kkd"
+}
+

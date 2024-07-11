@@ -1,0 +1,3 @@
+#This endpoint will return back all the rows in the table as an array in response
+
+GET http://localhost:7019/src/BackEnd/ksSample/DataOnly
