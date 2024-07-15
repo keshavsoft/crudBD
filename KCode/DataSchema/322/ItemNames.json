@@ -7,7 +7,8 @@
           "title": "Item Name"
         },
         "Create": {
-          "title": "Item Name"
+          "title": "Item Name",
+          "AutoFocusTag": "autofocus"
         }
       }
     }
