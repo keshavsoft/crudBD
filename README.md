@@ -10,10 +10,16 @@ generate backend and database from json schema
 - **Database:** root:KData/JSON
 - **Table Schemas definition location :** root:KCode/DataSchema
 - **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
+- **Frontend :** root:public
 
 #### **run the below commands to generate them** 
 - **Backend:** run KCode/Backend.js
 - **Database:** run KCode/Database.js
+- **Frontend:** run npm run home
+
+#### **run the below commands to see the output** 
+- run npm run start
+
 
 ## **Table of Contents** 📚
 - [Overview](#Overview)

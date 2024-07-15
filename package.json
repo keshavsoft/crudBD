@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
     "home": "vite build --config KCode/viteConfig/vite.config-bs5.js"
   },
   "author": "",
