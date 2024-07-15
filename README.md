@@ -8,6 +8,8 @@ generate backend and database from json schema
 #### **Key Locations** 
 - **Backend:** root:bin
 - **Database:** root:KData/JSON
+- **Table Schemas definition location :** root:KCode/DataSchema
+- **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
 
 #### **run the below commands to generate them** 
 - **Backend:** run KCode/Backend.js
