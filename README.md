@@ -28,6 +28,8 @@ generate backend and database from json schema
 - [Purpose of the Project](#purpose-of-the-project)
 - [Important Points](#important-points)
 - [advanced installation](#advancedinstallation)
+- [visual studio code extensions](#vscodeextensions)
+
 
 ### <a name="overview"></a>## **Overview** 🔎
 This project focuses on automating crudBD operations for JSON files, making it easy to manage and manipulate data. It offers a user-friendly interface for performing essential actions on JSON files, such as creating, reading, updating, and deleting records.
@@ -202,7 +204,7 @@ in kcode config.json is keep in kcode root for much more cleaner look of the cod
 
 for mock testing the end points:
 
-visual studio code extensions, helpfull :
+### <a name="vscodeextensions"></a>## **visual studio code extensions** 🚀
 
 for est client or http calling
 
