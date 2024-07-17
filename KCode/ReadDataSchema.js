@@ -15,6 +15,8 @@ let StartFunc = () => {
         element.fileData = JSON.parse(LoopInsideFileData);
     });
 
+    console.log(`TableSchema from : ${LocalDataPk}`);
+
     return tree;
 };
 

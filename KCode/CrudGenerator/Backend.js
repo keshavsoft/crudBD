@@ -14,6 +14,8 @@ let StartFunc = ({ inFilesArray }) => {
         inFrom: CommonFrom,
         inTo: CommonTo
     });
+
+    console.log(`Generated the endpoints in backend : ${CommonTo}`);
 };
 
 export { StartFunc };
