@@ -5,7 +5,8 @@ import handlebars from 'vite-plugin-handlebars';
 import path, { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
-import { StartFunc as StartFuncGetFiles } from "./getFiles.js";
+import { StartFunc as getFilesForVite } from "./getFilesForVite.js";
+import { StartFunc as getFilesForHbs } from "./getFilesForHbs.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,12 +14,15 @@ const __dirname = path.dirname(__filename);
 const commonSrcFolder = "src/Index/FrontEnd";
 const commonDistFolder = "public";
 
-let files = StartFuncGetFiles({ inSrcPath: commonSrcFolder });
-console.log("files : ", files);
+let filesForVite = getFilesForVite({ inSrcPath: commonSrcFolder });
+let filesForHbs = getFilesForHbs({ inSrcPath: commonSrcFolder });
 
 const pageData = {
     '/index.html': {
-        title: 'Main Page',
+        Title: 'Keshav',
+    },
+    '/dashboard.html': {
+        Title: 'Keshav',
     }
 };
 
@@ -48,7 +52,7 @@ export default {
     plugins: [
         handlebars({
             context(pagePath) {
-                return files[pagePath];
+                return filesForHbs[pagePath];
             },
         }),
     ],
@@ -58,7 +62,7 @@ export default {
         target: "chrome58",
         outDir: resolve(__dirname, `../../${commonDistFolder}`),
         rollupOptions: {
-            input: files,
+            input: filesForVite,
             output: {
             }
         },
