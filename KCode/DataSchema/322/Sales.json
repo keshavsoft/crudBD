@@ -1,6 +1,8 @@
 {
   "VoucherNumber": {
-    "type": "STRING",
+    "type": "NUMBER",
+    "unique": true,
+    "max": true,
     "HtmlTags": {
       "Show": {
         "title": "VoucherNumber"
@@ -33,6 +35,19 @@
       },
       "Create": {
         "title": "PartyName"
+      }
+    }
+  },
+  "DATE": {
+    "type": "DATEONLY",
+    "presentDate": true,
+    "max": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Date"
+      },
+      "Create": {
+        "title": "Date"
       }
     }
   }
