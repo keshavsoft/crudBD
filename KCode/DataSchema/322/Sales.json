@@ -41,7 +41,6 @@
   "DATE": {
     "type": "DATEONLY",
     "presentDate": true,
-    "max": true,
     "HtmlTags": {
       "Show": {
         "title": "Date"
