@@ -1,0 +1,30 @@
+{
+    "AddOnService": {
+        "type": "STRING",
+        "allowNull": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "AddOnService"
+            },
+            "Create": {
+                "title": "AddOnService",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+            }
+        }
+    },
+    "AddOnRate": {
+        "type": "NUMBER",
+        "unique": true,
+        "allowNull": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "AddOnRate"
+            },
+            "Create": {
+                "title": "AddOnRate",
+                "RequiredTag": "required"
+            }
+        }
+    }
+}
