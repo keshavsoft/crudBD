@@ -24,6 +24,7 @@ const StartFunc = ({ inFileName, NeededKey, inKey }) => {
     });
 
     if (LocalFindValue.length === 0) {
+        LocalReturnData.KReason = `ForeignKey check`;
         return LocalReturnData;
     };
     LocalReturnData.KTF = true;

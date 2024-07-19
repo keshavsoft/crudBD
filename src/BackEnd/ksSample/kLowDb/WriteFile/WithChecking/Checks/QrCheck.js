@@ -23,6 +23,7 @@ const StartFunc = ({ inFileName, NeededKey, inSearchKey }) => {
     let LocalFindValue = LocalDataNeeded.filter(element => element[LocalSearchKey] == NeededKey);
 
     if (LocalFindValue.length > 0) {
+        LocalReturnData.KReason = `ForeignKey check`;
         LocalReturnData.KTF = true;
 
         return LocalReturnData;
