@@ -17,14 +17,14 @@ const commonDistFolder = "public";
 let filesForVite = getFilesForVite({ inSrcPath: commonSrcFolder });
 let filesForHbs = getFilesForHbs({ inSrcPath: commonSrcFolder });
 
-const pageData = {
-    '/index.html': {
-        Title: 'Keshav',
-    },
-    '/dashboard.html': {
-        Title: 'Keshav',
-    }
-};
+// const pageData = {
+//     '/index.html': {
+//         Title: 'Keshav',
+//     },
+//     '/dashboard.html': {
+//         Title: 'Keshav',
+//     }
+// };
 
 build({
     configFile: false,

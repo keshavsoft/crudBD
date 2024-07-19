@@ -14,7 +14,7 @@ const StartFunc = ({ inSrcPath }) => {
         .filter(filename => filename.endsWith('.html'))
         .forEach(filename => {
             files[`/${filename}`] = {
-                Title: "Keshav", tables: LocalTableNames
+                DataPk: ConfigJson.jsonConfig.DataPk, tables: LocalTableNames
             }
         });
 
