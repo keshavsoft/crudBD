@@ -30,15 +30,15 @@ const LocalFuncInsertDefaultValues = ({ inObject, inTableSchema }) => {
         if (value.presentDate) {
             inObject[key] = new Date().toISOString().split('T')[0];
         };
-
         if (value.max) {
             let LocalData = PullData();
 
             let LocalArrayPk = LocalData.inDb.data.map(element => element[key]);
 
             let numberArray = LocalArrayPk.map(Number);
+            const newArray = numberArray.filter((value) => !Number.isNaN(value));
 
-            let MaxPk = (Math.max(...numberArray, 0) + 1);
+            let MaxPk = (Math.max(...newArray, 0) + 1);
 
             inObject[key] = MaxPk;
         };
