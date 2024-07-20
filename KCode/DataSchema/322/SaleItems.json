@@ -3,7 +3,7 @@
     "type": "STRING",
     "allowNull": false,
     "references": {
-      "model": "ItemNames",
+      "model": "ItemName",
       "key": "Item Name"
     },
     "HtmlTags": {
@@ -34,51 +34,78 @@
       },
       "Create": {
         "title": "RefPK"
+      },
+      "SubTable": {
+        "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
       }
     }
   },
   "ItemRate": {
     "type": "INTEGER",
     "allowNull": false,
+    "references": {
+      "model": "Sales",
+      "key": "id"
+    },
     "HtmlTags": {
       "Show": {
-        "title": "Item Name"
+        "title": "ItemRate"
       },
       "Create": {
-        "title": "Item Name"
+        "title": "ItemRate"
       },
       "SubTable": {
         "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
       }
     }
   },
   "ItemQty": {
     "type": "INTEGER",
     "allowNull": false,
+    "references": {
+      "model": "Sales",
+      "key": "id"
+    },
     "HtmlTags": {
       "Show": {
-        "title": "Item Name"
+        "title": "ItemQty"
       },
       "Create": {
-        "title": "Item Name"
+        "title": "ItemQty"
       },
       "SubTable": {
         "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
       }
     }
   },
   "ItemAmount": {
     "type": "INTEGER",
     "allowNull": false,
+    "references": {
+      "model": "Sales",
+      "key": "id"
+    },
     "HtmlTags": {
       "Show": {
-        "title": "Item Name"
+        "title": "ItemAmount"
       },
       "Create": {
-        "title": "Item Name"
+        "title": "ItemAmount"
       },
       "SubTable": {
         "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
       }
     }
   }
