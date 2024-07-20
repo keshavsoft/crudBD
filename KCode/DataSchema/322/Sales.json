@@ -27,7 +27,7 @@
     "type": "STRING",
     "references": {
       "model": "LedgerNames",
-      "key": "LedgerName"
+      "key": "LEDGERNAME"
     },
     "HtmlTags": {
       "Show": {
