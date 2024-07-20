@@ -1,5 +1,5 @@
 {
-  "VoucherNumber": {
+  "VOUCHERNUMBER": {
     "type": "STRING",
     "HtmlTags": {
       "Show": {
@@ -10,7 +10,7 @@
       }
     }
   },
-  "VoucherType": {
+  "VOUCHERTYPE": {
     "type": "STRING",
     "HtmlTags": {
       "Show": {
@@ -21,7 +21,7 @@
       }
     }
   },
-  "PartyName": {
+  "PARTYNAME": {
     "type": "STRING",
     "references": {
       "model": "LedgerNames",

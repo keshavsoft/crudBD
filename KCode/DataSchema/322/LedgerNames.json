@@ -1,5 +1,5 @@
   {
-    "LedgerName": {
+    "LEDGERNAME": {
       "type": "STRING",
       "unique": true,
       "HtmlTags": {
@@ -11,7 +11,7 @@
         }
       }
     },
-    "LedgerGuid": {
+    "GUID": {
       "type": "STRING",
       "HtmlTags": {
         "Show": {
