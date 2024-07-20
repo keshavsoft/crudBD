@@ -1,3 +1,7 @@
+{
+  "VOUCHERNUMBER": {
+    "type": "NUMBER",
+    "max": true,
     "HtmlTags": {
       "Show": {
         "title": "VoucherNumber"
