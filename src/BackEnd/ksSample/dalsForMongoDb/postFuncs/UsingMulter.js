@@ -6,7 +6,7 @@ var storage = multer.diskStorage({
         
         let LocalUrl=req.originalUrl;
         let LocalUrlArray=LocalUrl.split("/");
-        console.log("aaaaaaaaa : ", req.originalUrl,LocalUrlArray);
+        // console.log("aaaaaaaaa : ", req.originalUrl,LocalUrlArray);
         cb(null, `${ConfigJson.JsonPath}/${LocalUrlArray[2]}`);
         // cb(null, "uploads");
     },

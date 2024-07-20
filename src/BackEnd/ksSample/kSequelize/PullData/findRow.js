@@ -10,7 +10,7 @@ let StartFunc = async ({ inId }) => {
         const records = users.map(function (result) {
             return result.dataValues;
         });
-        console.log("aaaaaaaaaaaaa bbbbbbbbb : ", records);
+        // console.log("aaaaaaaaaaaaa bbbbbbbbb : ", records);
         const RowNeeded = records.find(element => {
             return element.id === parseInt(inId);
         });
