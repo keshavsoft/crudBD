@@ -1,6 +1,3 @@
-{
-  "VOUCHERNUMBER": {
-    "type": "STRING",
     "HtmlTags": {
       "Show": {
         "title": "VoucherNumber"
@@ -33,6 +30,18 @@
       },
       "Create": {
         "title": "PartyName"
+      }
+    }
+  },
+  "DATE": {
+    "type": "DATEONLY",
+    "presentDate": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Date"
+      },
+      "Create": {
+        "title": "Date"
       }
     }
   }
