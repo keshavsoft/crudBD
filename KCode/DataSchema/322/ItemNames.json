@@ -8,11 +8,8 @@
       },
       "Create": {
         "title": "Item Name",
-        "AutoFocusTag": "autofocus",
-        "RequiredTag": "required",
-        "BS5": {
-          "ErrorText": "Should not be empty..."
-        }
+        "AutoFocusTag": "autofocus"
+        
       }
     }
   }
