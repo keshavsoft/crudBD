@@ -11,9 +11,13 @@ import {
 import {
     PostFunc as PostFuncmiddleware,
     MultiInsertWithCheck as MultiInsertWithCheckMiddleware
-
 } from '../../middlewares/postFuncs/EntryFile.js';
-import { PostFunc as PostFuncPostUploadFunc } from '../../middlewares/postFuncs/PostUploadFunc.js';
+
+import {
+    StartFunc as middlewareUsingMulter
+} from '../../middlewares/postFuncs/UsingMulter.js';
+
+import { StartFunc as PostFuncPostUploadFunc } from '../../middlewares/postFuncs/PostUploadFunc.js';
 
 import { upload as uploadFromMulter } from '../../dals/postFuncs/UsingMulter.js';
 
@@ -32,7 +36,7 @@ router.post('/Filter', PostFilterFunc);
 router.post('/FromModal', PostFromModalFunc);
 router.post('/Upload', PostFuncPostUploadFunc, PostUploadFunc);
 router.post('/UploadFromModal', PostUploadFromModalFunc);
-router.post('/UploadImage/:Id', uploadFromMulter.single("image"), PostUploadImageFunc);
+router.post('/UploadImage/:Id', middlewareUsingMulter.single("image"), PostUploadImageFunc);
 router.post('/UploadMultipleImages/:Id', uploadFromMulter.array("images", 4), PostUploadImageFunc);
 
 export { router };

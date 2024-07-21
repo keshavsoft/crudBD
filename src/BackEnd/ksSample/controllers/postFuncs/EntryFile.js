@@ -76,9 +76,9 @@ let PostFilterFunc = async (req, res) => {
 
 let PostUploadImageFunc = async (req, res) => {
     let LocalBody = req.body;
-    let LocalModalObject = new ClassSample({ ...LocalBody });
+    // let LocalModalObject = new ClassSample({ ...LocalBody });
 
-    let LocalFromRepo = await PostFuncRepo({ ...LocalModalObject });
+    let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -177,5 +177,5 @@ export {
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc
 };

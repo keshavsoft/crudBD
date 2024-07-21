@@ -29,6 +29,7 @@ let PostFunc = async (inPostBody) => {
     if (ConfigJson.isMongoDb) {
         return PostFuncDalsForMongoDB(inPostBody);
     };
+
     return PostFuncDal(inPostBody);
 };
 
