@@ -74,18 +74,24 @@ let PostFilterFunc = async (req, res) => {
     res.json(LocalFromRepo);
 };
 
-let PostUploadImageFunc = async (req, res) => {
-    let LocalBody = req.body;
-    // let LocalModalObject = new ClassSample({ ...LocalBody });
-
-    let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
-
-    if (LocalFromRepo.KTF === false) {
-        res.status(500).send(LocalFromRepo.KReason);
+let PostUploadImageFunc = (req, res) => {
+    if ("insertedPk" in req.KeshavSoft === false) {
+        res.status(500).send("Error from multer");
         return;
     };
 
-    res.json(LocalFromRepo);
+    // let LocalBody = req.body;
+    // // let LocalModalObject = new ClassSample({ ...LocalBody });
+
+    // let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
+
+    // if (LocalFromRepo.KTF === false) {
+
+    // };
+    // res.send(req.KeshavSoft.insertedPk);
+    res.status(200).send(`${req.KeshavSoft.insertedPk}`);
+
+    // res.send(req.KeshavSoft.insertedPk);
 };
 
 let PostFromModalFunc = (req, res) => {
