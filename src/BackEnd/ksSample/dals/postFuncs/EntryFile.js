@@ -14,6 +14,8 @@ import { StartFunc as StartFuncCheckGeneratePk } from '../../kLowDb/WriteFile/Wi
 import { StartFunc as StartFuncBulkInsert } from '../../kLowDb/WriteTofile/BulkInsert.js';
 import { StartFunc as StartFuncBulkInsertCheck } from '../../kLowDb/WriteTofile/BulkInsert/EntryFile.js';
 import { StartFunc as StartFuncCustomPk } from '../../kLowDb/WriteTofile/InsertRow/CustomPk.js';
+import { StartFunc as WithImage } from '../../kLowDb/WriteTofile/WithChecking/WithImage.js';
+
 
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
@@ -59,10 +61,15 @@ let PostWithCheckAndGenPkFunc = ({ inBodyKeys }) => {
     return StartFuncCheckGeneratePk({ inDataToInsert: inBodyKeys });
 };
 
+let UploadImageAsDataFunc = (inPostBody) => {
+    return WithImage({ inDataToInsert: inPostBody });
+};
+
 export {
     PostFunc, PostFromModalFunc,
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostWithKeysCheckFunc,
     PostFuncGenUuId, PostFilterFunc,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
+    PostCustomPkFunc, UploadImageAsDataFunc
 };

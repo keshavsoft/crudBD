@@ -1,3 +1,5 @@
+import fs from "fs";
+
 import {
     PostFunc as PostFuncRepo,
     PostFromModalFunc as PostFromModalFuncRepo,
@@ -9,7 +11,8 @@ import {
     PostFuncGenUuId as PostFuncGenUuIdRepo,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo,
     MultiInsertWithCheckFunc as MultiInsertWithCheckFuncRepo,
-    PostCustomPkFunc as PostCustomPkFuncRepo
+    PostCustomPkFunc as PostCustomPkFuncRepo,
+    UploadImageAsDataFunc as UploadImageAsDataFuncDalRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 import {
@@ -75,6 +78,13 @@ let PostFilterFunc = async (req, res) => {
 };
 
 let PostUploadImageFunc = (req, res) => {
+    var base64Data = req.body.image;
+    let base64Image = base64Data.split(';base64,').pop();
+
+    fs.writeFile("image.png", base64Image, 'base64', function (err) {
+        if (err) console.log(err);
+    });
+
     if ("insertedPk" in req.KeshavSoft === false) {
         res.status(500).send("Error from multer");
         return;
@@ -178,10 +188,39 @@ let PostWithCheckAndGenPkFunc = async (req, res) => {
     res.json(LocalFromRepo);
 };
 
+let UploadImageAsDataFunc = (req, res) => {
+    // var base64Data = req.body.image;
+    // let base64Image = base64Data.split(';base64,').pop();
+
+    // fs.writeFile("image.png", base64Image, 'base64', function (err) {
+    //     if (err) console.log(err);
+    // });
+
+    // if ("insertedPk" in req.KeshavSoft === false) {
+    //     res.status(500).send("Error from multer");
+    //     return;
+    // };
+
+    let LocalBody = req.body;
+    // let LocalModalObject = new ClassSample({ ...LocalBody });
+
+    let LocalFromRepo = UploadImageAsDataFuncDalRepo({ ...LocalBody });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo.pk.toString());
+
+    // res.send(LocalFromRepo.pk);
+};
+
 export {
     PostFunc, PostFromModalFunc,
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc,
+    UploadImageAsDataFunc
 };
