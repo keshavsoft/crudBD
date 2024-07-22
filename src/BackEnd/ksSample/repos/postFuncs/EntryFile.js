@@ -7,7 +7,8 @@ import {
     PostFuncGenUuId as PostFuncGenUuIdDal, PostFilterFunc as PostFilterFuncDal,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncDal,
     MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDal,
-    PostCustomPkFunc as PostCustomPkFuncDal
+    PostCustomPkFunc as PostCustomPkFuncDal,
+    UploadImageAsDataFunc as UploadImageAsDataFuncDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -92,10 +93,15 @@ let PostWithCheckAndGenPkFunc = async (inModalObject) => {
     return PostWithCheckAndGenPkFuncDal({ inBodyKeys: inModalObject });
 };
 
+let UploadImageAsDataFunc = (inPostBody) => {
+    return UploadImageAsDataFuncDal({ ...inPostBody });
+};
+
 export {
     PostFunc, PostFromModalFunc,
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostFilterFunc,
     PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
+    PostCustomPkFunc, UploadImageAsDataFunc
 };
