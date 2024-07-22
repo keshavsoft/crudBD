@@ -1,0 +1,25 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "ItemNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "ItemNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      }
+    }
+  }
+}
