@@ -5,6 +5,20 @@
         "HeaderLi": {
           "ShowMessages": false
         }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "LedgerNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "LedgerNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
       }
     }
   }
