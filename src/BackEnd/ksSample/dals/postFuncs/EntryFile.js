@@ -2,7 +2,9 @@ import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileLi
 // import { StartFunc as StartFuncwriteFile } from '../../kLowDb/WriteFileList/writeFile.js';
 import { StartFunc as StartFuncWriteFileFromModal } from '../../kLowDb/WriteFileList/writeFileFromModal.js';
 import { StartFunc as StartFuncImportToFile } from '../../kLowDb/WriteFileList/ImportToFile.js';
-import { StartFunc as StartFuncUploadToFile } from '../../kLowDb/WriteFileList/UploadToFile.js';
+
+// import { StartFunc as StartFuncUploadToFile } from '../../kLowDb/WriteFileList/UploadToFile.js';
+
 import { StartFunc as StartFuncWriteTofile } from '../../kLowDb/WriteTofile/WithChecking/StartFunc.js';
 import { StartFunc as StartFuncWriteFileKeysCheck } from '../../kLowDb/WriteFile/WithChecking/StartFunc.js';
 import { StartFunc as StartFuncGenUuId } from '../../kLowDb/WriteFile/GenUuId.js';
@@ -12,6 +14,7 @@ import { StartFunc as StartFuncCheckGeneratePk } from '../../kLowDb/WriteFile/Wi
 import { StartFunc as StartFuncBulkInsert } from '../../kLowDb/WriteTofile/BulkInsert.js';
 import { StartFunc as StartFuncBulkInsertCheck } from '../../kLowDb/WriteTofile/BulkInsert/EntryFile.js';
 import { StartFunc as StartFuncCustomPk } from '../../kLowDb/WriteTofile/InsertRow/CustomPk.js';
+import { StartFunc as WithImage } from '../../kLowDb/WriteTofile/WithChecking/WithImage.js';
 
 
 let PostFunc = (inPostBody) => {
@@ -58,10 +61,15 @@ let PostWithCheckAndGenPkFunc = ({ inBodyKeys }) => {
     return StartFuncCheckGeneratePk({ inDataToInsert: inBodyKeys });
 };
 
+let UploadImageAsDataFunc = (inPostBody) => {
+    return WithImage({ inDataToInsert: inPostBody });
+};
+
 export {
     PostFunc, PostFromModalFunc,
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostWithKeysCheckFunc,
     PostFuncGenUuId, PostFilterFunc,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
+    PostCustomPkFunc, UploadImageAsDataFunc
 };

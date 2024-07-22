@@ -1,6 +1,4 @@
-import ModalDataJson from '../../Data.json' assert { type: 'json' };
-
-let PostFunc = (req, res, next) => {
+let StartFunc = (req, res, next) => {
     let LocalRequestBody = req.body;
 
     if (Array.isArray(LocalRequestBody) === false) {
@@ -14,4 +12,4 @@ let PostFunc = (req, res, next) => {
     next();
 };
 
-export { PostFunc };
+export { StartFunc };

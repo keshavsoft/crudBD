@@ -61,7 +61,8 @@ let StartFunc = ({ inDataToInsert }) => {
 
     LocalReturnData.KTF = true;
     LocalReturnData.pk = LocalDataWithUuid.InsertData.pk;
-    return LocalReturnData.pk;
+
+    return LocalReturnData;
 };
 
 const LocalFuncGeneratePk = ({ inDataToInsert, inData }) => {
