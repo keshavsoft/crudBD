@@ -23,7 +23,6 @@ import { ClassSample } from '../../ModalClass.js';
 
 let PostFunc = async (req, res) => {
     let LocalBody = req.body;
-    // let LocalModalObject = new ClassSample({ ...LocalBody });
 
     let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
 
@@ -32,7 +31,7 @@ let PostFunc = async (req, res) => {
         return;
     };
 
-    res.json(LocalFromRepo);
+    res.status(200).send(LocalFromRepo.pk.toString());
 };
 
 let PostCustomPkFunc = async (req, res) => {
@@ -212,8 +211,6 @@ let UploadImageAsDataFunc = (req, res) => {
     };
 
     res.status(200).send(LocalFromRepo.pk.toString());
-
-    // res.send(LocalFromRepo.pk);
 };
 
 export {
