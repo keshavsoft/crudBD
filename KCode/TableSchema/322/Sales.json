@@ -10,12 +10,12 @@
         "children": [
           {
             "name": "Create",
-            "url": "LedgerNamesCreateSingle.html",
+            "url": "SalesCreateSubTable.html",
             "icon": "bi bi-plus-circle"
           },
           {
             "name": "Show",
-            "url": "LedgerNamesShow.html",
+            "url": "SalesShow.html",
             "icon": "bi bi-plus-circle"
           }
         ]
