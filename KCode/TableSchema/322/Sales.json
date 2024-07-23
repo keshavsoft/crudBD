@@ -10,8 +10,14 @@
         "children": [
           {
             "name": "Create",
-            "url": "SalesCreateSubTable.html",
+            "url": "SalesCreateDatalist.html",
+            "icon": "bi bi-plus-circle",
+            "children": [
+          {
+            "name": "Create",
+            "url": "SalesCreatSubTable.html",
             "icon": "bi bi-plus-circle"
+          }]
           },
           {
             "name": "Show",
