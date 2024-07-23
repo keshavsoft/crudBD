@@ -34,7 +34,8 @@
         "title": "PartyName"
       },
       "Create": {
-        "title": "PartyName"
+        "title": "PartyName",
+        "RequiredTag": "required"
       }
     }
   },

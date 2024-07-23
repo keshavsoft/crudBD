@@ -8,8 +8,8 @@
       },
       "Create": {
         "title": "Item Name",
-        "AutoFocusTag": "autofocus"
-        
+        "AutoFocusTag": "autofocus",
+        "RequiredTag": "required"
       }
     }
   }

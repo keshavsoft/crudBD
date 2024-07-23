@@ -3,7 +3,7 @@
     "type": "STRING",
     "allowNull": false,
     "references": {
-      "model": "ItemName",
+      "model": "ItemNames",
       "key": "Item Name"
     },
     "HtmlTags": {

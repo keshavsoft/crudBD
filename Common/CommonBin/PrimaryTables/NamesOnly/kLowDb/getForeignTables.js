@@ -11,9 +11,13 @@ let StartFunc = () => {
             };
         };
     });
-
-    LocalReturnData.JsonData = LoopInsideArray;
+    // console.log("aaaaaaaaaa : ", LoopInsideArray, ConfigJson.jsonConfig.tableAndColumns.children);
+    LocalReturnData.JsonData = uniqueArray4(LoopInsideArray);
     return LocalReturnData;
+};
+
+function uniqueArray4(a) {
+    return [...new Set(a)];
 };
 
 export { StartFunc };
