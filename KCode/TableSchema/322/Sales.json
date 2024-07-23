@@ -10,7 +10,7 @@
         "children": [
           {
             "name": "Create",
-            "url": "SalesCreateSingle.html",
+            "url": "SalesCreateSubTable.html",
             "icon": "bi bi-plus-circle"
           },
           {
