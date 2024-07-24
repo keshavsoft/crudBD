@@ -37,7 +37,7 @@
         "title": "RefPK"
       },
       "SubTable": {
-        "isShown": true
+        "isShown": false
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
@@ -47,10 +47,8 @@
   "ItemRate": {
     "type": "INTEGER",
     "allowNull": false,
-    "references": {
-      "model": "Sales",
-      "key": "id"
-    },
+   
+   
     "HtmlTags": {
       "Show": {
         "title": "ItemRate"
@@ -69,10 +67,8 @@
   "ItemQty": {
     "type": "INTEGER",
     "allowNull": false,
-    "references": {
-      "model": "Sales",
-      "key": "id"
-    },
+    
+
     "HtmlTags": {
       "Show": {
         "title": "ItemQty"
@@ -91,10 +87,7 @@
   "ItemAmount": {
     "type": "INTEGER",
     "allowNull": false,
-    "references": {
-      "model": "Sales",
-      "key": "id"
-    },
+   
     "HtmlTags": {
       "Show": {
         "title": "ItemAmount"
