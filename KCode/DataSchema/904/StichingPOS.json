@@ -1,0 +1,65 @@
+{
+  "VOUCHERNUMBER": {
+    "type": "NUMBER",
+    "max": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherNumber"
+      },
+      "Create": {
+        "title": "VoucherNumber"
+      }
+    }
+  },
+  "CustomerNumber": {
+    "type": "STRING",
+    "references": {
+      "model": "Customers",
+      "key": "CustomerNumber"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "CustomerNumber"
+      },
+      "Create": {
+        "title": "CustomerNumber",
+        "AutoFocusTag": "autofocus"
+      }
+    }
+  },
+  "CustomerName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "CustomerName"
+      },
+      "Create": {
+        "title": "CustomerName",
+        "RequiredTag": "required"
+      }
+    }
+  },
+  "Description": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "Description"
+      },
+      "Create": {
+        "title": "Description"
+      }
+    }
+  },
+  "DATE": {
+    "type": "DATEONLY",
+    "presentDate": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Date"
+      },
+      "Create": {
+        "title": "Date"
+      }
+    }
+  }
+}

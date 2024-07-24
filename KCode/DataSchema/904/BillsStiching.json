@@ -1,0 +1,117 @@
+{
+  "ProductName": {
+    "type": "STRING",
+    "allowNull": false,
+    "references": {
+      "model": "Items",
+      "key": "ItemName"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "ProductName"
+      },
+      "Create": {
+        "title": "ProductName",
+        "AutoFocusTag": "autofocus"
+      },
+      "SubTable": {
+        "title": "ProductName",
+        "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
+      }
+    }
+  },
+  "FK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "StichingPOS",
+      "key": "pk"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "FK"
+      },
+      "Create": {
+        "title": "FK"
+      },
+      "SubTable": {
+        "title": "FK",
+        "isShown": false
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
+      }
+    }
+  },
+  "GrossAmount": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "GrossAmount"
+      },
+      "Create": {
+        "title": "GrossAmount"
+      },
+      "SubTable": {
+        "title": "Amount",
+        "isShown": true
+      },
+      "CreateInFooter": {}
+    }
+  },
+  "ItemDescription": {
+    "type": "STRING",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "ItemDescription"
+      },
+      "Create": {
+        "title": "ItemDescription"
+      },
+      "SubTable": {
+        "title": "Description",
+        "isShown": true
+      },
+      "CreateInFooter": {}
+    }
+  },
+  "AddOnAmount": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "AddOnAmount"
+      },
+      "Create": {
+        "title": "AddOnAmount"
+      },
+      "SubTable": {
+        "title": "Add-On",
+        "isShown": true
+      },
+      "CreateInFooter": {}
+    }
+  },
+  "GAmount": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "GAmount"
+      },
+      "Create": {
+        "title": "GAmount"
+      },
+      "SubTable": {
+        "title": "GAmount",
+        "isShown": true
+      },
+      "CreateInFooter": {}
+    }
+  }
+}
