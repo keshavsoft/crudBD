@@ -16,11 +16,9 @@
       },
       "SubTable": {
         "isShown": true,
-        "title":"Item Name"
+        "title": "Item Name"
       },
-      "CreateInFooter": {
-        
-      }
+      "CreateInFooter": {}
     }
   },
   "RefPK": {
@@ -46,10 +44,8 @@
     }
   },
   "ItemRate": {
-    "type": "INTEGER",
+    "type": "STRING",
     "allowNull": false,
-   
-   
     "HtmlTags": {
       "Show": {
         "title": "ItemRate"
@@ -59,8 +55,7 @@
       },
       "SubTable": {
         "isShown": true,
-         "title": "Rate"
-     
+        "title": "Rate"
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
@@ -70,8 +65,6 @@
   "ItemQty": {
     "type": "INTEGER",
     "allowNull": false,
-    
-
     "HtmlTags": {
       "Show": {
         "title": "ItemQty"
@@ -81,7 +74,7 @@
       },
       "SubTable": {
         "isShown": true,
-         "title": "Qty"
+        "title": "Qty"
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
@@ -91,7 +84,6 @@
   "ItemAmount": {
     "type": "INTEGER",
     "allowNull": false,
-   
     "HtmlTags": {
       "Show": {
         "title": "ItemAmount"
@@ -101,7 +93,9 @@
       },
       "SubTable": {
         "isShown": true,
-        "title": "Amount"
+        "title": "Amount",
+        "isClientEval": true,
+        "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
