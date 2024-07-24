@@ -1,0 +1,15 @@
+{
+  "ItemName": {
+    "type": "STRING",
+    "unique": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "ItemName"
+      },
+      "Create": {
+        "title": "ItemName",
+        "RequiredTag": "required"
+      }
+    }
+  }
+}

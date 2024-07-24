@@ -1,0 +1,29 @@
+{
+  "CustomerNumber": {
+    "type": "NUMBER",
+    "unique": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "CustomerNumber"
+      },
+      "Create": {
+        "title": "CustomerNumber",
+        "AutoFocusTag": "autofocus",
+        "RequiredTag": "required"
+      }
+    }
+  },
+  "CustomerName": {
+    "type": "STRING",
+    "unique": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "CustomerName"
+      },
+      "Create": {
+        "title": "CustomerName",
+        "RequiredTag": "required"
+      }
+    }
+  }
+}
