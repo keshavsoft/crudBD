@@ -1,5 +1,5 @@
 {
-  "Item Name": {
+  "ItemName": {
     "type": "STRING",
     "allowNull": false,
     "references": {
@@ -15,7 +15,8 @@
         "AutoFocusTag": "autofocus"
       },
       "SubTable": {
-        "isShown": true
+        "isShown": true,
+        "title":"Item Name"
       },
       "CreateInFooter": {
         
@@ -57,7 +58,9 @@
         "title": "ItemRate"
       },
       "SubTable": {
-        "isShown": true
+        "isShown": true,
+         "title": "Rate"
+     
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
@@ -77,7 +80,8 @@
         "title": "ItemQty"
       },
       "SubTable": {
-        "isShown": true
+        "isShown": true,
+         "title": "Qty"
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
@@ -96,7 +100,8 @@
         "title": "ItemAmount"
       },
       "SubTable": {
-        "isShown": true
+        "isShown": true,
+        "title": "Amount"
       },
       "CreateInFooter": {
         "AutoFocusTag": "autofocus"
