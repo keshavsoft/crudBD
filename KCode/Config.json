@@ -1,7 +1,7 @@
 {
     "isSequelize": false,
     "ToDataDetails": {
-        "DataPk": 322,
+        "DataPk": 904,
         "DataPath": "KData/JSON",
         "DbName": "data",
         "DataSchemaLocation": "KCode/DataSchema"

@@ -61,5 +61,17 @@
         "title": "Date"
       }
     }
+  },
+  "ADVANCE": {
+    "type": "STRING",
+    "presentDate": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Advance"
+      },
+      "Create": {
+        "title": "Advance"
+      }
+    }
   }
 }

@@ -17,6 +17,16 @@
             "name": "Show",
             "url": "StichingPOSShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "RowShow",
+            "url": "StichingPOSShowToSubTable.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Advance",
+            "url": "StichingPOSShowToSubTableByJs.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       }
