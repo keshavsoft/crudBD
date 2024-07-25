@@ -7,8 +7,16 @@
         "title": "VoucherNumber"
       },
       "Create": {
-        "title": "VoucherNumber"
+        "title": "VoucherNumber",
+        "disabledTag":"disabled",
+        "isShow":true
+      },
+      "Alter": {
+        "title": "VoucherNumber",
+        "disabledTag":"disabled",
+        "isShow":true
       }
+      
     }
   },
   "CustomerNumber": {
@@ -23,7 +31,14 @@
       },
       "Create": {
         "title": "CustomerNumber",
-        "AutoFocusTag": "autofocus"
+        "AutoFocusTag": "autofocus",
+        "disabledTag":"disabled",
+        "isShow":true
+      },
+      "Alter": {
+        "title": "VoucherNumber",
+        "disabledTag":"disabled",
+        "isShow":true
       }
     }
   },
@@ -33,9 +48,15 @@
       "Show": {
         "title": "CustomerName"
       },
-      "Create": {
-        "title": "CustomerName",
-        "RequiredTag": "required"
+     "Create": {
+        "title": "VoucherName",
+        "disabledTag":"disabled",
+        "isShow":true
+      },
+      "Alter": {
+        "title": "VoucherName",
+        "disabledTag":"disabled",
+        "isShow":true
       }
     }
   },
@@ -45,8 +66,15 @@
       "Show": {
         "title": "Description"
       },
-      "Create": {
-        "title": "Description"
+     "Create": {
+        "title": "VoucherDescription",
+        "disabledTag":"disabled",
+        "isShow":true
+      },
+      "Alter": {
+        "title": "VoucherDescription",
+        "disabledTag":"disabled",
+        "isShow":false
       }
     }
   },
@@ -58,19 +86,50 @@
         "title": "Date"
       },
       "Create": {
-        "title": "Date"
+        "title": "Date",
+        "disabledTag":"disabled",
+        "isShow":true
+      },
+      "Alter": {
+        "title": "Date",
+        "disabledTag":"disabled",
+        "isShow":false
       }
     }
   },
   "ADVANCE": {
-    "type": "STRING",
-    "presentDate": true,
+    "type": "NUMBER",
+    
     "HtmlTags": {
       "Show": {
         "title": "Advance"
       },
       "Create": {
-        "title": "Advance"
+        "title": "Advance",
+        "disabledTag":"disabled",
+        "isShow":false
+      },
+      "Alter": {
+        "title": "Advance",
+        "disabledTag":""
+      }
+    }
+  },
+  "MODEOFPAYMENT": {
+    "type": "STRING",
+    
+    "HtmlTags": {
+      "Show": {
+        "title": "Mode Of Payment"
+      },
+      "Create": {
+        "title": "Mode Of Payment",
+        "disabledTag":"disabled",
+        "isShow": false
+      },
+      "Alter": {
+        "title": "Mode Of Payment",
+        "disabledTag":""
       }
     }
   }
