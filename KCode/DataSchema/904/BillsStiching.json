@@ -109,7 +109,9 @@
       },
       "SubTable": {
         "title": "GAmount",
-        "isShown": true
+        "isShown": true,
+        "isClientEval": true,
+        "ClientEvalString": "KSEval.GrossAmount+KSEval.AddOnAmount"
       },
       "CreateInFooter": {}
     }

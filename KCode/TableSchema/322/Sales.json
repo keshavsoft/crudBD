@@ -17,6 +17,16 @@
             "name": "Show",
             "url": "SalesShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowToSubTable",
+            "url": "SalesShowToSubTable.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowToSubTableByJs",
+            "url": "SalesShowToSubTableByJs.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       }
