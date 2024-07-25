@@ -4,25 +4,15 @@
     "max": true,
     "HtmlTags": {
       "Show": {
-        "title": "VoucherNumber"
+        "title": "Voucher #"
       },
       "Create": {
-        "title": "VoucherNumber",
+        "title": "Voucher #",
         "AutoFocusTag": "autofocus"
       }
     }
   },
-  "VOUCHERTYPE": {
-    "type": "STRING",
-    "HtmlTags": {
-      "Show": {
-        "title": "VoucherType"
-      },
-      "Create": {
-        "title": "VoucherType"
-      }
-    }
-  },
+  
   "PARTYNAME": {
     "type": "STRING",
     "references": {
@@ -31,10 +21,10 @@
     },
     "HtmlTags": {
       "Show": {
-        "title": "PartyName"
+        "title": "Party Name"
       },
       "Create": {
-        "title": "PartyName",
+        "title": "Party Name",
         "RequiredTag": "required"
       }
     }
