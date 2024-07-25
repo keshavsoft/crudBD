@@ -4,22 +4,28 @@
     "max": true,
     "HtmlTags": {
       "Show": {
-        "title": "VoucherNumber"
+        "title": "Voucher #",
+        "isShown": true
       },
       "Create": {
-        "title": "VoucherNumber",
+        "title": "Voucher #",
         "AutoFocusTag": "autofocus"
       }
     }
   },
   "VOUCHERTYPE": {
     "type": "STRING",
+    "isShown": false,
     "HtmlTags": {
       "Show": {
-        "title": "VoucherType"
+        "title": "VoucherType",
+        "isShown": false
       },
       "Create": {
         "title": "VoucherType"
+      },
+      "SubTable": {
+        "isShown": false
       }
     }
   },
@@ -31,10 +37,11 @@
     },
     "HtmlTags": {
       "Show": {
-        "title": "PartyName"
+        "title": "Party Name",
+        "isShown": true
       },
       "Create": {
-        "title": "PartyName",
+        "title": "Party Name",
         "RequiredTag": "required"
       }
     }
@@ -44,7 +51,8 @@
     "presentDate": true,
     "HtmlTags": {
       "Show": {
-        "title": "Date"
+        "title": "Date",
+        "isShown": true
       },
       "Create": {
         "title": "Date"

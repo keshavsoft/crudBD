@@ -4,7 +4,8 @@
       "unique": true,
       "HtmlTags": {
         "Show": {
-          "title": "Ledger Name"
+          "title": "Ledger Name",
+          "isShown": true
         },
         "Create": {
           "title": "Ledger Name",
@@ -16,7 +17,8 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "Ledger Guid"
+          "title": "Ledger Guid",
+          "isShown": true
         },
         "Create": {
           "title": "Ledger Guid"
