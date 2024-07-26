@@ -1,2 +1,5 @@
-xcopy .\KCode\DataSchema\322\*.json ..\FrontEndByVite\ColumnSchema
-xcopy .\KCode\TableSchema\322\*.json ..\FrontEndByVite\TableSchema
+@echo off
+set /p "datapk=Enter dataPk needed : "
+
+xcopy ".\KCode\DataSchema\%datapk%\*.json" ..\FrontEndByVite\ColumnSchema
+xcopy ".\KCode\TableSchema\%datapk%\*.json" ..\FrontEndByVite\TableSchema
