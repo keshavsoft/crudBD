@@ -29,6 +29,11 @@
             "icon": "bi bi-plus-circle"
           }
         ]
+      },
+      "main": {
+        "columns": [
+          "VOUCHERNUMBER"
+        ]
       }
     }
   }
