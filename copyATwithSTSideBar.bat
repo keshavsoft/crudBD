@@ -1,1 +1,0 @@
-xcopy ..\FrontEndByVite\publicDir\binATSubTableSideBar .\public\binATSubTableSideBar /h /i /c /k /e /r /y
