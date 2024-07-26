@@ -19,6 +19,123 @@
             "icon": "bi bi-plus-circle"
           }
         ]
+      },
+      "main": {
+        "columns": {
+          "ItemName": {
+            "type": "STRING",
+            "allowNull": false,
+            "references": {
+              "model": "ItemNames",
+              "key": "Item Name"
+            },
+            "HtmlTags": {
+              "Show": {
+                "title": "Item Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Item Name",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Item Name"
+              },
+              "CreateInFooter": {}
+            },
+            "RefPK": {
+              "type": "INTEGER",
+              "allowNull": false,
+              "references": {
+                "model": "Sales",
+                "key": "id"
+              },
+              "HtmlTags": {
+                "Show": {
+                  "title": "RefPK",
+                  "isShown": false
+                },
+                "Create": {
+                  "title": "RefPK",
+                  "isShown": false
+                },
+                "SubTable": {
+                  "isShown": false
+                },
+                "CreateInFooter": {
+                  "AutoFocusTag": "autofocus"
+                }
+              },
+              "ItemRate": {
+                "type": "STRING",
+                "allowNull": false,
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Rate",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Rate",
+                    "isShown": true
+                  },
+                  "SubTable": {
+                    "isShown": true,
+                    "title": "Rate"
+                  },
+                  "CreateInFooter": {
+                    "AutoFocusTag": "autofocus"
+                  }
+                }
+              },
+              "ItemQty": {
+                "type": "INTEGER",
+                "allowNull": false,
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Qty",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Qty",
+                    "isShown": true
+                  },
+                  "SubTable": {
+                    "isShown": true,
+                    "title": "Qty"
+                  },
+                  "CreateInFooter": {
+                    "AutoFocusTag": "autofocus"
+                  }
+                }
+              },
+              "ItemAmount": {
+                "type": "INTEGER",
+                "allowNull": false,
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Amount",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Amount",
+                    "isShown": true
+                  },
+                  "SubTable": {
+                    "isShown": true,
+                    "title": "Amount",
+                    "isClientEval": true,
+                    "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
+                  },
+                  "CreateInFooter": {
+                    "AutoFocusTag": "autofocus"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -42,6 +42,51 @@
                 "title": "Voucher #",
                 "AutoFocusTag": "autofocus",
                 "isShown": true
+              },
+              "VOUCHERTYPE": {
+                "isShown": false,
+                "HtmlTags": {
+                  "Show": {
+                    "title": "VoucherType",
+                    "isShown": false
+                  },
+                  "Create": {
+                    "title": "VoucherType",
+                    "isShown": true
+                  }
+                }
+              },
+              "PARTYNAME": {
+                "type": "STRING",
+                "references": {
+                  "model": "LedgerNames",
+                  "key": "LEDGERNAME"
+                },
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Party Name",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Party Name",
+                    "RequiredTag": "required",
+                    "isShown": true
+                  }
+                }
+              },
+              "DATE": {
+                "type": "DATEONLY",
+                "presentDate": true,
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Date",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Date",
+                    "isShown": true
+                  }
+                }
               }
             }
           }
