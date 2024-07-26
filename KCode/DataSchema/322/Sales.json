@@ -1,17 +1,7 @@
 {
   "VOUCHERNUMBER": {
     "type": "NUMBER",
-    "max": true,
-    "HtmlTags": {
-      "Show": {
-        "title": "Voucher #",
-        "isShown": true
-      },
-      "Create": {
-        "title": "Voucher #",
-        "AutoFocusTag": "autofocus"
-      }
-    }
+    "max": true
   },
   "VOUCHERTYPE": {
     "type": "STRING",

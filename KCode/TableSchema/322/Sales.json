@@ -31,9 +31,21 @@
         ]
       },
       "main": {
-        "columns": [
-          "VOUCHERNUMBER"
-        ]
+        "columns": {
+          "VOUCHERNUMBER": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Voucher #",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Voucher #",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              }
+            }
+          }
+        }
       }
     }
   }
