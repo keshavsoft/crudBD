@@ -19,6 +19,51 @@
             "icon": "bi bi-plus-circle"
           }
         ]
+      },
+      "main": {
+        "columns": {
+          "CustomerNumber": {
+            "HtmlTags": {
+              "Show": {
+                "title": "CustomerNumber",
+                "isShown": true
+              },
+              "Create": {
+                "title": "CustomerNumber",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "disabledTag": "disabled",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "CustomerNumber",
+                "RequiredTag": "required",
+                "disabledTag": "disabled",
+                "isShown": true
+              }
+            }
+          },
+          "CustomerName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "CustomerName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "CustomerName",
+                "RequiredTag": "required",
+                "disabledTag": "disabled",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "CustomerName",
+                "RequiredTag": "required",
+                "disabledTag": "disabled",
+                "isShown": true
+              }
+            }
+          }
+        }
       }
     }
   }
