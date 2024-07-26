@@ -19,6 +19,57 @@
             "icon": "bi bi-plus-circle"
           }
         ]
+      },
+      "main": {
+        "columns": {
+          "ItemName": {
+            "type": "STRING",
+            "unique": true,
+            "HtmlTags": {
+              "Show": {
+                "title": "Item Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Item Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "StockCategory": {
+            "type": "STRING",
+            "unique": true,
+            "HtmlTags": {
+              "Show": {
+                "title": "Stock Category",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Stock Category",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              }
+            }
+          },
+          "StockGroup": {
+            "type": "STRING",
+            "unique": true,
+            "HtmlTags": {
+              "Show": {
+                "title": "Stock Group",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Stock Group",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              }
+            }
+          }
+        }
       }
     }
   }
