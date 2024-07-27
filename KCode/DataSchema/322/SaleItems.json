@@ -5,20 +5,6 @@
     "references": {
       "model": "ItemNames",
       "key": "Item Name"
-    },
-    "HtmlTags": {
-      "Show": {
-        "title": "Item Name"
-      },
-      "Create": {
-        "title": "Item Name",
-        "AutoFocusTag": "autofocus"
-      },
-      "SubTable": {
-        "isShown": true,
-        "title": "Item Name"
-      },
-      "CreateInFooter": {}
     }
   },
   "RefPK": {
@@ -27,79 +13,18 @@
     "references": {
       "model": "Sales",
       "key": "id"
-    },
-    "HtmlTags": {
-      "Show": {
-        "title": "RefPK"
-      },
-      "Create": {
-        "title": "RefPK"
-      },
-      "SubTable": {
-        "isShown": false
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
     }
   },
   "ItemRate": {
     "type": "STRING",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "ItemRate"
-      },
-      "Create": {
-        "title": "ItemRate"
-      },
-      "SubTable": {
-        "isShown": true,
-        "title": "Rate"
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
-    }
+    "allowNull": false
   },
   "ItemQty": {
     "type": "INTEGER",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "ItemQty"
-      },
-      "Create": {
-        "title": "ItemQty"
-      },
-      "SubTable": {
-        "isShown": true,
-        "title": "Qty"
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
-    }
+    "allowNull": false
   },
   "ItemAmount": {
     "type": "INTEGER",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "ItemAmount"
-      },
-      "Create": {
-        "title": "ItemAmount"
-      },
-      "SubTable": {
-        "isShown": true,
-        "title": "Amount",
-        "isClientEval": true,
-        "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
-    }
+    "allowNull": false
   }
 }

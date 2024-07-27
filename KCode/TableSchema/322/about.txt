@@ -1,0 +1,1 @@
+copy the required json schema from crudBD/KCode/TableSchema

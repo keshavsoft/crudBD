@@ -23,12 +23,6 @@
       "main": {
         "columns": {
           "ItemName": {
-            "type": "STRING",
-            "allowNull": false,
-            "references": {
-              "model": "ItemNames",
-              "key": "Item Name"
-            },
             "HtmlTags": {
               "Show": {
                 "title": "Item Name",
@@ -39,99 +33,108 @@
                 "AutoFocusTag": "autofocus",
                 "isShown": true
               },
+              "Alter": {
+                "title": "Item Name",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
               "SubTable": {
                 "isShown": true,
                 "title": "Item Name"
               },
               "CreateInFooter": {}
-            },
-            "RefPK": {
-              "type": "INTEGER",
-              "allowNull": false,
-              "references": {
-                "model": "Sales",
-                "key": "id"
+            }
+          },
+          "RefPK": {
+            "HtmlTags": {
+              "Show": {
+                "title": "RefPK",
+                "isShown": false
               },
-              "HtmlTags": {
-                "Show": {
-                  "title": "RefPK",
-                  "isShown": false
-                },
-                "Create": {
-                  "title": "RefPK",
-                  "isShown": false
-                },
-                "SubTable": {
-                  "isShown": false
-                },
-                "CreateInFooter": {
-                  "AutoFocusTag": "autofocus"
-                }
+              "Create": {
+                "title": "RefPK",
+                "isShown": false
               },
-              "ItemRate": {
-                "type": "STRING",
-                "allowNull": false,
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Rate",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Rate",
-                    "isShown": true
-                  },
-                  "SubTable": {
-                    "isShown": true,
-                    "title": "Rate"
-                  },
-                  "CreateInFooter": {
-                    "AutoFocusTag": "autofocus"
-                  }
-                }
+              "Alter": {
+                "title": "RefPK",
+                "isShown": false
               },
-              "ItemQty": {
-                "type": "INTEGER",
-                "allowNull": false,
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Qty",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Qty",
-                    "isShown": true
-                  },
-                  "SubTable": {
-                    "isShown": true,
-                    "title": "Qty"
-                  },
-                  "CreateInFooter": {
-                    "AutoFocusTag": "autofocus"
-                  }
-                }
+              "SubTable": {
+                "isShown": false
               },
-              "ItemAmount": {
-                "type": "INTEGER",
-                "allowNull": false,
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Amount",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Amount",
-                    "isShown": true
-                  },
-                  "SubTable": {
-                    "isShown": true,
-                    "title": "Amount",
-                    "isClientEval": true,
-                    "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
-                  },
-                  "CreateInFooter": {
-                    "AutoFocusTag": "autofocus"
-                  }
-                }
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Rate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Rate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Rate",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Rate"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemQty": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Qty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Amount",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Amount",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Amount",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Amount",
+                "isClientEval": true,
+                "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
               }
             }
           }

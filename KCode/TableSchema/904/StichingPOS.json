@@ -41,12 +41,12 @@
               "Create": {
                 "title": "VoucherNumber",
                 "disabledTag": "disabled",
-                "isShow": true
+                "isShown": true
               },
               "Alter": {
                 "title": "VoucherNumber",
                 "disabledTag": "disabled",
-                "isShow": true
+                "isShown": true
               }
             }
           },
@@ -60,12 +60,12 @@
                 "title": "CustomerNumber",
                 "AutoFocusTag": "autofocus",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               },
               "Alter": {
                 "title": "VoucherNumber",
                 "disabledTag": "disabled",
-                "isShow": true
+                "isShown": true
               }
             }
           },
@@ -78,12 +78,12 @@
               "Create": {
                 "title": "VoucherName",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               },
               "Alter": {
                 "title": "VoucherName",
                 "disabledTag": "disabled",
-                "isShow": true
+                "isShown": true
               }
             }
           },
@@ -96,12 +96,12 @@
               "Create": {
                 "title": "VoucherDescription",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               },
               "Alter": {
                 "title": "VoucherDescription",
                 "disabledTag": "disabled",
-                "isShow": false
+                "isShown": false
               }
             }
           },
@@ -114,12 +114,12 @@
               "Create": {
                 "title": "Date",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               },
               "Alter": {
                 "title": "Date",
                 "disabledTag": "disabled",
-                "isShow": false
+                "isShown": false
               }
             }
           },
@@ -132,12 +132,12 @@
               "Create": {
                 "title": "Advance",
                 "disabledTag": "disabled",
-                "isShow": false
+                "isShown": false
               },
               "Alter": {
                 "title": "Advance",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               }
             }
           },
@@ -150,12 +150,12 @@
               "Create": {
                 "title": "Mode Of Payment",
                 "disabledTag": "disabled",
-                "isShow": false
+                "isShown": false
               },
               "Alter": {
                 "title": "Mode Of Payment",
                 "disabledTag": "",
-                "isShow": true
+                "isShown": true
               }
             }
           }

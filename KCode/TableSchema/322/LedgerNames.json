@@ -32,16 +32,25 @@
                 "title": "Ledger Name",
                 "AutoFocusTag": "autofocus"
               },
-              "GUID": {
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Ledger Guid",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Ledger Guid"
-                  }
-                }
+              "Alter": {
+                "title": "Ledger Name",
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "GUID": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Ledger Guid",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Ledger Guid",
+                "isShown": true
+              },
+              " Alter": {
+                "title": "Ledger Guid",
+                "isShown": true
               }
             }
           }
