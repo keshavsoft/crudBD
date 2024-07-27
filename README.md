@@ -5,6 +5,16 @@ generate backend and database from json schema
 
 [![KeshavSoft Logo](./KeshavSoft.jpg)](https://keshavsoft.com/)
 
+## **Table of Contents** 📚
+- [Overview](#Overview)
+- [Installation](#installation)
+- [Folder Structure](#folder-structure)
+- [Purpose of the Project](#purpose-of-the-project)
+- [Important Points](#important-points)
+- [advanced installation](#advancedinstallation)
+- [end points testing](#testendpoints)
+- [visual studio code extensions](#vscodeextensions)
+ 
 #### **Key Locations** 
 - **Backend:** root:bin
 - **Database:** root:KData/JSON
@@ -12,7 +22,7 @@ generate backend and database from json schema
 - **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
 - **Frontend :** root:public
 
-#### **run the below commands to prepare the repo** 
+### <a name="advancedinstallation"></a>## **advancedinstallation** 🚀
 - git clone https://github.com/keshavsoft/FrontEndByVite and keep in this location only
 - keep the needed value KCode/Config.json : ToDataDetails.DataPk, from KCode/DataSchema and KCode/TableSchema
 - FrontATSubTableSideBar.bat
@@ -23,22 +33,11 @@ generate backend and database from json schema
 - **Database:** run KCode/Database.js
 - **Frontend:** run npm run home
 
-#### **test the backend endpoints** 
+### <a name="testendpoints"></a>## **testendpoints** 🚀
 - bin/tablename/restClients folder for different end points
  
 #### **run the below commands to see the output** 
 - run npm run start
-
-
-## **Table of Contents** 📚
-- [Overview](#Overview)
-- [Installation](#installation)
-- [Folder Structure](#folder-structure)
-- [Purpose of the Project](#purpose-of-the-project)
-- [Important Points](#important-points)
-- [advanced installation](#advancedinstallation)
-- [visual studio code extensions](#vscodeextensions)
-
 
 ### <a name="overview"></a>## **Overview** 🔎
 This project focuses on automating crudBD operations for JSON files, making it easy to manage and manipulate data. It offers a user-friendly interface for performing essential actions on JSON files, such as creating, reading, updating, and deleting records.
@@ -145,8 +144,6 @@ ready with only flat json
 if want to run the repo without npm 
 
 BoilerPlate.bat -npm 
-
-### <a name="advancedinstallation"></a>## **Advanced Installation** 🚀
 
 the below steps avoids, npm installation, there by saving internet bandwidth.
 
