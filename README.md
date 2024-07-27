@@ -18,11 +18,14 @@ generate backend and database from json schema
 - FrontATSubTableSideBar.bat
 - node app
   
-- #### **run the below commands to generate them** 
+#### **run the below commands to generate them** 
 - **Backend:** run KCode/Backend.js
 - **Database:** run KCode/Database.js
 - **Frontend:** run npm run home
 
+#### **test the backend endpoints** 
+- bin/tablename/restClients folder for different end points
+ 
 #### **run the below commands to see the output** 
 - run npm run start
 
