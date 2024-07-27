@@ -12,7 +12,13 @@ generate backend and database from json schema
 - **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
 - **Frontend :** root:public
 
-#### **run the below commands to generate them** 
+#### **run the below commands to prepare the repo** 
+- git clone https://github.com/keshavsoft/FrontEndByVite and keep in this location only
+- keep the needed value KCode/Config.json : ToDataDetails.DataPk, from KCode/DataSchema and KCode/TableSchema
+- FrontATSubTableSideBar.bat
+- node app
+  
+- #### **run the below commands to generate them** 
 - **Backend:** run KCode/Backend.js
 - **Database:** run KCode/Database.js
 - **Frontend:** run npm run home
