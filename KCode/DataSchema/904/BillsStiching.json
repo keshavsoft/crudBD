@@ -5,22 +5,6 @@
     "references": {
       "model": "Items",
       "key": "ItemName"
-    },
-    "HtmlTags": {
-      "Show": {
-        "title": "ProductName"
-      },
-      "Create": {
-        "title": "ProductName",
-        "AutoFocusTag": "autofocus"
-      },
-      "SubTable": {
-        "title": "ProductName",
-        "isShown": true
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
     }
   },
   "FK": {
@@ -29,91 +13,22 @@
     "references": {
       "model": "StichingPOS",
       "key": "pk"
-    },
-    "HtmlTags": {
-      "Show": {
-        "title": "FK"
-      },
-      "Create": {
-        "title": "FK"
-      },
-      "SubTable": {
-        "title": "FK",
-        "isShown": false
-      },
-      "CreateInFooter": {
-        "AutoFocusTag": "autofocus"
-      }
     }
   },
   "GrossAmount": {
     "type": "INTEGER",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "GrossAmount"
-      },
-      "Create": {
-        "title": "GrossAmount"
-      },
-      "SubTable": {
-        "title": "Amount",
-        "isShown": true
-      },
-      "CreateInFooter": {}
-    }
+    "allowNull": false
   },
   "ItemDescription": {
     "type": "STRING",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "ItemDescription"
-      },
-      "Create": {
-        "title": "ItemDescription"
-      },
-      "SubTable": {
-        "title": "Description",
-        "isShown": true
-      },
-      "CreateInFooter": {}
-    }
+    "allowNull": false
   },
   "AddOnAmount": {
     "type": "INTEGER",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "AddOnAmount"
-      },
-      "Create": {
-        "title": "AddOnAmount"
-      },
-      "SubTable": {
-        "title": "Add-On",
-        "isShown": true
-      },
-      "CreateInFooter": {}
-    }
+    "allowNull": false
   },
   "GAmount": {
     "type": "INTEGER",
-    "allowNull": false,
-    "HtmlTags": {
-      "Show": {
-        "title": "GAmount"
-      },
-      "Create": {
-        "title": "GAmount"
-      },
-      "SubTable": {
-        "title": "GAmount",
-        "isShown": true,
-        "isClientEval": true,
-        "ClientEvalString": "KSEval.GrossAmount+KSEval.AddOnAmount"
-      },
-      "CreateInFooter": {}
-    }
+    "allowNull": false
   }
 }

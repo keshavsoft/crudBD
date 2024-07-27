@@ -1,17 +1,6 @@
 {
   "Item Name": {
     "type": "STRING",
-    "unique": true,
-    "HtmlTags": {
-      "Show": {
-        "title": "Item Name",
-        "isShown": true
-      },
-      "Create": {
-        "title": "Item Name",
-        "AutoFocusTag": "autofocus",
-        "RequiredTag": "required"
-      }
-    }
+    "unique": true
   }
 }

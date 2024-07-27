@@ -43,50 +43,61 @@
                 "AutoFocusTag": "autofocus",
                 "isShown": true
               },
-              "VOUCHERTYPE": {
-                "isShown": false,
-                "HtmlTags": {
-                  "Show": {
-                    "title": "VoucherType",
-                    "isShown": false
-                  },
-                  "Create": {
-                    "title": "VoucherType",
-                    "isShown": true
-                  }
-                }
+              "Alter": {
+                "title": "Voucher #",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              }
+            }
+          },
+          "VOUCHERTYPE": {
+            "HtmlTags": {
+              "Show": {
+                "title": "VoucherType",
+                "isShown": false
               },
-              "PARTYNAME": {
-                "type": "STRING",
-                "references": {
-                  "model": "LedgerNames",
-                  "key": "LEDGERNAME"
-                },
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Party Name",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Party Name",
-                    "RequiredTag": "required",
-                    "isShown": true
-                  }
-                }
+              "Create": {
+                "title": "VoucherType",
+                "isShown": true
               },
-              "DATE": {
-                "type": "DATEONLY",
-                "presentDate": true,
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Date",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Date",
-                    "isShown": true
-                  }
-                }
+              "Alter": {
+                "title": "VoucherType",
+                "isShown": true
+              }
+            }
+          },
+          "PARTYNAME": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Party Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Party Name",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              " Alter": {
+                "title": "Party Name",
+                "RequiredTag": "required",
+                "isShown": true,
+                "disabledTag":"disabled"
+              }
+            }
+          },
+          "DATE": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Date",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Date",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Date",
+                "isShown": true
               }
             }
           }
