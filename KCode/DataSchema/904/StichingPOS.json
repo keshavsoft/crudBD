@@ -1,136 +1,29 @@
 {
   "VOUCHERNUMBER": {
     "type": "NUMBER",
-    "max": true,
-    "HtmlTags": {
-      "Show": {
-        "title": "VoucherNumber"
-      },
-      "Create": {
-        "title": "VoucherNumber",
-        "disabledTag":"disabled",
-        "isShow":true
-      },
-      "Alter": {
-        "title": "VoucherNumber",
-        "disabledTag":"disabled",
-        "isShow":true
-      }
-      
-    }
+    "max": true
   },
   "CustomerNumber": {
     "type": "STRING",
     "references": {
       "model": "Customers",
       "key": "CustomerNumber"
-    },
-    "HtmlTags": {
-      "Show": {
-        "title": "CustomerNumber"
-      },
-      "Create": {
-        "title": "CustomerNumber",
-        "AutoFocusTag": "autofocus",
-        "disabledTag":"disabled",
-        "isShow":true
-      },
-      "Alter": {
-        "title": "VoucherNumber",
-        "disabledTag":"disabled",
-        "isShow":true
-      }
     }
   },
   "CustomerName": {
-    "type": "STRING",
-    "HtmlTags": {
-      "Show": {
-        "title": "CustomerName"
-      },
-     "Create": {
-        "title": "VoucherName",
-        "disabledTag":"disabled",
-        "isShow":true
-      },
-      "Alter": {
-        "title": "VoucherName",
-        "disabledTag":"disabled",
-        "isShow":true
-      }
-    }
+    "type": "STRING"
   },
   "Description": {
-    "type": "STRING",
-    "HtmlTags": {
-      "Show": {
-        "title": "Description"
-      },
-     "Create": {
-        "title": "VoucherDescription",
-        "disabledTag":"disabled",
-        "isShow":true
-      },
-      "Alter": {
-        "title": "VoucherDescription",
-        "disabledTag":"disabled",
-        "isShow":false
-      }
-    }
+    "type": "STRING"
   },
   "DATE": {
     "type": "DATEONLY",
-    "presentDate": true,
-    "HtmlTags": {
-      "Show": {
-        "title": "Date"
-      },
-      "Create": {
-        "title": "Date",
-        "disabledTag":"disabled",
-        "isShow":true
-      },
-      "Alter": {
-        "title": "Date",
-        "disabledTag":"disabled",
-        "isShow":false
-      }
-    }
+    "presentDate": true
   },
   "ADVANCE": {
-    "type": "NUMBER",
-    
-    "HtmlTags": {
-      "Show": {
-        "title": "Advance"
-      },
-      "Create": {
-        "title": "Advance",
-        "disabledTag":"disabled",
-        "isShow":false
-      },
-      "Alter": {
-        "title": "Advance",
-        "disabledTag":""
-      }
-    }
+    "type": "NUMBER"
   },
   "MODEOFPAYMENT": {
-    "type": "STRING",
-    
-    "HtmlTags": {
-      "Show": {
-        "title": "Mode Of Payment"
-      },
-      "Create": {
-        "title": "Mode Of Payment",
-        "disabledTag":"disabled",
-        "isShow": false
-      },
-      "Alter": {
-        "title": "Mode Of Payment",
-        "disabledTag":""
-      }
-    }
+    "type": "STRING"
   }
 }
