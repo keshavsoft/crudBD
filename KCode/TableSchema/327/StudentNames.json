@@ -14,6 +14,11 @@
             "icon": "bi bi-plus-circle"
           },
           {
+            "name": "CreateWithMobile",
+            "url": "StudentNamesCreateWithMobile.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
             "name": "Show",
             "url": "StudentNamesShow.html",
             "icon": "bi bi-plus-circle"
