@@ -13,7 +13,7 @@
       }
     },
     "StudentMobile": {
-      "type": "STRING",
+      "type": "MOBILE",
       "unique": true,
       "HtmlTags": {
         "Show": {

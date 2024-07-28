@@ -1,0 +1,63 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "StudentNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "StudentNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "StudentName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "StudentName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "StudentName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "StudentMobile": {
+            "HtmlTags": {
+              "Show": {
+                "title": "StudentMobile",
+                "isShown": true
+              },
+              "Create": {
+                "title": "StudentMobile",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
