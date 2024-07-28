@@ -49,7 +49,8 @@
                 "title": "StudentMobile",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required",
-                "isShown": true
+                "isShown": true,
+                "class": "mobileTwilioClass"
               },
               "CreateInFooter": {
                 "AutoFocusTag": "autofocus"
