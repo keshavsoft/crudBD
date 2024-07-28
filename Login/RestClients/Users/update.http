@@ -1,0 +1,7 @@
+PUT http://localhost:7016/Login/bin/Users/{UuID}
+content-type: application/json
+
+{
+"UserName":"",
+"Password":""
+}

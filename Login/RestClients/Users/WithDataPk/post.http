@@ -1,0 +1,9 @@
+POST http://localhost:7016/Login/bin/Users/withDataPk
+content-type: application/json
+
+{
+    "UserName":"Dwijesh",
+    "Password":"KeshavSoft",
+    "Mail":"dwijeshbingumalla@gmail.com",
+    "DataPk":321
+}

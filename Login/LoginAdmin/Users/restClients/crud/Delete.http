@@ -1,0 +1,7 @@
+###Get for as is data
+DELETE http://localhost:7016/Login/LoginAdmin/Users/084eb201-1f01-437c-bf19-b5d7760fcc45
+Content-Type: application/json
+
+{}
+
+

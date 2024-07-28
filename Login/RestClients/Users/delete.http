@@ -1,0 +1,1 @@
+DELETE http://localhost:7016/Login/bin/Users/{UuId}

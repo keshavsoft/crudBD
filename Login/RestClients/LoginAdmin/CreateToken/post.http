@@ -1,0 +1,7 @@
+POST http://localhost:7016/Login/LoginAdmin/CreateToken/UsingJwt
+content-type: application/json
+
+{
+    "UserName":"KeshavAdmin",
+    "Password":"KeshavSoft"
+}

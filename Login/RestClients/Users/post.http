@@ -1,0 +1,7 @@
+POST http://localhost:7016/Login/bin/Users
+content-type: application/json
+
+{
+    "UserName":"K1",
+    "Password":"K1"
+}

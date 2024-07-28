@@ -1,0 +1,1 @@
+GET http://localhost:7016/Login/bin/ValidateToken/UsingJwt/eyJhbGciOiJIUzI1NiJ9.RHZpamVzaA.gMSaZTlg4f7OuvuG7DRDk_CEEE7nQ-onZbmEDQAHICA

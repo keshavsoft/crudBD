@@ -3,6 +3,7 @@ import { router as routerFromBin } from "./bin/routes.js";
 import { router as routerForUtility } from "./Utility/routes.js";
 import { router as routerFromCommon } from "./Common/routes.js";
 import { router as routerFromCustom } from "./Custom/routes.js";
+import { router as routerFromLogin } from "./Login/routes.js";
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
@@ -49,6 +50,7 @@ app.use('/bin', routerFromBin);
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);
+app.use('/Login', routerFromLogin);
 
 function normalizePort(val) {
     var port = parseInt(val, 10);

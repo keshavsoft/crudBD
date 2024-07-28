@@ -3,7 +3,7 @@ node_modules/
 bin/
 dist/
 
-KData/
+KData/JSON/
 publicDir/
 public/
 

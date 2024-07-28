@@ -1,0 +1,7 @@
+###Get for as is data
+DELETE http://localhost:7016/Login/bin/Users/<Token>
+Content-Type: application/json
+
+{}
+
+

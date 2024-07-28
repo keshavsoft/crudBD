@@ -1,0 +1,10 @@
+###Get for as is data
+PUT http://localhost:7016/Login/bin/Users/1d89eb5e-0a66-4885-b6fa-df462a16ea69
+Content-Type: application/json
+
+{
+"UserName": "",
+"Password": ""
+}
+
+
