@@ -25,18 +25,18 @@
           "CustomerNumber": {
             "HtmlTags": {
               "Show": {
-                "title": "Phone",
+                "title": "CustomerNumber",
                 "isShown": true
               },
               "Create": {
-                "title": "Phone",
+                "title": "CustomerNumber",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required",
                 "disabledTag": "disabled",
                 "isShown": true
               },
               "Alter": {
-                "title": "Phone",
+                "title": "CustomerNumber",
                 "RequiredTag": "required",
                 "disabledTag": "disabled",
                 "isShown": true
@@ -46,17 +46,17 @@
           "CustomerName": {
             "HtmlTags": {
               "Show": {
-                "title": "Customer Name",
+                "title": "CustomerName",
                 "isShown": true
               },
               "Create": {
-                "title": "Customer Name",
+                "title": "CustomerName",
                 "RequiredTag": "required",
                 "disabledTag": "disabled",
                 "isShown": true
               },
               "Alter": {
-                "title": "Customer Name",
+                "title": "CustomerName",
                 "RequiredTag": "required",
                 "disabledTag": "disabled",
                 "isShown": true

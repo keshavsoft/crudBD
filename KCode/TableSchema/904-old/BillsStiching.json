@@ -1,0 +1,131 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "main": {
+        "columns": {
+          "ProductName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ProductName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ProductName",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "SubTable": {
+                "title": "ProductName",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "FK": {
+            "HtmlTags": {
+              "Show": {
+                "title": "FK",
+                "isShown": true
+              },
+              "Create": {
+                "title": "FK",
+                "isShown": true
+              },
+              "SubTable": {
+                "title": "FK",
+                "isShown": false
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "GrossAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GrossAmount",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GrossAmount",
+                "isShown": true
+              },
+              "SubTable": {
+                "title": "Amount",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": ""
+              }
+            }
+          },
+          "ItemDescription": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemDescription",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemDescription",
+                "isShown": true
+              },
+              "SubTable": {
+                "title": "Description",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": ""
+              }
+            }
+          },
+          "AddOnAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AddOnAmount"
+              },
+              "Create": {
+                "title": "AddOnAmount"
+              },
+              "SubTable": {
+                "title": "Add-On",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": ""
+              }
+            }
+          },
+          "GAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GAmount",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GAmount",
+                "isShown": true
+              },
+              "SubTable": {
+                "title": "GAmount",
+                "isShown": true,
+                "isClientEval": true,
+                "ClientEvalString": "KSEval.GrossAmount+KSEval.AddOnAmount"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

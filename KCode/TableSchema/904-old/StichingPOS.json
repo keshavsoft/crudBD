@@ -53,17 +53,17 @@
           "CustomerNumber": {
             "HtmlTags": {
               "Show": {
-                "title": "Phone",
+                "title": "CustomerNumber",
                 "isShown": true
               },
               "Create": {
-                "title": "Phone",
+                "title": "CustomerNumber",
                 "AutoFocusTag": "autofocus",
                 "disabledTag": "",
                 "isShown": true
               },
               "Alter": {
-                "title": "Phone",
+                "title": "VoucherNumber",
                 "disabledTag": "disabled",
                 "isShown": true
               }
@@ -72,16 +72,16 @@
           "CustomerName": {
             "HtmlTags": {
               "Show": {
-                "title": "Customer Name",
+                "title": "CustomerName",
                 "isShown": true
               },
               "Create": {
-                "title": "Customer Name",
+                "title": "VoucherName",
                 "disabledTag": "",
                 "isShown": true
               },
               "Alter": {
-                "title": "Customer Name",
+                "title": "VoucherName",
                 "disabledTag": "disabled",
                 "isShown": true
               }
@@ -94,12 +94,12 @@
                 "isShown": true
               },
               "Create": {
-                "title": "Description",
+                "title": "VoucherDescription",
                 "disabledTag": "",
                 "isShown": true
               },
               "Alter": {
-                "title": "Description",
+                "title": "VoucherDescription",
                 "disabledTag": "disabled",
                 "isShown": false
               }

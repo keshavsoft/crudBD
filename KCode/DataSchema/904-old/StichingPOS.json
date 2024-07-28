@@ -1,0 +1,29 @@
+{
+  "VOUCHERNUMBER": {
+    "type": "NUMBER",
+    "max": true
+  },
+  "CustomerNumber": {
+    "type": "STRING",
+    "references": {
+      "model": "Customers",
+      "key": "CustomerNumber"
+    }
+  },
+  "CustomerName": {
+    "type": "STRING"
+  },
+  "Description": {
+    "type": "STRING"
+  },
+  "DATE": {
+    "type": "DATEONLY",
+    "presentDate": true
+  },
+  "ADVANCE": {
+    "type": "NUMBER"
+  },
+  "MODEOFPAYMENT": {
+    "type": "STRING"
+  }
+}

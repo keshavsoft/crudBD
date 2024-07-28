@@ -25,39 +25,19 @@
           "ItemName": {
             "HtmlTags": {
               "Show": {
-                "title": "Item Name",
+                "title": "ItemName",
                 "isShown": true
               },
               "Create": {
-                "title": "Item Name",
+                "title": "ItemName",
                 "RequiredTag": "required",
                 "disabledTag": "",
                 "isShown": true
               },
               "Alter": {
-                "title": "Item Name",
+                "title": "ItemName",
                 "RequiredTag": "required",
                 "disabledTag": "disabled",
-                "isShown": true
-              }
-            }
-          },
-          "Rate": {
-            "HtmlTags": {
-              "Show": {
-                "title": "Rate",
-                "isShown": true
-              },
-              "Create": {
-                "title": "Rate",
-                "RequiredTag": "",
-                "disabledTag": "",
-                "isShown": true
-              },
-              "Alter": {
-                "title": "Rate",
-                "RequiredTag": "",
-                "disabledTag": "",
                 "isShown": true
               }
             }

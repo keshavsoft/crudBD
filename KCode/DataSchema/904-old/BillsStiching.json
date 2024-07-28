@@ -1,0 +1,34 @@
+{
+  "ProductName": {
+    "type": "STRING",
+    "allowNull": false,
+    "references": {
+      "model": "Items",
+      "key": "ItemName"
+    }
+  },
+  "FK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "StichingPOS",
+      "key": "pk"
+    }
+  },
+  "GrossAmount": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "ItemDescription": {
+    "type": "STRING",
+    "allowNull": false
+  },
+  "AddOnAmount": {
+    "type": "INTEGER",
+    "allowNull": false
+  },
+  "GAmount": {
+    "type": "INTEGER",
+    "allowNull": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "CustomerNumber": {
+    "type": "NUMBER",
+    "unique": true
+  },
+  "CustomerName": {
+    "type": "STRING",
+    "unique": false
+  }
+}
