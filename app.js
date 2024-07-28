@@ -1,11 +1,14 @@
 // import { router as routerFromSrc } from "./src/routes.js";
 import { router as routerFromBin } from "./bin/routes.js";
+import { router as routerFrombinSecured } from "./binSecured/routes.js";
 import { router as routerForUtility } from "./Utility/routes.js";
 import { router as routerFromCommon } from "./Common/routes.js";
 import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
+
+import { StartFunc as MiddleWaresBinSecured } from "./MiddleWares/MiddleWares.binSecured/EntryFile.js";
 
 import packageJSON from './package.json' assert {type: 'json'};
 
@@ -47,6 +50,7 @@ app.get('/AboutUs', (req, res) => {
 
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
+app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);

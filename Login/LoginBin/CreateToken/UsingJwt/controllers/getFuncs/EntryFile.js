@@ -6,4 +6,9 @@ let GetFunc = (req, res) => {
     res.json(LocalFromRepo);
 };
 
-export { GetFunc };
+let GetRemoveTokenFunc = (req, res) => {
+    res.cookie('KSToken', "Killed", { maxAge: 900000, httpOnly: false });
+    res.status(200);
+};
+
+export { GetFunc, GetRemoveTokenFunc };
