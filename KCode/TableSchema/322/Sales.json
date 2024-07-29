@@ -41,12 +41,13 @@
               "Create": {
                 "title": "Voucher #",
                 "AutoFocusTag": "autofocus",
-                "isShown": true
+                "isShown": true,
+                "disabledTag": "disabled"
               },
               "Alter": {
                 "title": "Voucher #",
                 "AutoFocusTag": "autofocus",
-                "isShown": true
+                "isShown": false
               }
             }
           },
@@ -58,11 +59,11 @@
               },
               "Create": {
                 "title": "VoucherType",
-                "isShown": true
+                "isShown": false
               },
               "Alter": {
                 "title": "VoucherType",
-                "isShown": true
+                "isShown": false
               }
             }
           },
@@ -77,11 +78,10 @@
                 "RequiredTag": "required",
                 "isShown": true
               },
-              " Alter": {
+              "Alter": {
                 "title": "Party Name",
                 "RequiredTag": "required",
-                "isShown": true,
-                "disabledTag":"disabled"
+                "isShown": true
               }
             }
           },
@@ -97,6 +97,23 @@
               },
               "Alter": {
                 "title": "Date",
+                "isShown": true
+              }
+            }
+          },
+          "PHONE": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Phone",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Phone",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Phone",
                 "isShown": true
               }
             }

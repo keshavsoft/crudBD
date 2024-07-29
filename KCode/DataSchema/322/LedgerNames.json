@@ -3,7 +3,10 @@
       "type": "STRING",
       "unique": true
     },
-    "GUID": {
+    "PLACE": {
       "type": "STRING"
+    },
+    "PHONENUMBER": {
+      "type": "NUMBER"
     }
   }

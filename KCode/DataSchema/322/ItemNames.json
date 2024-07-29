@@ -2,5 +2,17 @@
   "Item Name": {
     "type": "STRING",
     "unique": true
+  },
+  "StockCategory": {
+    "type": "STRING",
+    "unique": true
+  },
+  "StockGroup": {
+    "type": "STRING",
+    "unique": true
+  },
+  "Units": {
+    "type": "STRING",
+    "unique": true
   }
 }

@@ -79,6 +79,26 @@
                 "isShown": true
               }
             }
+          },
+          "Units": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Units",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Units",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Units",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              }
+            }
           }
         }
       }
