@@ -38,18 +38,34 @@
               }
             }
           },
-          "GUID": {
+          "PLACE": {
             "HtmlTags": {
               "Show": {
-                "title": "Ledger Guid",
+                "title": "Place",
                 "isShown": true
               },
               "Create": {
-                "title": "Ledger Guid",
+                "title": "Place",
                 "isShown": true
               },
               " Alter": {
-                "title": "Ledger Guid",
+                "title": "Place",
+                "isShown": true
+              }
+            }
+          },
+          "PHONENUMBER": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Phone",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Phone",
+                "isShown": true
+              },
+              " Alter": {
+                "title": "Phone",
                 "isShown": true
               }
             }

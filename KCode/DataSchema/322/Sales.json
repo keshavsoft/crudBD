@@ -17,5 +17,9 @@
   "DATE": {
     "type": "DATEONLY",
     "presentDate": true
+  },
+   "PHONE": {
+    "type": "NUMBER"
+    
   }
 }
