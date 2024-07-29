@@ -16,7 +16,7 @@ generate backend and database from json schema
 - [visual studio code extensions](#vscodeextensions)
  
 #### **Key Locations** 
-- **Backend:** root:bin
+- **Backend:** root:bin, root:binSecured ( for jwt protected end points same as bin )
 - **Database:** root:KData/JSON
 - **Table Schemas definition location :** root:KCode/DataSchema
 - **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
