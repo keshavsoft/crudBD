@@ -10,22 +10,12 @@
         "children": [
           {
             "name": "Create",
-            "url": "StichingPOSCreateDatalist.html",
+            "url": "ESTBillCreateDatalist.html",
             "icon": "bi bi-plus-circle"
           },
           {
-            "name": "Show",
-            "url": "StichingPOSShow.html",
-            "icon": "bi bi-plus-circle"
-          },
-          {
-            "name": "RowShow",
-            "url": "StichingPOSShowToSubTable.html",
-            "icon": "bi bi-plus-circle"
-          },
-          {
-            "name": "Advance",
-            "url": "StichingPOSShowToSubTableByJs.html",
+            "name": "ESTB",
+            "url": "ESTBillESTDashboard.html",
             "icon": "bi bi-plus-circle"
           }
         ]
