@@ -11,7 +11,7 @@
     "type": "INTEGER",
     "allowNull": false,
     "references": {
-      "model": "StichingPOS",
+      "model": "ESTBill",
       "key": "pk"
     }
   },

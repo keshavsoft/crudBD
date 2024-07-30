@@ -1,0 +1,86 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "main": {
+        "columns": {
+          "ProductName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ProductName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ProductName",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              }
+            }
+          },
+          "FK": {
+            "HtmlTags": {
+              "Show": {
+                "title": "FK",
+                "isShown": true
+              },
+              "Create": {
+                "title": "FK",
+                "isShown": true
+              }
+            }
+          },
+          "UnitRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GrossAmount",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GrossAmount",
+                "isShown": true
+              }
+            }
+          },
+          "Discount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemDescription",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemDescription",
+                "isShown": true
+              }
+            }
+          },
+          "AddOnAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AddOnAmount"
+              },
+              "Create": {
+                "title": "AddOnAmount"
+              }
+            }
+          },
+          "GrossAmout": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GAmount",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GAmount",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
