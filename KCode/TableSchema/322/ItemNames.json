@@ -17,6 +17,11 @@
             "name": "Show",
             "url": "ItemNamesShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "BulkInsert",
+            "url": "ItemNamesShowBulkInsert.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
