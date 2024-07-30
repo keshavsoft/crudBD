@@ -17,12 +17,17 @@
             "name": "Show",
             "url": "LedgerNamesShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "BulkInsert",
+            "url": "LedgerNamesShowBulkInsert.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
       "main": {
         "columns": {
-          "LEDGERNAME": {
+          "LedgerName": {
             "HtmlTags": {
               "Show": {
                 "title": "Ledger Name",
@@ -34,6 +39,22 @@
               },
               "Alter": {
                 "title": "Ledger Name",
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Guid": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Guid",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Guid",
+                "AutoFocusTag": "autofocus"
+              },
+              "Alter": {
+                "title": "Guid",
                 "AutoFocusTag": "autofocus"
               }
             }
