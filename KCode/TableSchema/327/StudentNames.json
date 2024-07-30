@@ -19,6 +19,16 @@
             "icon": "bi bi-plus-circle"
           },
           {
+            "name": "CreateCamera",
+            "url": "StudentNamesCreateCamera.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "CreateCameraOnModal",
+            "url": "StudentNamesCreateCameraOnModal.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
             "name": "Show",
             "url": "StudentNamesShow.html",
             "icon": "bi bi-plus-circle"
@@ -52,10 +62,41 @@
               },
               "Create": {
                 "title": "StudentMobile",
-                "AutoFocusTag": "autofocus",
                 "RequiredTag": "required",
                 "isShown": true,
                 "class": "mobileTwilioClass"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "StudentAlternateMobile": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Alternate Mobile",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Alternate Mobile",
+                "isShown": true,
+                "class": "mobileTwilioClass"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Date of Birth": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Date of Birth",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Date of Birth",
+                "RequiredTag": "required",
+                "isShown": true
               },
               "CreateInFooter": {
                 "AutoFocusTag": "autofocus"
