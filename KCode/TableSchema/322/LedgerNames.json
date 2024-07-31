@@ -27,7 +27,7 @@
       },
       "main": {
         "columns": {
-          "LedgerName": {
+          "LEDGERNAME": {
             "HtmlTags": {
               "Show": {
                 "title": "Ledger Name",
@@ -43,7 +43,7 @@
               }
             }
           },
-          "Guid": {
+          "GUID": {
             "HtmlTags": {
               "Show": {
                 "title": "Guid",

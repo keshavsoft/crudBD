@@ -1,17 +1,17 @@
 {
-  "Item Name": {
+  "ITEMNAME": {
     "type": "STRING",
     "unique": true
   },
-  "StockCategory": {
+  "ITEMCATEGORY": {
     "type": "STRING"
     
   },
-  "StockGroup": {
+  "ITEMGROUP": {
     "type": "STRING"
    
   },
-  "Units": {
+  "GUID": {
     "type": "STRING"
    
   }

@@ -27,7 +27,7 @@
       },
       "main": {
         "columns": {
-          "Item Name": {
+          "ITEMNAME": {
             "HtmlTags": {
               "Show": {
                 "title": "Item Name",
@@ -45,50 +45,50 @@
               }
             }
           },
-          "StockCategory": {
+          "ITEMCATEGORY": {
             "HtmlTags": {
               "Show": {
-                "title": "Stock Category",
+                "title": "Item Category",
                 "isShown": true
               },
               "Create": {
-                "title": "Stock Category",
+                "title": "Item Category",
                 "isShown": true
               },
               "Alter": {
-                "title": "Stock Category",
+                "title": "Item Category",
                 "isShown": true
               }
             }
           },
-          "StockGroup": {
+          "ITEMGROUP": {
             "HtmlTags": {
               "Show": {
-                "title": "Stock Group",
+                "title": "Item Group",
                 "isShown": true
               },
               "Create": {
-                "title": "Stock Group",
+                "title": "Item Group",
                 "isShown": true
               },
               "Alter": {
-                "title": "Stock Group",
+                "title": "Item Group",
                 "isShown": true
               }
             }
           },
-          "Units": {
+          "GUID": {
             "HtmlTags": {
               "Show": {
-                "title": "Units",
+                "title": "Guid",
                 "isShown": true
               },
               "Create": {
-                "title": "Units",
+                "title": "Guid",
                 "isShown": true
               },
               "Alter": {
-                "title": "Units",
+                "title": "Guid",
                 "isShown": true
               }
             }
