@@ -109,8 +109,8 @@
               },
               "Create": {
                 "title": "Phone",
-                "isShown": true,
-                "RequiredTag": "required"
+                "isShown": true
+              
               },
               "Alter": {
                 "title": "Phone",

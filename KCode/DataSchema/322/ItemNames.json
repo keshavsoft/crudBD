@@ -4,15 +4,15 @@
     "unique": true
   },
   "StockCategory": {
-    "type": "STRING",
-    "unique": true
+    "type": "STRING"
+    
   },
   "StockGroup": {
-    "type": "STRING",
-    "unique": true
+    "type": "STRING"
+   
   },
   "Units": {
-    "type": "STRING",
-    "unique": true
+    "type": "STRING"
+   
   }
 }
