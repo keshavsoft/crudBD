@@ -53,14 +53,10 @@
               },
               "Create": {
                 "title": "Stock Category",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               },
               "Alter": {
                 "title": "Stock Category",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               }
             }
@@ -73,14 +69,10 @@
               },
               "Create": {
                 "title": "Stock Group",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               },
               "Alter": {
                 "title": "Stock Group",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               }
             }
@@ -93,14 +85,10 @@
               },
               "Create": {
                 "title": "Units",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               },
               "Alter": {
                 "title": "Units",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required",
                 "isShown": true
               }
             }
