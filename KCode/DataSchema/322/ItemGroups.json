@@ -1,0 +1,21 @@
+{
+    "ITEMGROUPNAME": {
+      "type": "STRING",
+      "unique": true
+    },
+    "ITEMGROUPPARENT": {
+      "type": "STRING"
+    },
+    "ITEMGROUPALTERID": {
+      "type": "STRING"
+    },
+    "ITEMGROUPHSNAPPLICABLEFROM": {
+      "type": "STRING"
+    },
+    "ITEMGROUHSN": {
+      "type": "STRING"
+    },
+    "GUID": {
+      "type": "STRING"
+    }
+  }
