@@ -12,7 +12,6 @@
       "allowNull": true
     },
     "Date of Birth": {
-      "type": "DATEONLY",
-      "unique": true
+      "type": "DATEONLY"
     }
   }
