@@ -32,6 +32,11 @@
             "name": "Show",
             "url": "StudentNamesShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowWithImage",
+            "url": "StudentNamesShowWithImage.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
@@ -40,11 +45,11 @@
           "StudentName": {
             "HtmlTags": {
               "Show": {
-                "title": "StudentName",
+                "title": "Name",
                 "isShown": true
               },
               "Create": {
-                "title": "StudentName",
+                "title": "Name",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required",
                 "isShown": true
@@ -57,11 +62,11 @@
           "StudentMobile": {
             "HtmlTags": {
               "Show": {
-                "title": "StudentMobile",
+                "title": "Mobile",
                 "isShown": true
               },
               "Create": {
-                "title": "StudentMobile",
+                "title": "Mobile",
                 "RequiredTag": "required",
                 "isShown": true,
                 "class": "mobileTwilioClass"
@@ -87,14 +92,14 @@
               }
             }
           },
-          "Date of Birth": {
+          "Year of Birth": {
             "HtmlTags": {
               "Show": {
-                "title": "Date of Birth",
+                "title": "Year of Birth",
                 "isShown": true
               },
               "Create": {
-                "title": "Date of Birth",
+                "title": "Year of Birth",
                 "RequiredTag": "required",
                 "isShown": true
               },
