@@ -4,7 +4,7 @@
     "allowNull": false,
     "references": {
       "model": "ItemNames",
-      "key": "Item Name"
+      "key": "ITEMNAME"
     }
   },
   "RefPK": {
