@@ -1,5 +1,5 @@
   {
-    "LedgerName": {
+    "LEDGERNAME": {
       "type": "STRING",
       "unique": true
     },
@@ -9,7 +9,7 @@
     "PHONENUMBER": {
       "type": "NUMBER"
     },
-    "Guid": {
+    "GUID": {
       "type": "STRING"
     }
   }
