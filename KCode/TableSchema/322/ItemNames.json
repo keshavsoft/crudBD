@@ -10,7 +10,7 @@
         "children": [
           {
             "name": "Create",
-            "url": "ItemNamesCreateSingle.html",
+            "url": "ItemNamesCreateDatalist.html",
             "icon": "bi bi-plus-circle"
           },
           {
@@ -36,12 +36,14 @@
               "Create": {
                 "title": "Item Name",
                 "AutoFocusTag": "autofocus",
-                "RequiredTag": "required"
+                "RequiredTag": "required",
+                "isShown": true
               },
               "Alter": {
                 "title": "Item Name",
                 "AutoFocusTag": "autofocus",
-                "RequiredTag": "required"
+                "RequiredTag": "required",
+                "isShown": true
               }
             }
           },
