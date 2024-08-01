@@ -5,6 +5,47 @@
         "HeaderLi": {
           "ShowMessages": false
         }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "CustomerNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "CustomerNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "BulkInsert",
+            "url": "../",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "CustomerName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemCategory Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Customer Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "ItemCategory Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -1,78 +1,15 @@
 {
     "CustomerName": {
         "type": "STRING",
-        "allowNull": false,
-        "HtmlTags": {
-            "Show": {
-                "title": "CustomerName"
-            },
-            "Create": {
-                "title": "CustomerName",
-                "AutoFocusTag": "autofocus",
-                "RequiredTag": "required"
-            }
-        }
+        "allowNull": false
     },
     "Mobile": {
         "type": "NUMBER",
         "unique": true,
-        "allowNull": false,
-        "HtmlTags": {
-            "Show": {
-                "title": "Mobile"
-            },
-            "Create": {
-                "title": "Mobile",
-                "RequiredTag": "required"
-            }
-        }
+        "allowNull": false
     },
-    "DOB": {
-        "type": "DATEONLY",
-        "allowNull": true,
-        "HtmlTags": {
-            "Show": {
-                "title": "DOB"
-            },
-            "Create": {
-                "title": "DOB"
-            }
-        }
-    },
-    "GSTNumber ": {
-        "type": "STRING",
-        "allowNull": true,
-        "HtmlTags": {
-            "Show": {
-                "title": "GST Number"
-            },
-            "Create": {
-                "title": "GST Number"
-            }
-        }
-    },
-    "OCCUPATION": {
-        "type": "STRING",
-        "allowNull": true,
-        "HtmlTags": {
-            "Show": {
-                "title": "Occupation"
-            },
-            "Create": {
-                "title": "Occupation"
-            }
-        }
-    },
-    "Location": {
-        "type": "STRING",
-        "allowNull": true,
-        "HtmlTags": {
-            "Show": {
-                "title": "Location"
-            },
-            "Create": {
-                "title": "Location"
-            }
-        }
+    "City": {
+        "type": "NUMBER",
+        "allowNull": true
     }
 }
