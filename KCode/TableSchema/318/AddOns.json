@@ -1,0 +1,70 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "AddOnsCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "AddOnsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "BulkInsert",
+            "url": "../",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "AddOnService": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AddOnService",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AddOnService",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "AddOnService",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "AddOnRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AddOnRate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AddOnRate",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "AddOnRate",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
