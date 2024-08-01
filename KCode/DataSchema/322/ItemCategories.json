@@ -1,0 +1,15 @@
+{
+    "ITEMCATEGORYNAME": {
+        "type": "STRING",
+        "unique": true
+    },
+    "ITEMCATEGORYPARENT": {
+        "type": "STRING"
+    },
+    "ITEMCATEGORYALTERID": {
+        "type": "STRING"
+    },
+    "GUID": {
+        "type": "STRING"
+    }
+}

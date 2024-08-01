@@ -1,0 +1,116 @@
+{
+    "TableConfig": {
+        "HtmlConfig": {
+            "Header": {
+                "HeaderLi": {
+                    "ShowMessages": false
+                }
+            },
+            "SideBar": {
+                "children": [
+                    {
+                        "name": "Create",
+                        "url": "ItemCategoriesCreateSingle.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Show",
+                        "url": "ItemCategoriesShow.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "BulkInsert",
+                        "url": "ItemCategoriesShowBulkInsert.html",
+                        "icon": "bi bi-plus-circle"
+                    }
+                ]
+            },
+            "main": {
+                "columns": {
+                    "ITEMCATEGORYNAME": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "ItemCategory Name",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "ItemCategory Name",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required"
+                            },
+                            "Alter": {
+                                "title": "ItemCategory Name",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required"
+                            }
+                        }
+                    },
+                    "ITEMCATEGORYPARENT": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "ItemCategory Parent",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "ItemCategory Parent",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "ItemCategory Parent",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "ITEMGROUPALTERID": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "ItemGroup PalterId",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "ItemGroup PalterId",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "ItemGroup PalterId",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "ITEMCATEGORYALTERID": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "ItemCategoryal Terid",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "ItemCategoryal Terid",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "ItemCategoryal Terid",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "GUID": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Guid",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Guid",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Guid",
+                                "isShown": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
