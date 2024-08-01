@@ -9,6 +9,8 @@ import { StartFunc as StartFuncColumnsAsObject } from "../../kLowDb/GetTableSche
 import { StartFunc as StartFunMaxWithKey } from '../../kLowDb/ReadFile/MaxWithKey.js';
 import { StartFunc as StartFuncMaxRow } from '../../kLowDb/ReadFile/MaxRow.js';
 import { StartFunc as StartFuncUniqueWithKey } from '../../kLowDb/ReadFile/UniqueKey.js';
+import { StartFunc as StartFunSigleImage } from '../../kLowDb/ReadFile/SigleImage.js';
+
 
 let GetFunc = () => {
     return StartFuncreadFile();
@@ -72,10 +74,15 @@ let GetMaxRowFunc = () => {
     return StartFuncMaxRow();
 };
 
+let GetSigleImageFunc = async ({ inKey }) => {
+    return await StartFunSigleImage({ inKey });
+
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc, GetFilterDataFunc,
     GetColumnsSchemaFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc
+    GetUniqueWithKeyFunc, GetSigleImageFunc
 };

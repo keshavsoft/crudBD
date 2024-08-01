@@ -5,7 +5,7 @@ var router = express.Router();
 import {
     GetFunc, GetDataOnlyFunc, GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetFromModalFunc, GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
-    GetColumnsSchemaFunc, GetFilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc, GetUniqueWithKeyFunc, GetRawSqlFunc
+    GetColumnsSchemaFunc, GetFilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc, GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc
 } from '../../controllers/getFuncs/EntryFile.js';
 
 router.get('/FromModal', GetFromModalFunc);
@@ -18,6 +18,7 @@ router.get('/BodyCheck', GetBodyCheckFunc);
 router.get('/RowCount', GetRowCountFunc);
 router.get('/MaxRow', GetMaxRowFunc);
 router.get('/RawSql/:id', GetRawSqlFunc);
+router.get('/SingleImage/:RowPk', GetSigleImageFunc);
 
 router.get('/FilterData/:Key/:Value', GetFilterDataFunc);
 router.get('/Max/:Key', GetMaxWithKeyFunc);

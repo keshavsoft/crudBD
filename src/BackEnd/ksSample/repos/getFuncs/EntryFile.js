@@ -8,7 +8,8 @@ import {
     GetColumnsSchemaFunc as GetColumnsSchemaFuncDal,
     GetMaxWithKeyFunc as GetMaxWithKeyFuncDal,
     GetMaxRowFunc as GetMaxRowFuncDal,
-    GetUniqueWithKeyFunc as GetUniqueWithKeyFuncDal
+    GetUniqueWithKeyFunc as GetUniqueWithKeyFuncDal,
+    GetSigleImageFunc as GetSigleImageFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
@@ -104,11 +105,14 @@ let GetRawSqlFunc = async ({ inId }) => {
 
     return await { KReason: "Only From Sql " };
 };
+let GetSigleImageFunc = async ({ inKey }) => {
+    return await GetSigleImageFuncDal({ inKey });
+};
 
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetfilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc, GetRawSqlFunc
+    GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc
 };

@@ -9,7 +9,8 @@ import {
     GetMaxWithKeyFunc as GetMaxWithKeyFuncRepo,
     GetMaxRowFunc as GetMaxRowFuncRepo,
     GetUniqueWithKeyFunc as GetUniqueWithKeyFuncRepo,
-    GetRawSqlFunc as GetRawSqlFuncRepo
+    GetRawSqlFunc as GetRawSqlFuncRepo,
+    GetSigleImageFunc as GetSigleImageFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -136,6 +137,14 @@ let GetRawSqlFunc = async (req, res) => {
 
     res.json(LocalFromRepo.JsonData);
 };
+let GetSigleImageFunc = async (req, res) => {
+    let LocalParams = req.params;
+    let LocalKeyFromParam = LocalParams.RowPk;
+
+    let LocalFromRepo = await GetSigleImageFuncRepo({ inKey: LocalKeyFromParam, res });
+    res.setHeader('Content-Type', 'image/png');
+    res.send(LocalFromRepo);
+};
 
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
@@ -144,5 +153,5 @@ export {
     GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetFilterDataFunc,
     GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc, GetRawSqlFunc
+    GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc
 };
