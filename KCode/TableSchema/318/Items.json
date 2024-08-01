@@ -10,12 +10,12 @@
         "children": [
           {
             "name": "Create",
-            "url": "CustomerNamesCreateSingle.html",
+            "url": "ItemsCreateSingle.html",
             "icon": "bi bi-plus-circle"
           },
           {
             "name": "Show",
-            "url": "CustomerNamesShow.html",
+            "url": "ItemsShow.html",
             "icon": "bi bi-plus-circle"
           },
           {
@@ -27,132 +27,84 @@
       },
       "main": {
         "columns": {
-          "CustomerName": {
+          "Category": {
             "HtmlTags": {
               "Show": {
-                "title": "Customer Name",
+                "title": "Category",
                 "isShown": true
               },
               "Create": {
-                "title": "Customer Name",
+                "title": "Category",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required"
               },
               "Alter": {
-                "title": "Customer Name",
+                "title": "Category",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required"
               }
             }
           },
-          "Mobile": {
+          "ItemName": {
             "HtmlTags": {
               "Show": {
-                "title": "Mobile",
+                "title": "ItemName",
                 "isShown": true
               },
               "Create": {
-                "title": "Mobile",
+                "title": "ItemName",
                 "isShown": true
               },
               "Alter": {
-                "title": "Mobile",
+                "title": "CateItemNamegory",
                 "isShown": true
               }
             }
           },
-          "DOB": {
+          "Pcs": {
             "HtmlTags": {
               "Show": {
-                "title": "DOB",
+                "title": "Pcs",
                 "isShown": true
               },
               "Create": {
-                "title": "DOB",
+                "title": "Pcs",
                 "isShown": true
               },
               "Alter": {
-                "title": "DOB",
+                "title": "Pcs",
                 "isShown": true
               }
             }
           },
-          "GSTNumber": {
+          "WashType": {
             "HtmlTags": {
               "Show": {
-                "title": "GSTNumber",
+                "title": "WashType",
                 "isShown": true
               },
               "Create": {
-                "title": "GSTNumber",
+                "title": "WashType",
                 "isShown": true
               },
               "Alter": {
-                "title": "GSTNumber",
+                "title": "WashType",
                 "isShown": true
               }
             }
           },
-          "City": {
+          "WashRate": {
             "HtmlTags": {
               "Show": {
-                "title": "City",
+                "title": "WashRate",
                 "isShown": true
               },
               "Create": {
-                "title": "City",
+                "title": "WashRate",
                 "isShown": true
               },
               "Alter": {
-                "title": "City",
-                "isShown": true
-              }
-            }
-          },
-          "Occupation": {
-            "HtmlTags": {
-              "Show": {
-                "title": "Occupation",
-                "isShown": true
-              },
-              "Create": {
-                "title": "Occupation",
-                "isShown": true
-              },
-              "Alter": {
-                "title": "Occupation",
-                "isShown": true
-              }
-            }
-          },
-          "CompanyName": {
-            "HtmlTags": {
-              "Show": {
-                "title": "CompanyName",
-                "isShown": true
-              },
-              "Create": {
-                "title": "CompanyName",
-                "isShown": true
-              },
-              "Alter": {
-                "title": "CompanyName",
-                "isShown": true
-              }
-            }
-          },
-          "BranchName": {
-            "HtmlTags": {
-              "Show": {
-                "title": "BranchName",
-                "isShown": true
-              },
-              "Create": {
-                "title": "BranchName",
-                "isShown": true
-              },
-              "Alter": {
-                "title": "BranchName",
+                "title": "WashRate",
                 "isShown": true
               }
             }

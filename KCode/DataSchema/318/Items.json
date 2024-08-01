@@ -1,0 +1,22 @@
+{
+    "Category": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "ItemName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "Pcs": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "WashType": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "WashRate": {
+        "type": "NUMBER",
+        "allowNull": true
+    }
+}
