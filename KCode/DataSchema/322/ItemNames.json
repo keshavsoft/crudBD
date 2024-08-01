@@ -1,6 +1,7 @@
 {
   "ITEMNAME": {
-    "type": "STRING"
+    "type": "STRING",
+    "unique": true
   },
   "ITEMCATEGORY": {
     "type": "STRING",

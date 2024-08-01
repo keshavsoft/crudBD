@@ -3,8 +3,12 @@ set /p "datapk=Enter dataPk needed : "
 
 del /p ..\FrontEndByVite\ColumnSchema\*.json
 del /p ..\FrontEndByVite\TableSchema\*.json
-del /p ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles\*.html
-del /p ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\Js\pages\*.*
+
+rd /s..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles
+rd /s ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\Js\pages
+
+@REM del /p ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles\*.html
+@REM del /p /s ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\Js\pages\*.*
 
 xcopy ".\KCode\DataSchema\%datapk%\*.json" ..\FrontEndByVite\ColumnSchema
 xcopy ".\KCode\TableSchema\%datapk%\*.json" ..\FrontEndByVite\TableSchema
