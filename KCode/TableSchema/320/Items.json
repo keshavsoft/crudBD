@@ -1,71 +1,71 @@
 {
-    "TableConfig": {
-      "HtmlConfig": {
-        "Header": {
-          "HeaderLi": {
-            "ShowMessages": false
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-bag-heart",
+        "children": [
+          {
+            "name": "Create",
+            "url": "ItemsCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "CreateCamera",
+            "url": "ItemsCreateCamera.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "ItemsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowWithImage",
+            "url": "ItemsShowWithImage.html",
+            "icon": "bi bi-plus-circle"
           }
-        },
-        "SideBar": {
-          "children": [
-            {
-              "name": "Create",
-              "url": "ItemsCreateSingle.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "CreateCamera",
-              "url": "ItemsCreateCamera.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "Show",
-              "url": "ItemsShow.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "ShowWithImage",
-              "url": "ItemsShowWithImage.html",
-              "icon": "bi bi-plus-circle"
-            }
-          ]
-        },
-        "main": {
-          "columns": {
-            "ItemName": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "ItemName",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "ItemName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "ItemName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
-                }
+        ]
+      },
+      "main": {
+        "columns": {
+          "ItemName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "ItemName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
               }
-            },
-            "ItemRate": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "ItemRate",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "ItemRate",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "ItemRate",
-                  "isShown": true
-                }
+            }
+          },
+          "ItemRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemRate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemRate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "ItemRate",
+                "isShown": true
               }
             }
           }
@@ -73,3 +73,4 @@
       }
     }
   }
+}
