@@ -1,6 +1,6 @@
 import { StartFunc as StartFuncreadFile } from '../../kLowDb/ReadFileList/readFile.js';
 import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileList/readFileFromModal.js';
-import { StartFunc as StartFunReadFileById } from '../../kLowDb/ReadFileList/readFileById.js';
+// import { StartFunc as StartFunReadFileById } from '../../kLowDb/ReadFileList/readFileById.js';
 import { StartFunc as StartFunreadFileById } from '../../kLowDb/ReadFile/readFileById.js';
 import { StartFunc as StartFunFilterDataByKeyId } from '../../kLowDb/ReadFile/FilterInKeyInValue.js';
 
@@ -10,6 +10,7 @@ import { StartFunc as StartFunMaxWithKey } from '../../kLowDb/ReadFile/MaxWithKe
 import { StartFunc as StartFuncMaxRow } from '../../kLowDb/ReadFile/MaxRow.js';
 import { StartFunc as StartFuncUniqueWithKey } from '../../kLowDb/ReadFile/UniqueKey.js';
 import { StartFunc as StartFunSigleImage } from '../../kLowDb/ReadFile/SingleImage.js';
+import { StartFunc as imagesOnly } from '../../kLowDb/ReadFile/imagesOnly.js';
 
 let GetFunc = () => {
     return StartFuncreadFile();
@@ -77,10 +78,21 @@ let GetSigleImageFunc = ({ inKey, inResponse }) => {
     StartFunSigleImage({ inKey, inResponse });
 };
 
+let ImagesFunc = () => {
+    let LocalFromLowDb = imagesOnly();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb.JsonData;
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc, GetFilterDataFunc,
     GetColumnsSchemaFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc, GetSigleImageFunc
+    GetUniqueWithKeyFunc, GetSigleImageFunc,
+    ImagesFunc
 };

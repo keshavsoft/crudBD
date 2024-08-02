@@ -10,7 +10,7 @@
                 "children": [
                     {
                         "name": "Create",
-                        "url": "OrdersCreateDataList.html",
+                        "url": "OrdersCreateDatalist.html",
                         "icon": "bi bi-plus-circle"
                     },
                     {

@@ -10,7 +10,8 @@ import {
     GetMaxRowFunc as GetMaxRowFuncRepo,
     GetUniqueWithKeyFunc as GetUniqueWithKeyFuncRepo,
     GetRawSqlFunc as GetRawSqlFuncRepo,
-    GetSigleImageFunc as GetSigleImageFuncRepo
+    GetSigleImageFunc as GetSigleImageFuncRepo,
+    ImagesFunc as ImagesFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -149,6 +150,13 @@ let GetSigleImageFunc = (req, res) => {
     // res.send(LocalFromRepo);
 };
 
+let ImagesFunc = (req, res) => {
+    let LocalFromRepo = ImagesFuncRepo();
+
+    res.status(200).send(JSON.stringify(LocalFromRepo));
+    // res.json(LocalFromRepo);
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
@@ -156,5 +164,6 @@ export {
     GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetFilterDataFunc,
     GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc
+    GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc,
+    ImagesFunc
 };
