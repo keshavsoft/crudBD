@@ -13,19 +13,19 @@
     "allowNull": false,
     "references": {
       "model": "Orders",
-      "key": "pk"
+      "key": "id"
     }
   },
   "ItemRate": {
-    "type": "NUMBER",
+    "type": "INTEGER",
     "allowNull": false
   },
   "Qty": {
-    "type": "NUMBER",
+    "type": "INTEGER",
     "allowNull": false
   },
   "GRate": {
-    "type": "NUMBER",
+    "type": "INTEGER",
     "allowNull": false
   }
 }

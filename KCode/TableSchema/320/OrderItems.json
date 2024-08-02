@@ -1,98 +1,149 @@
 {
-    "TableConfig": {
-      "HtmlConfig": {
-        "Header": {
-          "HeaderLi": {
-            "ShowMessages": false
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "ItemsCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "ItemsShow.html",
+            "icon": "bi bi-plus-circle"
           }
-        },
-        "SideBar": {
-          "children": [
-            {
-              "name": "Create",
-              "url": "ItemsCreateSingle.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "Show",
-              "url": "ItemsShow.html",
-              "icon": "bi bi-plus-circle"
+        ]
+      },
+      "main": {
+        "columns": {
+          "ItemName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "ItemName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "ItemName"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
             }
-           
-          ]
-        },
-        "main": {
-          "columns": {
-            "ItemName": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "ItemName",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "ItemName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "ItemName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
-                }
+          },
+          "ItemRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemRate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemRate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "ItemRate",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "ItemRate"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
               }
-            },
-            "ItemRate": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "ItemRate",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "ItemRate",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "ItemRate",
-                  "isShown": true
-                }
+            }
+          },
+          "RefPK": {
+            "HtmlTags": {
+              "Show": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "Create": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "Alter": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "SubTable": {
+                "isShown": false
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
               }
-            },
-            "Qty": {
-                "HtmlTags": {
-                  "Show": {
-                    "title": "Qty",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "Qty",
-                    "isShown": true
-                  },
-                  "Alter": {
-                    "title": "Qty",
-                    "isShown": true
-                  }
-                }
-            },
-            "GRate": {
-                "HtmlTags": {
-                  "Show": {
-                    "title": "GRate",
-                    "isShown": true
-                  },
-                  "Create": {
-                    "title": "GRate",
-                    "isShown": true
-                  },
-                  "Alter": {
-                    "title": "GRate",
-                    "isShown": true
-                  }
-                }
+            }
+          },
+          "Qty": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                 "title": "Qty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "GRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GRate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GRate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "GRate",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "GRate",
+                 "isClientEval": true,
+                "ClientEvalString": "KSEval.ItemRate*KSEval.Qty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
             }
           }
         }
       }
     }
   }
+}
