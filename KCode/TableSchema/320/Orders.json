@@ -1,0 +1,81 @@
+{
+    "TableConfig": {
+        "HtmlConfig": {
+            "Header": {
+                "HeaderLi": {
+                    "ShowMessages": false
+                }
+            },
+            "SideBar": {
+                "children": [
+                    {
+                        "name": "Create",
+                        "url": "OrdersCreateDataList.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Show",
+                        "url": "OrdersShow.html",
+                        "icon": "bi bi-plus-circle"
+                    }
+                ]
+            },
+            "main": {
+                "columns": {
+                    "OrderDate": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "OrderDate",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "OrderDate",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "OrderDate",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "CustomerName": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "CustomerName",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "CustomerName",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "CustomerName",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "CustomerMobile": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "CustomerMobile",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "CustomerMobile",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "CustomerMobile",
+                                "isShown": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
