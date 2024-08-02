@@ -141,8 +141,7 @@ let GetSigleImageFunc = async (req, res) => {
     let LocalParams = req.params;
     let LocalKeyFromParam = LocalParams.RowPk;
 
-    let LocalFromRepo = await GetSigleImageFuncRepo({ inKey: LocalKeyFromParam, res });
-    res.setHeader('Content-Type', 'image/png');
+    let LocalFromRepo = await GetSigleImageFuncRepo({ inKey: LocalKeyFromParam });
     res.send(LocalFromRepo);
 };
 
