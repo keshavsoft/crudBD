@@ -7,6 +7,7 @@
         }
       },
       "SideBar": {
+        "icon": "bi bi-cart-plus-fill",
         "children": [
           {
             "name": "Create",
@@ -110,7 +111,7 @@
               },
               "SubTable": {
                 "isShown": true,
-                 "title": "Qty"
+                "title": "Qty"
               },
               "CreateInFooter": {
                 "AutoFocusTag": "autofocus"
@@ -134,7 +135,7 @@
               "SubTable": {
                 "isShown": true,
                 "title": "GRate",
-                 "isClientEval": true,
+                "isClientEval": true,
                 "ClientEvalString": "KSEval.ItemRate*KSEval.Qty"
               },
               "CreateInFooter": {
