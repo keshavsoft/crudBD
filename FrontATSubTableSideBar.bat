@@ -4,7 +4,7 @@ set /p "datapk=Enter dataPk needed : "
 del /p ..\FrontEndByVite\ColumnSchema\*.json
 del /p ..\FrontEndByVite\TableSchema\*.json
 
-rd /s..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles
+rd /s ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles
 rd /s ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\Js\pages
 
 @REM del /p ..\FrontEndByVite\src\AllTables\WithSSR\SubTableSideBar\SourceCode\HtmlFiles\*.html
