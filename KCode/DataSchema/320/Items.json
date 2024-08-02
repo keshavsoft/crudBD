@@ -2,7 +2,7 @@
     "ItemName": {
       "type": "STRING",
       "unique":true,
-      "allowNull": true
+      "allowNull": false
     },
     "ItemRate": {
       "type": "NUMBER",

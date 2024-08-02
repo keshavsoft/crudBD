@@ -14,11 +14,20 @@
               "icon": "bi bi-plus-circle"
             },
             {
+              "name": "CreateCamera",
+              "url": "ItemsCreateCamera.html",
+              "icon": "bi bi-plus-circle"
+            },
+            {
               "name": "Show",
               "url": "ItemsShow.html",
               "icon": "bi bi-plus-circle"
+            },
+            {
+              "name": "ShowWithImage",
+              "url": "ItemsShowWithImage.html",
+              "icon": "bi bi-plus-circle"
             }
-           
           ]
         },
         "main": {
