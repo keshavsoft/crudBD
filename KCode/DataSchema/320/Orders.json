@@ -1,14 +1,17 @@
   {
     "OrderDate": {
-      "type": "STRING",
-      "allowNull": true
+      "type": "DATEONLY",
+      "presentDate": true
     },
     "CustomerName": {
-      "type": "NUMBER",
-      "allowNull": false
+      "type": "STRING",
+      "references": {
+        "model": "Customers",
+        "key": "CustomerName"
+      }
     },
     "CustomerMobile": {
-      "type": "NUMBER",
-      "allowNull": false
+      "type": "NUMBER"
+      
     }
   }

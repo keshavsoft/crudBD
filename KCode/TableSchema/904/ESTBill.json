@@ -127,7 +127,7 @@
               "Alter": {
                 "title": "Advance",
                 "disabledTag": "",
-                "isShown": true
+                "isShown": false
               }
             }
           },
@@ -145,7 +145,7 @@
               "Alter": {
                 "title": "Mode Of Payment",
                 "disabledTag": "",
-                "isShown": true
+                "isShown": false
               }
             }
           }
