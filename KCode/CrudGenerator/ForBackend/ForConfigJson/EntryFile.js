@@ -23,6 +23,8 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
 
     LocalfileNameJsonData.jsonConfig.tableAndColumns = inTablesCollection;
     LocalfileNameJsonData.jsonConfig.DataPk = ConfigJson.ToDataDetails.DataPk;
+    LocalfileNameJsonData.jsonConfig.DataPath = ConfigJson.ToDataDetails.DataPath;
+  
     LocalfileNameJsonData.JsonPath = `${ConfigJson.JsonPath}/${ConfigJson.ToDataDetails.DataPk}`;
 
     fs.writeFileSync(`${LocalTo}/${LocalFileName}`, JSON.stringify(LocalfileNameJsonData));

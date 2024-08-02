@@ -2,7 +2,7 @@
   "name": "crudbd",
   "version": "1.0.0",
   "description": "generate backend and database from json schema",
-  "main": "app1.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

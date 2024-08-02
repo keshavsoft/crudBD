@@ -23,7 +23,8 @@ let GetFunc = async (req, res) => {
 let GetDataOnlyFunc = async (req, res) => {
     let LocalFromRepo = await GetDataOnlyFuncRepo();
 
-    res.json(LocalFromRepo);
+    res.status(200).send(JSON.stringify(LocalFromRepo));
+    // res.json(LocalFromRepo);
 };
 
 let GetIdFunc = async (req, res) => {
