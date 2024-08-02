@@ -1,18 +1,31 @@
-  {
-    "ItemName": {
-      "type": "STRING",
-      "allowNull": true
-    },
-    "ItemRate": {
-      "type": "NUMBER",
-      "allowNull": false
-    },
-    "Qty": {
-      "type": "NUMBER",
-      "allowNull": false
-    },
-    "GRate": {
-      "type": "NUMBER",
-      "allowNull": false
-    }
+{
+  "ItemName": {
+    "type": "STRING",
+    "allowNull": true,
+    "references": {
+    "model": "Items",
+    "key": "ItemName"
   }
+  
+  },
+  "RefPK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "Orders",
+      "key": "pk"
+    }
+  },
+  "ItemRate": {
+    "type": "NUMBER",
+    "allowNull": false
+  },
+  "Qty": {
+    "type": "NUMBER",
+    "allowNull": false
+  },
+  "GRate": {
+    "type": "NUMBER",
+    "allowNull": false
+  }
+}

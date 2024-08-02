@@ -1,26 +1,12 @@
   {
     "CustomerName": {
       "type": "STRING",
-      "allowNull": true,
-      "HtmlTags": {
-        "Create": {
-          "title": "CustomerName"
-        },
-        "Show": {
-          "title": "Customer Name"
-        }
-      }
+      "unique":true
+     
     },
     "CustomerMobile": {
       "type": "NUMBER",
-      "allowNull": false,
-      "HtmlTags": {
-        "Create": {
-          "title": "CustomerMobile"
-        },
-        "Show": {
-          "title": "Customer Mobile"
-        }
-      }
+      "allowNull": false
+      
     }
   }
