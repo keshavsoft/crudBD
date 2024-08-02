@@ -105,8 +105,8 @@ let GetRawSqlFunc = async ({ inId }) => {
 
     return await { KReason: "Only From Sql " };
 };
-let GetSigleImageFunc = async ({ inKey }) => {
-    return await GetSigleImageFuncDal({ inKey });
+let GetSigleImageFunc = ({ inKey, inResponse }) => {
+     GetSigleImageFuncDal({ inKey, inResponse });
 };
 
 export {

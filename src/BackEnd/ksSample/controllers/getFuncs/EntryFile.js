@@ -138,12 +138,15 @@ let GetRawSqlFunc = async (req, res) => {
 
     res.json(LocalFromRepo.JsonData);
 };
-let GetSigleImageFunc = async (req, res) => {
+let GetSigleImageFunc = (req, res) => {
     let LocalParams = req.params;
     let LocalKeyFromParam = LocalParams.RowPk;
 
-    let LocalFromRepo = await GetSigleImageFuncRepo({ inKey: LocalKeyFromParam });
-    res.send(LocalFromRepo);
+    GetSigleImageFuncRepo({
+        inKey: LocalKeyFromParam,
+        inResponse: res
+    });
+    // res.send(LocalFromRepo);
 };
 
 export {
