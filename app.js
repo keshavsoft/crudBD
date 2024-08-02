@@ -19,12 +19,17 @@ import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+global.__basedir = path.dirname(__filename);
+
 const app = express();
 const server = http.createServer(app);
 
 var port = normalizePort(process.env.PORT || '7019');
 
-// app.disable('x-powered-by');
+app.disable('x-powered-by');
 
 app.use(cookieParser());
 
