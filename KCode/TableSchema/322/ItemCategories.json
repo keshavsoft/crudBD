@@ -23,6 +23,11 @@
                         "name": "BulkInsert",
                         "url": "ItemCategoriesShowBulkInsert.html",
                         "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "ShowWithPagination",
+                        "url": "ItemCategoriesShowWithPagiNation.html",
+                        "icon": "bi bi-plus-circle"
                     }
                 ]
             },
