@@ -9,18 +9,8 @@
       "SideBar": {
         "children": [
           {
-            "name": "Create",
-            "url": "ItemsCreateSingle.html",
-            "icon": "bi bi-plus-circle"
-          },
-          {
             "name": "Show",
             "url": "ItemsShow.html",
-            "icon": "bi bi-plus-circle"
-          },
-          {
-            "name": "BulkInsert",
-            "url": "../",
             "icon": "bi bi-plus-circle"
           }
         ]
