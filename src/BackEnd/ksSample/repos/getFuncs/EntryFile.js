@@ -33,7 +33,7 @@ let GetFunc = async () => {
 
 let GetDataOnlyFunc = async () => {
     if (ConfigJson.isSequelize) {
-        return GetDataOnlyFuncDalsForSequelize();
+        return await GetDataOnlyFuncDalsForSequelize();
     };
 
     if (ConfigJson.isMongoDb) {

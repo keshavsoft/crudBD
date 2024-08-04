@@ -23,7 +23,7 @@ let GetDataOnlyFunc = () => {
         return false;
     };
 
-    return LocalFromLowDb.JsonData;
+    return LocalFromLowDb;
 };
 
 let GetIdFunc = async ({ inId }) => {

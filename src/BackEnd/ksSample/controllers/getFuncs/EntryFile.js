@@ -24,7 +24,13 @@ let GetFunc = async (req, res) => {
 let GetDataOnlyFunc = async (req, res) => {
     let LocalFromRepo = await GetDataOnlyFuncRepo();
 
-    res.status(200).send(JSON.stringify(LocalFromRepo));
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    // res.json(LocalFromRepo.JsonData);
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
     // res.json(LocalFromRepo);
 };
 
