@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 let StartFunc = ({ inToken }) => {
-    console.log("inToken:",inToken);
+    // console.log("inToken:",inToken);
     try {
         let jVarTokenInfo = jwt.verify(inToken, 'KeshavSoft');
         
