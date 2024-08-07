@@ -28,6 +28,11 @@
             "name": "ShowToSubTableByJs",
             "url": "SalesShowToSubTableByJs.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "RowShowSTPrint",
+            "url": "SalesRowShowPrint.html",
+            "icon": "bi bi-printer-fill"
           }
         ]
       },
