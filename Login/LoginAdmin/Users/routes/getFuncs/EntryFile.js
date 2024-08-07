@@ -6,6 +6,4 @@ import { GetFunc, ValidateEmailFunc } from '../../controllers/getFuncs/EntryFile
 router.get('/', GetFunc);
 router.get('/ValidateEmail/:Id', ValidateEmailFunc);
 
-
-
 export { router };
