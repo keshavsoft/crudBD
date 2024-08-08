@@ -18,6 +18,16 @@
                         "name": "Show",
                         "url": "ReceiptsShow.html",
                         "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Alter",
+                        "url": "ReceiptsShowAlterSSR.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Delete",
+                        "url": "ReceiptsDeleteSSR.html",
+                        "icon": "bi bi-plus-circle"
                     }
                 ]
             },
