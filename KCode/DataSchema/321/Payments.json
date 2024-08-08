@@ -1,7 +1,11 @@
 {
   "AccountName": {
     "type": "STRING",
-    "allowNull": false
+    "allowNull": false,
+    "references": {
+      "model": "Receipts",
+      "key": "id"
+    }
   },
   "Date": {
     "type": "STRING",

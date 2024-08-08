@@ -1,0 +1,111 @@
+{
+    "TableConfig": {
+        "HtmlConfig": {
+            "Header": {
+                "HeaderLi": {
+                    "ShowMessages": false
+                }
+            },
+            "main": {
+                "columns": {
+                    "AccountName": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "AccountName",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "AccountName",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "AccountName",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            },
+                            "SubTable": {
+                                "isShown": true,
+                                "title": "AccountName"
+                            },
+                            "CreateInFooter": {
+                                "AutoFocusTag": "autofocus"
+                            }
+                        }
+                    },
+                    "Date": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Date",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Date",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Date",
+                                "isShown": true
+                            },
+                            "SubTable": {
+                                "isShown": true,
+                                "title": "Date"
+                            },
+                            "CreateInFooter": {
+                                "AutoFocusTag": "autofocus"
+                            }
+                        }
+                    },
+                    "Description": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Description",
+                                "isShown": false
+                            },
+                            "Create": {
+                                "title": "Description",
+                                "isShown": false
+                            },
+                            "Alter": {
+                                "title": "Description",
+                                "isShown": false
+                            },
+                            "SubTable": {
+                                "isShown": false,
+                                "title": "Description"
+                            },
+                            "CreateInFooter": {
+                                "AutoFocusTag": "autofocus"
+                            }
+                        }
+                    },
+                    "Debit": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Debit",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Debit",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Debit",
+                                "isShown": true
+                            },
+                            "SubTable": {
+                                "isShown": true,
+                                "title": "Debit"
+                            },
+                            "CreateInFooter": {
+                                "AutoFocusTag": "autofocus"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

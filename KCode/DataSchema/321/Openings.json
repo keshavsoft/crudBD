@@ -4,7 +4,7 @@
     "allowNull": false
   },
   "Date": {
-    "type": "STRING",
+    "type": "DATEONLY",
     "allowNull": true
   },
   "Description": {
@@ -12,11 +12,11 @@
     "allowNull": true
   },
   "Credit": {
-    "type": "INTEGER",
+    "type": "STRING",
     "allowNull": true
   },
   "Debit": {
-    "type": "INTEGER",
+    "type": "STRING",
     "allowNull": true
   }
 }

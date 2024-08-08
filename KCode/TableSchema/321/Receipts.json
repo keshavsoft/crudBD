@@ -1,0 +1,98 @@
+{
+    "TableConfig": {
+        "HtmlConfig": {
+            "Header": {
+                "HeaderLi": {
+                    "ShowMessages": false
+                }
+            },
+            "SideBar": {
+                "icon": "bi bi-clipboard-data",
+                "children": [
+                    {
+                        "name": "Create",
+                        "url": "ReceiptsCreateDatalist.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Show",
+                        "url": "ReceiptsShow.html",
+                        "icon": "bi bi-plus-circle"
+                    }
+                ]
+            },
+            "main": {
+                "columns": {
+                    "AccountName": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "AccountName",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "AccountName",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "AccountName",
+                                "AutoFocusTag": "autofocus",
+                                "RequiredTag": "required",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "Date": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Date",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Date",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Date",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "Description": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Description",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Description",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Description",
+                                "isShown": true
+                            }
+                        }
+                    },
+                    "Credit": {
+                        "HtmlTags": {
+                            "Show": {
+                                "title": "Credit",
+                                "isShown": true
+                            },
+                            "Create": {
+                                "title": "Credit",
+                                "isShown": true
+                            },
+                            "Alter": {
+                                "title": "Credit",
+                                "isShown": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
