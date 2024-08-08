@@ -7,6 +7,14 @@
       "key": "id"
     }
   },
+  "RefPK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "Receipts",
+      "key": "id"
+    }
+  },
   "Date": {
     "type": "STRING",
     "allowNull": true
