@@ -9,36 +9,56 @@
       "SideBar": {
         "children": [
           {
-            "name": "Create",
-            "url": "StudentNamesCreateSingle.html",
-            "icon": "bi bi-plus-circle"
+              "name": "CRUD",
+              "isTitle": true,
+              "icon": "bi bi-back"
           },
           {
-            "name": "CreateWithMobile",
-            "url": "StudentNamesCreateWithMobile.html",
-            "icon": "bi bi-plus-circle"
+              "name": "Create",
+              "url": "Create.html",
+              "icon": "bi bi-plus-circle"
           },
           {
-            "name": "CreateCamera",
-            "url": "StudentNamesCreateCamera.html",
-            "icon": "bi bi-plus-circle"
+              "name": "CreateCamera",
+              "url": "CreateCamera.html",
+              "icon": "bi bi-camera-fill"
           },
           {
-            "name": "CreateCameraOnModal",
-            "url": "StudentNamesCreateCameraOnModal.html",
-            "icon": "bi bi-plus-circle"
+              "name": "CreateCameraOnModal",
+              "url": "CreateCameraOnModal.html",
+              "icon": "bi bi-camera-video-fill"
           },
           {
-            "name": "Show",
-            "url": "StudentNamesShow.html",
-            "icon": "bi bi-plus-circle"
+              "name": "Show",
+              "url": "Show.html",
+              "icon": "bi bi-table"
           },
           {
-            "name": "ShowWithImage",
-            "url": "StudentNamesShowWithImage.html",
-            "icon": "bi bi-plus-circle"
+              "name": "ShowNoSerial",
+              "url": "ShowNoSerial.html",
+              "icon": "bi bi-file-earmark-spreadsheet"
+          },
+          {
+              "name": "ShowWithInsert",
+              "url": "ShowTableFooterAddSSR.html",
+              "icon": "bi bi-file-earmark-plus"
+          },
+          {
+              "name": "Alter",
+              "url": "AlterWithSSR.html",
+              "icon": "bi bi-box-arrow-up-right"
+          },
+          {
+              "name": "ShowWithImage",
+              "url": "ShowWithImage.html",
+              "icon": "bi bi-filetype-jpg"
+          },
+          {
+              "name": "Delete",
+              "url": "DeleteSSR.html",
+              "icon": "bi bi-trash3"
           }
-        ]
+      ]
       },
       "main": {
         "columns": {
