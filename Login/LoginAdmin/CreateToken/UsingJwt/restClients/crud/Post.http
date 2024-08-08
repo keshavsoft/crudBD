@@ -1,10 +1,9 @@
 ###Get for as is data
-POST http://localhost:7016/Login/LoginAdmin/CreateToken/UsingJwt
+POST http://localhost:7019/Login/LoginAdmin/CreateToken/UsingJwt
 Content-Type: application/json
 
 {
-"UserName": "",
-"Password": ""
+"Secret": 984863021
 }
 
 

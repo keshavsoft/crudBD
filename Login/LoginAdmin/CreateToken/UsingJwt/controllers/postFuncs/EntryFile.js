@@ -1,17 +1,13 @@
-import { PostFunc as PostFuncRepo } from '../../repos/postFuncs/EntryFile.js';
 import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/CreateToken.js";
 
-let PostFunc = async (req, res) => {
+let PostFunc = (req, res) => {
     let LocalData = req.body;
+    let LocalSecret = LocalData.Secret;
 
-    let LocalUsername = LocalData.UserName;
-    let LocalPassword = LocalData.Password;
+    let LocalFromValidate = LocalFuncValidate({ inSecret: LocalSecret });
 
-    let LocalFromRepo = await PostFuncRepo({ inUsername: LocalUsername, inPassword: LocalPassword });
-
-    if (LocalFromRepo.KTF) {
-        let LocalDataPk = LocalFromRepo.DataPk;
-        let jVarLocalToken = StartFuncCreateToken({ inObject: LocalDataPk });
+    if (LocalFromValidate) {
+        let jVarLocalToken = StartFuncCreateToken({ inObject: 984863021 });
 
         res.cookie('KSAToken', jVarLocalToken, { maxAge: 900000, httpOnly: false });
         res.end(jVarLocalToken);
@@ -19,6 +15,12 @@ let PostFunc = async (req, res) => {
     else {
         res.status(401);
         res.end();
+    };
+};
+
+const LocalFuncValidate = ({ inSecret }) => {
+    if (inSecret === 984863021) {
+        return true;
     };
 };
 
