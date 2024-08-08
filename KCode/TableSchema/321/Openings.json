@@ -11,22 +11,12 @@
           "children": [
             {
               "name": "Create",
-              "url": "OpeningsCreateSingle.html",
+              "url": "OpeningsCreateDatalist.html",
               "icon": "bi bi-plus-circle"
             },
             {
               "name": "Show",
               "url": "OpeningsShow.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "Alter",
-              "url": "OpeningsShowAlterSSR.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "Delete",
-              "url": "OpeningsDeleteSSR.html",
               "icon": "bi bi-plus-circle"
             }
           ]
@@ -48,8 +38,7 @@
                 "Alter": {
                   "title": "AccountName",
                   "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
+                  "RequiredTag": "required"
                 }
               }
             },
