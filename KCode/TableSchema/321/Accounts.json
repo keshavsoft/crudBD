@@ -18,6 +18,16 @@
             "name": "Show",
             "url": "AccountsShow.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "AccountsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "AccountsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
