@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/CreateToken.js";
+import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/Bin/CreateToken.js";
 
 let PostFunc = (req, res) => {
     let LocalData = req.body;
@@ -19,7 +19,7 @@ let PostFunc = (req, res) => {
 };
 
 const LocalFuncValidate = ({ inSecret }) => {
-    if (inSecret === 984863021) {
+    if (inSecret === 9848163021) {
         return true;
     };
 };

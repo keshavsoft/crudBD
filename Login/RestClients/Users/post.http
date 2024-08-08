@@ -1,7 +1,8 @@
-POST http://localhost:7016/Login/bin/Users
+POST http://localhost:7019/Login/bin/Users
 content-type: application/json
 
 {
-    "UserName":"K1",
-    "Password":"K1"
+    "UserName": "k1",
+    "Password": "k1",
+    "isMailValidated": false
 }

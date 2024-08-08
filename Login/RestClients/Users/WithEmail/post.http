@@ -1,8 +1,8 @@
-POST http://localhost:7016/Login/bin/Users/endUser
+POST http://localhost:7019/Login/bin/Users/endUser
 content-type: application/json
 
 {
-    "UserName":"Dwijesh",
-    "Password":"KeshavSoft",
-    "Mail":"dwijeshbingumalla@gmail.com"
+    "UserName":"k1",
+    "Password":"k1",
+    "Mail":"nknnkumar@yahoo.com"
 }

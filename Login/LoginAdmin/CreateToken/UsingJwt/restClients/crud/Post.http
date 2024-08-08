@@ -3,7 +3,7 @@ POST http://localhost:7019/Login/LoginAdmin/CreateToken/UsingJwt
 Content-Type: application/json
 
 {
-"Secret": 984863021
+"Secret": "my Mobile Number"
 }
 
 

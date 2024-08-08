@@ -1,10 +1,9 @@
 [
   {
-    "UserName": "Keshav",
-    "Password": "KeshavSoft",
-    "isMailValidated": true,
+    "UserName": "k1",
+    "Password": "k1",
+    "isMailValidated": false,
     "Mail": "nknnkumar@yahoo.com",
-    "DataPk": 318,
-    "UuId": "e741bacb-f4a3-46fc-8462-4400c61c3384"
+    "UuId": "e48c819a-81e5-48bb-b565-f9463d9a3c38"
   }
 ]
