@@ -18,6 +18,16 @@
               "name": "Show",
               "url": "OpeningsShow.html",
               "icon": "bi bi-plus-circle"
+            },
+            {
+              "name": "Alter",
+              "url": "OpeningsShowAlterSSR.html",
+              "icon": "bi bi-plus-circle"
+            },
+            {
+              "name": "Delete",
+              "url": "OpeningsDeleteSSR.html",
+              "icon": "bi bi-plus-circle"
             }
           ]
         },
@@ -32,12 +42,14 @@
                 "Create": {
                   "title": "AccountName",
                   "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required"
+                  "RequiredTag": "required",
+                  "isShown": true
                 },
                 "Alter": {
                   "title": "AccountName",
                   "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required"
+                  "RequiredTag": "required",
+                  "isShown": true
                 }
               }
             },

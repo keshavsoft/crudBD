@@ -1,8 +1,6 @@
 {
   "AccountName": {
     "type": "STRING",
-    "unique":"true",
-    "allowNull": false,
     "references": {
         "model": "Openings",
         "key": "AccountName"
