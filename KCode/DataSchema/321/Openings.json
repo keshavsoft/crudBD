@@ -1,7 +1,11 @@
 {
   "AccountName": {
     "type": "STRING",
-    "unique":true
+    "unique":true,
+    "references": {
+        "model": "Accounts",
+        "key": "AccountName"
+      }
   },
   "Date": {
     "type": "DATEONLY",
