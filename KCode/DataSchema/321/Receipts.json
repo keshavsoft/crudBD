@@ -1,7 +1,11 @@
 {
   "AccountName": {
     "type": "STRING",
-    "allowNull": false
+    "allowNull": false,
+    "references": {
+        "model": "Openings",
+        "key": "AccountName"
+      }
   },
   "Date": {
     "type": "STRING",

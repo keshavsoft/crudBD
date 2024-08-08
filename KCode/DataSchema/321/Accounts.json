@@ -2,16 +2,7 @@
   "AccountName": {
     "type": "STRING",
     "allowNull": false,
-    "unique": true,
-    "HtmlTags": {
-      "Create": {
-        "AutoFocusTag": "autofocus",
-        "RequiredTag": "required"
-      },
-      "Show": {
-        "title": "Account Name"
-      }
-    }
+    "unique": true
   },
   "BSGroup": {
     "type": "STRING",
@@ -22,7 +13,7 @@
     "allowNull": true
   },
   "pk": {
-    "type": "INTEGER",
+    "type": "STRING",
     "primaryKey": true,
     "autoIncrement": true
   }
