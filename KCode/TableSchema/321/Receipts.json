@@ -30,7 +30,7 @@
                         "icon": "bi bi-plus-circle"
                     },
                     {
-                        "name": "Delete",
+                        "name": "Print",
                         "url": "ReceiptsRowShowPrint.html",
                         "icon": "bi bi-plus-circle"
                     }

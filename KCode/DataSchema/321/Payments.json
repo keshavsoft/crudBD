@@ -12,7 +12,7 @@
     }
   },
   "Date": {
-    "type": "STRING",
+    "type": "DATEONLY",
     "allowNull": true
   },
   "Description": {
@@ -20,7 +20,7 @@
     "allowNull": true
   },
   "Debit": {
-    "type": "INTEGER",
+    "type": "NUMBER",
     "allowNull": true
   }
 }
