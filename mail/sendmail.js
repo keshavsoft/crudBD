@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-let StartFunc = async ({inMail, inlink}) =>{
+let StartFunc = async ({ inMail, inlink }) => {
     if ("KS_MAIL_ID" in process.env === false) {
         console.log("KS_MAIL_ID not found in .env file");
         return await false;
@@ -14,16 +14,16 @@ let StartFunc = async ({inMail, inlink}) =>{
         return await false;
     };
 
-    await jFTransporter.sendMail({
-        from: `"Computer" ${process.env.KS_MAIL_ID}`, 
+    return await jFTransporter.sendMail({
+        from: `"Computer" ${process.env.KS_MAIL_ID}`,
         to: `${inMail}`,
-        subject: "Hello ✔", 
-        text: "To activate click on this", 
+        subject: "Hello ✔",
+        text: "To activate click on this",
         html: `<h3>To activate <h1><a href=${inlink}>Click here</a></h1></h3>`,
     });
 }
 
-let  jFTransporter = nodemailer.createTransport({
+let jFTransporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
@@ -33,4 +33,4 @@ let  jFTransporter = nodemailer.createTransport({
     },
 });
 
-export {StartFunc};
+export { StartFunc };

@@ -2,7 +2,6 @@ import Configjson from '../../../../../binSecured/Config.json' assert { type: 'j
 import { StartFunc as StartFuncReturnDbObject } from "../CommonFuncs/ReturnDbObject.js";
 
 let StartFunc = ({ inUsername, inPassword, inMail }) => {
-
     let LocalUsername = inUsername;
     let LocalPassword = inPassword;
     let LocalMail = inMail;
@@ -13,7 +12,7 @@ let StartFunc = ({ inUsername, inPassword, inMail }) => {
 
     LocalFromLowDb.read();
 
-    if ("error" in LocalFromLowDb.data){
+    if ("error" in LocalFromLowDb.data) {
         LocalReturnData.err = LocalFromLowDb.data.error;
         return LocalReturnData;
     }
@@ -34,7 +33,7 @@ let StartFunc = ({ inUsername, inPassword, inMail }) => {
         }
 
     };
-    
+
     let LocalUuId = uuidv4();
     let LocalObject = {};
     LocalObject.UserName = LocalUsername;
@@ -49,7 +48,6 @@ let StartFunc = ({ inUsername, inPassword, inMail }) => {
 
     LocalReturnData.KTF = true;
     LocalReturnData.JsonData = LocalFromLowDb.data;
-
 
     return LocalUuId;
 };

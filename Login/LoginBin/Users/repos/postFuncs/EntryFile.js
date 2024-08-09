@@ -11,8 +11,8 @@ let PostFuncWithMail = ({ inUsername, inPassword, inMail }) => {
     return PostFuncDalWithMail({ inUsername, inPassword, inMail });
 };
 
-let PostFuncWithEndUser = ({ inUsername, inPassword, inMail }) => {
-    return PostFuncDalEndUser({ inUsername, inPassword, inMail });
+let PostFuncWithEndUser = async ({ inDomainName, inUsername, inPassword, inMail }) => {
+    return await PostFuncDalEndUser({ inDomainName, inUsername, inPassword, inMail });
 };
 
 let PostFuncWithDataPk = ({ inUsername, inPassword, inMail, inDataPk }) => {
