@@ -79,7 +79,7 @@
               "ShowForPrint": {
                 "title": "VoucherType",
                 "AutoFocusTag": "autofocus",
-                "isShown": true
+                "isShown": false
               }
             }
           },
@@ -144,7 +144,7 @@
               "ShowForPrint": {
                 "title": "Phone",
                 "AutoFocusTag": "autofocus",
-                "isShown": true
+                "isShown": false
               }
             }
           }
