@@ -11,13 +11,13 @@ let StartFunc = ({ inUsername, inPassword }) => {
     LocalFromLowDb.read();
 
     if (LocalFromLowDb.data.length !== 0) {
-        let LocalFindData = LocalFromLowDb.data.find(e => e.UserName == LocalUsername && e.Password == LocalPassword)
+        let LocalFindData = LocalFromLowDb.data.find(e => e.UserName == LocalUsername && e.Password == LocalPassword && e.isMailValidated === true)
         if (LocalFindData !== undefined) {
             LocalReturnData.KTF = true;
             LocalReturnData.DataPk = LocalFindData.DataPk;
         }
     };
-    
+
     return LocalReturnData;
 };
 
