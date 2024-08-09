@@ -15,12 +15,12 @@
       "key": "id"
     }
   },
-  "ItemRate": {
-    "type": "STRING",
-    "allowNull": false
-  },
   "ItemQty": {
     "type": "INTEGER",
+    "allowNull": false
+  },
+  "ItemRate": {
+    "type": "STRING",
     "allowNull": false
   },
   "ItemAmount": {
