@@ -7,7 +7,7 @@
       }
   },
   "Date": {
-    "type": "STRING",
+    "type": "DATEONLY",
     "allowNull": true
   },
   "Description": {
@@ -15,7 +15,7 @@
     "allowNull": true
   },
   "Credit": {
-    "type": "STRING",
+    "type": "NUMBER",
     "allowNull": true
   }
 }

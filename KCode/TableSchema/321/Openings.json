@@ -11,7 +11,7 @@
         "children": [
           {
             "name": "Create",
-            "url": "OpeningsCreateDatalist.html",
+            "url": "OpeningsCreateDLToShow.html",
             "icon": "bi bi-plus-circle"
           },
           {

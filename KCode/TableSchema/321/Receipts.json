@@ -11,7 +11,7 @@
                 "children": [
                     {
                         "name": "Create",
-                        "url": "ReceiptsCreateDatalist.html",
+                        "url": "ReceiptsCreateDLToShow.html",
                         "icon": "bi bi-plus-circle"
                     },
                     {
@@ -27,6 +27,11 @@
                     {
                         "name": "Delete",
                         "url": "ReceiptsDeleteSSR.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Delete",
+                        "url": "ReceiptsRowShowPrint.html",
                         "icon": "bi bi-plus-circle"
                     }
                 ]
@@ -50,6 +55,11 @@
                                 "AutoFocusTag": "autofocus",
                                 "RequiredTag": "required",
                                 "isShown": true
+                            },
+                            "ShowForPrint": {
+                                "title": "AccountName",
+                                "AutoFocusTag": "autofocus",
+                                "isShown": true
                             }
                         }
                     },
@@ -65,6 +75,11 @@
                             },
                             "Alter": {
                                 "title": "Date",
+                                "isShown": true
+                            },
+                            "ShowForPrint": {
+                                "title": "Date",
+                                "AutoFocusTag": "autofocus",
                                 "isShown": true
                             }
                         }
@@ -82,6 +97,11 @@
                             "Alter": {
                                 "title": "Description",
                                 "isShown": true
+                            },
+                            "ShowForPrint": {
+                                "title": "Description",
+                                "AutoFocusTag": "autofocus",
+                                "isShown": true
                             }
                         }
                     },
@@ -97,6 +117,11 @@
                             },
                             "Alter": {
                                 "title": "Credit",
+                                "isShown": true
+                            },
+                            "ShowForPrint": {
+                                "title": "Credit",
+                                "AutoFocusTag": "autofocus",
                                 "isShown": true
                             }
                         }
