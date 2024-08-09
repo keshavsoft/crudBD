@@ -6,6 +6,36 @@
                     "ShowMessages": false
                 }
             },
+            "SideBar": {
+        "icon": "bi bi-card-list",
+        "children": [
+          {
+            "name": "Create",
+            "url": "PaymentsCreateDLToShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "PaymentsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowWithTotals",
+            "url": "PaymentsShowWithTotals.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "PaymentsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "PaymentsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
             "main": {
                 "columns": {
                     "AccountName": {
@@ -66,7 +96,7 @@
                             },
                             "Create": {
                                 "title": "Description",
-                                "isShown": false
+                                "isShown": true
                             },
                             "Alter": {
                                 "title": "Description",
