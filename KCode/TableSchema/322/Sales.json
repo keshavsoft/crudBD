@@ -33,6 +33,21 @@
             "name": "RowShowSTPrint",
             "url": "SalesRowShowPrint.html",
             "icon": "bi bi-printer-fill"
+          },
+          {
+            "name": "ShowPageWise",
+            "url": "SalesShowWithPagiNation.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "SalesShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "SalesDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
