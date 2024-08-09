@@ -20,6 +20,11 @@
             "icon": "bi bi-plus-circle"
           },
           {
+            "name": "ShowWithTotals",
+            "url": "OpeningsShowWithTotals.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
             "name": "Alter",
             "url": "OpeningsShowAlterSSR.html",
             "icon": "bi bi-plus-circle"
