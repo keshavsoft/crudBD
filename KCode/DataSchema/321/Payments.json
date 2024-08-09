@@ -1,11 +1,7 @@
 {
   "AccountName": {
     "type": "STRING",
-    "allowNull": false,
-    "references": {
-      "model": "Receipts",
-      "key": "id"
-    }
+    "allowNull": false
   },
   "RefPK": {
     "type": "INTEGER",

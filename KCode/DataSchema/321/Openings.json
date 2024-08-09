@@ -16,11 +16,11 @@
     "allowNull": true
   },
   "Credit": {
-    "type": "STRING",
+    "type": "Number",
     "allowNull": true
   },
   "Debit": {
-    "type": "STRING",
+    "type": "Number",
     "allowNull": true
   }
 }
