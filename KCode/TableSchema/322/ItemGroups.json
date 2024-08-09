@@ -23,6 +23,21 @@
               "name": "BulkInsert",
               "url": "ItemGroupsShowBulkInsert.html",
               "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowPageWise",
+                "url": "ItemGroupsShowWithPagiNation.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Alter",
+                "url": "ItemGroupsShowAlterSSR.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Delete",
+                "url": "ItemGroupsDeleteSSR.html",
+                "icon": "bi bi-plus-circle"
             }
           ]
         },

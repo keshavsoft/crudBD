@@ -7,7 +7,7 @@
                 }
             },
             "SideBar": {
-                "icon":"bi bi-collection-fill",
+                "icon": "bi bi-collection-fill",
                 "children": [
                     {
                         "name": "Create",
@@ -25,8 +25,18 @@
                         "icon": "bi bi-plus-circle"
                     },
                     {
-                        "name": "ShowWithPagination",
+                        "name": "ShowPageWise",
                         "url": "ItemCategoriesShowWithPagiNation.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Alter",
+                        "url": "ItemCategoriesShowAlterSSR.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Delete",
+                        "url": "ItemCategoriesDeleteSSR.html",
                         "icon": "bi bi-plus-circle"
                     }
                 ]

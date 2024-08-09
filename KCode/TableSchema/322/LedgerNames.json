@@ -23,6 +23,21 @@
             "name": "BulkInsert",
             "url": "LedgerNamesShowBulkInsert.html",
             "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowPageWise",
+            "url": "LedgerNamesShowWithPagiNation.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "LedgerNamesShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "LedgerNamesDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
           }
         ]
       },
