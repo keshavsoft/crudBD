@@ -1,109 +1,121 @@
 {
-    "TableConfig": {
-      "HtmlConfig": {
-        "Header": {
-          "HeaderLi": {
-            "ShowMessages": false
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-card-list",
+        "children": [
+          {
+            "name": "Create",
+            "url": "OpeningsCreateDatalist.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "OpeningsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "OpeningsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "OpeningsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
           }
-        },
-        "SideBar": {
-          "icon":"bi bi-card-list",
-          "children": [
-            {
-              "name": "Create",
-              "url": "OpeningsCreateDatalist.html",
-              "icon": "bi bi-plus-circle"
-            },
-            {
-              "name": "Show",
-              "url": "OpeningsShow.html",
-              "icon": "bi bi-plus-circle"
+        ]
+      },
+      "main": {
+        "columns": {
+          "AccountName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AccountName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
             }
-          ]
-        },
-        "main": {
-          "columns": {
-            "AccountName": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "AccountName",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "AccountName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "AccountName",
-                  "AutoFocusTag": "autofocus",
-                  "RequiredTag": "required"
-                }
+          },
+          "Date": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Create": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
               }
-            },
-            "Date": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "Date",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "Date",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "Date",
-                  "isShown": true
-                }
+            }
+          },
+          "Description": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Description",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Description",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Description",
+                "isShown": true
               }
-            },
-            "Description": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "Description",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "Description",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "Description",
-                  "isShown": true
-                }
+            }
+          },
+          "Credit": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Credit",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Credit",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Credit",
+                "isShown": true
               }
-            },
-            "Credit": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "Credit",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "Credit",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "Credit",
-                  "isShown": true
-                }
-              }
-            },
-            "Debit": {
-              "HtmlTags": {
-                "Show": {
-                  "title": "Debit",
-                  "isShown": true
-                },
-                "Create": {
-                  "title": "Debit",
-                  "isShown": true
-                },
-                "Alter": {
-                  "title": "Debit",
-                  "isShown": true
-                }
+            }
+          },
+          "Debit": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Debit",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Debit",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Debit",
+                "isShown": true
               }
             }
           }
@@ -111,3 +123,4 @@
       }
     }
   }
+}
