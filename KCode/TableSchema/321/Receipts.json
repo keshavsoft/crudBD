@@ -20,18 +20,18 @@
                         "icon": "bi bi-plus-circle"
                     },
                     {
-                        "name": "Alter",
+                        "name": "ShowWithTotal",
                         "url": "ReceiptsShowWithTotals.html",
+                        "icon": "bi bi-plus-circle"
+                    },
+                    {
+                        "name": "Alter",
+                        "url": "ReceiptsShowAlterSSR.html",
                         "icon": "bi bi-plus-circle"
                     },
                     {
                         "name": "Delete",
                         "url": "ReceiptsDeleteSSR.html",
-                        "icon": "bi bi-plus-circle"
-                    },
-                    {
-                        "name": "Print",
-                        "url": "ReceiptsRowShowPrint.html",
                         "icon": "bi bi-plus-circle"
                     }
                 ]
@@ -71,7 +71,8 @@
                             },
                             "Create": {
                                 "title": "Date",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Date",
@@ -92,7 +93,8 @@
                             },
                             "Create": {
                                 "title": "Description",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Description",
@@ -114,7 +116,8 @@
                             },
                             "Create": {
                                 "title": "Credit",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Credit",
