@@ -1,0 +1,11 @@
+###Get for as is data
+POST http://localhost:7019/Login/bin/Users/endUser
+Content-Type: application/json
+
+{
+"UserName": "",
+"Password": "",
+"Mail":""
+}
+
+
