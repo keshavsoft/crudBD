@@ -21,7 +21,7 @@
                     },
                     {
                         "name": "Alter",
-                        "url": "ReceiptsShowAlterSSR.html",
+                        "url": "ReceiptsShowWithTotals.html",
                         "icon": "bi bi-plus-circle"
                     },
                     {
@@ -109,7 +109,8 @@
                         "HtmlTags": {
                             "Show": {
                                 "title": "Credit",
-                                "isShown": true
+                                "isShown": true,
+                                "footerFormatter": "totalFormatter"
                             },
                             "Create": {
                                 "title": "Credit",

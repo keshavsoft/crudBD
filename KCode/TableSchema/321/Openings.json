@@ -113,7 +113,8 @@
             "HtmlTags": {
               "Show": {
                 "title": "Debit",
-                "isShown": true
+                "isShown": true,
+                "footerFormatter": "totalFormatter"
               },
               "Create": {
                 "title": "Debit",

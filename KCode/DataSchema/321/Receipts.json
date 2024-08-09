@@ -2,7 +2,7 @@
   "AccountName": {
     "type": "STRING",
      "references": {
-        "model": "Openings",
+        "model": "Accounts",
         "key": "AccountName"
       }
   },
