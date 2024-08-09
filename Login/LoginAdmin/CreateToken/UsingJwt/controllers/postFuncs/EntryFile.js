@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/Bin/CreateToken.js";
+import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/JwtBin/CreateToken.js";
 
 let PostFunc = (req, res) => {
     let LocalData = req.body;
