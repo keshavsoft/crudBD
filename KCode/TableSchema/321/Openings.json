@@ -96,7 +96,8 @@
             "HtmlTags": {
               "Show": {
                 "title": "Credit",
-                "isShown": true
+                "isShown": true,
+                "footerFormatter": "totalFormatter"
               },
               "Create": {
                 "title": "Credit",
