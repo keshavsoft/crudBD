@@ -1,5 +1,6 @@
 import { PostFunc as PostFuncRepo } from '../../repos/postFuncs/EntryFile.js';
-import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/CreateToken.js";
+// import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/CreateToken.js";
+import { StartFunc as StartFuncCreateToken } from "../../../../../../Token/jwt/JwtBin/CreateToken.js";
 
 let PostFunc = async (req, res) => {
     let LocalData = req.body;
