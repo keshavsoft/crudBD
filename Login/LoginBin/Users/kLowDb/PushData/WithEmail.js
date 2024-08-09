@@ -1,5 +1,4 @@
-import fs from "fs";
-
+import Configjson from '../../../../../binSecured/Config.json' assert { type: 'json' };
 import { StartFunc as StartFuncReturnDbObject } from "../CommonFuncs/ReturnDbObject.js";
 
 let StartFunc = ({ inUsername, inPassword, inMail }) => {
@@ -43,6 +42,7 @@ let StartFunc = ({ inUsername, inPassword, inMail }) => {
     LocalObject.isMailValidated = false;
     LocalObject.Mail = LocalMail;
     LocalObject.UuId = LocalUuId;
+    LocalObject.DataPk = Configjson.jsonConfig.DataPk;
 
     LocalFromLowDb.data.push(LocalObject);
     LocalFromLowDb.write();
