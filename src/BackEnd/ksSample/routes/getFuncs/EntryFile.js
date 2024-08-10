@@ -7,7 +7,7 @@ import {
     GetFromModalFunc, GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetFilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
     GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc,
-    ImagesFunc, GetDataFilterByColumnFunc
+    ImagesFunc, GetDataShortByColumnFunc
 } from '../../controllers/getFuncs/EntryFile.js';
 
 router.get('/Images', ImagesFunc);
@@ -17,7 +17,7 @@ router.get('/', GetFunc);
 router.get('/FromModalUuid', GetFromModalUuidFunc);
 router.get('/FromModalUuidAndTS', GetFromModalUuidAndTSFunc);
 router.get('/DataOnly', GetDataOnlyFunc);
-router.get('/Sort/:Column', GetDataFilterByColumnFunc);
+router.get('/Sort/:Column', GetDataShortByColumnFunc);
 
 router.get('/BodyCheck', GetBodyCheckFunc);
 router.get('/RowCount', GetRowCountFunc);
