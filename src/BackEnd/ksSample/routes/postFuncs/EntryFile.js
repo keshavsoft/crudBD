@@ -7,7 +7,7 @@ import {
     PostUploadFunc, PostGetSelectColumnsFunc, PostUploadFromModalFunc,
     PostUploadImageFunc, PostFilterFunc, PostWithKeysCheckFunc,
     PostFuncGenUuId, PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
-    UploadImageAsDataFunc
+    UploadImageAsDataFunc, PostSendMailFunc
 } from '../../controllers/postFuncs/EntryFile.js';
 
 import {
@@ -27,7 +27,7 @@ router.post('/BodyCheck', PostFuncmiddleware, PostFunc);
 router.post('/GetSelectColumns', PostGetSelectColumnsFunc);
 // Post - it's check foreign and unique check and it's collect Max pk and generate UuId And pk also
 router.post('/', PostFunc);
-router.post('/SendMail', PostFunc);
+router.post('/SendMail', PostSendMailFunc);
 
 router.post('/CustomPk', PostCustomPkFunc);
 router.post('/GenUuId', PostFuncGenUuId);

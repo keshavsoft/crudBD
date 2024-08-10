@@ -16,6 +16,9 @@ import { StartFunc as StartFuncBulkInsertCheck } from '../../kLowDb/WriteTofile/
 import { StartFunc as StartFuncCustomPk } from '../../kLowDb/WriteTofile/InsertRow/CustomPk.js';
 import { StartFunc as WithImage } from '../../kLowDb/WriteTofile/WithChecking/WithImage.js';
 
+let PostSendMailFunc = (inPostBody) => {
+    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+};
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
@@ -70,5 +73,5 @@ export {
     PostUploadFromModalFunc, PostWithKeysCheckFunc,
     PostFuncGenUuId, PostFilterFunc,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
-    PostCustomPkFunc, UploadImageAsDataFunc
+    PostCustomPkFunc, UploadImageAsDataFunc, PostSendMailFunc
 };

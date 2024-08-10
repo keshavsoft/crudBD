@@ -4,8 +4,12 @@ import { StartFunc as bulkInsertAsIs } from '../../kSequelize/WriteToFile/bulkIn
 
 import { StartFunc as StartFuncImportToFile } from '../../kSequelize/WriteFileList/ImportToFile.js';
 import { StartFunc as StartFuncInsertRow } from "../../kSequelize/WriteToFile/InsertRow.js";
+import { StartFunc as StartFuncSendMail } from "../../kSequelize/WriteToFile/SendMail.js";
 
 
+let PostSendMailFunc = (inPostBody) => {
+    return StartFuncSendMail(inPostBody);
+};
 let PostFunc = (inPostBody) => {
     return StartFuncInsertRow(inPostBody);
 };
@@ -33,5 +37,5 @@ let PostGetSelectColumnsFunc = ({ LocalBodyAsModal }) => {
 export {
     PostFunc, PostFromModalFunc,
     PostUploadFunc, PostGetSelectColumnsFunc, PostUploadFromModalFunc,
-    MultiInsertWithCheckFunc
+    MultiInsertWithCheckFunc,PostSendMailFunc
 };

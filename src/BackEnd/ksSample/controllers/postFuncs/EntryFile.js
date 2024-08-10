@@ -12,7 +12,8 @@ import {
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo,
     MultiInsertWithCheckFunc as MultiInsertWithCheckFuncRepo,
     PostCustomPkFunc as PostCustomPkFuncRepo,
-    UploadImageAsDataFunc as UploadImageAsDataFuncDalRepo
+    UploadImageAsDataFunc as UploadImageAsDataFuncDalRepo,
+    PostSendMailFunc as PostSendMailFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 import {
@@ -21,6 +22,18 @@ import {
 
 import { ClassSample } from '../../ModalClass.js';
 
+let PostSendMailFunc = async (req, res) => {
+    let LocalBody = req.body;
+
+    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo.pk.toString());
+};
 let PostFunc = async (req, res) => {
     let LocalBody = req.body;
 
@@ -219,5 +232,5 @@ export {
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc,
-    UploadImageAsDataFunc
+    UploadImageAsDataFunc,PostSendMailFunc
 };

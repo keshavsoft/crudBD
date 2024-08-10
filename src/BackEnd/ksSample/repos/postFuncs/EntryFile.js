@@ -8,7 +8,8 @@ import {
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncDal,
     MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDal,
     PostCustomPkFunc as PostCustomPkFuncDal,
-    UploadImageAsDataFunc as UploadImageAsDataFuncDal
+    UploadImageAsDataFunc as UploadImageAsDataFuncDal,
+    PostSendMailFunc as PostSendMailFuncDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -22,6 +23,17 @@ import {
 
 import ConfigJson from '../../../Config.json' assert {type: 'json'};
 
+let PostSendMailFunc = async (inPostBody) => {
+    if (ConfigJson.isSequelize) {
+        return PostFuncDalsForSequelize(inPostBody);
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return PostFuncDalsForMongoDB(inPostBody);
+    };
+
+    return PostSendMailFuncDal(inPostBody);
+};
 let PostFunc = async (inPostBody) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);
@@ -103,5 +115,5 @@ export {
     PostUploadFromModalFunc, PostFilterFunc,
     PostWithKeysCheckFunc, PostFuncGenUuId,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
-    PostCustomPkFunc, UploadImageAsDataFunc
+    PostCustomPkFunc, UploadImageAsDataFunc,PostSendMailFunc
 };
