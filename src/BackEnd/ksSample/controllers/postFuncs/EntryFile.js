@@ -24,8 +24,9 @@ import { ClassSample } from '../../ModalClass.js';
 
 let PostSendMailFunc = async (req, res) => {
     let LocalBody = req.body;
+    let LocalMail = LocalBody.Mail;
 
-    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+    let LocalFromRepo = await PostSendMailFuncRepo({ inMail: LocalMail });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -232,5 +233,5 @@ export {
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc,
-    UploadImageAsDataFunc,PostSendMailFunc
+    UploadImageAsDataFunc, PostSendMailFunc
 };

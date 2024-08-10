@@ -15,9 +15,10 @@ import { StartFunc as StartFuncBulkInsert } from '../../kLowDb/WriteTofile/BulkI
 import { StartFunc as StartFuncBulkInsertCheck } from '../../kLowDb/WriteTofile/BulkInsert/EntryFile.js';
 import { StartFunc as StartFuncCustomPk } from '../../kLowDb/WriteTofile/InsertRow/CustomPk.js';
 import { StartFunc as WithImage } from '../../kLowDb/WriteTofile/WithChecking/WithImage.js';
+import { StartFunc as StartFuncsendmail } from '../../kLowDb/WriteTofile/Send/sendmail.js';
 
-let PostSendMailFunc = (inPostBody) => {
-    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+let PostSendMailFunc = ({ inMail }) => {
+    return StartFuncsendmail({ inMail });
 };
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });

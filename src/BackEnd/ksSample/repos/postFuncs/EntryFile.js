@@ -29,10 +29,10 @@ let PostSendMailFunc = async (inPostBody) => {
     };
 
     if (ConfigJson.isMongoDb) {
-        return PostFuncDalsForMongoDB(inPostBody);
+        return PostFuncDalsForMongoDB({ inPostBody });
     };
 
-    return PostSendMailFuncDal(inPostBody);
+    return PostSendMailFuncDal({ inMail });
 };
 let PostFunc = async (inPostBody) => {
     if (ConfigJson.isSequelize) {
@@ -115,5 +115,5 @@ export {
     PostUploadFromModalFunc, PostFilterFunc,
     PostWithKeysCheckFunc, PostFuncGenUuId,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
-    PostCustomPkFunc, UploadImageAsDataFunc,PostSendMailFunc
+    PostCustomPkFunc, UploadImageAsDataFunc, PostSendMailFunc
 };
