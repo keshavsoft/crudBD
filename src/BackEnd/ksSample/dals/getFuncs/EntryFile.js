@@ -11,6 +11,7 @@ import { StartFunc as StartFuncMaxRow } from '../../kLowDb/ReadFile/MaxRow.js';
 import { StartFunc as StartFuncUniqueWithKey } from '../../kLowDb/ReadFile/UniqueKey.js';
 import { StartFunc as StartFunSigleImage } from '../../kLowDb/ReadFile/SingleImage.js';
 import { StartFunc as imagesOnly } from '../../kLowDb/ReadFile/imagesOnly.js';
+import { StartFunc as StartFuncreadFileFilterByColumn } from '../../kLowDb/ReadFileList/readFileFilterByColumn.js';
 
 let GetFunc = () => {
     return StartFuncreadFile();
@@ -18,6 +19,15 @@ let GetFunc = () => {
 
 let GetDataOnlyFunc = () => {
     let LocalFromLowDb = StartFuncreadFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
+let GetDataFilterByColumnFunc = ({inColumn}) => {
+    let LocalFromLowDb = StartFuncreadFileFilterByColumn({inColumn});
 
     if (LocalFromLowDb === false) {
         return false;
@@ -94,5 +104,5 @@ export {
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc, GetFilterDataFunc,
     GetColumnsSchemaFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
     GetUniqueWithKeyFunc, GetSigleImageFunc,
-    ImagesFunc
+    ImagesFunc,GetDataFilterByColumnFunc
 };
