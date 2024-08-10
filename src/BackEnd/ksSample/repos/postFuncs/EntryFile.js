@@ -32,8 +32,9 @@ let PostSendMailFunc = async (inPostBody) => {
         return PostFuncDalsForMongoDB({ inPostBody });
     };
 
-    return PostSendMailFuncDal({ inMail });
+    return await PostSendMailFuncDal(inPostBody);
 };
+
 let PostFunc = async (inPostBody) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);

@@ -24,17 +24,19 @@ import { ClassSample } from '../../ModalClass.js';
 
 let PostSendMailFunc = async (req, res) => {
     let LocalBody = req.body;
-    let LocalMail = LocalBody.Mail;
+    // let LocalMail = LocalBody.Mail;
 
-    let LocalFromRepo = await PostSendMailFuncRepo({ inMail: LocalMail });
+    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+    // let LocalFromRepo = await PostSendMailFuncRepo({ inMail: LocalMail });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.status(200).send(LocalFromRepo.pk.toString());
+    res.status(200).send(LocalFromRepo);
 };
+
 let PostFunc = async (req, res) => {
     let LocalBody = req.body;
 
