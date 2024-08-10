@@ -11,7 +11,10 @@ import {
     GetUniqueWithKeyFunc as GetUniqueWithKeyFuncRepo,
     GetRawSqlFunc as GetRawSqlFuncRepo,
     GetSigleImageFunc as GetSigleImageFuncRepo,
-    ImagesFunc as ImagesFuncRepo
+    ImagesFunc as ImagesFuncRepo,
+    GetDataFilterByColumnFunc as GetDataFilterByColumnFuncRepo,
+
+
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -33,6 +36,21 @@ let GetDataOnlyFunc = async (req, res) => {
     res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
     // res.json(LocalFromRepo);
 };
+let GetDataFilterByColumnFunc = async (req, res) => {
+    let LocalParams = req.params;
+    let LocalIfFromParam = LocalParams.Column;
+    let LocalFromRepo = await GetDataFilterByColumnFuncRepo({ inColumn: LocalIfFromParam });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    // res.json(LocalFromRepo.JsonData);
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    // res.json(LocalFromRepo);
+};
+
 
 let GetIdFunc = async (req, res) => {
     let LocalParams = req.params;
@@ -171,5 +189,5 @@ export {
     GetColumnsSchemaFunc, GetFilterDataFunc,
     GetMaxWithKeyFunc, GetMaxRowFunc,
     GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc,
-    ImagesFunc
+    ImagesFunc, GetDataFilterByColumnFunc
 };

@@ -10,7 +10,8 @@ import {
     GetMaxRowFunc as GetMaxRowFuncDal,
     GetUniqueWithKeyFunc as GetUniqueWithKeyFuncDal,
     GetSigleImageFunc as GetSigleImageFuncDal,
-    ImagesFunc as ImagesFuncDal
+    ImagesFunc as ImagesFuncDal,
+    GetDataFilterByColumnFunc as GetDataFilterByColumnFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
@@ -41,6 +42,17 @@ let GetDataOnlyFunc = async () => {
     };
 
     return GetDataOnlyFuncDal();
+};
+let GetDataFilterByColumnFunc = async ({inColumn}) => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetDataFilterByColumnFuncDal({inColumn});
 };
 
 let GetIdFunc = async ({ inId }) => {
@@ -121,5 +133,5 @@ export {
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetfilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
     GetUniqueWithKeyFunc, GetRawSqlFunc, GetSigleImageFunc,
-    ImagesFunc
+    ImagesFunc,GetDataFilterByColumnFunc
 };
