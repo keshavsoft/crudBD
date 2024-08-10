@@ -26,7 +26,7 @@ let GetDataOnlyFunc = () => {
 
     return LocalFromLowDb;
 };
-let GetDataShortByColumnFunc = ({ inColumn }) => {
+let GetDataSortByColumnFunc = ({ inColumn }) => {
     let LocalFromLowDb = SortByColumn({ inColumn });
 
     if (LocalFromLowDb === false) {
@@ -104,5 +104,5 @@ export {
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc, GetFilterDataFunc,
     GetColumnsSchemaFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
     GetUniqueWithKeyFunc, GetSigleImageFunc,
-    ImagesFunc, GetDataShortByColumnFunc
+    ImagesFunc, GetDataSortByColumnFunc
 };
