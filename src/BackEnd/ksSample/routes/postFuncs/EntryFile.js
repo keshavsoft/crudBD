@@ -27,6 +27,8 @@ router.post('/BodyCheck', PostFuncmiddleware, PostFunc);
 router.post('/GetSelectColumns', PostGetSelectColumnsFunc);
 // Post - it's check foreign and unique check and it's collect Max pk and generate UuId And pk also
 router.post('/', PostFunc);
+router.post('/SendMail', PostFunc);
+
 router.post('/CustomPk', PostCustomPkFunc);
 router.post('/GenUuId', PostFuncGenUuId);
 // WithKeysCheck - it's check foreign and unique check and it's collect Max pk and generate UuId
