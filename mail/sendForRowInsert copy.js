@@ -1,7 +1,6 @@
 import nodemailer from "nodemailer";
 import dotenv from 'dotenv';
 import fs from "fs";
-const CommonHtmlPath = "./mail/Templates/Html/welcome.html";
 
 dotenv.config();
 
@@ -21,9 +20,9 @@ let StartFunc = async ({ inDataPk, inTableName }) => {
         return await false;
     };
 
-    const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8', flag: 'r' });
+    const data = fs.readFileSync("./new-email.html", { encoding: 'utf8', flag: 'r' });
 
-    return await transporter.sendMail({
+    return await jFTransporter.sendMail({
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
@@ -32,28 +31,7 @@ let StartFunc = async ({ inDataPk, inTableName }) => {
     });
 };
 
-let testAccount = await nodemailer.createTestAccount();
-
-var transporter = nodemailer.createTransport({
-    service: 'Yahoo',
-    secure: false,
-    auth: {
-        user: process.env.KS_MAIL_ID,
-        pass: process.env.KS_MAIL_PASSWORD,
-    },
-});
-
 let jFTransporter = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com",
-    port: 465,
-    secure: false,
-    auth: {
-        user: process.env.KS_MAIL_ID,
-        pass: process.env.KS_MAIL_PASSWORD,
-    },
-});
-
-let jFTransporterForGoogle = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
