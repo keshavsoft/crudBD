@@ -23,7 +23,7 @@ let StartFunc = async ({ inDataPk, inTableName }) => {
 
     const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8', flag: 'r' });
 
-    return await transporter.sendMail({
+    return await jFTransporterForDomain.sendMail({
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
@@ -43,7 +43,7 @@ var transporter = nodemailer.createTransport({
     },
 });
 
-let jFTransporter = nodemailer.createTransport({
+let jFTransporterYahoo = nodemailer.createTransport({
     host: "smtp.mail.yahoo.com",
     port: 465,
     secure: false,
@@ -56,6 +56,16 @@ let jFTransporter = nodemailer.createTransport({
 let jFTransporterForGoogle = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
+    secure: false,
+    auth: {
+        user: process.env.KS_MAIL_ID,
+        pass: process.env.KS_MAIL_PASSWORD,
+    },
+});
+
+let jFTransporterForDomain = nodemailer.createTransport({
+    host: "cosmic.herosite.pro",
+    port: 465,
     secure: false,
     auth: {
         user: process.env.KS_MAIL_ID,
