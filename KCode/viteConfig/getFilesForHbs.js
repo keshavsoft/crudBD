@@ -9,7 +9,7 @@ const StartFunc = ({ inSrcPath }) => {
         return path.parse(element.name).name;
     });
 
-    console.log("ConfigJson : ", ConfigJson.jsonConfig.tableAndColumns.children);
+    // console.log("ConfigJson : ", ConfigJson.jsonConfig.tableAndColumns.children);
     fs.readdirSync(root)
         .filter(filename => filename.endsWith('.html'))
         .forEach(filename => {

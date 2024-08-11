@@ -1,11 +1,10 @@
 import nodemailer from "nodemailer";
 import dotenv from 'dotenv';
+import fs from "fs";
 
 dotenv.config();
 
-let StartFunc = async ({ toMail, inDataPk }) => {
-    const LocalMail = "pushpadamalanka@gmail.com";
-
+let StartFunc = async ({ inDataPk, inTableName }) => {
     if ("KS_MAIL_ID" in process.env === false) {
         console.log("KS_MAIL_ID not found in .env file");
         return await false;
@@ -16,12 +15,19 @@ let StartFunc = async ({ toMail, inDataPk }) => {
         return await false;
     };
 
+    if ("KS_TO_MAIL_ID" in process.env === false) {
+        console.log("KS_TO_MAIL_ID not found in .env file");
+        return await false;
+    };
+
+    const data = fs.readFileSync("./new-email.html", { encoding: 'utf8', flag: 'r' });
+
     return await jFTransporter.sendMail({
-        from: `"Computer" ${process.env.KS_MAIL_ID}`,
-        to: `${LocalMail}`,
+        from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
+        to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
         text: inDataPk.toString(),
-        html: `<h3>To activate <h1><a href="#">${inDataPk.toString()}</a></h1></h3>`,
+        html: data.toString()
     });
 };
 
