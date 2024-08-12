@@ -1,0 +1,56 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-plus-circle",
+        "children": [
+          {
+            "name": "Create",
+            "url": "AG4CreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "AG4Show.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "AG4ShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "AG4DeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "AG4 Name": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AG4 Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AG4 Name",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "AG4 Name",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

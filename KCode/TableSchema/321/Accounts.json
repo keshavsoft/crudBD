@@ -87,6 +87,40 @@
               }
             }
           },
+          "AG3 Name": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AG3 Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AG3 Name",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "AG3 Name",
+                "isShown": true
+              }
+            }
+          },
+          "AG4 Name": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AG4 Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AG4 Name",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "AG4 Name",
+                "isShown": true
+              }
+            }
+          },
           "pk": {
             "HtmlTags": {
               "Show": {

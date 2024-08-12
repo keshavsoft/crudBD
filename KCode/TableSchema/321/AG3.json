@@ -1,0 +1,56 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-plus-circle",
+        "children": [
+          {
+            "name": "Create",
+            "url": "AG3CreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "AG3Show.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "AG3ShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "AG3DeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "AG3 Name": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AG3 Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AG3 Name",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "AG3 Name",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
