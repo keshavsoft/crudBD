@@ -23,7 +23,7 @@ let StartFunc = async ({ inDataPk, inTableName }) => {
 
     const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8', flag: 'r' });
 
-    return await jFTransporterForDomain.sendMail({
+    return await jFTransporterForGoogle.sendMail({
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
