@@ -1,7 +1,8 @@
 import {
     GetFunc as GetFuncRepo, GetDataOnlyFunc as GetDataOnlyFuncRepo,
     GetImagesFunc as GetImagesFuncRepo,
-    GetBodyCheckFunc as GetBodyCheckFuncRepo
+    GetBodyCheckFunc as GetBodyCheckFuncRepo,
+    GetFromModalFunc as GetFromModalFuncRepo,
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -41,7 +42,17 @@ let GetBodyCheckFunc = async (req, res) => {
 
     res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
 };
+let GetFromModalFunc = async (req, res) => {
+    let LocalFromRepo = await GetFromModalFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc
 };
