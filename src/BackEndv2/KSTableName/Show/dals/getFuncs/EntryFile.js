@@ -31,7 +31,16 @@ let GetBodyCheckFunc = () => {
 
     return LocalFromLowDb;
 };
+let GetFromModalFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc
 };
