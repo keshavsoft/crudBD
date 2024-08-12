@@ -13,7 +13,17 @@ let GetDataOnlyFunc = () => {
 
     return LocalFromLowDb;
 };
+let GetImagesFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
+
 
 export {
-    GetFunc, GetDataOnlyFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc
 };
