@@ -28,6 +28,7 @@ let GetDataOnlyFunc = async () => {
 
     return GetDataOnlyFuncDal();
 };
+
 let GetImagesFunc = async () => {
     if (ConfigJson.isSequelize) {
         return await GetDataOnlyFuncDalsForSequelize();

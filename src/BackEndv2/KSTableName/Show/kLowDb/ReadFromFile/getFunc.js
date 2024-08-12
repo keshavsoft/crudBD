@@ -11,9 +11,10 @@ let StartFunc = async () => {
   };
 
   const db = LocalStartFuncPullData.inDb;
+  db.read();
 
   LocalReturnData.KTF = true;
-  LocalReturnData.JsonData = db;
+  LocalReturnData.JsonData = db.data;
 
   return await LocalReturnData;
 };

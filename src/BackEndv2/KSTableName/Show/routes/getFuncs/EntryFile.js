@@ -11,5 +11,4 @@ router.get('/', GetFunc);
 router.get('/DataOnly', GetDataOnlyFunc);
 router.get('/Images', GetImagesFunc);
 
-
 export { router };
