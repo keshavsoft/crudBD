@@ -11,7 +11,7 @@
         "children": [
           {
             "name": "Create",
-            "url": "AccountsCreateSingle.html",
+            "url": "AccountsCreateDLToShow.html",
             "icon": "bi bi-plus-circle"
           },
           {
@@ -61,7 +61,8 @@
               },
               "Create": {
                 "title": "BSGroup",
-                "isShown": true
+                "isShown": true,
+                "RequiredTag": "required"
               },
               "Alter": {
                 "title": "BSGroup",
