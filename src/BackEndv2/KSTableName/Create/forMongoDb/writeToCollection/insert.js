@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 import { startFunc as startFuncForPassword } from "../commonFuncs/forPassword.js";
 import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
-import configJson from '../../../Config.json' assert {type: 'json'};
+import configJson from '../../../../Config.json' assert {type: 'json'};
 import tableJson from "../../tableName.json" assert {type: 'json'};
-import  path  from "path";
+import path from "path";
 
 let StartFunc = async (inPostBody) => {
     try {
