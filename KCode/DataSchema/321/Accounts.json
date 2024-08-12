@@ -6,7 +6,11 @@
   },
   "BSGroup": {
     "type": "STRING",
-    "allowNull": true
+    "allowNull": false,
+    "references": {
+      "model": "BSGroups",
+      "key": "BSGroup"
+    }
   },
   "SubGroup": {
     "type": "STRING",

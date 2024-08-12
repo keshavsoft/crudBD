@@ -1,0 +1,108 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-plus-circle",
+        "children": [
+          {
+            "name": "Create",
+            "url": "BSGroupsCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "AccountsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "AccountsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "AccountsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "AccountName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AccountName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              }
+            }
+          },
+          "BSGroup": {
+            "HtmlTags": {
+              "Show": {
+                "title": "BSGroup",
+                "isShown": true
+              },
+              "Create": {
+                "title": "BSGroup",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "BSGroup",
+                "isShown": true
+              }
+            }
+          },
+          "SubGroup": {
+            "HtmlTags": {
+              "Show": {
+                "title": "SubGroup",
+                "isShown": true
+              },
+              "Create": {
+                "title": "SubGroup",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "SubGroup",
+                "isShown": true
+              }
+            }
+          },
+          "pk": {
+            "HtmlTags": {
+              "Show": {
+                "title": "pk",
+                "isShown": true
+              },
+              "Create": {
+                "title": "pk",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "pk",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
