@@ -1,11 +1,12 @@
 import {
     GetFunc as GetFuncRepo, GetDataOnlyFunc as GetDataOnlyFuncRepo,
-    GetImagesFunc as GetImagesFuncRepo
+    GetImagesFunc as GetImagesFuncRepo,
+    GetBodyCheckFunc as GetBodyCheckFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
 let GetFunc = async (req, res) => {
-    let LocalFromRepo = await GetFuncRepo();
+    let LocalFromRepo = await GetFuncRepo({});
 
     res.json(LocalFromRepo);
 };
@@ -30,7 +31,17 @@ let GetImagesFunc = async (req, res) => {
 
     res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
 };
+let GetBodyCheckFunc = async (req, res) => {
+    let LocalFromRepo = await GetBodyCheckFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc
 };
