@@ -78,7 +78,8 @@
               },
               "Create": {
                 "title": "SubGroup",
-                "isShown": true
+                "isShown": true,
+                "RequiredTag": "required"
               },
               "Alter": {
                 "title": "SubGroup",

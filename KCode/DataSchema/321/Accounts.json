@@ -14,7 +14,11 @@
   },
   "SubGroup": {
     "type": "STRING",
-    "allowNull": true
+    "allowNull": true,
+    "references": {
+      "model": "SubGroups",
+      "key": "SubGroup"
+    }
   },
   "pk": {
     "type": "STRING",
