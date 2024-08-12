@@ -11,5 +11,4 @@ router.post('/', PostFunc);
 router.post('/GenUuId', PostFuncGenUuId);
 router.post('/WithCheckAndGenPk', PostWithCheckAndGenPkFunc);
 
-
 export { router };

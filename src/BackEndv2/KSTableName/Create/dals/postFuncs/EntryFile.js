@@ -3,10 +3,15 @@ import { StartFunc as StartFuncWriteTofile } from '../../kLowDb/WriteTofile/With
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
+
 let PostFuncGenUuId = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
 
+let PostWithCheckAndGenPkFunc = (inPostBody) => {
+    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+};
+
 export {
-    PostFunc, PostFuncGenUuId
+    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc
 };

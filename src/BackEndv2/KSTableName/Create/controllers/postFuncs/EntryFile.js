@@ -1,7 +1,5 @@
-import fs from "fs";
-
 import {
-    PostFunc as PostFuncRepo, 
+    PostFunc as PostFuncRepo,
     PostFuncGenUuId as PostFuncGenUuIdRepo,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
@@ -18,6 +16,7 @@ let PostFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
+
 let PostFuncGenUuId = async (req, res) => {
     let LocalBody = req.body;
 
@@ -30,6 +29,7 @@ let PostFuncGenUuId = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
+
 let PostWithCheckAndGenPkFunc = async (req, res) => {
     let LocalBody = req.body;
 
