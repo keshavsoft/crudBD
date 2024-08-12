@@ -3,6 +3,7 @@ import {
     GetImagesFunc as GetImagesFuncRepo,
     GetBodyCheckFunc as GetBodyCheckFuncRepo,
     GetFromModalFunc as GetFromModalFuncRepo,
+    GetFromModalUuidFunc as GetFromModalUuidFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -52,7 +53,18 @@ let GetFromModalFunc = async (req, res) => {
 
     res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
 };
+let GetFromModalUuidFunc = async (req, res) => {
+    let LocalFromRepo = await GetFromModalUuidFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
+    GetFromModalUuidFunc
 };
