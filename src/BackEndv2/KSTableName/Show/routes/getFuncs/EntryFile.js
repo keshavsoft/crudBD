@@ -3,9 +3,9 @@ import express from 'express';
 var router = express.Router();
 
 import {
-    GetFunc, GetDataOnlyFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc
 } from '../../controllers/getFuncs/EntryFile.js';
-import { GetImagesFunc } from '../../dals/getFuncs/EntryFile.js';
+
 
 router.get('/', GetFunc);
 router.get('/DataOnly', GetDataOnlyFunc);
