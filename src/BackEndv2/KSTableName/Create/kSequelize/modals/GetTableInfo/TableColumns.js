@@ -1,6 +1,6 @@
 import { StartFunc as StartFuncInitializeSequelize } from '../../../../../kSequelize/AssignSchema.js';
 
-import tableNameJson from '../../../tableName.json' assert { type: 'json' };
+import tableNameJson from '../../../../tableName.json' assert { type: 'json' };
 import path from "path";
 
 let AllColumns = async () => {
