@@ -49,6 +49,18 @@ let PostFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
+let  PostWithCheckAndGenPkFuncc = async (req, res) => {
+    let LocalBody = req.body;
+
+    let LocalFromRepo = await PostWithCheckAndGenPkFuncRepo({ ...LocalBody });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo.pk.toString());
+};
 
 let PostCustomPkFunc = async (req, res) => {
     let LocalBody = req.body;
