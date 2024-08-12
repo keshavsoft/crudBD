@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import path from "path";
-
+const commonFromPath = "KSTableName";
 let StartFunc = ({ inTablesCollection, inTo, inFrom }) => {
     let LocalTo = inTo;
     let LocalFrom = inFrom;
@@ -13,7 +13,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom }) => {
 
     LocalFirstLevelFolders.forEach(LoopSecond => {
         try {
-            fs.cpSync(`${LocalFrom}/ksSample`, `${LocalTo}/${path.parse(LoopSecond.name).name}`, {
+            fs.cpSync(`${LocalFrom}/${commonFromPath}`, `${LocalTo}/${path.parse(LoopSecond.name).name}`, {
                 recursive: true,
             });
         } catch (error) {
