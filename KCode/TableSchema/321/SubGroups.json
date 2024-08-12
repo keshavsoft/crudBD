@@ -1,0 +1,56 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-plus-circle",
+        "children": [
+          {
+            "name": "Create",
+            "url": "SubGroupsCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "SubGroupsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "SubGroupsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "SubGroupsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "SubGroup": {
+            "HtmlTags": {
+              "Show": {
+                "title": "SubGroup",
+                "isShown": true
+              },
+              "Create": {
+                "title": "SubGroup",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "SubGroup",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
