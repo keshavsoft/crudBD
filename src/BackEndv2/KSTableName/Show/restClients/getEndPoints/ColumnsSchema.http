@@ -1,0 +1,3 @@
+#This endpoint will return back all the rows in the table as an json object with its properties in response
+
+GET http://localhost:7019/src/BackEnd/ksSample/ColumnsSchema

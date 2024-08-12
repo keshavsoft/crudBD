@@ -1,0 +1,8 @@
+
+
+###copy the table schema from step 1 and paste in inside the array in the buttom of this file(GET)
+POST http://localhost:7019/src/BackEnd/ksSample/UploadFromModal
+content-type: application/json
+
+[]
+

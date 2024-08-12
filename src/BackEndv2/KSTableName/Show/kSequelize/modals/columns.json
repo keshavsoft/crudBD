@@ -1,0 +1,11 @@
+[
+    {
+        "tableName": "ksSample",
+        "tableColumns": {
+            "Name": {
+                "type": "STRING",
+                "allowNull": false
+            }
+        }
+    }
+]

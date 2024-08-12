@@ -1,0 +1,45 @@
+{
+    "isSequelize": false,
+    "isMongoDb": false,
+    "jsonConfig": {
+        "DataPk": 902,
+        "DataPath": "KData/JSON",
+        "tableAndColumns": {
+            "path": "FromTableColumns/317",
+            "name": "317",
+            "children": [
+                {
+                    "path": "FromTableColumns\\317\\Transactions\\Orders.json",
+                    "name": "ksSample.json",
+                    "fileData": {
+                        "Name": {
+                            "type": "STRING",
+                            "allowNull": false,
+                            "unique": true
+                        },
+                        "Mobile": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "City": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "sequelizeConfig": {
+        "isMysql": true,
+        "isPostgres": false,
+        "DataPk": 902,
+        "DataPath": "KData/JSON",
+        "DbName": "data"
+    },
+    "mongoDbConfig": {
+        "url": "mongodb+srv://21131a0581:<password>@cluster0.eqf6nz0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "DbName": "sdata",
+        "collectionName": "scoll"
+    }
+}

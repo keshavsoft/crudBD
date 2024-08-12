@@ -1,0 +1,6 @@
+###copy the table schema from step 1(GET)
+POST http://localhost:7019/src/BackEnd/ksSample/SendMail
+content-type: application/json
+
+{}
+

@@ -1,0 +1,62 @@
+POST http://localhost:7019/src/BackEnd/ksSample/BodyCheck
+content-type: application/json
+
+###
+POST http://localhost:7019/src/BackEnd/ksSample/Filter
+content-type: application/json
+
+###
+
+
+POST http://localhost:7019/src/BackEnd/ksSample/UploadImage
+content-type: application/json
+
+###
+POST http://localhost:7019/src/BackEnd/ksSample
+content-type: application/json
+
+{
+"Name":"1111111"
+}
+
+### GetSelectColumns
+POST http://localhost:7019/src/BackEnd/ksSample/GetSelectColumns
+content-type: application/json
+
+{
+
+}
+
+### Upload
+POST http://localhost:7019/src/BackEnd/ksSample/Upload
+content-type: application/json
+
+[{
+"nmae":"kkk",
+"contactNumber":89898
+},
+{
+"nmae":"ppp",
+"contactNumber":7777
+},
+{
+"nmae":"mmmm",
+"contactNumber":5555
+}]
+
+### UploadFromModal
+POST http://localhost:7019/src/BackEnd/ksSample/UploadFromModal
+content-type: application/json
+
+[{
+"Name":"aaaaaaaaa",
+"Mobile":89898
+},
+{
+"Name":"bbb",
+"contactNumber":7777
+},
+{
+"nmae":"ccccccc",
+"Mobile":5555
+}]

@@ -1,0 +1,8 @@
+###copy the table schema from step 1(GET)
+PUT  http://localhost:7019/src/BackEnd/ksSample/FromBody/{RowPk}
+content-type: application/json
+
+{
+
+}
+

@@ -1,0 +1,5 @@
+#not working
+#This endpoint will return back structured representation of user data as an json in response
+
+
+GET http://localhost:7019/src/BackEnd/ksSample/FromModalUuid

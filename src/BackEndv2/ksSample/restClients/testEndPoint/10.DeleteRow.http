@@ -1,0 +1,8 @@
+
+
+# Check the end point /bin/Masters/CustomerNames from app.js file
+# Chech the pk of the record you want to delete
+# Give the pk at the endpoint / to delete the row
+DELETE  http://localhost:7019/src/BackEnd/ksSample/{RowPk}
+
+

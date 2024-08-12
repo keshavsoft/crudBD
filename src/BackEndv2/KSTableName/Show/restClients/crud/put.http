@@ -1,0 +1,6 @@
+PUT http://localhost:7019/src/BackEnd/ksSample/78
+content-type: application/json
+
+{
+"Name":"AAAAAAAA"
+}

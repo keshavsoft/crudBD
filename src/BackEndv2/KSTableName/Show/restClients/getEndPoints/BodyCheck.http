@@ -1,0 +1,3 @@
+#This endpoint will return back all the attributes(columns) in the table as an json in response
+
+GET http://localhost:7019/src/BackEnd/ksSample/BodyCheck

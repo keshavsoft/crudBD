@@ -6,6 +6,8 @@ import { router as routerFromCommon } from "./Common/routes.js";
 import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
+import { router as routerFromBinV2 } from "./binV2/routes.js";
+
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
 import { StartFunc as MiddleWaresBinSecured } from "./MiddleWares/MiddleWares.binSecured/EntryFile.js";
@@ -56,6 +58,9 @@ app.get('/AboutUs', (req, res) => {
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
 app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
+
+app.use('/binV2', routerFromBinV2);
+
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);
