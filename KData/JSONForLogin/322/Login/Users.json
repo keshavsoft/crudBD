@@ -1,10 +1,10 @@
 [
   {
-    "UserName": "rajesh",
-    "Password": "rajesh",
-    "isMailValidated": true,
+    "UserName": "keshav",
+    "Password": "keshav",
+    "isMailValidated": false,
     "Mail": "nknnkumar@yahoo.com",
-    "DataPk": 322,
-    "UuId": "e741bacb-f4a3-46fc-8462-4400c61c3384"
+    "UuId": "4f2600f5-307e-4f0e-9e7d-0afe9ac839fd",
+    "DataPk": 322
   }
 ]
