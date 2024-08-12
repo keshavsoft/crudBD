@@ -1,9 +1,10 @@
 import { MongoClient } from "mongodb";
-import  path  from "path";
-import configJson from '../../../Config.json' assert {type: 'json'};
+import path from "path";
+import configJson from '../../../../Config.json' assert {type: 'json'};
 import { startFunc as startFuncForPassword } from "../commonFuncs/forPassword.js";
 import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
-import tableJson from "../../tableName.json" assert {type: 'json'};
+import tableJson from "../../../tableName.json" assert {type: 'json'};
+
 let StartFunc = async () => {
     try {
         const password = startFuncForPassword();

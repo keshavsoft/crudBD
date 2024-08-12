@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-let StartFunc = ({ inElement, inTablesCollection, inFrom, inTo }) => {
-    let LocalElement = inElement;
+let StartFunc = ({ inTablesCollection, inFrom, inTo }) => {
     let LocalTypeName = "kLowDb";
     let LocalFrom = inFrom;
     let LocalTo = inTo;
@@ -18,13 +17,11 @@ let StartFunc = ({ inElement, inTablesCollection, inFrom, inTo }) => {
         inFilesArray: LocalFirstLevelFolders,
         inTo: LocalTo, inFrom: LocalFrom, inTypeName: LocalTypeName, inSampleString: LocalSampleString
     });
-
 };
 
 let LocalFuncForreadFile = ({ inFilesArray, inFrom, inTo, inTypeName, inSampleString }) => {
     let LocalFileName = "tableName.json";
     let LocalFilesArray = inFilesArray;
-    let LocalTypeName = inTypeName;
     let LocalTo = inTo;
 
     LocalFilesArray.forEach(LoopFile => {

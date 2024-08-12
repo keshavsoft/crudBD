@@ -1,10 +1,10 @@
 import { DataTypes } from "sequelize";
 import path from "path";
 
-import Configjson from '../../../Config.json' assert { type: 'json' };
-import tableNameJson from '../../tableName.json' assert { type: 'json' };
+import Configjson from '../../../../Config.json' assert { type: 'json' };
+import tableNameJson from '../../../tableName.json' assert { type: 'json' };
 
-import { StartFunc as StartFuncInitializeSequelize } from "../../../kSequelize/initializeSequelize.js";
+import { StartFunc as StartFuncInitializeSequelize } from "../../../../kSequelize/initializeSequelize.js";
 
 let StartFunc = async () => {
     let LocalTableName = tableNameJson.tableName;
