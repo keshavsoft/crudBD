@@ -1,0 +1,7 @@
+{
+    "AG4 Name": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    }
+  }
