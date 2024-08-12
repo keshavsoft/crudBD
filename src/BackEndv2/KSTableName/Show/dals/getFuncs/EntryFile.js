@@ -22,8 +22,16 @@ let GetImagesFunc = () => {
 
     return LocalFromLowDb;
 };
+let GetBodyCheckFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
 
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc
 };

@@ -1,6 +1,7 @@
 import {
     GetFunc as GetFuncDal, GetDataOnlyFunc as GetDataOnlyFuncDal,
-    GetImagesFunc as GetImagesFuncDal
+    GetImagesFunc as GetImagesFuncDal,
+    GetBodyCheckFunc as GetBodyCheckFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
@@ -40,7 +41,18 @@ let GetImagesFunc = async () => {
 
     return GetImagesFuncDal();
 };
+let GetBodyCheckFunc = async () => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetBodyCheckFuncDal();
+};
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc
 };
