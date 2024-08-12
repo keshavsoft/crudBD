@@ -1,5 +1,6 @@
 import {
-    PostFunc as PostFuncDal
+    PostFunc as PostFuncDal,
+    PostFuncGenUuId as PostFuncGenUuIdDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -23,7 +24,18 @@ let PostFunc = async (inPostBody) => {
 
     return PostFuncDal(inPostBody);
 };
+let PostFuncGenUuId = async (inPostBody) => {
+    if (ConfigJson.isSequelize) {
+       return PostFuncDalsForSequelize(inPostBody);
+    };
+
+    if (ConfigJson.isMongoDb) {
+       return PostFuncDalsForMongoDB(inPostBody);
+    };
+
+    return PostFuncGenUuIdDal(inPostBody);
+};
 
 export {
-    PostFunc
+    PostFunc, PostFuncGenUuId
 };
