@@ -8,8 +8,8 @@ import {
 
 
 let GetFunc = async (req, res) => {
-    let LocalFromRepo = await GetFuncRepo({});
-
+    let LocalFromRepo = await GetFuncRepo();
+    
     res.json(LocalFromRepo);
 };
 
@@ -26,12 +26,8 @@ let GetDataOnlyFunc = async (req, res) => {
 let GetImagesFunc = async (req, res) => {
     let LocalFromRepo = await GetImagesFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
-        res.status(500).send(LocalFromRepo.KReason);
-        return;
-    };
+    res.status(200).send(JSON.stringify(LocalFromRepo));
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
 };
 let GetBodyCheckFunc = async (req, res) => {
     let LocalFromRepo = await GetBodyCheckFuncRepo();
@@ -41,7 +37,7 @@ let GetBodyCheckFunc = async (req, res) => {
         return;
     };
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    res.status(200).send(JSON.stringify(LocalFromRepo));
 };
 let GetFromModalFunc = async (req, res) => {
     let LocalFromRepo = await GetFromModalFuncRepo();
@@ -51,7 +47,7 @@ let GetFromModalFunc = async (req, res) => {
         return;
     };
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    res.status(200).send(JSON.stringify(LocalFromRepo));
 };
 let GetFromModalUuidFunc = async (req, res) => {
     let LocalFromRepo = await GetFromModalUuidFuncRepo();

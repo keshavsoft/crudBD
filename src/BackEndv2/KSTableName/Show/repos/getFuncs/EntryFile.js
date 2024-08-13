@@ -74,7 +74,7 @@ let GetFromModalFunc = async () => {
         return GetDataOnlyFuncDalsForMongoDb();
     };
 
-    return GetFromModalUuidFuncDal();
+    return GetFromModalFuncDal();
 };
 
 export {

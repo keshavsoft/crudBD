@@ -1,4 +1,7 @@
 import { StartFunc as ReadFromFile } from '../../kLowDb/ReadFromFile/getFunc.js';
+import { StartFunc as getModal } from '../../kLowDb/ReadFromFile/getModal.js';
+import { StartFunc as getBodyCheck } from '../../kLowDb/ReadFromFile/getBodyCheck.js';
+import { StartFunc as getimagesOnly } from '../../kLowDb/ReadFromFile/getimagesOnly.js';
 
 let GetFunc = () => {
     return ReadFromFile();
@@ -14,7 +17,7 @@ let GetDataOnlyFunc = () => {
     return LocalFromLowDb;
 };
 let GetImagesFunc = () => {
-    let LocalFromLowDb = ReadFromFile();
+    let LocalFromLowDb = getimagesOnly();
 
     if (LocalFromLowDb === false) {
         return false;
@@ -23,7 +26,7 @@ let GetImagesFunc = () => {
     return LocalFromLowDb;
 };
 let GetBodyCheckFunc = () => {
-    let LocalFromLowDb = ReadFromFile();
+    let LocalFromLowDb = getBodyCheck();
 
     if (LocalFromLowDb === false) {
         return false;
@@ -32,7 +35,7 @@ let GetBodyCheckFunc = () => {
     return LocalFromLowDb;
 };
 let GetFromModalFunc = () => {
-    let LocalFromLowDb = ReadFromFile();
+    let LocalFromLowDb = getModal();
 
     if (LocalFromLowDb === false) {
         return false;
