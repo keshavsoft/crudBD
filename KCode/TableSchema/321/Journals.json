@@ -1,0 +1,136 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon": "bi bi-journal-bookmark-fill",
+        "children": [
+          {
+            "name": "Create",
+            "url": "JournalsCreateDLToShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "JournalsShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowWithTotals",
+            "url": "JournalsShowWithTotals.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "JournalsShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "JournalsDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "AccountName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "AccountName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "AccountName",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "Date": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Create": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Date",
+                "isShown": true,
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "Description": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Description",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Description",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Description",
+                "isShown": true
+              }
+            }
+          },
+          "Credit": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Credit",
+                "isShown": true,
+                "footerFormatter": "totalFormatter"
+              },
+              "Create": {
+                "title": "Credit",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Credit",
+                "isShown": true
+              }
+            }
+          },
+          "Debit": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Debit",
+                "isShown": true,
+                "footerFormatter": "totalFormatter"
+              },
+              "Create": {
+                "title": "Debit",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Debit",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
