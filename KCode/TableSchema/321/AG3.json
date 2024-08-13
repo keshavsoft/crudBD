@@ -7,7 +7,7 @@
         }
       },
       "SideBar": {
-        "icon": "bi bi-diagram-2-fill",
+        "icon": "bi bi-stack",
         "children": [
           {
             "name": "Create",

@@ -7,7 +7,7 @@
                 }
             },
             "SideBar": {
-                "icon": "bi bi-clipboard-data",
+                "icon": "bi bi-clipboard-data-fill",
                 "children": [
                     {
                         "name": "Create",
