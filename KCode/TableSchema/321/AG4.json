@@ -43,6 +43,7 @@
               "Create": {
                 "title": "AG4 Name",
                 "isShown": true,
+                "RequiredTag": "required",
                 "AutoFocusTag": "autofocus"
               },
               "Alter": {

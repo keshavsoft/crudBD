@@ -7,7 +7,7 @@
                 }
             },
             "SideBar": {
-        "icon": "bi bi-currency-dollar",
+        "icon": "bi bi-currency-exchange",
         "children": [
           {
             "name": "Create",

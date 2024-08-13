@@ -43,6 +43,7 @@
               "Create": {
                 "title": "BSGroup",
                 "isShown": true,
+                "RequiredTag": "required",
                 "AutoFocusTag": "autofocus"
               },
               "Alter": {

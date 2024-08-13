@@ -43,6 +43,7 @@
               "Create": {
                 "title": "SubGroup",
                 "isShown": true,
+                "RequiredTag": "required",
                 "AutoFocusTag": "autofocus"
               },
               "Alter": {
