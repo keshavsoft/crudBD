@@ -22,7 +22,7 @@
   },
   "AG3 Name": {
     "type": "STRING",
-    "allowNull": true,
+    "allowNull": false,
     "references": {
       "model": "AG3",
       "key": "AG3 Name"
@@ -30,7 +30,7 @@
   },
   "AG4 Name": {
     "type": "STRING",
-    "allowNull": true,
+    "allowNull": false,
     "references": {
       "model": "AG4",
       "key": "AG4 Name"
