@@ -1,7 +1,6 @@
 {
   "Credit Account": {
     "type": "STRING",
-    "unique": true,
     "references": {
       "model": "Accounts",
       "key": "AccountName"
@@ -9,7 +8,6 @@
   },
   "Debit Account": {
     "type": "STRING",
-    "unique": true,
     "references": {
       "model": "Accounts",
       "key": "AccountName"
