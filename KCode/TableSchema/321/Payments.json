@@ -93,7 +93,7 @@
                         "HtmlTags": {
                             "Show": {
                                 "title": "Description",
-                                "isShown": false
+                                "isShown": true
                             },
                             "Create": {
                                 "title": "Description",
