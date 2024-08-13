@@ -1,5 +1,13 @@
 {
-  "AccountName": {
+  "Credit Account": {
+    "type": "STRING",
+    "unique": true,
+    "references": {
+      "model": "Accounts",
+      "key": "AccountName"
+    }
+  },
+  "Debit Account": {
     "type": "STRING",
     "unique": true,
     "references": {
@@ -15,11 +23,7 @@
     "type": "STRING",
     "allowNull": true
   },
-  "Credit": {
-    "type": "NUMBER",
-    "allowNull": true
-  },
-  "Debit": {
+  "Amount": {
     "type": "NUMBER",
     "allowNull": true
   }

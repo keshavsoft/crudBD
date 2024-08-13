@@ -97,8 +97,7 @@
                             },
                             "Create": {
                                 "title": "Description",
-                                "isShown": true,
-                                "RequiredTag": "required"
+                                "isShown": true
                             },
                             "Alter": {
                                 "title": "Description",

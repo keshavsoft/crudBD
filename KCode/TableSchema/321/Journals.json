@@ -38,20 +38,39 @@
       },
       "main": {
         "columns": {
-          "AccountName": {
+          "Credit Account": {
             "HtmlTags": {
               "Show": {
-                "title": "AccountName",
+                "title": "Credit Account",
                 "isShown": true
               },
               "Create": {
-                "title": "AccountName",
+                "title": "Credit Account",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required",
                 "isShown": true
               },
               "Alter": {
-                "title": "AccountName",
+                "title": "Credit Account",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "Debit Account": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Debit Account",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Debit Account",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Debit Account",
                 "AutoFocusTag": "autofocus",
                 "RequiredTag": "required"
               }
@@ -84,8 +103,7 @@
               },
               "Create": {
                 "title": "Description",
-                "isShown": true,
-                "RequiredTag": "required"
+                "isShown": true
               },
               "Alter": {
                 "title": "Description",
@@ -93,38 +111,20 @@
               }
             }
           },
-          "Credit": {
+          "Amount": {
             "HtmlTags": {
               "Show": {
-                "title": "Credit",
+                "title": "Amount",
                 "isShown": true,
                 "footerFormatter": "totalFormatter"
               },
               "Create": {
-                "title": "Credit",
+                "title": "Amount",
                 "isShown": true,
                 "RequiredTag": "required"
               },
               "Alter": {
-                "title": "Credit",
-                "isShown": true
-              }
-            }
-          },
-          "Debit": {
-            "HtmlTags": {
-              "Show": {
-                "title": "Debit",
-                "isShown": true,
-                "footerFormatter": "totalFormatter"
-              },
-              "Create": {
-                "title": "Debit",
-                "isShown": true,
-                "RequiredTag": "required"
-              },
-              "Alter": {
-                "title": "Debit",
+                "title": "Amount",
                 "isShown": true
               }
             }
