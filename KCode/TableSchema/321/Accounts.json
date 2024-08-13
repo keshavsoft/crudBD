@@ -7,7 +7,7 @@
         }
       },
       "SideBar": {
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-person-circle",
         "children": [
           {
             "name": "Create",
@@ -125,15 +125,15 @@
             "HtmlTags": {
               "Show": {
                 "title": "pk",
-                "isShown": true
+                "isShown": false
               },
               "Create": {
                 "title": "pk",
-                "isShown": true
+                "isShown": false
               },
               "Alter": {
                 "title": "pk",
-                "isShown": true
+                "isShown": false
               }
             }
           }

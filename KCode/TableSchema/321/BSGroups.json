@@ -7,7 +7,7 @@
         }
       },
       "SideBar": {
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-microsoft-teams",
         "children": [
           {
             "name": "Create",
@@ -37,15 +37,18 @@
             "HtmlTags": {
               "Show": {
                 "title": "BSGroup",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               },
               "Create": {
                 "title": "BSGroup",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               },
               "Alter": {
                 "title": "BSGroup",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               }
             }
           }

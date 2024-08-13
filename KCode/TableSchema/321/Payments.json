@@ -7,7 +7,7 @@
                 }
             },
             "SideBar": {
-        "icon": "bi bi-card-list",
+        "icon": "bi bi-currency-dollar",
         "children": [
           {
             "name": "Create",
@@ -73,7 +73,8 @@
                             },
                             "Create": {
                                 "title": "Date",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Date",
@@ -96,7 +97,8 @@
                             },
                             "Create": {
                                 "title": "Description",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Description",
@@ -120,7 +122,8 @@
                             },
                             "Create": {
                                 "title": "Debit",
-                                "isShown": true
+                                "isShown": true,
+                                "RequiredTag": "required"
                             },
                             "Alter": {
                                 "title": "Debit",
