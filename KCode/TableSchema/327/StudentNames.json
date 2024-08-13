@@ -9,56 +9,56 @@
       "SideBar": {
         "children": [
           {
-              "name": "CRUD",
-              "isTitle": true,
-              "icon": "bi bi-back"
+            "name": "CRUD",
+            "isTitle": true,
+            "icon": "bi bi-back"
           },
           {
-              "name": "Create",
-              "url": "Create.html",
-              "icon": "bi bi-plus-circle"
+            "name": "Create",
+            "url": "Create.html",
+            "icon": "bi bi-plus-circle"
           },
           {
-              "name": "CreateCamera",
-              "url": "CreateCamera.html",
-              "icon": "bi bi-camera-fill"
+            "name": "CreateCamera",
+            "url": "CreateCamera.html",
+            "icon": "bi bi-camera-fill"
           },
           {
-              "name": "CreateCameraOnModal",
-              "url": "CreateCameraOnModal.html",
-              "icon": "bi bi-camera-video-fill"
+            "name": "CreateCameraOnModal",
+            "url": "CreateCameraOnModal.html",
+            "icon": "bi bi-camera-video-fill"
           },
           {
-              "name": "Show",
-              "url": "Show.html",
-              "icon": "bi bi-table"
+            "name": "Show",
+            "url": "Show.html",
+            "icon": "bi bi-table"
           },
           {
-              "name": "ShowNoSerial",
-              "url": "ShowNoSerial.html",
-              "icon": "bi bi-file-earmark-spreadsheet"
+            "name": "ShowNoSerial",
+            "url": "ShowNoSerial.html",
+            "icon": "bi bi-file-earmark-spreadsheet"
           },
           {
-              "name": "ShowWithInsert",
-              "url": "ShowTableFooterAddSSR.html",
-              "icon": "bi bi-file-earmark-plus"
+            "name": "ShowWithInsert",
+            "url": "ShowTableFooterAddSSR.html",
+            "icon": "bi bi-file-earmark-plus"
           },
           {
-              "name": "Alter",
-              "url": "AlterWithSSR.html",
-              "icon": "bi bi-box-arrow-up-right"
+            "name": "Alter",
+            "url": "AlterWithSSR.html",
+            "icon": "bi bi-box-arrow-up-right"
           },
           {
-              "name": "ShowWithImage",
-              "url": "ShowWithImage.html",
-              "icon": "bi bi-filetype-jpg"
+            "name": "ShowWithImage",
+            "url": "ShowWithImage.html",
+            "icon": "bi bi-filetype-jpg"
           },
           {
-              "name": "Delete",
-              "url": "DeleteSSR.html",
-              "icon": "bi bi-trash3"
+            "name": "Delete",
+            "url": "DeleteSSR.html",
+            "icon": "bi bi-trash3"
           }
-      ]
+        ]
       },
       "main": {
         "columns": {
@@ -79,7 +79,23 @@
               }
             }
           },
-          "StudentMobile": {
+          "Roll Number": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Roll Number",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Roll Number",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Mobile": {
             "HtmlTags": {
               "Show": {
                 "title": "Mobile",
@@ -96,7 +112,7 @@
               }
             }
           },
-          "StudentAlternateMobile": {
+          "AlternateMobile": {
             "HtmlTags": {
               "Show": {
                 "title": "Alternate Mobile",
@@ -120,7 +136,67 @@
               },
               "Create": {
                 "title": "Year of Birth",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Email": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Email",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Email",
                 "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "10th Grade GPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "10th Grade GPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "10th Grade GPA",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Intermediate/Diploma CGPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Intermediate/Diploma CGPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Intermediate/Diploma CGPA",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Graduation CGPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Graduation CGPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Graduation CGPA",
                 "isShown": true
               },
               "CreateInFooter": {

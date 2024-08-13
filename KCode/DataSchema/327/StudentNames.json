@@ -3,15 +3,31 @@
       "type": "STRING",
       "unique": true
     },
-    "StudentMobile": {
+    "Roll Number": {
       "type": "STRING",
       "unique": true
     },
-    "StudentAlternateMobile": {
-      "type": "STRING",
+    "Mobile": {
+      "type": "NUMBER",
+      "unique": true
+    },
+    "AlternateMobile": {
+      "type": "NUMBER",
       "allowNull": true
     },
-    "Date of Birth": {
-      "type": "DATEONLY"
+    "Year of Birth": {
+      "type": "MONTH"
+    },
+    "Email": {
+      "type": "STRING"
+    },
+    "10th Grade GPA":{
+      "type": "NUMBER"
+    },
+    "Intermediate/Diploma CGPA":{
+      "type": "NUMBER"
+    },
+    "Graduation CGPA":{
+      "type": "NUMBER"
     }
   }
