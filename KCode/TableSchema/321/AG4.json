@@ -7,7 +7,7 @@
         }
       },
       "SideBar": {
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-highlights",
         "children": [
           {
             "name": "Create",
@@ -37,15 +37,18 @@
             "HtmlTags": {
               "Show": {
                 "title": "AG4 Name",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               },
               "Create": {
                 "title": "AG4 Name",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               },
               "Alter": {
                 "title": "AG4 Name",
-                "isShown": true
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
               }
             }
           }

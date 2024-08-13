@@ -7,7 +7,7 @@
         }
       },
       "SideBar": {
-        "icon": "bi bi-card-list",
+        "icon": "bi bi-envelope-open-fill",
         "children": [
           {
             "name": "Create",
@@ -84,7 +84,8 @@
               },
               "Create": {
                 "title": "Description",
-                "isShown": true
+                "isShown": true,
+                "RequiredTag": "required"
               },
               "Alter": {
                 "title": "Description",
@@ -101,7 +102,8 @@
               },
               "Create": {
                 "title": "Credit",
-                "isShown": true
+                "isShown": true,
+                "RequiredTag": "required"
               },
               "Alter": {
                 "title": "Credit",
@@ -118,7 +120,8 @@
               },
               "Create": {
                 "title": "Debit",
-                "isShown": true
+                "isShown": true,
+                "RequiredTag": "required"
               },
               "Alter": {
                 "title": "Debit",
