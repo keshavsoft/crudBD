@@ -52,8 +52,17 @@ let GetFromModalUuidFunc = () => {
 
     return LocalFromLowDb;
 };
+let GetWithJoinsFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
 
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc
 };
