@@ -24,8 +24,9 @@ import { ClassSample } from '../../ModalClass.js';
 
 let PostSendMailFunc = async (req, res) => {
     let LocalBody = req.body;
-    // let LocalMail = LocalBody.Mail;
-    let LocalDomainName = req.hostname;
+    var host = req.get('host');
+    let protocol = req.protocol;
+    let LocalDomainName = `${protocol}://${host}`
 
     let LocalFromRepo = await PostSendMailFuncRepo({
         inRequestBody: LocalBody,
