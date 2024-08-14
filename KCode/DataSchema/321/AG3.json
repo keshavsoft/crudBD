@@ -1,7 +1,11 @@
 {
-    "AG3 Name": {
-      "type": "STRING",
-      "allowNull": false,
-      "unique": true
-    }
+  "AG3 Name": {
+    "type": "STRING",
+    "allowNull": false,
+    "unique": true
+  },
+  "DisplaySerial": {
+    "type": "NUMBER",
+    "allowNull": true
   }
+}

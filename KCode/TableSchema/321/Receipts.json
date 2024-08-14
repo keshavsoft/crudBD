@@ -111,7 +111,8 @@
                             "Show": {
                                 "title": "Credit",
                                 "isShown": true,
-                                "footerFormatter": "totalFormatter"
+                                "footerFormatter": "totalFormatter",
+                                "align": "right"
                             },
                             "Create": {
                                 "title": "Credit",

@@ -116,7 +116,8 @@
               "Show": {
                 "title": "Amount",
                 "isShown": true,
-                "footerFormatter": "totalFormatter"
+                "footerFormatter": "totalFormatter",
+                "align": "right"
               },
               "Create": {
                 "title": "Amount",
