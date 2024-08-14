@@ -1,0 +1,14 @@
+  {
+    "StudentName": {
+      "type": "STRING",
+      "unique": true
+    },
+    "IpAddress": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "GpsCoordinates": {
+      "type": "STRING",
+      "allowNull": true
+    }
+  }
