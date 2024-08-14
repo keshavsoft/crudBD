@@ -4,9 +4,11 @@ import { StartFunc as mail } from "../../../../../mail/sendForRowInsert.js";
 let StartFunc = async ({ inDataToInsert, inDomainName }) => {
     let LocalFromSave = WithChecking({ inDataToInsert });
 
-    if (LocalFromSave.KTF) {
-        return await mail({ inDataPk: LocalFromSave.pk, inDomainName });
+    if (LocalFromSave.KTF === false) {
+        return await LocalFromSave;
     };
+
+    return await mail({ inDataPk: LocalFromSave.pk, inDomainName });
 };
 
 export { StartFunc };

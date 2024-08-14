@@ -24,13 +24,14 @@ let StartFunc = async ({ inDataPk, inDomainName }) => {
     const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8' });
 
     let LocalRedirectUrl = `http://${inDomainName}/Login/bin/Users/ValidateEmail/${inDataPk}`;
+    let LocalUrlInserted = data.toString().replace("{{inRedirectUrl}}", LocalRedirectUrl);
 
     return await jFTransporterForGoogle.sendMail({
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
         text: inDataPk.toString(),
-        html: data.toString().replace("{{inRedirectUrl}}", LocalRedirectUrl)
+        html: LocalUrlInserted
     });
 };
 

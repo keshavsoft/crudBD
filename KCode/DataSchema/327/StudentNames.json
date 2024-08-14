@@ -4,8 +4,7 @@
       "unique": true
     },
     "Roll Number": {
-      "type": "STRING",
-      "unique": true
+      "type": "STRING"
     },
     "Mobile": {
       "type": "NUMBER",
