@@ -52,6 +52,27 @@
                 "AutoFocusTag": "autofocus"
               }
             }
+          },
+          "DisplaySerial": {
+            "HtmlTags": {
+              "Show": {
+                "title": "DisplaySerial",
+                "isShown": true,
+                "AutoFocusTag": "autofocus",
+                "align": "right"
+              },
+              "Create": {
+                "title": "BSGroup",
+                "isShown": true,
+                "RequiredTag": "required",
+                "AutoFocusTag": "autofocus"
+              },
+              "Alter": {
+                "title": "BSGroup",
+                "isShown": true,
+                "AutoFocusTag": "autofocus"
+              }
+            }
           }
         }
       }
