@@ -25,8 +25,12 @@ import { ClassSample } from '../../ModalClass.js';
 let PostSendMailFunc = async (req, res) => {
     let LocalBody = req.body;
     // let LocalMail = LocalBody.Mail;
+    let LocalDomainName = req.hostname;
 
-    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+    let LocalFromRepo = await PostSendMailFuncRepo({
+        inRequestBody: LocalBody,
+        inDomainName: LocalDomainName
+    });
     // let LocalFromRepo = await PostSendMailFuncRepo({ inMail: LocalMail });
 
     if (LocalFromRepo.KTF === false) {
@@ -49,7 +53,7 @@ let PostFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
-let  PostWithCheckAndGenPkFuncc = async (req, res) => {
+let PostWithCheckAndGenPkFuncc = async (req, res) => {
     let LocalBody = req.body;
 
     let LocalFromRepo = await PostWithCheckAndGenPkFuncRepo({ ...LocalBody });

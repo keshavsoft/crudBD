@@ -17,8 +17,8 @@ import { StartFunc as StartFuncCustomPk } from '../../kLowDb/WriteTofile/InsertR
 import { StartFunc as WithImage } from '../../kLowDb/WriteTofile/WithChecking/WithImage.js';
 import { StartFunc as StartFuncsendmail } from '../../kLowDb/WriteTofile/Send/sendMail.js';
 
-let PostSendMailFunc = async (inPostBody) => {
-    return await StartFuncsendmail({ inDataToInsert: inPostBody });
+let PostSendMailFunc = async ({ inRequestBody, inDomainName }) => {
+    return await StartFuncsendmail({ inDataToInsert: inRequestBody, inDomainName });
 };
 
 let PostFunc = (inPostBody) => {

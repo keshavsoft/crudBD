@@ -5,7 +5,7 @@ const CommonHtmlPath = "./mail/Templates/Html/welcome.html";
 
 dotenv.config();
 
-let StartFunc = async ({ inDataPk, inTableName }) => {
+let StartFunc = async ({ inDataPk, inDomainName }) => {
     if ("KS_MAIL_ID" in process.env === false) {
         console.log("KS_MAIL_ID not found in .env file");
         return await false;
@@ -21,14 +21,16 @@ let StartFunc = async ({ inDataPk, inTableName }) => {
         return await false;
     };
 
-    const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8', flag: 'r' });
+    const data = fs.readFileSync(CommonHtmlPath, { encoding: 'utf8' });
+
+    let LocalRedirectUrl = `http://${inDomainName}/Login/bin/Users/ValidateEmail/${inDataPk}`;
 
     return await jFTransporterForGoogle.sendMail({
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         subject: "Hello ✔",
         text: inDataPk.toString(),
-        html: data.toString()
+        html: data.toString().replace("{{inRedirectUrl}}", LocalRedirectUrl)
     });
 };
 

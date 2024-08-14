@@ -23,7 +23,7 @@ import {
 
 import ConfigJson from '../../../Config.json' assert {type: 'json'};
 
-let PostSendMailFunc = async (inPostBody) => {
+let PostSendMailFunc = async ({ inRequestBody, inDomainName }) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);
     };
@@ -32,7 +32,7 @@ let PostSendMailFunc = async (inPostBody) => {
         return PostFuncDalsForMongoDB({ inPostBody });
     };
 
-    return await PostSendMailFuncDal(inPostBody);
+    return await PostSendMailFuncDal({ inRequestBody, inDomainName });
 };
 
 let PostFunc = async (inPostBody) => {
