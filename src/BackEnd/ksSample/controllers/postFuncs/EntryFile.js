@@ -13,7 +13,8 @@ import {
     MultiInsertWithCheckFunc as MultiInsertWithCheckFuncRepo,
     PostCustomPkFunc as PostCustomPkFuncRepo,
     UploadImageAsDataFunc as UploadImageAsDataFuncDalRepo,
-    PostSendMailFunc as PostSendMailFuncRepo
+    PostSendMailFunc as PostSendMailFuncRepo,
+    PostSendMailGenUuIdFunc as PostSendMailGenUuIdFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 import {
@@ -29,6 +30,24 @@ let PostSendMailFunc = async (req, res) => {
     let LocalDomainName = `${protocol}://${host}`
 
     let LocalFromRepo = await PostSendMailFuncRepo({
+        inRequestBody: LocalBody,
+        inDomainName: LocalDomainName
+    });
+    // let LocalFromRepo = await PostSendMailFuncRepo({ inMail: LocalMail });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo);
+};
+let PostSendMailGenUuIdFunc = async (req, res) => {
+    let LocalBody = req.body;
+    // let LocalMail = LocalBody.Mail;
+    let LocalDomainName = req.hostname;
+
+    let LocalFromRepo = await PostSendMailGenUuIdFuncRepo({
         inRequestBody: LocalBody,
         inDomainName: LocalDomainName
     });
@@ -252,5 +271,5 @@ export {
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc,
-    UploadImageAsDataFunc, PostSendMailFunc
+    UploadImageAsDataFunc, PostSendMailFunc, PostSendMailGenUuIdFunc
 };

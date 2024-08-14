@@ -20,6 +20,9 @@ import { StartFunc as StartFuncsendmail } from '../../kLowDb/WriteTofile/Send/En
 let PostSendMailFunc = async ({ inRequestBody, inDomainName }) => {
     return await StartFuncsendmail({ inDataToInsert: inRequestBody, inDomainName });
 };
+let PostSendMailGenUuIdFunc = async ({ inRequestBody, inDomainName }) => {
+    return await StartFuncsendmail({ inDataToInsert: inRequestBody, inDomainName });
+};
 
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
@@ -75,5 +78,6 @@ export {
     PostUploadFromModalFunc, PostWithKeysCheckFunc,
     PostFuncGenUuId, PostFilterFunc,
     PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc,
-    PostCustomPkFunc, UploadImageAsDataFunc, PostSendMailFunc
+    PostCustomPkFunc, UploadImageAsDataFunc, PostSendMailFunc,
+    PostSendMailGenUuIdFunc
 };
