@@ -117,7 +117,8 @@
                             "Show": {
                                 "title": "Debit",
                                 "isShown": true,
-                                "footerFormatter": "totalFormatter"
+                                "footerFormatter": "totalFormatter",
+                                "align": "right"
                             },
                             "Create": {
                                 "title": "Debit",

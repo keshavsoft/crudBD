@@ -3,5 +3,9 @@
       "type": "STRING",
       "allowNull": false,
       "unique": true
+    },
+    "DisplaySerial": {
+      "type": "NUMBER",
+      "allowNull": true
     }
   }

@@ -62,13 +62,13 @@
                 "align": "right"
               },
               "Create": {
-                "title": "BSGroup",
+                "title": "DisplaySerial",
                 "isShown": true,
                 "RequiredTag": "required",
                 "AutoFocusTag": "autofocus"
               },
               "Alter": {
-                "title": "BSGroup",
+                "title": "DisplaySerial",
                 "isShown": true,
                 "AutoFocusTag": "autofocus"
               }

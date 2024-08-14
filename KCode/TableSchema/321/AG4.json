@@ -51,6 +51,27 @@
                 "isShown": true,
                 "AutoFocusTag": "autofocus"
               }
+            },
+            "DisplaySerial": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "DisplaySerial",
+                  "isShown": true,
+                  "AutoFocusTag": "autofocus",
+                  "align": "right"
+                },
+                "Create": {
+                  "title": "DisplaySerial",
+                  "isShown": true,
+                  "RequiredTag": "required",
+                  "AutoFocusTag": "autofocus"
+                },
+                "Alter": {
+                  "title": "DisplaySerial",
+                  "isShown": true,
+                  "AutoFocusTag": "autofocus"
+                }
+              }
             }
           }
         }
