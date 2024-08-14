@@ -15,47 +15,42 @@
           },
           {
             "name": "Create",
-            "url": "Create.html",
+            "url": "StudentNamesCreateDLToShow.html",
             "icon": "bi bi-plus-circle"
           },
           {
             "name": "CreateCamera",
-            "url": "CreateCamera.html",
+            "url": "StudentNamesCreateCamera.html",
             "icon": "bi bi-camera-fill"
           },
           {
             "name": "CreateCameraOnModal",
-            "url": "CreateCameraOnModal.html",
+            "url": "StudentNamesCreateCameraOnModal.html",
             "icon": "bi bi-camera-video-fill"
           },
           {
+            "name": "CreateSendEmail",
+            "url": "StudentNamesCreateSendEmail.html",
+            "icon": "bi bi-envelope-check"
+          },
+          {
             "name": "Show",
-            "url": "Show.html",
+            "url": "StudentNamesShow.html",
             "icon": "bi bi-table"
           },
           {
-            "name": "ShowNoSerial",
-            "url": "ShowNoSerial.html",
-            "icon": "bi bi-file-earmark-spreadsheet"
-          },
-          {
-            "name": "ShowWithInsert",
-            "url": "ShowTableFooterAddSSR.html",
-            "icon": "bi bi-file-earmark-plus"
-          },
-          {
             "name": "Alter",
-            "url": "AlterWithSSR.html",
+            "url": "StudentNamesShowAlterWithDL.html",
             "icon": "bi bi-box-arrow-up-right"
           },
           {
             "name": "ShowWithImage",
-            "url": "ShowWithImage.html",
+            "url": "StudentNamesShowWithImage.html",
             "icon": "bi bi-filetype-jpg"
           },
           {
             "name": "Delete",
-            "url": "DeleteSSR.html",
+            "url": "StudentNamesDeleteSSR.html",
             "icon": "bi bi-trash3"
           }
         ]
