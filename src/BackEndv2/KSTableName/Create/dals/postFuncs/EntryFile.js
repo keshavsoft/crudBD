@@ -11,7 +11,10 @@ let PostFuncGenUuId = (inPostBody) => {
 let PostWithCheckAndGenPkFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
+let PostSendMailGenUuIdFunc = (inPostBody) => {
+    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+};
 
 export {
-    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc
+    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, PostSendMailGenUuIdFunc
 };
