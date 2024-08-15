@@ -1,0 +1,28 @@
+{
+  "Credit Account": {
+    "type": "STRING",
+    "references": {
+      "model": "Accounts",
+      "key": "AccountName"
+    }
+  },
+  "Debit Account": {
+    "type": "STRING",
+    "references": {
+      "model": "Accounts",
+      "key": "AccountName"
+    }
+  },
+  "Date": {
+    "type": "DATEONLY",
+    "allowNull": true
+  },
+  "Description": {
+    "type": "STRING",
+    "allowNull": true
+  },
+  "Amount": {
+    "type": "NUMBER",
+    "allowNull": true
+  }
+}
