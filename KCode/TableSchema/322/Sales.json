@@ -20,8 +20,8 @@
             "icon": "bi bi-plus-circle"
           },
           {
-            "name": "ShowToSubTable",
-            "url": "SalesShowToSubTable.html",
+            "name": "ShowToSTAlter",
+            "url": "SalesShowToSTAlter.html",
             "icon": "bi bi-plus-circle"
           },
           {
