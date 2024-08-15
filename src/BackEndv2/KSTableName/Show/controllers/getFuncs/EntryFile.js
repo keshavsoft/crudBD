@@ -8,10 +8,9 @@ import {
     GetDataSortByColumnFunc as GetDataSortByColumnFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
-
 let GetFunc = async (req, res) => {
     let LocalFromRepo = await GetFuncRepo();
-    
+
     res.json(LocalFromRepo);
 };
 
@@ -23,8 +22,11 @@ let GetDataOnlyFunc = async (req, res) => {
         return;
     };
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    // res.json(LocalFromRepo.JsonData);
+    // res.sendStatus(200);
+    res.status(200).json(LocalFromRepo.JsonData);
 };
+
 let GetDataSortByColumnFunc = async (req, res) => {
     let LocalFromRepo = await GetDataSortByColumnFuncRepo();
 
@@ -35,6 +37,7 @@ let GetDataSortByColumnFunc = async (req, res) => {
 
     res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
 };
+
 let GetImagesFunc = async (req, res) => {
     let LocalFromRepo = await GetImagesFuncRepo();
 
