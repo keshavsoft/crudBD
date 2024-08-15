@@ -96,7 +96,8 @@
               },
               "Alter": {
                 "title": "Rate",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "SubTable": {
                 "isShown": true,
@@ -120,7 +121,8 @@
               },
               "Alter": {
                 "title": "Qty",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "SubTable": {
                 "isShown": true,
@@ -144,7 +146,8 @@
               },
               "Alter": {
                 "title": "Amount",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "SubTable": {
                 "isShown": true,
