@@ -17,6 +17,15 @@ let GetDataOnlyFunc = () => {
 
     return LocalFromLowDb;
 };
+let GetDataSortByColumnFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
 let GetImagesFunc = () => {
     let LocalFromLowDb = getimagesOnly();
 
@@ -65,5 +74,5 @@ let GetWithJoinsFunc = () => {
 
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
 };

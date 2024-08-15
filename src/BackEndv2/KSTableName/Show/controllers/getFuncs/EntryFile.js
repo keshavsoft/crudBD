@@ -4,7 +4,8 @@ import {
     GetBodyCheckFunc as GetBodyCheckFuncRepo,
     GetFromModalFunc as GetFromModalFuncRepo,
     GetFromModalUuidFunc as GetFromModalUuidFuncRepo,
-    GetWithJoinsFunc as GetWithJoinsFuncRepo
+    GetWithJoinsFunc as GetWithJoinsFuncRepo,
+    GetDataSortByColumnFunc as GetDataSortByColumnFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -16,6 +17,16 @@ let GetFunc = async (req, res) => {
 
 let GetDataOnlyFunc = async (req, res) => {
     let LocalFromRepo = await GetDataOnlyFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
+let GetDataSortByColumnFunc = async (req, res) => {
+    let LocalFromRepo = await GetDataSortByColumnFuncRepo();
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -73,5 +84,5 @@ let GetWithJoinsFunc = async (req, res) => {
 
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
 };
