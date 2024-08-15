@@ -87,7 +87,8 @@
             "HtmlTags": {
               "Show": {
                 "title": "Rate",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "Create": {
                 "title": "Rate",
@@ -110,7 +111,8 @@
             "HtmlTags": {
               "Show": {
                 "title": "Qty",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "Create": {
                 "title": "Qty",
@@ -133,7 +135,8 @@
             "HtmlTags": {
               "Show": {
                 "title": "Amount",
-                "isShown": true
+                "isShown": true,
+                "align": "right"
               },
               "Create": {
                 "title": "Amount",
