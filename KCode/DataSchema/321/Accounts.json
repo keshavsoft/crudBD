@@ -36,6 +36,21 @@
       "key": "AG4 Name"
     }
   },
+  "IntrestTransfer": {
+    "type": "CHECKBOX",
+    "allowNull": false,
+    "unique": true
+  },
+  "Intrest %": {
+    "type": "STRING",
+    "allowNull": false,
+    "unique": true
+  },
+  "TransferAccountName": {
+    "type": "STRING",
+    "allowNull": false,
+    "unique": true
+  },
   "pk": {
     "type": "STRING",
     "primaryKey": true,
