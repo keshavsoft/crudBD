@@ -121,6 +121,57 @@
               }
             }
           },
+          "IntrestTransfer": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Intrest Transfer",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Intrest Transfer",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Intrest Transfer",
+                "isShown": true
+              }
+            }
+          },
+          "Intrest %": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Intrest %",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Intrest %",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Intrest %",
+                "isShown": true
+              }
+            }
+          },
+          "TransferAccountName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "TransferAccountName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "TransferAccountName",
+                "isShown": true,
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "TransferAccountName",
+                "isShown": true
+              }
+            }
+          },
           "pk": {
             "HtmlTags": {
               "Show": {
