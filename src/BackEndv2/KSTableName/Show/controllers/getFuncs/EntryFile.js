@@ -34,12 +34,12 @@ let GetDataOnlyFunc = async (req, res) => {
 let GetDataSortByColumnFunc = async (req, res) => {
     let LocalFromRepo = await GetDataSortByColumnFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
+    if (LocalFromRepo === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    res.status(200).send(JSON.stringify(LocalFromRepo));
 };
 
 let GetImagesFunc = async (req, res) => {
@@ -48,45 +48,49 @@ let GetImagesFunc = async (req, res) => {
     res.status(200).send(JSON.stringify(LocalFromRepo));
 
 };
+
 let GetBodyCheckFunc = async (req, res) => {
     let LocalFromRepo = await GetBodyCheckFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
-        res.status(500).send(LocalFromRepo.KReason);
+    if (LocalFromRepo === false) {
+        res.status(500).send(LocalFromRepo);
         return;
     };
 
     res.status(200).send(JSON.stringify(LocalFromRepo));
 };
+
 let GetFromModalFunc = async (req, res) => {
     let LocalFromRepo = await GetFromModalFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
+    if (LocalFromRepo === false) {
+        res.status(500).send(LocalFromRepo);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo));
+};
+
+let GetFromModalUuidFunc = async (req, res) => {
+    let LocalFromRepo = await GetFromModalUuidFuncRepo();
+
+    if (LocalFromRepo === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
     res.status(200).send(JSON.stringify(LocalFromRepo));
 };
-let GetFromModalUuidFunc = async (req, res) => {
-    let LocalFromRepo = await GetFromModalUuidFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
-        res.status(500).send(LocalFromRepo.KReason);
-        return;
-    };
-
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
-};
 let GetWithJoinsFunc = async (req, res) => {
     let LocalFromRepo = await GetWithJoinsFuncRepo();
 
-    if (LocalFromRepo.KTF === false) {
+    if (LocalFromRepo === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+    res.status(200).send(JSON.stringify(LocalFromRepo));
 };
 
 export {
