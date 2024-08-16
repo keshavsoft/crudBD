@@ -23,59 +23,65 @@ let GetDataOnlyFunc = () => {
 
     return LocalFromLowDb.JsonData;
 };
+
 let GetDataSortByColumnFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
+
 let GetImagesFunc = () => {
     let LocalFromLowDb = getimagesOnly();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
+
 let GetBodyCheckFunc = () => {
     let LocalFromLowDb = getBodyCheck();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
     return LocalFromLowDb;
 };
+
 let GetFromModalFunc = () => {
     let LocalFromLowDb = getModal();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
+
 let GetFromModalUuidFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
+
 let GetWithJoinsFunc = () => {
     let LocalFromLowDb = withJoins();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
 
 export {
