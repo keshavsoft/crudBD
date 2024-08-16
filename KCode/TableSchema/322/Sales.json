@@ -25,7 +25,12 @@
             "icon": "bi bi-plus-circle"
           },
           {
-            "name": "ShowToSubTableByJs",
+            "name": "SubTableAdd",
+            "url": "SalesMTableShowSTAdd.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowToSubTable",
             "url": "SalesShowToSubTableByJs.html",
             "icon": "bi bi-plus-circle"
           },
