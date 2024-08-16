@@ -1,12 +1,12 @@
 import { StartFunc as StartFuncPullData } from "../PullData/EntryFile.js";
 
-let StartFunc = async () => {
-  let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
+let StartFunc = () => {
+  let LocalReturnData = { KTF: false };
 
   let LocalStartFuncPullData = StartFuncPullData();
 
-  if (LocalStartFuncPullData === false) {
-    LocalReturnData.KReason = LocalStartFuncPullData.KReason;
+  if ("error" in LocalStartFuncPullData) {
+    LocalReturnData.KReason = LocalStartFuncPullData.error;
     return LocalReturnData;
   };
 
@@ -16,7 +16,7 @@ let StartFunc = async () => {
   LocalReturnData.KTF = true;
   LocalReturnData.JsonData = db.data;
 
-  return await LocalReturnData;
+  return LocalReturnData;
 };
 
 export { StartFunc };

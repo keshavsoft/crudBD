@@ -5,17 +5,23 @@ import { StartFunc as getimagesOnly } from '../../kLowDb/ReadFromFile/getimagesO
 import { StartFunc as withJoins } from '../../kLowDb/ReadFromFile/withJoins.js';
 
 let GetFunc = () => {
-    return ReadFromFile();
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
 };
 
 let GetDataOnlyFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
-    if (LocalFromLowDb === false) {
+    if (LocalFromLowDb.KTF === false) {
         return false;
     };
 
-    return LocalFromLowDb;
+    return LocalFromLowDb.JsonData;
 };
 let GetDataSortByColumnFunc = () => {
     let LocalFromLowDb = ReadFromFile();
