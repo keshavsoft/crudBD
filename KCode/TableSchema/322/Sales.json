@@ -25,6 +25,11 @@
             "icon": "bi bi-plus-circle"
           },
           {
+            "name": "ShowSTDelete",
+            "url": "SalesShowSTDelete.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
             "name": "SubTableAdd",
             "url": "SalesMTableShowSTAdd.html",
             "icon": "bi bi-plus-circle"
@@ -73,7 +78,7 @@
               "Alter": {
                 "title": "Voucher #",
                 "AutoFocusTag": "autofocus",
-                "isShown": false
+                "isShown": true
               },
               "ShowForPrint": {
                 "title": "Voucher #",
