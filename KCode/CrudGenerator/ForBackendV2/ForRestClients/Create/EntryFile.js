@@ -6,7 +6,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom }) => {
 };
 
 let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom }) => {
-    let LocalTypeName = "Create/restClients/postEndPoints";
+    let LocalTypeName = "Create/restClients/PostEndPoints";
     let LocalTo = inTo;
     let LocalFrom = inFrom;
 
