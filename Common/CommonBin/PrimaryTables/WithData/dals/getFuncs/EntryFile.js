@@ -3,5 +3,7 @@ import { StartFunc as StartFuncPullData } from '../../kLowDb/PullData.js';
 let GetFunc = () => {
     return StartFuncPullData();
 };
-
-export { GetFunc };
+let GetAllUniquesFunc = () => {
+    return StartFuncPullData();
+};
+export { GetFunc, GetAllUniquesFunc };
