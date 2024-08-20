@@ -1,0 +1,50 @@
+{
+  "QrCode": {
+    "type": "STRING",
+    "unique": true
+  },
+  "CostPrice": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "ProductName": {
+    "type": "STRING",
+    "unique": false
+  },
+  "ProductAliasName": {
+    "type": "STRING",
+    "unique": false
+  },
+  "SalePrice": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "PercentageValueAddition": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "UserDescription": {
+    "type": "STRING",
+    "unique": false
+  },
+  "InventorySerial": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "PurchasePk": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "SupplierName": {
+    "type": "STRING",
+    "unique": false
+  },
+  "BillNumber": {
+    "type": "NUMBER",
+    "unique": false
+  },
+  "RefPk": {
+    "type": "NUMBER",
+    "unique": false
+  }
+}

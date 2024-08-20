@@ -1,0 +1,10 @@
+{
+  "Date": {
+    "type": "Date",
+    "allowNull": false
+  },
+  "Description": {
+    "type": "STRING",
+    "allowNull": false
+  }
+}
