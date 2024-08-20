@@ -1,0 +1,169 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "icon":"bi bi-receipt-cutoff",
+        "children": [
+          {
+            "name": "Create",
+            "url": "LedgerNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "LedgerNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "ShowPageWise",
+            "url": "LedgerNamesShowWithPagiNation.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Alter",
+            "url": "LedgerNamesShowAlterSSR.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Delete",
+            "url": "LedgerNamesDeleteSSR.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "ItemName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Item Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Item Name",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Item Name",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Item Name"
+              },
+              "CreateInFooter": {}
+            }
+          },
+          "RefPK": {
+            "HtmlTags": {
+              "Show": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "Create": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "Alter": {
+                "title": "RefPK",
+                "isShown": false
+              },
+              "SubTable": {
+                "isShown": false
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Rate",
+                "isShown": true,
+                "align": "right",
+                "footerFormatter": "totalFormatter"
+              },
+              "Create": {
+                "title": "Rate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Rate",
+                "isShown": true,
+                "align": "right"
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Rate"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemQty": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Qty",
+                "isShown": true,
+                "align": "right"
+              },
+              "Create": {
+                "title": "Qty",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Qty",
+                "isShown": true,
+                "align": "right"
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Qty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "ItemAmount": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Amount",
+                "isShown": true,
+                "align": "right",
+                "footerFormatter": "totalFormatter"
+              },
+              "Create": {
+                "title": "Amount",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Amount",
+                "isShown": true,
+                "align": "right"
+              },
+              "SubTable": {
+                "isShown": true,
+                "title": "Amount",
+                "isClientEval": true,
+                "ClientEvalString": "KSEval.ItemRate*KSEval.ItemQty"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
