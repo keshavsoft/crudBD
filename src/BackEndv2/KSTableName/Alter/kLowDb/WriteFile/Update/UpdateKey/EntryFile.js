@@ -25,28 +25,25 @@ let StartFunc = async ({ inId, inKey, inValue }) => {
 
   LocalUpdateRow({
     inKey: LocalKey, inValue: LocalValue,
-    inFindRow: LocalFindId,
-    inDataToUpdate: LocalDataToUpdate
+    inFindRow: LocalFindId
   });
 
   db.write();
 
   LocalReturnData.KTF = true;
-  // LocalReturnData.JsonData = LocalFindId;
 
   return await LocalReturnData;
 };
 
-const LocalUpdateRow = ({ inKey, inValue, inFindRow, inDataToUpdate }) => {
-  let LocalDataToUpdate = inDataToUpdate;
+const LocalUpdateRow = ({ inKey, inValue, inFindRow }) => {
   let LocalFindRow = inFindRow;
   let LocalKey = inKey;
   let LocalValue = inValue;
 
   Object.entries(LocalFindRow).forEach(
     ([key, value]) => {
-      if (key in LocalDataToUpdate) {
-        LocalFindRow[key] = LocalDataToUpdate[key]
+      if (key === LocalKey) {
+        LocalFindRow[LocalKey] = LocalValue
       }
     }
   );
