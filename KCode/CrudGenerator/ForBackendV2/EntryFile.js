@@ -3,9 +3,9 @@ import { StartFunc as StartFuncForConfigJson } from './ForConfigJson/EntryFile.j
 import { StartFunc as StartFuncForRestClients } from './ForRestClients/EntryFile.js';
 import { StartFunc as StartFuncForTableName } from './ForTableName/EntryFile.js';
 import { StartFunc as StartFuncForkSequelize } from './ForkSequelize/EntryFile.js';
-import ConfigJson from '../../../binV2/Config.json' with {type: 'json'};
 
 import fs from "fs-extra";
+
 
 let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
     let LocalTablesCollection = inTablesCollection;
@@ -18,7 +18,9 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
 
     StartFuncForRoutesFile({ inTablesCollection, inFrom, inTo });
     await StartFuncForConfigJson({ inTablesCollection, inFrom, inTo })
-    StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson: ConfigJson });
+    const ConfigJson = await fs.readFile('./binV2/Config.json', { encoding: 'utf8' });
+
+    StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson: JSON.parse(ConfigJson) });
     StartFuncForTableName({ inTablesCollection, inTo });
     StartFuncForkSequelize({ inFrom, inTo });
 };

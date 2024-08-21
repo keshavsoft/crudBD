@@ -1,6 +1,6 @@
 import {
-  PutFunc as PutFuncDal
-} from '../../dals/putFuncs/EntryFile.js';
+  GetFunc as GetFuncDal
+} from '../../dals/GetFuncs/EntryFile.js';
 
 import {
   PutFunc as PutFuncDalsForSequelize
@@ -10,16 +10,17 @@ import { PutFunc as PutFuncDalsForMongoDB } from "../../dalsForMongoDb/putFuncs/
 
 import ConfigJson from '../../../../Config.json' assert {type: 'json'};
 
-let PutFunc = async ({ inDataToUpdate, inId }) => {
+
+let GetFunc = async ({ inId, inKey, inValue }) => {
   if (ConfigJson.isSequelize) {
-    return PutFuncDalsForSequelize({ inDataToUpdate, inId });
+    return PutFuncDalsForSequelize({ inId, inKey, inValue });
   };
 
   if (ConfigJson.isMongoDb) {
-    return PutFuncDalsForMongoDB({ inDataToUpdate, inId });
+    return PutFuncDalsForMongoDB({ inId, inKey, inValue });
   };
 
-  return PutFuncDal({ inDataToUpdate, inId });
+  return GetFuncDal({ inId, inKey, inValue });
 };
 
-export { PutFunc };
+export { GetFunc };

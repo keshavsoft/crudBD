@@ -1,15 +1,18 @@
 import {
-  PutFunc as PutFuncRepo
-} from "../../repos/putFuncs/EntryFile.js";
+  GetFunc as GetFuncRepo
+} from "../../repos/GetFuncs/EntryFile.js";
 
-let PutFunc = async (req, res) => {
-  let LocalDataToUpdate = req.body;
+let GetFunc = async (req, res) => {
 
-  let LocalIfFromParam = req.params.id;
+  let LocalIfFromParam = req.params;
+  let Localid = LocalIfFromParam.id;
+  let LocalKey = LocalIfFromParam.inKey;
+  let LocalValue = LocalIfFromParam.inValue;
 
-  let LocalFromRepo = await PutFuncRepo({
-    inDataToUpdate: LocalDataToUpdate,
-    inId: LocalIfFromParam,
+  let LocalFromRepo = await GetFuncRepo({
+    inId: Localid,
+    inKey: LocalKey,
+    inValue: LocalValue,
   });
 
   if (LocalFromRepo.KTF === false) {
@@ -20,4 +23,4 @@ let PutFunc = async (req, res) => {
   res.json(LocalFromRepo);
 };
 
-export { PutFunc };
+export { GetFunc };

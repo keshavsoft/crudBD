@@ -3,9 +3,9 @@ import express from 'express';
 var router = express.Router();
 
 import {
-    PutFunc
-} from '../../controllers/putFuncs/EntryFile.js';
+    GetFunc
+} from '../../controllers/GetFuncs/EntryFile.js';
 
-router.get('/:inKey/:inValue', PutFunc);
+router.get('/:id/:inKey/:inValue', GetFunc);
 
 export { router };
