@@ -3,7 +3,10 @@ import { StartFunc as StartFuncUpdateRow } from '../../kLowDb/WriteFile/Update/U
 let PutFunc = ({ inDataToUpdate, inId }) => {
     return StartFuncUpdateRow({ inDataToUpdate, inId });
 };
+let GetFunc = ({ inDataToUpdate, inId }) => {
+    return StartFuncUpdateRow({ inDataToUpdate, inId });
+};
 
 export {
-    PutFunc
+    PutFunc, GetFunc
 };
