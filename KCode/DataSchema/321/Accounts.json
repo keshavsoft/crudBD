@@ -38,22 +38,14 @@
   },
   "IntrestTransfer": {
     "type": "CHECKBOX",
-    "allowNull": false,
-    "unique": true
+    "allowNull": false
   },
   "Intrest %": {
     "type": "STRING",
-    "allowNull": false,
-    "unique": true
+    "allowNull": false
   },
   "TransferAccountName": {
     "type": "STRING",
-    "allowNull": false,
-    "unique": true
-  },
-  "pk": {
-    "type": "STRING",
-    "primaryKey": true,
-    "autoIncrement": true
+    "allowNull": false
   }
 }
