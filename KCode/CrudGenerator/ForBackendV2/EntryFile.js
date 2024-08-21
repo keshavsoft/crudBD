@@ -18,7 +18,7 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
 
     StartFuncForRoutesFile({ inTablesCollection, inFrom, inTo });
     await StartFuncForConfigJson({ inTablesCollection, inFrom, inTo })
-    StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson });
+    StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson: ConfigJson });
     StartFuncForTableName({ inTablesCollection, inTo });
     StartFuncForkSequelize({ inFrom, inTo });
 };

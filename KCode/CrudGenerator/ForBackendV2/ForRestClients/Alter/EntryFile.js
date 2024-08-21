@@ -29,14 +29,32 @@ let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson
 
             let LocalFileDataReplaced = LocalFileData.toString().replaceAll("ksSample", LoopInsideFileName);
             let LocalBinReplaced = LocalFileDataReplaced.replaceAll(LocalFrom, LocalTo);
+            let LocalColumnsSchema = LocalFuncGetTableSchema({
+                inConfigJson,
+                inTableNameWithExtension: element.name
+            });
 
-            fs.writeFileSync(`${LocalFilePath}/${LoopFile}`, LocalBinReplaced);
+            let LocalWithBody = LocalFileDataReplaced.replaceAll("{}", JSON.stringify(LocalColumnsSchema));
+
+            fs.writeFileSync(`${LocalFilePath}/${LoopFile}`, LocalWithBody);
         });
     });
 };
 
-const LocalFuncGetTableSchema = ({ inConfigJson }) => {
+const LocalFuncGetTableSchema = ({ inConfigJson, inTableNameWithExtension }) => {
+    let LocalChildren = inConfigJson.jsonConfig.tableAndColumns.children;
+    let LocalColumnsSchemaToReturn = {};
 
+    let LocalColumnsSchema = LocalChildren.find(element => {
+        return element.name === inTableNameWithExtension;
+    });
+    console.log("aaaaaaaa : ", inTableNameWithExtension, LocalColumnsSchema);
+
+    for (const [key, value] of Object.entries(LocalColumnsSchema.fileData)) {
+        LocalColumnsSchemaToReturn[key] = "";
+    };
+
+    return LocalColumnsSchemaToReturn;
 };
 
 export { StartFunc };
