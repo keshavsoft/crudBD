@@ -62,7 +62,8 @@ let PostSendMailGenUuIdFunc = async (inPostBody) => {
 
     return PostSendMailGenUuIdFuncDal(inPostBody);
 };
-let PostSendMailFunc = async (inPostBody) => {
+
+let PostSendMailFunc = async ({ inPostBody, inDomainName }) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);
     };
@@ -71,10 +72,10 @@ let PostSendMailFunc = async (inPostBody) => {
         return PostFuncDalsForMongoDB(inPostBody);
     };
 
-    return PostSendMailFuncDal(inPostBody);
+    return await PostSendMailFuncDal({ inPostBody, inDomainName });
 };
 
-
 export {
-    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, PostSendMailGenUuIdFunc, PostSendMailFunc
+    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
+    PostSendMailGenUuIdFunc, PostSendMailFunc
 };

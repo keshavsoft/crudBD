@@ -42,6 +42,7 @@ let PostSendMailFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo);
 };
+
 let PostSendMailGenUuIdFunc = async (req, res) => {
     let LocalBody = req.body;
     // let LocalMail = LocalBody.Mail;

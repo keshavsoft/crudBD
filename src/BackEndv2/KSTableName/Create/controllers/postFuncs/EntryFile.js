@@ -56,18 +56,27 @@ let PostSendMailGenUuIdFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
+
 let PostSendMailFunc = async (req, res) => {
     let LocalBody = req.body;
+    var host = req.get('host');
+    let protocol = req.protocol;
+    let LocalDomainName = `${protocol}://${host}`
 
-    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+    let LocalFromRepo = await PostSendMailFuncRepo({
+        inPostBody: LocalBody,
+        inDomainName: LocalDomainName
+    });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.status(200).send(LocalFromRepo.pk.toString());
+    res.status(200).send(LocalFromRepo);
 };
+
 export {
-    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, PostSendMailGenUuIdFunc, PostSendMailFunc
+    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
+    PostSendMailGenUuIdFunc, PostSendMailFunc
 };

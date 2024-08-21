@@ -1,4 +1,6 @@
 
 ###Get all the rows from the database in this table
-POST http://localhost:7019/src/BackEndv2/ksSample/SendMail
+POST http://localhost:7019/src/BackEndv2/ksSample/Create/SendMail
+content-type: application/json
 
+{}
