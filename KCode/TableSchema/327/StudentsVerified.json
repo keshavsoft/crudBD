@@ -1,0 +1,206 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "CRUD",
+            "isTitle": true,
+            "icon": "bi bi-back"
+          },
+          {
+            "name": "Create",
+            "url": "StudentNamesCreateDLToShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "CreateCamera",
+            "url": "StudentNamesCreateCamera.html",
+            "icon": "bi bi-camera-fill"
+          },
+          {
+            "name": "CreateCameraOnModal",
+            "url": "StudentNamesCreateCameraOnModal.html",
+            "icon": "bi bi-camera-video-fill"
+          },
+          {
+            "name": "CreateSendEmail",
+            "url": "StudentNamesCreateSendEmail.html",
+            "icon": "bi bi-envelope-check"
+          },
+          {
+            "name": "Show",
+            "url": "StudentNamesShow.html",
+            "icon": "bi bi-table"
+          },
+          {
+            "name": "Alter",
+            "url": "StudentNamesShowAlterWithDL.html",
+            "icon": "bi bi-box-arrow-up-right"
+          },
+          {
+            "name": "ShowWithImage",
+            "url": "StudentNamesShowWithImage.html",
+            "icon": "bi bi-filetype-jpg"
+          },
+          {
+            "name": "Delete",
+            "url": "StudentNamesDeleteSSR.html",
+            "icon": "bi bi-trash3"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "StudentName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Roll Number": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Roll Number",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Roll Number",
+                "AutoFocusTag": "autofocus",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Mobile": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Mobile",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Mobile",
+                "RequiredTag": "required",
+                "isShown": true,
+                "class": "mobileTwilioClass"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "AlternateMobile": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Alternate Mobile",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Alternate Mobile",
+                "isShown": true,
+                "class": "mobileTwilioClass"
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Year of Birth": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Year of Birth",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Year of Birth",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Email": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Email",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Email",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "10th Grade GPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "10th Grade GPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "10th Grade GPA",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Intermediate/Diploma CGPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Intermediate/Diploma CGPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Intermediate/Diploma CGPA",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "Graduation CGPA": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Graduation CGPA",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Graduation CGPA",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

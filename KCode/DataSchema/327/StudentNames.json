@@ -1,7 +1,6 @@
   {
     "StudentName": {
-      "type": "STRING",
-      "unique": true
+      "type": "STRING"
     },
     "Roll Number": {
       "type": "STRING"
@@ -20,13 +19,13 @@
     "Email": {
       "type": "STRING"
     },
-    "10th Grade GPA":{
+    "10th Grade GPA": {
       "type": "NUMBER"
     },
-    "Intermediate/Diploma CGPA":{
+    "Intermediate/Diploma CGPA": {
       "type": "NUMBER"
     },
-    "Graduation CGPA":{
+    "Graduation CGPA": {
       "type": "NUMBER"
     }
   }
