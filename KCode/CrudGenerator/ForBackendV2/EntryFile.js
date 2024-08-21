@@ -6,7 +6,6 @@ import { StartFunc as StartFuncForkSequelize } from './ForkSequelize/EntryFile.j
 
 import fs from "fs-extra";
 
-
 let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
     let LocalTablesCollection = inTablesCollection;
 
@@ -17,8 +16,9 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
     LocalFuncCreateFolders({ inTo });
 
     StartFuncForRoutesFile({ inTablesCollection, inFrom, inTo });
-    await StartFuncForConfigJson({ inTablesCollection, inFrom, inTo })
-    const ConfigJson = await fs.readFile('./binV2/Config.json', { encoding: 'utf8' });
+    await StartFuncForConfigJson({ inTablesCollection, inFrom, inTo });
+
+    const ConfigJson = fs.readFileSync('./binV2/Config.json', { encoding: 'utf8' });
 
     StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson: JSON.parse(ConfigJson) });
     StartFuncForTableName({ inTablesCollection, inTo });

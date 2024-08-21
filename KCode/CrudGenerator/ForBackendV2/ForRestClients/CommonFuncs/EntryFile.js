@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
-    LocalFuncForTestEndPoint({ inTablesCollection, inTo, inFrom, inConfigJson });
-};
-
-let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
-    let LocalTypeName = "Alter/restClients/PutEndPoints";
+let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson, inFileLocation }) => {
+    let LocalTypeName = inFileLocation;
     let LocalTo = inTo;
     let LocalFrom = inFrom;
 
@@ -29,7 +25,7 @@ let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson
 
             let LocalFileDataReplaced = LocalFileData.toString().replaceAll("ksSample", LoopInsideFileName);
             let LocalBinReplaced = LocalFileDataReplaced.replaceAll(LocalFrom, LocalTo);
-            
+
             let LocalColumnsSchema = LocalFuncGetTableSchema({
                 inConfigJson,
                 inTableNameWithExtension: element.name
