@@ -2,7 +2,8 @@ import {
     PostFunc as PostFuncRepo,
     PostFuncGenUuId as PostFuncGenUuIdRepo,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo,
-    PostSendMailGenUuIdFunc as PostSendMailGenUuIdFuncRepo
+    PostSendMailGenUuIdFunc as PostSendMailGenUuIdFuncRepo,
+    PostSendMailFunc as PostSendMailFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 let PostFunc = async (req, res) => {
@@ -55,7 +56,18 @@ let PostSendMailGenUuIdFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
+let PostSendMailFunc = async (req, res) => {
+    let LocalBody = req.body;
 
+    let LocalFromRepo = await PostSendMailFuncRepo({ ...LocalBody });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo.pk.toString());
+};
 export {
-    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, PostSendMailGenUuIdFunc
+    PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, PostSendMailGenUuIdFunc, PostSendMailFunc
 };
