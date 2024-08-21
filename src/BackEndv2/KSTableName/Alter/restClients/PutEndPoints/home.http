@@ -1,6 +1,6 @@
 
 ###Get all the rows from the database in this table
-POST http://localhost:7019/src/BackEndv2/ksSample/Create
+PUT http://localhost:7019/src/BackEndv2/ksSample/Alter/{inRowpk}
 content-type: application/json
 
 {}
