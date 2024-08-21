@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-let StartFunc = ({ inTablesCollection, inTo, inFrom }) => {
-    LocalFuncForTestEndPoint({ inTablesCollection, inTo, inFrom });
+let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
+    LocalFuncForTestEndPoint({ inTablesCollection, inTo, inFrom, inConfigJson });
 };
 
-let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom }) => {
+let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     let LocalTypeName = "Alter/restClients/PutEndPoints";
     let LocalTo = inTo;
     let LocalFrom = inFrom;
@@ -35,5 +35,8 @@ let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom }) => {
     });
 };
 
+const LocalFuncGetTableSchema = ({ inConfigJson }) => {
+
+};
 
 export { StartFunc };

@@ -3,6 +3,7 @@ import { StartFunc as StartFuncForConfigJson } from './ForConfigJson/EntryFile.j
 import { StartFunc as StartFuncForRestClients } from './ForRestClients/EntryFile.js';
 import { StartFunc as StartFuncForTableName } from './ForTableName/EntryFile.js';
 import { StartFunc as StartFuncForkSequelize } from './ForkSequelize/EntryFile.js';
+import ConfigJson from '../../../binV2/Config.json' with {type: 'json'};
 
 import fs from "fs-extra";
 
@@ -17,7 +18,7 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
 
     StartFuncForRoutesFile({ inTablesCollection, inFrom, inTo });
     await StartFuncForConfigJson({ inTablesCollection, inFrom, inTo })
-    StartFuncForRestClients({ inTablesCollection, inFrom, inTo });
+    StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson });
     StartFuncForTableName({ inTablesCollection, inTo });
     StartFuncForkSequelize({ inFrom, inTo });
 };
