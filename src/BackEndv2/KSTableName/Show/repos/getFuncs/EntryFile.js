@@ -23,7 +23,7 @@ let GetFunc = async () => {
     return GetFuncDal();
 };
 
-let GetRowDataFunc = async () => {
+let GetRowDataFunc = async ({ inId }) => {
     if (ConfigJson.isSequelize) {
         return await GetDataOnlyFuncDalsForSequelize();
     };
@@ -32,7 +32,7 @@ let GetRowDataFunc = async () => {
         return GetDataOnlyFuncDalsForMongoDb();
     };
 
-    return GetRowDataFuncDal();
+    return GetRowDataFuncDal({ inId });
 };
 
 let GetDataOnlyFunc = async () => {
