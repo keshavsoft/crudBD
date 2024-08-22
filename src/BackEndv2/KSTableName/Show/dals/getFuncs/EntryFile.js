@@ -14,8 +14,8 @@ let GetFunc = () => {
     return LocalFromLowDb;
 };
 
-let GetRowDataFunc = () => {
-    let LocalFromLowDb = ReadFromFile();
+let GetRowDataFunc = ({ inId }) => {
+    let LocalFromLowDb = ReadFromFile({ inId });
 
     if (LocalFromLowDb.KTF === false) {
         return false;
