@@ -16,9 +16,10 @@ generate backend and database from json schema
 - [visual studio code extensions](#vscodeextensions)
  
 #### **Key Locations** 
-- **Backend:** root:bin, root:binSecured ( for jwt protected end points same as bin )
+- **Backend:** root:bin, root:binSecured ( for jwt protected end points same as bin ), root:binV2 for new branched End points
 - **Database:** root:KData/JSON
-- **Table Schemas definition location :** root:KCode/DataSchema
+- **Columns Schemas definition location :** root:KCode/DataSchema
+- **Table Schemas definition location :** root:KCode/TableSchema
 - **Table Schema to be considered :** root:KData/Config.json:ToDataDetails.DataPk
 - **Frontend :** root:public
 
@@ -32,6 +33,9 @@ generate backend and database from json schema
 - **Backend:** run KCode/Backend.js
 - **Database:** run KCode/Database.js
 - **Frontend:** run npm run home
+
+#### **run the batch files for windows** 
+- **Batch File:** run fbd.bat
 
 ### <a name="testendpoints"></a>## **testendpoints** 🚀
 - bin/tablename/restClients folder for different end points

@@ -27,5 +27,9 @@
     },
     "Graduation CGPA": {
       "type": "NUMBER"
+    },
+    "isMailValidated": {
+      "type": "STRING",
+      "defaultValue": false
     }
   }
