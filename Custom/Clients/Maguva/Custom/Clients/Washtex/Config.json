@@ -1,7 +1,0 @@
-{
-    "jsonConfig": {
-        "DataPk": 318,
-        "DataPath": "KData/JSON",
-        "LoginPath": "KData/JSONForLogin"
-    }
-}
