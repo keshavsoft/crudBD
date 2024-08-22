@@ -3,6 +3,7 @@ import { StartFunc as getModal } from '../../kLowDb/ReadFromFile/getModal.js';
 import { StartFunc as getBodyCheck } from '../../kLowDb/ReadFromFile/getBodyCheck.js';
 import { StartFunc as getimagesOnly } from '../../kLowDb/ReadFromFile/getimagesOnly.js';
 import { StartFunc as withJoins } from '../../kLowDb/ReadFromFile/withJoins.js';
+import { StartFunc as getRowFunc } from '../../kLowDb/ReadFromFile/getRowFunc.js';
 
 let GetFunc = () => {
     let LocalFromLowDb = ReadFromFile();
@@ -15,7 +16,7 @@ let GetFunc = () => {
 };
 
 let GetRowDataFunc = ({ inId }) => {
-    let LocalFromLowDb = ReadFromFile({ inId });
+    let LocalFromLowDb = getRowFunc({ inId });
 
     if (LocalFromLowDb.KTF === false) {
         return false;
