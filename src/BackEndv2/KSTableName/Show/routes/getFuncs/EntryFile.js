@@ -4,11 +4,11 @@ var router = express.Router();
 
 import {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
 } from '../../controllers/getFuncs/EntryFile.js';
 
 router.get('/', GetFunc);
-// router.get('/:id', GetRowDataFunc);
+router.get('/:id', GetRowDataFunc);
 router.get('/DataOnly', GetDataOnlyFunc);
 router.get('/Images', GetImagesFunc);
 router.get('/BodyCheck', GetBodyCheckFunc);

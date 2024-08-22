@@ -14,6 +14,16 @@ let GetFunc = () => {
     return LocalFromLowDb;
 };
 
+let GetRowDataFunc = ({ inId }) => {
+    let LocalFromLowDb = ReadFromFile({ inId });
+
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb.JsonData;
+};
+
 let GetDataOnlyFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
@@ -86,5 +96,5 @@ let GetWithJoinsFunc = () => {
 
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
 };

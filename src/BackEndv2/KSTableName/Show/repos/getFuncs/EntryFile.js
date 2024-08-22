@@ -5,7 +5,8 @@ import {
     GetFromModalFunc as GetFromModalFuncDal,
     GetFromModalUuidFunc as GetFromModalUuidFuncDal,
     GetWithJoinsFunc as GetWithJoinsFuncDal,
-    GetDataSortByColumnFunc as GetDataSortByColumnFuncDal
+    GetDataSortByColumnFunc as GetDataSortByColumnFuncDal,
+    GetRowDataFunc as GetRowDataFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
@@ -20,6 +21,18 @@ import ConfigJson from '../../../../Config.json' assert {type: 'json'};
 
 let GetFunc = async () => {
     return GetFuncDal();
+};
+
+let GetRowDataFunc = async ({ inId }) => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetRowDataFuncDal({ inId });
 };
 
 let GetDataOnlyFunc = async () => {
@@ -102,5 +115,5 @@ let GetWithJoinsFunc = async () => {
 };
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
 };

@@ -5,7 +5,8 @@ import {
     GetFromModalFunc as GetFromModalFuncRepo,
     GetFromModalUuidFunc as GetFromModalUuidFuncRepo,
     GetWithJoinsFunc as GetWithJoinsFuncRepo,
-    GetDataSortByColumnFunc as GetDataSortByColumnFuncRepo
+    GetDataSortByColumnFunc as GetDataSortByColumnFuncRepo,
+    GetRowDataFunc as GetRowDataFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
@@ -18,6 +19,18 @@ let GetFunc = async (req, res) => {
 
     res.status(200).json(LocalFromRepo);
 
+};
+
+let GetRowDataFunc = async (req, res) => {
+    let localid = req.params.id
+    let LocalFromRepo = await GetRowDataFuncRepo({ inId: localid });
+
+    if (LocalFromRepo === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).json(LocalFromRepo);
 };
 
 let GetDataOnlyFunc = async (req, res) => {
@@ -95,5 +108,5 @@ let GetWithJoinsFunc = async (req, res) => {
 
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
 };
