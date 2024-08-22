@@ -15,7 +15,12 @@ let StartFunc = ({ inId }) => {
   const db = LocalStartFuncPullData.inDb;
   db.read();
 
-  let LocalFindData = db.data.filter(el => el.pk === LocalId);
+  let LocalFindData = db.data.find(el => el.pk === LocalId);
+
+  if (LocalFindData === undefined) {
+    LocalReturnData.KReason = `No Data by : ${LocalId}`;
+    return LocalReturnData;
+  };
 
   LocalReturnData.KTF = true;
   LocalReturnData.JsonData = LocalFindData;
