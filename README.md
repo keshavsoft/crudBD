@@ -37,9 +37,6 @@ generate backend and database from json schema
 #### **run the batch files for windows** 
 - **Batch File:** run fbd.bat
 
-### <a name="testendpoints"></a>## **testendpoints** 🚀
-- bin/tablename/restClients folder for different end points
- 
 #### **run the below commands to see the output** 
 - run npm run start
 
