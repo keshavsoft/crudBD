@@ -2,10 +2,8 @@ import express from 'express';
 
 var router = express.Router();
 
-import { router as routerPutFuncs } from './routes/putFuncs/EntryFile.js';
-import { router as routerGetFuncs } from './routes/GetFuncs/EntryFile.js';
+import { router as routerDeleteFuncs } from './routes/DeleteFuncs/EntryFile.js';
 
-router.use('/', routerPutFuncs);
-router.use('/', routerGetFuncs);
+router.use('/', routerDeleteFuncs);
 
 export { router };

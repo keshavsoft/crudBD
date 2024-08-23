@@ -1,26 +1,46 @@
 import {
-  GetFunc as GetFuncDal
-} from '../../dals/GetFuncs/EntryFile.js';
+    GetFunc as GetFuncDal, GetDataOnlyFunc as GetDataOnlyFuncDal,
+    GetImagesFunc as GetImagesFuncDal
+} from '../../dals/getFuncs/EntryFile.js';
 
 import {
-  PutFunc as PutFuncDalsForSequelize
-} from '../../dalsForSequelize/putFuncs/EntryFile.js';
+    GetDataOnlyFunc as GetDataOnlyFuncDalsForSequelize
+} from '../../dalsForSequelize/getFuncs/EntryFile.js';
 
-import { PutFunc as PutFuncDalsForMongoDB } from "../../dalsForMongoDb/putFuncs/EntryFile.js";
+import {
+    GetDataOnlyFunc as GetDataOnlyFuncDalsForMongoDb
+} from '../../dalsForMongoDb/getFuncs/EntryFile.js';
 
 import ConfigJson from '../../../../Config.json' assert {type: 'json'};
 
-
-let GetFunc = async ({ inId, inKey, inValue }) => {
-  if (ConfigJson.isSequelize) {
-    return PutFuncDalsForSequelize({ inId, inKey, inValue });
-  };
-
-  if (ConfigJson.isMongoDb) {
-    return PutFuncDalsForMongoDB({ inId, inKey, inValue });
-  };
-
-  return GetFuncDal({ inId, inKey, inValue });
+let GetFunc = async () => {
+    return GetFuncDal();
 };
 
-export { GetFunc };
+let GetDataOnlyFunc = async () => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetDataOnlyFuncDal();
+};
+
+let GetImagesFunc = async () => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetImagesFuncDal();
+};
+
+export {
+    GetFunc, GetDataOnlyFunc, GetImagesFunc
+};

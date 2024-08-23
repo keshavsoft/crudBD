@@ -1,9 +1,29 @@
-import { StartFunc as StartFuncUpdateRow } from '../../kLowDb/WriteFile/Update/UpdateKey/EntryFile.js';
+import { StartFunc as ReadFromFile } from '../../kLowDb/ReadFromFile/getFunc.js';
 
-let GetFunc = ({ inId, inKey, inValue }) => {
-    return StartFuncUpdateRow({ inId, inKey, inValue });
+let GetFunc = () => {
+    return ReadFromFile();
 };
 
+let GetDataOnlyFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
+let GetImagesFunc = () => {
+    let LocalFromLowDb = ReadFromFile();
+
+    if (LocalFromLowDb === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
+
+
 export {
-    GetFunc
+    GetFunc, GetDataOnlyFunc, GetImagesFunc
 };

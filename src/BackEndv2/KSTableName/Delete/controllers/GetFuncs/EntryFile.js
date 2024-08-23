@@ -1,26 +1,36 @@
 import {
-  GetFunc as GetFuncRepo
-} from "../../repos/GetFuncs/EntryFile.js";
+    GetFunc as GetFuncRepo, GetDataOnlyFunc as GetDataOnlyFuncRepo,
+    GetImagesFunc as GetImagesFuncRepo
+} from '../../repos/getFuncs/EntryFile.js';
+
 
 let GetFunc = async (req, res) => {
+    let LocalFromRepo = await GetFuncRepo();
 
-  let LocalIfFromParam = req.params;
-  let Localid = LocalIfFromParam.id;
-  let LocalKey = LocalIfFromParam.inKey;
-  let LocalValue = LocalIfFromParam.inValue;
-
-  let LocalFromRepo = await GetFuncRepo({
-    inId: Localid,
-    inKey: LocalKey,
-    inValue: LocalValue,
-  });
-
-  if (LocalFromRepo.KTF === false) {
-    res.status(500).send(LocalFromRepo.KReason);
-    return;
-  };
-
-  res.json(LocalFromRepo);
+    res.json(LocalFromRepo);
 };
 
-export { GetFunc };
+let GetDataOnlyFunc = async (req, res) => {
+    let LocalFromRepo = await GetDataOnlyFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
+let GetImagesFunc = async (req, res) => {
+    let LocalFromRepo = await GetImagesFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo.JsonData));
+};
+
+export {
+    GetFunc, GetDataOnlyFunc, GetImagesFunc
+};

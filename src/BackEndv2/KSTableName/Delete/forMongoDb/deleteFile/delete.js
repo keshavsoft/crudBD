@@ -1,16 +1,15 @@
 import { MongoClient, ObjectId } from "mongodb";
 import { startFunc as startFuncForPassword } from "../commonFuncs/forPassword.js";
 import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
-// const { ObjectId } = require('mongodb');
 import  path  from "path";
+// const { ObjectId } = require('mongodb');
+
 import configJson from '../../../Config.json' assert {type: 'json'};
 import tableJson from "../../tableName.json" assert {type: 'json'};
 
-let StartFunc = async ({ inDataToUpdate, inId }) => {
+let StartFunc = async ({ inId }) => {
     try {
-
         const password = startFuncForPassword();
-
         let url = startFuncForUrl();
         const dbName = configJson.mongoDbConfig.DbName;
         // const LocalcollectionName = configJson.mongoDbConfig.collectionName;
@@ -27,10 +26,10 @@ let StartFunc = async ({ inDataToUpdate, inId }) => {
         const collection = db.collection(LocalcollectionName);
         // let objID = new ObjectId(inId);
         console.log('inId : ', inId);
-        const updateResult = await collection.updateOne( { _id: new ObjectId(inId) } , { $set: inDataToUpdate} );
+        const insertResult = await collection.deleteOne( { _id: new ObjectId(inId) } );
         // let serverData = await collection.find().toArray();
         // console.log('serverData successfully to server', serverData);
-        return await updateResult;
+        return await insertResult;
     } catch (error) {
         console.log("error : ", error);
         return await {
