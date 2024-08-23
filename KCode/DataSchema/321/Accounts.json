@@ -46,6 +46,10 @@
   },
   "TransferAccountName": {
     "type": "STRING",
-    "allowNull": false
+    "allowNull": false,
+    "references": {
+      "model": "Accounts",
+      "key": "AccountName"
+    }
   }
 }
