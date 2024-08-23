@@ -6,7 +6,7 @@
       "type": "STRING"
     },
     "Mobile": {
-      "type": "NUMBER",
+      "type": "TELEPHONE",
       "unique": true
     },
     "AlternateMobile": {
