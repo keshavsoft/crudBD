@@ -39,22 +39,6 @@ app.use(express.json({ limit: '100mb' }));
 
 app.use('/', express.static(path.join(path.resolve(), 'public')));
 
-app.get('/Version', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept,Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.end(packageJSON.version);
-});
-
-app.get('/AboutUs', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept,Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.end("KeshavSoft : 9848163021");
-});
-
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
 app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);

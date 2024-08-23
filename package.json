@@ -1,6 +1,6 @@
 {
   "name": "crudbd",
-  "version": "1.0.0",
+  "version": "2024.08.23",
   "description": "generate backend and database from json schema",
   "main": "app.js",
   "type": "module",
