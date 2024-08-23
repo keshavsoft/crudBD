@@ -7,7 +7,7 @@ let StartFunc = () => {
 
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/BillsQrCode.json`;
+    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/pos.json`;
 
     const defaultData = { error: "From KLowDb" }
 
@@ -25,7 +25,7 @@ let LocalFuncForTableSchema = () => {
     LocalReturnData.KTF = false;
 
     let LocalSecondNeeded = Configjson.jsonConfig.tableAndColumns.children.find(element => {
-        return "children" in element === false && element.name === "BillsQrCode.json";
+        return "children" in element === false && element.name === "pos.json";
     });
 
     return LocalSecondNeeded;

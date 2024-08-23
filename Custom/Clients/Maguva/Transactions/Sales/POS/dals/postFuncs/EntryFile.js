@@ -6,8 +6,6 @@ let postFunc = ({ inPostBody }) => {
         inDataToInsert: inPostBody
     });
 
-
-
     return LocalFromLowDb;
 };
 
