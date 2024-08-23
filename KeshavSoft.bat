@@ -8,10 +8,15 @@ IF ERRORLEVEL 1 (
     ECHO Downloading installer from https://vscode-update.azurewebsites.net/latest/win32/stable
 
     rem Download the file & name it VSCodeSetup.exe relative to this running batch file
-    CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://vscode-update.azurewebsites.net/latest/win32/stable', 'VSCodeSetup.exe')"
+   call winget install -e --id Microsoft.VisualStudioCode --scope machine
 
-    rem Run the installer & ensure it does not launch after install
-    rem https://github.com/Microsoft/vscode/issues/860
-    rem CALL VSCodeSetup.exe /verysilent
-    CALL VSCodeSetup.exe /silent /mergetasks=!runcode
+	call code --install-extension humao.rest-client
+	call code --install-extension formulahendry.code-runner
+	call code --install-extension KeshavSoft.crud-snippets
+    call code .
 )
+
+call code --install-extension humao.rest-client
+call code --install-extension formulahendry.code-runner
+call code --install-extension KeshavSoft.crud-snippets
+call code .
