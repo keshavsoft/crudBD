@@ -4,8 +4,8 @@ import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
 import  path  from "path";
 // const { ObjectId } = require('mongodb');
 
-import configJson from '../../../Config.json' assert {type: 'json'};
-import tableJson from "../../tableName.json" assert {type: 'json'};
+import configJson from '../../../../Config.json' assert {type: 'json'};
+import tableJson from "../../../tableName.json" assert {type: 'json'};
 
 let StartFunc = async ({ inId }) => {
     try {
