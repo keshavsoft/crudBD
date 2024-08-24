@@ -28,11 +28,11 @@ const LocalFuncDefalultKeys = ({ inColumns }) => {
 
     let LocalDefaultfilteredObject = Object.fromEntries(
         Object.entries(LocalinColumns)
-            .filter(([key, value]) => value.defaultValue === true)
-            .map(([key]) => [key, ""])
+            .filter(([key, value]) => "defaultValue" in value)
+            .map(([key, value]) => [key, value.defaultValue])
     );
 
-    return LocalDefaultfilteredObject
+    return LocalDefaultfilteredObject;
 };
 
 export { StartFunc };
