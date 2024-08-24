@@ -3,7 +3,7 @@ import { StartFunc as StartFuncForeignKeyCheck } from "./Checks/ForeignKeyCheck.
 import { StartFunc as StartFuncUniqueKeyCheck } from "./Checks/UniqueKeyCheck.js";
 
 let StartFunc = ({ inTableSchema }) => {
-    let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
+    let LocalReturnData = { KTF: true, JSONFolderPath: "", CreatedLog: {} };
     const LocalTableSchema = inTableSchema;
     let LocalKeysNeeded = {};
 
