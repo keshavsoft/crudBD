@@ -1,8 +1,9 @@
 import { StartFunc as StartFuncPullData } from "./PullData/EntryFile.js";
 import { StartFunc as StartFuncForeignKeyCheck } from "./Checks/ForeignKeyCheck.js";
 import { StartFunc as StartFuncUniqueKeyCheck } from "./Checks/UniqueKeyCheck.js";
+import { StartFunc as checkReferences } from "./checkReferences.js";
 
-let StartFunc = ({ inDataToInsert }) => {
+let StartFunc1 = ({ inDataToInsert }) => {
     let LocalinDataToInsert = inDataToInsert;
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
     let LocalStartFuncPullData = StartFuncPullData();
@@ -61,6 +62,82 @@ let StartFunc = ({ inDataToInsert }) => {
 
     LocalReturnData.KTF = true;
     LocalReturnData.pk = LocalDataWithUuid.InsertData.pk;
+
+    return LocalReturnData;
+};
+
+let StartFunc = ({ inDataToInsert }) => {
+    let LocalinDataToInsert = inDataToInsert;
+    let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
+    let LocalStartFuncPullData = StartFuncPullData();
+
+    if (LocalStartFuncPullData === false) {
+        LocalReturnData.KReason = LocalStartFuncPullData.KReason;
+        return LocalReturnData;
+    };
+
+    const LocalTableSchema = LocalStartFuncPullData.inTableSchema;
+    const db = LocalStartFuncPullData.inDb;
+
+    let LocalFromCheckReferences = checkReferences({ inTableSchema: LocalTableSchema });
+    
+    if (LocalFromCheckReferences.KTF === false) {
+        LocalReturnData.KReason = LocalFromCheckReferences.KReason;
+        return LocalReturnData;
+    };
+
+    let LocalStartFuncChecksQrCodeId = StartFuncUniqueKeyCheck({ inData: db.data, inDataToInsert: LocalinDataToInsert, inSchema: LocalTableSchema.fileData });
+
+    if (LocalStartFuncChecksQrCodeId.KTF === false) {
+        LocalReturnData.KReason = LocalStartFuncChecksQrCodeId.KReason;
+        return LocalReturnData;
+    };
+
+    let LocalDataWithUuid = LocalFuncGeneratePk({
+        inDataToInsert: LocalinDataToInsert,
+        inData: db.data
+    });
+
+    if (LocalDataWithUuid.KTF === false) {
+        LocalReturnData.KReason = LocalDataWithUuid.KReason;
+        return LocalReturnData;
+    };
+
+    db.data.push(LocalDataWithUuid.InsertData);
+    db.write();
+
+    LocalReturnData.KTF = true;
+    LocalReturnData.pk = LocalDataWithUuid.InsertData.pk;
+
+    return LocalReturnData;
+};
+
+let LocalFuncCheckReferences = ({ inTableSchema }) => {
+    const LocalTableSchema = inTableSchema;
+    let LocalKeysNeeded = {};
+
+    for (const prop in LocalTableSchema.fileData) {
+        if ("references" in LocalTableSchema.fileData[prop]) {
+            LocalKeysNeeded[prop] = LocalTableSchema.fileData[prop];
+        };
+    };
+
+    if ((Object.keys(LocalKeysNeeded).length === 0) === false) {
+        let LocalKeyNeeded = Object.keys(LocalKeysNeeded)[0];
+        let LocalValueNeeded = inDataToInsert[LocalKeyNeeded];
+
+        let LocalK1 = Object.values(LocalKeysNeeded)[0].references;
+        let LocalDataNeeded = StartFuncForeignKeyCheck({
+            inFileName: LocalK1.model,
+            inKey: LocalK1.key, NeededKey: LocalValueNeeded
+        });
+
+        if (LocalDataNeeded.KTF === false) {
+            LocalReturnData.KReason = LocalDataNeeded.KReason;
+            return LocalReturnData;
+        };
+
+    };
 
     return LocalReturnData;
 };
