@@ -1,14 +1,14 @@
 import { StartFunc as WithChecking } from "../WithChecking/StartFunc.js";
-import { StartFunc as sendMail } from "./sendMail.js";
+import { StartFunc as SendMail } from "./SendMail/EntryFile.js";
 
 let StartFunc = async ({ inDataToInsert, inDomainName }) => {
     let LocalFromSave = WithChecking({ inDataToInsert });
-
-    if (LocalFromSave.KTF === false) {
+    
+     if (LocalFromSave.KTF === false) {
         return await LocalFromSave;
     };
 
-    return await sendMail({ inDataPk: LocalFromSave.pk, inDomainName });
+    return await SendMail({ inDataPk: LocalFromSave.pk, inDomainName, inDataToInsert, inpk:LocalFromSave.pk});
 };
 
 export { StartFunc };
