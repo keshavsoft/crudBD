@@ -24,7 +24,8 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.14",
     "sequelize": "^6.37.3",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@sweetalert2/theme-dark": "^5.0.15",

@@ -11,6 +11,7 @@ import { router as routerFromBinV2 } from "./binV2/routes.js";
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
 import { StartFunc as MiddleWaresBinSecured } from "./MiddleWares/MiddleWares.binSecured/EntryFile.js";
+import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
 
 import express from 'express';
 import http from 'http';
@@ -47,6 +48,8 @@ app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);
 app.use('/Login', routerFromLogin);
+
+StartFuncKWSServer(server);
 
 function normalizePort(val) {
     var port = parseInt(val, 10);
