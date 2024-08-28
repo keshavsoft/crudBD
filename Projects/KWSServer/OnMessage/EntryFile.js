@@ -3,7 +3,6 @@ import { StartFunc as CommonMessageAsString } from "./MessageAsString/EntryFile.
 
 let StartFunc = ({ inData, inws, inClients, inWss }) => {
     let LocalData = inData;
-    console.log("ainws : ", inws.request);
 
     try {
         let LocalDataAsJson = JSON.parse(LocalData);

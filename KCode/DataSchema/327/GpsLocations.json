@@ -1,0 +1,8 @@
+  {
+    "latitude": {
+      "type": "STRING"
+    },
+    "longitude": {
+      "type": "STRING"
+    }
+  }
