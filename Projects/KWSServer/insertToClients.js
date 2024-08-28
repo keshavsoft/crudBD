@@ -1,14 +1,15 @@
-// let CommonSaveToJsonOnConnections = require("./LogHistory/OnConnection/EntryFile")
+import { StartFunc as OnConnection } from "./OnConnection/EntryFile.js";
 
-let StartFunc = ({ inClients, ws }) => {
+let StartFunc = ({ inClients, ws, inIpAddress }) => {
   const id = uuidv4();
   const color = Math.floor(Math.random() * 360);
   const Name = "Anonymous";
-  // const loginDateTime = getDate();
   const loginDateTime = new Date();
   const metadata = { id, color, Name, loginDateTime };
-  // console.log("IP address of the connected user: ",ws._socket.address());
+  
   inClients.set(ws, metadata);
+
+  OnConnection({ inIpAddress });
 };
 
 function uuidv4() {
@@ -19,20 +20,4 @@ function uuidv4() {
   });
 }
 
-function getDate() {
-  var today = new Date();
-  var dateTime = {
-    year: today.getFullYear(),
-    month: today.getMonth(),
-    date: today.getDate(),
-    hours: today.getHours(),
-    minutes: today.getMinutes(),
-    seconds: today.getSeconds()
-  };
-
-  return dateTime;
-}
-
-
-//module.exports = StartFunc;
 export { StartFunc };

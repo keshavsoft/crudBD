@@ -13,10 +13,12 @@ let StartFunc = (server) => {
 };
 
 let WsOnConnection = (ws, req) => {
-    console.log("IP address of the connected user is:", req.cookies, req.headers.cookie, req.connection.remoteAddress);
+    let LocalIpAddress = req.headers["x-forwarded-for"];
+
     CommoninsertToClients({
         inClients: clients,
-        ws
+        ws,
+        inIpAddress: LocalIpAddress
     });
 
     let localWebSocketData = clients.get(ws);

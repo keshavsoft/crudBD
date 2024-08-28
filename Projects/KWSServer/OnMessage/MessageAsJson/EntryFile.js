@@ -29,9 +29,6 @@ let StartFunc = ({ inDataAsJson, inws, inClients, inWss }) => {
         };
 
         if (LocalDataAsJson.Type === "myLocation") {
-            console.log("LocalDataAsJson : ", LocalDataAsJson);
-
-            
             StartFuncMyLocation({ inDataAsJson: LocalDataAsJson, inws, inClients });
         };
     };
