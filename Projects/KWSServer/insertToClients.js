@@ -6,10 +6,10 @@ let StartFunc = ({ inClients, ws, inIpAddress }) => {
   const Name = "Anonymous";
   const loginDateTime = new Date();
   const metadata = { id, color, Name, loginDateTime };
-  
+
   inClients.set(ws, metadata);
 
-  OnConnection({ inIpAddress });
+  OnConnection({ inIpAddress, inUniqUuid: id });
 };
 
 function uuidv4() {
