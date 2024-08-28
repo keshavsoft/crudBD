@@ -31,7 +31,7 @@ let GetCreateWithUserFunc = (req, res) => {
 
     let LocalFromRepo = GetCreateWithUserFuncRepo({ inUserName: LocalUserName });
 
-    if (LocalFromRepo.KTF === false) return res.status(404).json({});
+    if (LocalFromRepo.KTF === false) return res.status(409).send("Name already present");
 
     res.json(LocalFromRepo.JsonData);
 };
