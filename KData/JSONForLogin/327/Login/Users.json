@@ -1,10 +1,7 @@
 [
   {
-    "UserName": "k1",
-    "Password": "k1",
-    "isMailValidated": true,
-    "Mail": "nknnkumar@yahoo.com",
-    "UuId": 1,
-    "DataPk": 330
+    "UserName": "Keshav",
+    "isMailValidated": false,
+    "DataPk": 327
   }
 ]

@@ -1,11 +1,18 @@
-import { GetFunc as GetFuncDal, ValidateEmailFunc as ValidateEmailFuncDal } from '../../dals/getFuncs/EntryFile.js';
+import {
+    GetFunc as GetFuncDal, ValidateEmailFunc as ValidateEmailFuncDal,
+    GetCreateWithUserFunc as GetCreateWithUserFuncDal
+} from '../../dals/getFuncs/EntryFile.js';
 
 let GetFunc = () => {
     return GetFuncDal();
 };
 
-let ValidateEmailFunc = ({inUuid}) => {
-    return ValidateEmailFuncDal({inUuid});
+let ValidateEmailFunc = ({ inUuid }) => {
+    return ValidateEmailFuncDal({ inUuid });
 };
 
-export { GetFunc, ValidateEmailFunc };
+let GetCreateWithUserFunc = ({ inUserName }) => {
+    return GetCreateWithUserFuncDal({ inUserName });
+};
+
+export { GetFunc, ValidateEmailFunc, GetCreateWithUserFunc };

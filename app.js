@@ -12,8 +12,6 @@ import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
 import { StartFunc as MiddleWaresBinSecured } from "./MiddleWares/MiddleWares.binSecured/EntryFile.js";
 
-import packageJSON from './package.json' assert {type: 'json'};
-
 import express from 'express';
 import http from 'http';
 import path from 'path';

@@ -2,6 +2,7 @@ import { StartFunc as StartFuncPullData } from '../../kLowDb/GetData.js';
 import { StartFunc as StartFuncUpdateData } from '../../kLowDb/UpdateData/Email.js';
 import { StartFunc as StartFuncDataBase } from "../../../../../SetupFuncs/ForDatabase/EntryFile.js";
 import { StartFunc as StartFuncUpdateDataPk } from "../../kLowDb/UpdateData/DataPK.js";
+import { StartFunc as PushData } from '../../kLowDb/PushData/UserNameOnly.js';
 
 let GetFunc = () => {
     return StartFuncPullData();
@@ -14,10 +15,14 @@ let ValidateEmailFunc = ({ inUuid }) => {
 
     if (LocalFromLowDb.KTF) {
         LocalDataPk = StartFuncDataBase();
-        let LocalFromLowDbDataPk = StartFuncUpdateDataPk({ inDataPk : LocalDataPk, inUuid: LocalUuId});
+        let LocalFromLowDbDataPk = StartFuncUpdateDataPk({ inDataPk: LocalDataPk, inUuid: LocalUuId });
         return LocalFromLowDbDataPk;
     }
     return LocalFromLowDb;
 };
 
-export { GetFunc, ValidateEmailFunc };
+let GetCreateWithUserFunc = ({ inUserName }) => {
+    return PushData({ inUsername: inUserName });
+};
+
+export { GetFunc, ValidateEmailFunc, GetCreateWithUserFunc };

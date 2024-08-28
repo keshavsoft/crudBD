@@ -1,0 +1,4 @@
+###Get for as is data
+GET http://localhost:7019/Login/bin/Users/CreateWithUser/Keshav
+
+
