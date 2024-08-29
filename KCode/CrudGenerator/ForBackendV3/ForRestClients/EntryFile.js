@@ -4,7 +4,7 @@ import { StartFunc as Alter } from './Alter/EntryFile.js';
 
 let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
   Show({ inTablesCollection, inTo });
-  Create({ inTablesCollection, inTo });
+  Create({ inTablesCollection, inTo, inConfigJson });
   // Alter({ inTablesCollection, inTo, inFrom, inConfigJson });
 };
 
