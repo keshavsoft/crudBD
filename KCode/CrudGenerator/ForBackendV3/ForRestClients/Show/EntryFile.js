@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
+const CommonShow = "Show";
 
 let StartFunc = ({ inTablesCollection, inTo }) => {
     LocalFuncForGetEndPoints({ inTablesCollection, inTo });
@@ -46,15 +47,16 @@ let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo }) => {
 };
 
 const LocalFuncWriteToHome = ({ inFrom, inTo }) => {
-    let LocalFileData = `GET http://localhost:${inFrom}/Show`;
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}`;
 
     fs.writeFileSync(`${inTo}/home.http`, LocalFileData);
 };
 
 const LocalFuncWriteToDataOnly = ({ inFrom, inTo }) => {
-    let LocalFileData = `GET http://localhost:${inFrom}/DataOnly`;
+    const LocalEndPoint = "DataOnly";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
 
-    fs.writeFileSync(`${inTo}/DataOnly.http`, LocalFileData);
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
 };
 
 export { StartFunc };
