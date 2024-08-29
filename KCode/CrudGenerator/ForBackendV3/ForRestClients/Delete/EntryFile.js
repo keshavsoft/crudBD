@@ -30,7 +30,7 @@ let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo }) => {
 };
 
 const LocalFuncWriteToHome = ({ inFrom, inTo }) => {
-    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonCreate}\r\n`;
+    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonDelete}\r\n`;
 
     fs.writeFileSync(`${inTo}/home.http`, `${LocalFileData}\r\n${JSON.stringify(LocalFileData)}`);
 };
