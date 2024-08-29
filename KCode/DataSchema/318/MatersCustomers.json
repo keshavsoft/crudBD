@@ -5,6 +5,7 @@
     },
     "Mobile": {
         "type": "NUMBER",
+        "unique": true,
         "allowNull": true
     },
     "DOB": {
@@ -12,7 +13,7 @@
         "allowNull": true
     },
     "GSTNumber": {
-        "type": "NUMBER",
+        "type": "STRING",
         "allowNull": true
     },
     "City": {
