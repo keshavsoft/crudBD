@@ -3,6 +3,7 @@ node_modules/
 bin/
 binSecured/
 binV2/
+binV3/
 
 dist/
 

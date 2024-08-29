@@ -1,0 +1,38 @@
+{
+    "tableName": "StudentNames.json",
+    "ColumnsSchema": {
+        "StudentName": {
+            "type": "STRING"
+        },
+        "Roll Number": {
+            "type": "STRING"
+        },
+        "Mobile": {
+            "type": "TELEPHONE",
+            "unique": true
+        },
+        "AlternateMobile": {
+            "type": "NUMBER",
+            "allowNull": true
+        },
+        "Year of Birth": {
+            "type": "MONTH"
+        },
+        "Email": {
+            "type": "STRING"
+        },
+        "10th Grade GPA": {
+            "type": "NUMBER"
+        },
+        "Intermediate/Diploma CGPA": {
+            "type": "NUMBER"
+        },
+        "Graduation CGPA": {
+            "type": "NUMBER"
+        },
+        "isMailValidated": {
+            "type": "STRING",
+            "defaultValue": false
+        }
+    }
+}
