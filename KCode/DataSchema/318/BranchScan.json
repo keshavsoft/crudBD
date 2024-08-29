@@ -1,0 +1,84 @@
+{
+    "VoucherNumber": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "Date": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "Description": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Factory": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "BranchName": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "BookingData": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Category": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "ItemName": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "ItemNamePk": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "WashType": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "WashTypePk": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "locationPk": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "location": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Pcs": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "Rate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "DisPer": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "AddOn": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "QrCodeId": {
+        "type": "INTEGER",
+        "unique": true,
+        "references": {
+          "model": {
+            "tableName": "QrCodeDetails"
+          },
+          "folderName": "Factory",
+          "key": "QrCodeId"
+        },
+        "allowNull": false,
+        "onUpdate": "cascade",
+        "onDelete": "cascade"
+      }
+}

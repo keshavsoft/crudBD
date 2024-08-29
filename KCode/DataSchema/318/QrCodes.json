@@ -1,0 +1,67 @@
+{
+    "GenerateReference": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "ItemSerial": {
+        "type": "OBJECT",
+        "unique": true,
+        "allowNull": false
+    },
+    "Category": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "ItemName": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "ItemNamePk": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "WashType": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "WashTypePk": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "locationPk": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "location": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "Pcs": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "Rate": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "DisPer": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "AddOn": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "DeliveryDateTime": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "Total": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "BookingData": {
+        "type": "OBJECT",
+        "allowNull": false
+    }
+}
