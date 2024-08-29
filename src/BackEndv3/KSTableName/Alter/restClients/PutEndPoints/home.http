@@ -1,6 +1,0 @@
-
-###Get all the rows from the database in this table
-PUT http://localhost:7019/src/BackEndv2/ksSample/Alter/{inRowpk}
-content-type: application/json
-
-{}

@@ -1,14 +1,15 @@
 import fs from "fs";
 import path from "path";
+import dotenv from 'dotenv';
+dotenv.config();
 
-let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
-    LocalFuncForTestEndPoint({ inTablesCollection, inTo, inFrom, inConfigJson });
+let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
+    LocalFuncForGetEndPoints({ inTablesCollection, inTo, inConfigJson });
 };
 
-let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
+let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo, inConfigJson }) => {
     let LocalTypeName = "Alter/restClients/PutEndPoints";
     let LocalTo = inTo;
-    let LocalFrom = inFrom;
 
     let LocalTablesCollection = inTablesCollection;
 
@@ -25,19 +26,14 @@ let LocalFuncForTestEndPoint = ({ inTablesCollection, inTo, inFrom, inConfigJson
             .map(item => item.name);
 
         LoopInsideFiles.forEach(LoopFile => {
-            let LocalFileData = fs.readFileSync(`${LocalFilePath}/${LoopFile}`);
+            let LocalFileData = `PUT http://localhost:${process.env.PORT}/${LocalTo}/${LoopInsideFileName}/Alter\r\n\r\n`;
 
-            let LocalFileDataReplaced = LocalFileData.toString().replaceAll("ksSample", LoopInsideFileName);
-            let LocalBinReplaced = LocalFileDataReplaced.replaceAll(LocalFrom, LocalTo);
-            
             let LocalColumnsSchema = LocalFuncGetTableSchema({
                 inConfigJson,
                 inTableNameWithExtension: element.name
             });
 
-            let LocalWithBody = LocalBinReplaced.replaceAll("{}", JSON.stringify(LocalColumnsSchema));
-
-            fs.writeFileSync(`${LocalFilePath}/${LoopFile}`, LocalWithBody);
+            fs.writeFileSync(`${LocalFilePath}/${LoopFile}`, `${LocalFileData}\r\n${JSON.stringify(LocalColumnsSchema)}`);
         });
     });
 };
