@@ -20,7 +20,11 @@ let PostSendMailFunc = async ({ inPostBody, inDomainName }) => {
     return await Send({ inDataToInsert: inPostBody, inDomainName });
 };
 
+let PostForTemplateFunc = async ({ inPostBody, inDomainName }) => {
+    return await Send({ inDataToInsert: inPostBody, inDomainName });
+};
+
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
-    PostSendMailGenUuIdFunc, PostSendMailFunc
+    PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc
 };
