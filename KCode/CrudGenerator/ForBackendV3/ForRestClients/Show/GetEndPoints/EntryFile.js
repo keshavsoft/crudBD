@@ -3,15 +3,8 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const CommonShow = "Show";
-import { StartFunc as GetEndPoints } from "./GetEndPoints/EntryFile.js";
-import { StartFunc as PostEndPoints } from "./PostEndPoints/EntryFile.js";
 
-let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
-    GetEndPoints({ inTablesCollection, inTo });
-    PostEndPoints({ inTablesCollection, inTo, inConfigJson });
-};
-
-let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo }) => {
+let StartFunc = ({ inTablesCollection, inTo }) => {
     let LocalTypeName = "Show/restClients/GetEndPoints";
     let LocalTo = inTo;
 

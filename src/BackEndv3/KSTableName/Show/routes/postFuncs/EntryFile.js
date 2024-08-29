@@ -8,5 +8,4 @@ import {
 
 router.post('/FilterDataFromBody', postFilterDataFromBodyFunc);
 
-
 export { router };
