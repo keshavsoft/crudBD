@@ -28,28 +28,12 @@ let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo, inConfigJson }) => {
             inTableNameWithExtension: element.name,
             inConfigJson
         });
-
-
-        // let LoopInsideFiles = fs.readdirSync(LocalFilePath, { withFileTypes: true })
-        //     .filter(item => !item.name.endsWith(".json"))
-        //     .map(item => item.name);
-
-        // LoopInsideFiles.forEach(LoopFile => {
-        //     let LocalFileData = `POST http://localhost:${process.env.PORT}/${LocalTo}/${LoopInsideFileName}/Create\r\n\r\n`;
-
-        //     let LocalColumnsSchema = LocalFuncGetTableSchema({
-        //         inConfigJson,
-        //         inTableNameWithExtension: element.name
-        //     });
-
-        //     fs.writeFileSync(`${LocalFilePath}/${LoopFile}`, `${LocalFileData}\r\n${JSON.stringify(LocalColumnsSchema)}`);
-        // });
-
     });
 };
 
 const LocalFuncWriteToHome = ({ inFrom, inTo, inConfigJson, inTableNameWithExtension }) => {
-    let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}\r\nContent-Type: application/json\r\n`;
+    let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}\r\n`;
+    LocalFileData += `Content-Type: application/json\r\n`;
 
     let LocalColumnsSchema = LocalFuncGetTableSchema({
         inConfigJson,
