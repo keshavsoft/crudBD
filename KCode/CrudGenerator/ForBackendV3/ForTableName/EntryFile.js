@@ -31,14 +31,17 @@ let LocalFuncForreadFile = ({ inFilesArray, inFrom, inTo, inTypeName, inSampleSt
         let LocalFileData = fs.readFileSync(LocalFilePath);
         let LocalfileNameJsonData = JSON.parse(LocalFileData);
         LocalfileNameJsonData.tableName = LoopFile.name;
-        LocalfileNameJsonData.ColumnsSchema = LocalFuncGetSchemaFromConfig({ inTableName: LoopFile.name });
+        LocalfileNameJsonData.ColumnsSchema = LocalFuncGetSchemaFromConfig({
+            inTableName: LoopFile.name,
+            inTo: LocalTo
+        });
 
         fs.writeFileSync(LocalFilePath, JSON.stringify(LocalfileNameJsonData));
     });
 };
 
-const LocalFuncGetSchemaFromConfig = ({ inTableName }) => {
-    const LocalConfigFilePath = "binV2/Config.json";
+const LocalFuncGetSchemaFromConfig = ({ inTableName, inTo }) => {
+    const LocalConfigFilePath = `${inTo}/Config.json`;
 
     const LocalConfigJson = fs.readFileSync(LocalConfigFilePath, { encoding: 'utf8' });
 

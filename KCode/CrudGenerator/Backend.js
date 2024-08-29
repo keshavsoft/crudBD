@@ -10,9 +10,9 @@ let StartFunc = ({ inFilesArray }) => {
 
     StartFuncPrepareReadColumnsData({ inTableData: LocalFilesArray });
 
-    LocalFuncForBackEnd({ inFilesArray: LocalFilesArray });
-    LocalFuncForBackEndSecured({ inFilesArray: LocalFilesArray });
-    LocalFuncForBackEndv2({ inFilesArray: LocalFilesArray });
+    // LocalFuncForBackEnd({ inFilesArray: LocalFilesArray });
+    // LocalFuncForBackEndSecured({ inFilesArray: LocalFilesArray });
+    // LocalFuncForBackEndv2({ inFilesArray: LocalFilesArray });
 
     LocalFuncForBackEndv3({ inFilesArray: LocalFilesArray });
 };

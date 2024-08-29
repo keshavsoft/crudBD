@@ -24,7 +24,6 @@ let StartFunc = async ({ inTablesCollection, inFrom, inTo }) => {
     StartFuncForRestClients({ inTablesCollection, inFrom, inTo, inConfigJson: JSON.parse(ConfigJson) });
     StartFuncForTableName({ inTablesCollection, inTo });
     StartFuncForkSequelize({ inFrom, inTo });
-
 };
 
 let LocalFuncCreateFolders = ({ inTo }) => {
