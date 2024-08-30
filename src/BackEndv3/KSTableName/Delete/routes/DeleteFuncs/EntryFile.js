@@ -7,5 +7,6 @@ import { DeleteFunc } from '../../controllers/DeleteFuncs/EntryFile.js';
 import { DeleteFunc as DeleteFuncmiddleware } from '../../middlewares/DeleteFuncs/DeleteFunc.js';
 
 router.delete('/:Id', DeleteFuncmiddleware, DeleteFunc);
+router.delete('/ReferenceCheck/:Id', DeleteFuncmiddleware, DeleteFunc);
 
 export { router };

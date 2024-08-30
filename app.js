@@ -12,7 +12,7 @@ import { router as routerFromBinV3 } from "./binV3/routes.js";
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
 import { StartFunc as MiddleWaresBinSecured } from "./MiddleWares/MiddleWares.binSecured/EntryFile.js";
-import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
+// import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
 
 import express from 'express';
 import http from 'http';
@@ -51,7 +51,7 @@ app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);
 app.use('/Login', routerFromLogin);
 
-StartFuncKWSServer(server);
+// StartFuncKWSServer(server);
 
 function normalizePort(val) {
     var port = parseInt(val, 10);
