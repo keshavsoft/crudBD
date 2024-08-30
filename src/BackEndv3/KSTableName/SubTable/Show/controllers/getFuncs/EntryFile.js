@@ -1,9 +1,9 @@
 import {
-    GetFunc as GetFuncRepo
+    GetKeyNameFunc as GetKeyNameFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
-let GetFunc = async (req, res) => {
-    let LocalFromRepo = await GetFuncRepo();
+let GetKeyNameFunc = async (req, res) => {
+    let LocalFromRepo = await GetKeyNameFuncRepo();
 
     if (LocalFromRepo === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -14,5 +14,5 @@ let GetFunc = async (req, res) => {
 };
 
 export {
-    GetFunc
+    GetKeyNameFunc
 };
