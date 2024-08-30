@@ -1,8 +1,8 @@
 import { StartFunc as ReadFromFile } from '../../kLowDb/ReadFromFile/getFunc.js';
 
-let GetFunc = () => {
+let GetKeyNameFunc = () => {
     let LocalFromLowDb = ReadFromFile();
-
+    
     if (LocalFromLowDb.KTF === false) {
         return false;
     };
@@ -11,5 +11,5 @@ let GetFunc = () => {
 };
 
 export {
-    GetFunc
+    GetKeyNameFunc
 };
