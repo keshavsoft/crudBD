@@ -26,9 +26,12 @@ let PostForTemplateFunc = async ({ inPostBody, inDomainName }) => {
 let PostWithReferenceCheckFunc = async ({ inPostBody, inDomainName }) => {
     return await Send({ inDataToInsert: inPostBody, inDomainName });
 };
+let PostAsIsFunc = async ({ inPostBody, inDomainName }) => {
+    return await Send({ inDataToInsert: inPostBody, inDomainName });
+};
 
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
     PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
-    PostWithReferenceCheckFunc
+    PostWithReferenceCheckFunc,PostAsIsFunc
 };
