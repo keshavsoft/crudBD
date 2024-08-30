@@ -4,6 +4,7 @@ import { StartFunc as getBodyCheck } from '../../kLowDb/ReadFromFile/getBodyChec
 import { StartFunc as getimagesOnly } from '../../kLowDb/ReadFromFile/getimagesOnly.js';
 import { StartFunc as withJoins } from '../../kLowDb/ReadFromFile/withJoins.js';
 import { StartFunc as getRowFunc } from '../../kLowDb/ReadFromFile/getRowFunc.js';
+import { StartFunc as lastRow } from '../../kLowDb/ReadFromFile/WithJoins/lastRow.js';
 
 let GetFunc = () => {
     let LocalFromLowDb = ReadFromFile();
@@ -96,7 +97,7 @@ let GetWithJoinsFunc = () => {
 };
 
 let GetMaxRowFunc = () => {
-    let LocalFromLowDb = withJoins();
+    let LocalFromLowDb = lastRow();
 
     if (LocalFromLowDb.KTF === false) {
         return false;
