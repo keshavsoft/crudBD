@@ -9,7 +9,16 @@ let postFilterDataFromBodyFunc = ({ inFindKey, inFindValue }) => {
 
     return LocalFromLowDb;
 };
+let postMaxRowFunc = ({ inFindKey, inFindValue }) => {
+    let LocalFromLowDb = ApplyFilter({ inFindKey, inFindValue });
+
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb;
+};
 
 export {
-    postFilterDataFromBodyFunc
+    postFilterDataFromBodyFunc, postMaxRowFunc
 };
