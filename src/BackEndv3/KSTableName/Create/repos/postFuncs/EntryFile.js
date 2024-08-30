@@ -4,7 +4,8 @@ import {
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncDal,
     PostSendMailGenUuIdFunc as PostSendMailGenUuIdFuncDal,
     PostSendMailFunc as PostSendMailFuncDal,
-    PostForTemplateFunc as PostForTemplateFuncDal
+    PostForTemplateFunc as PostForTemplateFuncDal,
+    PostWithReferenceCheckFunc as PostWithReferenceCheckFuncDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -86,8 +87,19 @@ let PostForTemplateFunc = async ({ inPostBody, inDomainName }) => {
 
     return await PostForTemplateFuncDal({ inPostBody, inDomainName });
 };
+let PostWithReferenceCheckFunc = async ({ inPostBody, inDomainName }) => {
+    if (ConfigJson.isSequelize) {
+        return PostFuncDalsForSequelize(inPostBody);
+    };
 
+    if (ConfigJson.isMongoDb) {
+        return PostFuncDalsForMongoDB(inPostBody);
+    };
+
+    return await PostWithReferenceCheckFuncDal({ inPostBody, inDomainName });
+};
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
-    PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc
+    PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
+    PostWithReferenceCheckFunc
 };
