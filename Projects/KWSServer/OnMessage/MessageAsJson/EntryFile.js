@@ -20,6 +20,7 @@ let StartFunc = ({ inDataAsJson, inws, inClients, inWss }) => {
         if (LocalDataAsJson.Type === "sendMessage") {
             StartFuncSendMessage({ inDataToClientAsJson: LocalDataAsJson, inws: inws, inClients: inClients });
         };
+        
         if (LocalDataAsJson.Type === "sendMessageToAll") {
             StartFuncSendMessageToAll({ inDataToClientAsJson: LocalDataAsJson, inws, inClients, inWss });
         };
