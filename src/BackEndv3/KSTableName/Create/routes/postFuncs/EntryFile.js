@@ -16,5 +16,6 @@ router.post('/SendMailGenUuId', PostSendMailGenUuIdFunc);
 router.post('/SendMail', PostSendMailFunc);
 router.post('/ForTemplate', PostForTemplateFunc);
 router.post('/WithReferenceCheck', PostWithReferenceCheckFunc);
+router.post('/AsIs', PostWithReferenceCheckFunc);
 
 export { router };
