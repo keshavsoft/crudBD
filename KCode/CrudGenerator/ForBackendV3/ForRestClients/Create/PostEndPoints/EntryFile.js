@@ -20,12 +20,14 @@ let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
 
         LocalFuncFilterDataFromBody({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
-            inTo: `${LocalFilePath}`
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
         });
     });
 };
 
-const LocalFuncFilterDataFromBody = ({ inFrom, inTo }) => {
+const LocalFuncFilterDataFromBody = ({ inFrom, inTo, inConfigJson, inTableNameWithExtension }) => {
     let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}\r\n`;
     LocalFileData += `Content-Type: application/json\r\n`;
 
