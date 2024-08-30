@@ -4,7 +4,8 @@ import {
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo,
     PostSendMailGenUuIdFunc as PostSendMailGenUuIdFuncRepo,
     PostSendMailFunc as PostSendMailFuncRepo,
-    PostForTemplateFunc as PostForTemplateFuncRepo
+    PostForTemplateFunc as PostForTemplateFuncRepo,
+    PostWithReferenceCheckFunc as PostWithReferenceCheckFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 let PostFunc = async (req, res) => {
@@ -94,8 +95,26 @@ let PostForTemplateFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo);
 };
+let PostWithReferenceCheckFunc = async (req, res) => {
+    let LocalBody = req.body;
+    var host = req.get('host');
+    let protocol = req.protocol;
+    let LocalDomainName = `${protocol}://${host}`
 
+    let LocalFromRepo = await PostWithReferenceCheckFuncRepo({
+        inPostBody: LocalBody,
+        inDomainName: LocalDomainName
+    });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(LocalFromRepo);
+};
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
-    PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc
+    PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
+    PostWithReferenceCheckFunc
 };
