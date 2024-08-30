@@ -15,11 +15,6 @@ let AllColumns = async () => {
             if (value.type === "STRING" || value.type === "DATETIME") {
                 LocalColumnsInfo[key] = "";
             };
-
-            // if (value.type === "INTEGER") {
-            //     LocalColumnsInfo[key] = 0;
-            // };
-
         }
     );
     console.log("kkkkkkkkkkk : ", LocalColumnsInfo);

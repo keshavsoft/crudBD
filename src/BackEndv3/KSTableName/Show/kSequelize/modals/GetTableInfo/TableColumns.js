@@ -1,8 +1,6 @@
-// import { StartFunc as StartFuncInitializeSequelize } from '../../../../kSequelize/initializeSequelize.js';
-
 import { StartFunc as StartFuncInitializeSequelize } from '../../../../kSequelize/AssignSchema.js';
 
-import tableNameJson from '../../../tableName.json' assert { type: 'json' };
+import tableNameJson from '../../../../tableName.json' assert { type: 'json' };
 import path from "path";
 
 let AllColumns = async () => {
@@ -17,11 +15,6 @@ let AllColumns = async () => {
             if (value.type === "STRING" || value.type === "DATETIME") {
                 LocalColumnsInfo[key] = "";
             };
-
-            // if (value.type === "INTEGER") {
-            //     LocalColumnsInfo[key] = 0;
-            // };
-
         }
     );
     console.log("kkkkkkkkkkk : ", LocalColumnsInfo);
