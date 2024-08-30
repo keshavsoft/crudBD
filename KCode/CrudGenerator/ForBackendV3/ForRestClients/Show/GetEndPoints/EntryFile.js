@@ -27,6 +27,11 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`
         });
+
+        LocalFuncMaxRow({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
     });
 };
 
@@ -38,6 +43,13 @@ const LocalFuncWriteToHome = ({ inFrom, inTo }) => {
 
 const LocalFuncWriteToDataOnly = ({ inFrom, inTo }) => {
     const LocalEndPoint = "DataOnly";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncMaxRow = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "MaxRow";
     let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
 
     fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
