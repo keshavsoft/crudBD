@@ -95,7 +95,18 @@ let GetWithJoinsFunc = () => {
     return LocalFromLowDb.JsonData;
 };
 
+let GetMaxRowFunc = () => {
+    let LocalFromLowDb = withJoins();
+
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb.JsonData;
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
+    GetMaxRowFunc
 };
