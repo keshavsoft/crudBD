@@ -13,6 +13,6 @@ router.post('/WithCheckAndGenPk', PostWithCheckAndGenPkFunc);
 router.post('/SendMailGenUuId', PostSendMailGenUuIdFunc);
 router.post('/SendMail', PostSendMailFunc);
 router.post('/ForTemplate', PostForTemplateFunc);
-
+router.post('/WithReferenceCheck', PostFunc);
 
 export { router };
