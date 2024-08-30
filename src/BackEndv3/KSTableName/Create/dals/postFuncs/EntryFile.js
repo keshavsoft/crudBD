@@ -1,5 +1,6 @@
 import { StartFunc as StartFuncWriteTofile } from '../../kLowDb/WriteTofile/WithChecking/StartFunc.js';
 import { StartFunc as Send } from '../../kLowDb/WriteTofile/Send/EntryFile.js';
+import { StartFunc as asIs } from '../../kLowDb/WriteTofile/asIs.js';
 
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
@@ -27,11 +28,11 @@ let PostWithReferenceCheckFunc = async ({ inPostBody, inDomainName }) => {
     return await Send({ inDataToInsert: inPostBody, inDomainName });
 };
 let PostAsIsFunc = async ({ inPostBody, inDomainName }) => {
-    return await Send({ inDataToInsert: inPostBody, inDomainName });
+    return await asIs({ inDataToInsert: inPostBody, inDomainName });
 };
 
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
     PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
-    PostWithReferenceCheckFunc,PostAsIsFunc
+    PostWithReferenceCheckFunc, PostAsIsFunc
 };
