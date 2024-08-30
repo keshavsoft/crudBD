@@ -6,7 +6,8 @@ import {
     GetFromModalUuidFunc as GetFromModalUuidFuncRepo,
     GetWithJoinsFunc as GetWithJoinsFuncRepo,
     GetDataSortByColumnFunc as GetDataSortByColumnFuncRepo,
-    GetRowDataFunc as GetRowDataFuncRepo
+    GetRowDataFunc as GetRowDataFuncRepo,
+    GetMaxRowFunc as GetMaxRowFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
@@ -106,7 +107,19 @@ let GetWithJoinsFunc = async (req, res) => {
     res.status(200).send(JSON.stringify(LocalFromRepo));
 };
 
+let GetMaxRowFunc = async (req, res) => {
+    let LocalFromRepo = await GetMaxRowFuncRepo();
+
+    if (LocalFromRepo === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).send(JSON.stringify(LocalFromRepo));
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc
+    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
+    GetMaxRowFunc
 };
