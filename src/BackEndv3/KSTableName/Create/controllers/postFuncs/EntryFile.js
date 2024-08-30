@@ -99,7 +99,7 @@ let PostWithReferenceCheckFunc = async (req, res) => {
     let LocalBody = req.body;
     var host = req.get('host');
     let protocol = req.protocol;
-    let LocalDomainName = `${protocol}://${host}`
+    let LocalDomainName = `${protocol}://${host}`;
 
     let LocalFromRepo = await PostWithReferenceCheckFuncRepo({
         inPostBody: LocalBody,
