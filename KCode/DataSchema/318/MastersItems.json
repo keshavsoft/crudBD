@@ -16,7 +16,7 @@
         "type": "STRING",
         "allowNull": true
     },
-    "WashRate": {
+    "DryWashRate": {
         "type": "NUMBER",
         "allowNull": true
     }
