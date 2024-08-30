@@ -105,9 +105,17 @@ let GetMaxRowFunc = () => {
 
     return LocalFromLowDb.JsonData;
 };
+let GetLastRowFunc = () => {
+    let LocalFromLowDb = lastRow();
 
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb.JsonData;
+};
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc
+    GetMaxRowFunc,GetLastRowFunc
 };

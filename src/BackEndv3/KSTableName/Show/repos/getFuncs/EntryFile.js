@@ -7,7 +7,8 @@ import {
     GetWithJoinsFunc as GetWithJoinsFuncDal,
     GetDataSortByColumnFunc as GetDataSortByColumnFuncDal,
     GetRowDataFunc as GetRowDataFuncDal,
-    GetMaxRowFunc as GetMaxRowFuncDal
+    GetMaxRowFunc as GetMaxRowFuncDal,
+    GetLastRowFunc as GetLastRowFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
@@ -125,8 +126,20 @@ let GetMaxRowFunc = async () => {
 
     return GetMaxRowFuncDal();
 };
+
+let GetLastRowFunc = async () => {
+    if (ConfigJson.isSequelize) {
+        return await GetDataOnlyFuncDalsForSequelize();
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return GetDataOnlyFuncDalsForMongoDb();
+    };
+
+    return GetLastRowFuncDal();
+};
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc
+    GetMaxRowFunc,GetLastRowFunc
 };
