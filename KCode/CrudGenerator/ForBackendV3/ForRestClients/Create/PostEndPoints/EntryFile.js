@@ -3,14 +3,9 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const CommonCreate = "Create";
-import { StartFunc as PostEndPoints } from "./PostEndPoints/EntryFile.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
-    PostEndPoints({ inTablesCollection, inTo, inConfigJson });
-};
-
-let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo, inConfigJson }) => {
-    let LocalTypeName = "Create/restClients/PostEndPoints";
+    let LocalTypeName = `${CommonCreate}/restClients/PostEndPoints`;
     let LocalTo = inTo;
 
     let LocalTablesCollection = inTablesCollection;
@@ -23,16 +18,14 @@ let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo, inConfigJson }) => {
         let LoopInsideFileName = path.parse(element.name).name;
         let LocalFilePath = `${LocalTo}/${LoopInsideFileName}/${LocalTypeName}`;
 
-        LocalFuncWriteToHome({
+        LocalFuncFilterDataFromBody({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
-            inTo: `${LocalFilePath}`,
-            inTableNameWithExtension: element.name,
-            inConfigJson
+            inTo: `${LocalFilePath}`
         });
     });
 };
 
-const LocalFuncWriteToHome = ({ inFrom, inTo, inConfigJson, inTableNameWithExtension }) => {
+const LocalFuncFilterDataFromBody = ({ inFrom, inTo }) => {
     let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}\r\n`;
     LocalFileData += `Content-Type: application/json\r\n`;
 
