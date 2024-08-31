@@ -1,0 +1,82 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "CRUD",
+            "isTitle": true,
+            "icon": "bi bi-back"
+          },
+          {
+            "name": "Create",
+            "url": "ConnectedClientsCreateDLToShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "CreateCamera",
+            "url": "ConnectedClientsCreateCamera.html",
+            "icon": "bi bi-camera-fill"
+          },
+          {
+            "name": "CreateCameraOnModal",
+            "url": "ConnectedClientsCreateCameraOnModal.html",
+            "icon": "bi bi-camera-video-fill"
+          },
+          {
+            "name": "CreateSendEmail",
+            "url": "ConnectedClientsCreateSendEmail.html",
+            "icon": "bi bi-envelope-check"
+          },
+          {
+            "name": "Show",
+            "url": "ConnectedClientsShow.html",
+            "icon": "bi bi-table"
+          },
+          {
+            "name": "Alter",
+            "url": "ConnectedClientsShowAlterWithDL.html",
+            "icon": "bi bi-box-arrow-up-right"
+          },
+          {
+            "name": "ShowWithImage",
+            "url": "ConnectedClientsShowWithImage.html",
+            "icon": "bi bi-filetype-jpg"
+          },
+          {
+            "name": "Delete",
+            "url": "ConnectedClientsDeleteSSR.html",
+            "icon": "bi bi-trash3"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "ipAddress": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ipAddress",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ipAddress",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          }
+       
+        }
+      }
+    }
+  }
+}
