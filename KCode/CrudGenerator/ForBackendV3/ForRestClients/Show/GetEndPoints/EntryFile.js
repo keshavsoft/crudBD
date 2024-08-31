@@ -37,8 +37,20 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`
         });
+        LocalFuncWriteToWithJoins({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
+        LocalFuncWriteToSort({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
 
         LocalFuncMaxRow({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
+        LocalFuncLastRow({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`
         });
@@ -58,13 +70,6 @@ const LocalFuncWriteToDataOnly = ({ inFrom, inTo }) => {
     fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
 };
 
-const LocalFuncMaxRow = ({ inFrom, inTo }) => {
-    const LocalEndPoint = "MaxRow";
-    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
-
-    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
-};
-
 const LocalFuncWriteToImages = ({ inFrom, inTo }) => {
     const LocalEndPoint = "Images";
     let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
@@ -74,6 +79,32 @@ const LocalFuncWriteToImages = ({ inFrom, inTo }) => {
 
 const LocalFuncWriteToBodyCheck = ({ inFrom, inTo }) => {
     const LocalEndPoint = "BodyCheck";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+const LocalFuncWriteToWithJoins = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "WithJoins";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+const LocalFuncWriteToSort = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "Sort";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncMaxRow = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "MaxRow";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncLastRow = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "LastRow";
     let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
 
     fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
