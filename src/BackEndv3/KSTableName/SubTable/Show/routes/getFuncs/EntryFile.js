@@ -6,6 +6,6 @@ import {
      GetKeyNameFunc
 } from '../../controllers/getFuncs/EntryFile.js';
 
-router.get('/:inKeyName', GetKeyNameFunc);
+router.get('/:id/:inKeyName', GetKeyNameFunc);
 
 export { router };
