@@ -113,8 +113,18 @@ let GetLastRowFunc = () => {
 
     return LocalFromLowDb.JsonData;
 };
+
+let GetFilterFunc = ({ inFilterKey, inFilterValue }) => {
+    let LocalFromLowDb = lastRow({ inFilterKey, inFilterValue });
+
+    if (LocalFromLowDb.KTF === false) {
+        return false;
+    };
+
+    return LocalFromLowDb.JsonData;
+};
 export {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc,GetLastRowFunc
+    GetMaxRowFunc, GetLastRowFunc, GetFilterFunc
 };
