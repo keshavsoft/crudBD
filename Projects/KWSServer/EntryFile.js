@@ -33,6 +33,8 @@ let WsOnConnection = (ws, req) => {
     // });
 
     ws.on('message', (data, isBinary) => {
+        console.log("aaaaaaaaa : ", data.toString(), clients.size);
+
         CommonOnMessage({
             inData: data,
             inws: ws,
