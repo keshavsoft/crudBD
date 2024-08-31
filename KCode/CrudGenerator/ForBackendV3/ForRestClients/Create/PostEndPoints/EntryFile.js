@@ -5,6 +5,12 @@ dotenv.config();
 const CommonCreate = "Create";
 import { StartFunc as home } from "./EndPointsContent/home.js";
 import { StartFunc as GenUuId } from "./EndPointsContent/GenUuId.js";
+import { StartFunc as WithCheckAndGenPk } from "./EndPointsContent/WithCheckAndGenPk.js";
+import { StartFunc as SendMailGenUuId } from "./EndPointsContent/SendMailGenUuId.js";
+import { StartFunc as SendMail } from "./EndPointsContent/SendMail.js";
+import { StartFunc as ForTemplate } from "./EndPointsContent/ForTemplate.js";
+import { StartFunc as WithReferenceCheck } from "./EndPointsContent/WithReferenceCheck.js";
+import { StartFunc as AsIs } from "./EndPointsContent/AsIs.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
     let LocalTypeName = `${CommonCreate}/restClients/PostEndPoints`;
@@ -33,6 +39,49 @@ let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
             inConfigJson,
             inTableNameWithExtension: element.name
         });
+
+        WithCheckAndGenPk({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        SendMailGenUuId({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        SendMail({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        ForTemplate({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        WithReferenceCheck({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        AsIs({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
     });
 };
 
