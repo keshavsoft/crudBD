@@ -3,6 +3,8 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const CommonCreate = "Create";
+import { StartFunc as home } from "./EndPointsContent/home.js";
+import { StartFunc as GenUuId } from "./EndPointsContent/GenUuId.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
     let LocalTypeName = `${CommonCreate}/restClients/PostEndPoints`;
@@ -18,7 +20,14 @@ let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
         let LoopInsideFileName = path.parse(element.name).name;
         let LocalFilePath = `${LocalTo}/${LoopInsideFileName}/${LocalTypeName}`;
 
-        LocalFuncFilterDataFromBody({
+        home({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        GenUuId({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`,
             inConfigJson,

@@ -1,7 +1,8 @@
 [
   {
     "UserName": "Keshav",
-    "isMailValidated": false,
+    "Password": "Keshav",
+    "isMailValidated": true,
     "DataPk": 327
   }
 ]
