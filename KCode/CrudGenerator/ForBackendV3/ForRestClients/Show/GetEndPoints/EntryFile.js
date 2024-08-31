@@ -28,6 +28,11 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
             inTo: `${LocalFilePath}`
         });
 
+        LocalFuncWriteToImages({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
+
         LocalFuncMaxRow({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`
@@ -50,6 +55,13 @@ const LocalFuncWriteToDataOnly = ({ inFrom, inTo }) => {
 
 const LocalFuncMaxRow = ({ inFrom, inTo }) => {
     const LocalEndPoint = "MaxRow";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncWriteToImages = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "Images";
     let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
 
     fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
