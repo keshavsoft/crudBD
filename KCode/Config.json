@@ -1,7 +1,7 @@
 {
     "isSequelize": false,
     "ToDataDetails": {
-        "DataPk": 327,
+        "DataPk": 318,
         "DataPath": "KData/JSON",
         "LoginPath": "KData/JSONForLogin",
         "DbName": "data",

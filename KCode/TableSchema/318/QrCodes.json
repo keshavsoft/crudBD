@@ -1,0 +1,202 @@
+{
+    "TableConfig": {
+      "HtmlConfig": {
+        "Header": {
+          "HeaderLi": {
+            "ShowMessages": false
+          }
+        },
+       
+        "main": {
+          "columns": {
+            "GenerateReference": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "GenerateReference",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "GenerateReference",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "GenerateReference",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "ItemSerial": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "ItemSerial",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "ItemSerial",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "ItemSerial",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "Category": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Category",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Category"
+                  },
+                  "Alter": {
+                    "title": "Category"
+                    
+                  }
+                }
+            },
+            "ItemName": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "ItemName",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "ItemName"
+                  },
+                  "Alter": {
+                    "title": "ItemName"
+                    
+                  }
+                }
+            },
+            "location": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "location",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "location"
+                },
+                "Alter": {
+                  "title": "location"
+                  
+                }
+              }
+            },
+            "Pcs": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Pcs",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "Pcs"
+                },
+                "Alter": {
+                  "title": "Pcs"
+                  
+                }
+              }
+            },
+            "Rate": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Rate",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "Rate"
+                },
+                "Alter": {
+                  "title": "Rate"
+                  
+                }
+              }
+            },
+            "DisPer": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "DisPer",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "DisPer"
+                },
+                "Alter": {
+                  "title": "DisPer"
+                  
+                }
+              }
+            },
+            "DeliveryDateTime": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "DeliveryDateTime",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "DeliveryDateTime"
+                },
+                "Alter": {
+                  "title": "DeliveryDateTime"
+                  
+                }
+              }
+            },
+            "Total": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Total",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "Total"
+                },
+                "Alter": {
+                  "title": "Total"
+                  
+                }
+              }
+            },
+            "BookingData": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "BookingData",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "BookingData"
+                },
+                "Alter": {
+                  "title": "BookingData"
+                  
+                }
+              }
+            },
+            "OrderNumber": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "OrderNumber",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "OrderNumber"
+                },
+                "Alter": {
+                  "title": "OrderNumber"
+                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
