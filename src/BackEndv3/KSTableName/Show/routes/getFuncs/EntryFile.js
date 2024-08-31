@@ -21,5 +21,6 @@ router.get('/MaxRow', GetMaxRowFunc);
 router.get('/LastRow', GetLastRowFunc);
 router.get('/MinRow', GetMaxRowFunc);
 router.get('/FirstRow', GetLastRowFunc);
+router.get('/Filter/:FilterKey/:FilterValue', GetDataOnlyFunc);
 
 export { router };
