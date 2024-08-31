@@ -1,0 +1,98 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "CRUD",
+            "isTitle": true,
+            "icon": "bi bi-back"
+          },
+          {
+            "name": "Create",
+            "url": "GpsLocationsCreateDLToShow.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "CreateCamera",
+            "url": "GpsLocationsCreateCamera.html",
+            "icon": "bi bi-camera-fill"
+          },
+          {
+            "name": "CreateCameraOnModal",
+            "url": "GpsLocationsCreateCameraOnModal.html",
+            "icon": "bi bi-camera-video-fill"
+          },
+          {
+            "name": "CreateSendEmail",
+            "url": "GpsLocationsCreateSendEmail.html",
+            "icon": "bi bi-envelope-check"
+          },
+          {
+            "name": "Show",
+            "url": "GpsLocationsShow.html",
+            "icon": "bi bi-table"
+          },
+          {
+            "name": "Alter",
+            "url": "GpsLocationsShowAlterWithDL.html",
+            "icon": "bi bi-box-arrow-up-right"
+          },
+          {
+            "name": "ShowWithImage",
+            "url": "GpsLocationsShowWithImage.html",
+            "icon": "bi bi-filetype-jpg"
+          },
+          {
+            "name": "Delete",
+            "url": "GpsLocationsDeleteSSR.html",
+            "icon": "bi bi-trash3"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "latitude": {
+            "HtmlTags": {
+              "Show": {
+                "title": "latitude",
+                "isShown": true
+              },
+              "Create": {
+                "title": "latitude",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          },
+          "longitude": {
+            "HtmlTags": {
+              "Show": {
+                "title": "longitude",
+                "isShown": true
+              },
+              "Create": {
+                "title": "longitude",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required",
+                "isShown": true
+              },
+              "CreateInFooter": {
+                "AutoFocusTag": "autofocus"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
