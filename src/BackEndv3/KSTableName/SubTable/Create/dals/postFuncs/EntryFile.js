@@ -1,9 +1,10 @@
 import { StartFunc as StartFuncWriteTofile } from '../../kLowDb/WriteTofile/WithChecking/StartFunc.js';
 import { StartFunc as Send } from '../../kLowDb/WriteTofile/Send/EntryFile.js';
 import { StartFunc as asIs } from '../../kLowDb/WriteTofile/asIs.js';
+import { StartFunc as CreateSubTable } from '../../kLowDb/WriteTofile/CreateSubTable/StartFunc.js';
 
-let PostFunc = (inPostBody) => {
-    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+let PostFunc = ({ inPostBody, id, inKey }) => {
+    return CreateSubTable({ inDataToInsert: inPostBody, id, inKey });
 };
 
 let PostFuncGenUuId = (inPostBody) => {

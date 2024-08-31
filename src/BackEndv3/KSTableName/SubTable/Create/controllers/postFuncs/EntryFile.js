@@ -11,8 +11,10 @@ import {
 
 let PostFunc = async (req, res) => {
     let LocalBody = req.body;
+    let Localid = req.params.id;
+    let LocalinKey = req.params.inKey;
 
-    let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
+    let LocalFromRepo = await PostFuncRepo({ inPostBody: LocalBody, id: Localid, inKey: LocalinKey });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -135,5 +137,5 @@ let PostAsIsFunc = async (req, res) => {
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
     PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
-    PostWithReferenceCheckFunc,PostAsIsFunc
+    PostWithReferenceCheckFunc, PostAsIsFunc
 };

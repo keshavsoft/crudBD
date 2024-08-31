@@ -19,7 +19,7 @@ import {
 
 import ConfigJson from '../../../../../Config.json' assert {type: 'json'};
 
-let PostFunc = async (inPostBody) => {
+let PostFunc = async ({ inPostBody, id, inKey }) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);
     };
@@ -28,7 +28,7 @@ let PostFunc = async (inPostBody) => {
         return PostFuncDalsForMongoDB(inPostBody);
     };
 
-    return PostFuncDal(inPostBody);
+    return PostFuncDal({ inPostBody, id, inKey });
 };
 
 let PostFuncGenUuId = async (inPostBody) => {
@@ -113,5 +113,5 @@ let PostAsIsFunc = async ({ inPostBody, inDomainName }) => {
 export {
     PostFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc,
     PostSendMailGenUuIdFunc, PostSendMailFunc, PostForTemplateFunc,
-    PostWithReferenceCheckFunc,PostAsIsFunc
+    PostWithReferenceCheckFunc, PostAsIsFunc
 };
