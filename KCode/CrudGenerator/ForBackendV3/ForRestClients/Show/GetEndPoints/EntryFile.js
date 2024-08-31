@@ -46,6 +46,16 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
             inTo: `${LocalFilePath}`
         });
 
+        LocalFuncWriteToFromModal({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
+
+        LocalFuncWriteToFromModalUuid({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`
+        });
+
         LocalFuncMaxRow({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`
@@ -105,6 +115,20 @@ const LocalFuncMaxRow = ({ inFrom, inTo }) => {
 
 const LocalFuncLastRow = ({ inFrom, inTo }) => {
     const LocalEndPoint = "LastRow";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncWriteToFromModal = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "FromModal";
+    let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
+
+    fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
+};
+
+const LocalFuncWriteToFromModalUuid = ({ inFrom, inTo }) => {
+    const LocalEndPoint = "FromModalUuid";
     let LocalFileData = `GET http://localhost:${inFrom}/${CommonShow}/${LocalEndPoint}`;
 
     fs.writeFileSync(`${inTo}/${LocalEndPoint}.http`, LocalFileData);
