@@ -2,8 +2,8 @@ import {
     GetKeyNameFunc as GetKeyNameFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
-let GetKeyNameFunc = () => {
-    return GetKeyNameFuncDal();
+let GetKeyNameFunc = ({ inId, inKey}) => {
+    return GetKeyNameFuncDal({ inId, inKey});
 };
 
 export {

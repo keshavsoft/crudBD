@@ -3,7 +3,15 @@ import {
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetKeyNameFunc = async (req, res) => {
-    let LocalFromRepo = await GetKeyNameFuncRepo();
+
+    let LocalIfFromParam = req.params;
+    let Localid = LocalIfFromParam.id;
+    let LocalKey = LocalIfFromParam.inKey;
+
+    let LocalFromRepo = await GetKeyNameFuncRepo({
+        inId: Localid,
+        inKey: LocalKey,
+    });
 
     if (LocalFromRepo === false) {
         res.status(500).send(LocalFromRepo.KReason);

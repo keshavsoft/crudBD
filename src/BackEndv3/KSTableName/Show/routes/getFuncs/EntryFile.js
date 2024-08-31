@@ -19,5 +19,7 @@ router.get('/Sort/:Column', GetDataSortByColumnFunc);
 router.get('/:id', GetRowDataFunc);
 router.get('/MaxRow', GetMaxRowFunc);
 router.get('/LastRow', GetLastRowFunc);
+router.get('/MinRow', GetMaxRowFunc);
+router.get('/FirstRow', GetLastRowFunc);
 
 export { router };
