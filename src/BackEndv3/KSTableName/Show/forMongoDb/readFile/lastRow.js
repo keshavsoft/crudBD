@@ -23,8 +23,9 @@ let StartFunc = async () => {
         const db = client.db(dbName);
         const collection = db.collection(LocalcollectionName);
         let serverData = await collection.find().toArray();
-        
+
         LocalReturnData.LastRow = serverData[serverData.length - 1];
+        LocalReturnData.KTF = true;
 
         return await LocalReturnData;
     } catch (error) {
