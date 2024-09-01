@@ -17,7 +17,8 @@ import {
 } from '../../dalsForSequelize/getFuncs/EntryFile.js';
 
 import {
-    GetDataOnlyFunc as GetDataOnlyFuncDalsForMongoDb
+    GetDataOnlyFunc as GetDataOnlyFuncDalsForMongoDb,
+    GetLastRowFuncRepo as GetLastRowFuncRepoForMongoDbDal
 } from '../../dalsForMongoDb/getFuncs/EntryFile.js';
 
 import ConfigJson from '../../../../Config.json' assert {type: 'json'};
@@ -134,7 +135,7 @@ let GetLastRowFunc = async () => {
     };
 
     if (ConfigJson.isMongoDb) {
-        return GetDataOnlyFuncDalsForMongoDb();
+        return await GetLastRowFuncRepoForMongoDbDal();
     };
 
     return GetLastRowFuncDal();
