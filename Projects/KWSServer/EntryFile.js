@@ -5,6 +5,7 @@ import { StartFunc as CommonOnMessage } from "./OnMessage/EntryFile.js";
 let wss;
 
 const clients = new Map();
+const CommonChatLog = [];
 
 let StartFunc = (server) => {
     wss = new WebSocketServer({ server });
@@ -22,9 +23,22 @@ let WsOnConnection = (ws, req) => {
     });
 
     let localWebSocketData = clients.get(ws);
-    // console.log("localWebSocketData",localWebSocketData);
 
-    ws.send(JSON.stringify({ Type: 'GetWebSocketId', webSocketId: localWebSocketData.id }));
+    const LocalFuncSendMessage = ({ inMessage, inTypeJson }) => {
+        CommonChatLog.push({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
+
+        if (inTypeJson) {
+            ws.send(JSON.stringify(inMessage));
+        } else {
+            ws.send(inMessage);
+        };
+    };
+
+    LocalFuncSendMessage({
+        inMessage: { Type: 'IsStudent', webSocketId: localWebSocketData.id },
+        inTypeJson: true
+    });
+    // ws.send(JSON.stringify({ Type: 'GetWebSocketId', webSocketId: localWebSocketData.id }));
     // CommonSaveToJsonOnConnections({
     //     inVerifyToken: LocalFromVerifyToken,
     //     inws: ws,
@@ -33,13 +47,17 @@ let WsOnConnection = (ws, req) => {
     // });
 
     ws.on('message', (data, isBinary) => {
-        console.log("inWardMessage : ", data.toString(), clients.size);
+        CommonChatLog.push({ id: localWebSocketData.id, data, InOut: "In" });
+
+        // console.log("inWardMessage : ", data.toString(), clients.size, CommonLog[CommonLog.length - 1].data.toString());
 
         CommonOnMessage({
             inData: data,
             inws: ws,
             inClients: clients,
-            inWss: wss
+            inWss: wss,
+            inChatLog: CommonChatLog,
+            inSendFunc: LocalFuncSendMessage
         });
     });
 
@@ -54,6 +72,8 @@ let WsOnConnection = (ws, req) => {
     });
 
     ws.send(Date.now());
+
 };
+
 
 export { StartFunc };

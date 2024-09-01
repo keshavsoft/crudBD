@@ -5,8 +5,9 @@ import { StartFunc as StartFuncSendMessageToAll } from "./SendMessageToAll.js";
 import { StartFunc as StartFuncMyIpAddress } from "./MyIpAddress.js";
 import { StartFunc as StartFuncMyLocation } from "./MyLocation.js";
 import { StartFunc as checkUser } from "./checkUser.js";
+import { StartFunc as myChat } from "./myChat.js";
 
-let StartFunc = ({ inDataAsJson, inws, inClients, inWss }) => {
+let StartFunc = ({ inDataAsJson, inws, inClients, inWss, inChatLog }) => {
     let LocalDataAsJson = inDataAsJson;
 
     if ("Type" in LocalDataAsJson) {
@@ -37,6 +38,11 @@ let StartFunc = ({ inDataAsJson, inws, inClients, inWss }) => {
         if (LocalDataAsJson.Type === "checkUser") {
             checkUser({ inDataToClientAsJson: LocalDataAsJson, inws, inClients, inWss });
         };
+
+        if (LocalDataAsJson.Type === "myChat") {
+            myChat({ inDataToClientAsJson: LocalDataAsJson, inws: inws, inClients: inClients, inChatLog });
+        };
+
     };
 };
 
