@@ -11,14 +11,14 @@ let StartFunc = ({ inDataAsJson, inws, inClients }) => {
     inClients.set(inws, LocalChangedObject);
     console.log("LocalDataAsJson : ", LocalDataAsJson);
 
-    jFLocalWriteToData({
-        inLatitude: LocalDataAsJson.latitude,
-        inLongitude: LocalDataAsJson.longitude
-    }).then();
+    // jFLocalWriteToData({
+    //     inLatitude: LocalDataAsJson.latitude,
+    //     inLongitude: LocalDataAsJson.longitude
+    // }).then();
 };
 
 let jFLocalWriteToData = async ({ inLatitude, inLongitude }) => {
-    let jVarFromSave = await GpsLocations({ inLatitude, inLongitude });
+    let jVarFromSave = await GpsLocation({ inLatitude, inLongitude });
     console.log("jVarFromSave : ", jVarFromSave);
 
 };
