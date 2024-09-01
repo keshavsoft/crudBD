@@ -5,7 +5,7 @@ var router = express.Router();
 import {
     GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc,GetLastRowFunc,GetFilterFunc
+    GetMaxRowFunc, GetLastRowFunc, GetFilterFunc
 } from '../../controllers/getFuncs/EntryFile.js';
 
 router.get('/', GetFunc);

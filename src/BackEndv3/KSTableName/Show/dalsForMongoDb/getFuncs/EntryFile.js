@@ -11,12 +11,12 @@ let GetDataOnlyFunc = async () => {
     return LocalFromLowDb;
 };
 
-let GetLastRowFuncRepo = async () => {
+let GetLastRowFunc = async () => {
     let LocalFromLowDb = await lastRow();
 
     return LocalFromLowDb;
 };
 
 export {
-    GetFunc, GetDataOnlyFunc, GetLastRowFuncRepo
+    GetFunc, GetDataOnlyFunc, GetLastRowFunc
 };

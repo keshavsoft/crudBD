@@ -18,7 +18,7 @@ import {
 
 import {
     GetDataOnlyFunc as GetDataOnlyFuncDalsForMongoDb,
-    GetLastRowFuncRepo as GetLastRowFuncRepoForMongoDbDal
+    GetLastRowFunc as GetLastRowFuncRepoForMongoDbDal
 } from '../../dalsForMongoDb/getFuncs/EntryFile.js';
 
 import ConfigJson from '../../../../Config.json' assert {type: 'json'};
