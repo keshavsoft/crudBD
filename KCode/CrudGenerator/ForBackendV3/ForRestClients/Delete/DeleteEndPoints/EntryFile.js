@@ -5,7 +5,7 @@ dotenv.config();
 const CommonDelete = "Delete";
 
 let StartFunc = ({ inTablesCollection, inTo }) => {
-    let LocalTypeName = `${CommonDelete}/restClients/GetEndPoints`;
+    let LocalTypeName = `${CommonDelete}/restClients/DeleteEndPoints`;
     let LocalTo = inTo;
 
     let LocalTablesCollection = inTablesCollection;
