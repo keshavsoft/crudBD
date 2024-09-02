@@ -1,0 +1,9 @@
+POST http://localhost:7016/Custom/Clients/Washtex/Orders/NewOrder/InsertNewOrder/Kakinada
+content-type: application/json
+
+{
+    "OrderData":{
+
+    },
+    "k1":"Keshav"
+}
