@@ -15,13 +15,24 @@ import {
 let GetFunc = async (req, res) => {
     let LocalFromRepo = await GetFuncRepo();
 
-    if (LocalFromRepo === false) {
+    if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
     res.status(200).json(LocalFromRepo);
 
+};
+
+let GetDataOnlyFunc = async (req, res) => {
+    let LocalFromRepo = await GetDataOnlyFuncRepo();
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).json(LocalFromRepo.JsonData);
 };
 
 let GetRowDataFunc = async (req, res) => {
@@ -36,16 +47,6 @@ let GetRowDataFunc = async (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
-let GetDataOnlyFunc = async (req, res) => {
-    let LocalFromRepo = await GetDataOnlyFuncRepo();
-
-    if (LocalFromRepo === false) {
-        res.status(500).send(LocalFromRepo.KReason);
-        return;
-    };
-
-    res.status(200).json(LocalFromRepo);
-};
 
 let GetDataSortByColumnFunc = async (req, res) => {
     let LocalFromRepo = await GetDataSortByColumnFuncRepo();

@@ -8,10 +8,6 @@ import { StartFunc as lastRow } from '../../kLowDb/ReadFromFile/WithJoins/lastRo
 let GetFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
-    if (LocalFromLowDb.KTF === false) {
-        return false;
-    };
-
     return LocalFromLowDb;
 };
 
@@ -28,11 +24,7 @@ let GetRowDataFunc = ({ inId }) => {
 let GetDataOnlyFunc = () => {
     let LocalFromLowDb = ReadFromFile();
 
-    if (LocalFromLowDb.KTF === false) {
-        return false;
-    };
-
-    return LocalFromLowDb.JsonData;
+    return LocalFromLowDb;
 };
 
 let GetDataSortByColumnFunc = () => {
