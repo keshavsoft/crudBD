@@ -1,6 +1,7 @@
 import { GetWithQrCodesFunc as GetWithQrCodesFuncRepo } from '../../repos/getFuncs/EntryFile.js';
 
 let GetWithQrCodesFunc = async (req, res) => {
+    
     let LocalParams = req.params;
     let LocalBranch = LocalParams.inBranch
 
