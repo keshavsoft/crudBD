@@ -3,14 +3,9 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const CommonDelete = "Delete";
-import { StartFunc as DeleteEndPoints } from "./DeleteEndPoints/EntryFile.js";
 
 let StartFunc = ({ inTablesCollection, inTo }) => {
-    DeleteEndPoints({ inTablesCollection, inTo });
-};
-
-let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo }) => {
-    let LocalTypeName = `${CommonDelete}/restClients/${CommonDelete}EndPoints`;
+    let LocalTypeName = `${CommonDelete}/restClients/GetEndPoints`;
     let LocalTo = inTo;
 
     let LocalTablesCollection = inTablesCollection;
@@ -31,9 +26,9 @@ let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo }) => {
 };
 
 const LocalFuncWriteToHome = ({ inFrom, inTo }) => {
-    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonDelete}\r\n`;
+    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonDelete}`;
 
-    fs.writeFileSync(`${inTo}/home.http`, `${LocalFileData}\r\n}`);
+    fs.writeFileSync(`${inTo}/home.http`, LocalFileData);
 };
 
 export { StartFunc };
