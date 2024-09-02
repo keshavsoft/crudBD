@@ -21,7 +21,7 @@ let PostFunc = async (req, res) => {
         return;
     };
 
-    res.status(200).send(LocalFromRepo.pk.toString());
+    res.status(200).send(LocalFromRepo);
 };
 
 let PostFuncGenUuId = async (req, res) => {
