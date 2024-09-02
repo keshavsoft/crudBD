@@ -3,34 +3,29 @@ import { JSONFileSync } from 'lowdb/node';
 import Configjson from '../../../../../../Config.json' assert {type: 'json'};
 
 let LocalFuncPullData = ({ inFileName }) => {
-
     let LocalFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${inFileName}.json`;
 
-    const defaultData = { error: "From local" }
+    const defaultData = { error: "From local" };
 
     const db = new LowSync(new JSONFileSync(LocalFilePath), defaultData);
     db.read();
     return db.data;
 };
 
-const StartFunc = ({ inFileName, NeededKey, inSearchKey }) => {
+const StartFunc = ({ inFileName, inCheckWith, inKey }) => {
     let LocalinFileName = inFileName;
-    let LocalSearchKey = inSearchKey;
-    let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     let LocalDataNeeded = LocalFuncPullData({ inFileName: LocalinFileName });
 
-    let LocalFindValue = LocalDataNeeded.filter(element => element[LocalSearchKey] == NeededKey);
+    let LocalFindValue = LocalDataNeeded.filter(element => {
+        return element[inKey] === inCheckWith;
+    });
 
-    if (LocalFindValue.length > 0) {
-        LocalReturnData.KTF = true;
-
-        return LocalReturnData;
+    if (LocalFindValue.length === 0) {
+        return false;
     };
 
-    LocalReturnData.KReason = `${NeededKey} not found in ${LocalinFileName}.${LocalSearchKey}`;
-    return LocalReturnData;
-
-}
+    return true;
+};
 
 export { StartFunc };

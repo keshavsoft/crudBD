@@ -1,6 +1,6 @@
-const StartFunc = ({ inData, inDataToInsert, inTableSchema }) => {
+const StartFunc = ({ inData, inDataToInsert, inSchema }) => {
     let LocalInData = inData;
-    let LocalTableSchema = inTableSchema;
+    let LocalTableSchema = inSchema;
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     let LocalKeysNeeded = {};
