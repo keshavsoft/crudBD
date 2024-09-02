@@ -2,6 +2,9 @@ import { StartFunc as StartFuncInitializeSequelizeWithTableName } from "../modal
 import { StartFunc as StartFuncPrimaryKey } from "../modals/GetTableInfo/PrimaryKey.js";
 
 let StartFunc = async (inPostBody) => {
+  let LocalReturnData = {};
+  LocalReturnData.KTF = false;
+
   let localInDataToInsert = inPostBody;
 
   const LocalTableData = await StartFuncInitializeSequelizeWithTableName();
@@ -13,6 +16,9 @@ let StartFunc = async (inPostBody) => {
 
   try {
     localNewAfterSave = await LocalFromBuild.save();
+    LocalReturnData.KTF = true;
+    LocalReturnData.pk = localNewAfterSave.id;
+
   } catch (error) {
     return await {
       KTF: false,
@@ -20,7 +26,7 @@ let StartFunc = async (inPostBody) => {
     };
   }
 
-  return await localNewAfterSave[localPrimaryKey];
+  return await LocalReturnData;
 };
 
 export { StartFunc };
