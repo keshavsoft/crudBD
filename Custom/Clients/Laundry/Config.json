@@ -1,0 +1,392 @@
+{
+    "isSequelize": false,
+    "isMongoDb": false,
+    "jsonConfig": {
+        "DataPk": 902,
+        "DataPath": "KData/JSON",
+        "tableAndColumns": {
+            "path": "KCode/DataSchema/902",
+            "name": "902",
+            "children": [
+                {
+                    "path": "KCode\\DataSchema\\902\\Bills2425.json",
+                    "name": "Bills2425.json",
+                    "fileData": {
+                        "Date": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "CustomerName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "ContactNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "CustomerNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "PaymentMode": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "GSTNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "BillNumber": {
+                            "type": "INTEGER",
+                            "allowNull": false
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\BillsQrCode.json",
+                    "name": "BillsQrCode.json",
+                    "fileData": {
+                        "ProductName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "UnitRate": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "sno": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "DisPercentage": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "DisRate": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "GrossAmout": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "Barcode": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "BillPk": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "pk": {
+                            "type": "INTEGER",
+                            "unique": true,
+                            "allowNull": false,
+                            "onUpdate": "cascade",
+                            "onDelete": "cascade",
+                            "references": {
+                                "model": {
+                                    "tableName": "Generate"
+                                },
+                                "key": "pk"
+                            }
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\BillsStiching.json",
+                    "name": "BillsStiching.json",
+                    "fileData": {
+                        "ProductName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "UnitRate": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "Discount": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "GrossAmout": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\Discounts.json",
+                    "name": "Discounts.json",
+                    "fileData": {
+                        "ProductName": {
+                            "type": "STRING",
+                            "allowNull": false
+                        },
+                        "CostPrice": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\Generate.json",
+                    "name": "Generate.json",
+                    "fileData": {
+                        "ProductName": {
+                            "type": "STRING",
+                            "allowNull": false
+                        },
+                        "CostPrice": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "ProductAliasName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "SalePrice": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "PercentageValueAddition": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "UserDescription": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "InventorySerial": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "PurchasePk": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "SupplierName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "BillNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\Items.json",
+                    "name": "Items.json",
+                    "fileData": {
+                        "ItemName": {
+                            "type": "STRING",
+                            "allowNull": false,
+                            "unique": true
+                        },
+                        "GST": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\pos.json",
+                    "name": "pos.json",
+                    "fileData": {
+                        "BillNumber": {
+                            "type": "INTEGER",
+                            "allowNull": false,
+                            "primaryKey": true
+                        },
+                        "Date": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "CustomerName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "ContactNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "CustomerNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "PaymentMode": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "GSTNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "DateTime": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\SalesReturns.json",
+                    "name": "SalesReturns.json",
+                    "fileData": {
+                        "ProductName": {
+                            "type": "STRING",
+                            "allowNull": false
+                        },
+                        "CostPrice": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "ProductAliasName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "SalePrice": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "PercentageValueAddition": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "UserDescription": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "InventorySerial": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "PurchasePk": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "SupplierName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "BillNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\StichingPOS.json",
+                    "name": "StichingPOS.json",
+                    "fileData": {
+                        "CustomerName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "Mobile": {
+                            "type": "NUMBER",
+                            "allowNull": true
+                        },
+                        "Place": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\Suppliers.json",
+                    "name": "Suppliers.json",
+                    "fileData": {
+                        "SupplierName": {
+                            "type": "STRING",
+                            "allowNull": false
+                        },
+                        "AliasName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "City": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "GST": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "Phone": {
+                            "type": "INTEGER",
+                            "allowNull": true,
+                            "unique": true
+                        }
+                    }
+                },
+                {
+                    "path": "KCode\\DataSchema\\902\\Vouchers.json",
+                    "name": "Vouchers.json",
+                    "fileData": {
+                        "VoucherName": {
+                            "type": "STRING",
+                            "allowNull": false
+                        },
+                        "BillNumber": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "Date": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "VoucherValue": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "VoucherSign": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "ParentVoucherName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "AccountCode": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "AccountName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "SupplierName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "AliasName": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "TotalAmount": {
+                            "type": "STRING",
+                            "allowNull": true
+                        },
+                        "InvGrid": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "sequelizeConfig": {
+        "isMysql": false,
+        "isPostgres": false,
+        "DataPk": 902,
+        "DataPath": "KData/JSON",
+        "DbName": "data"
+    },
+    "mongoDbConfig": {
+        "url": "",
+        "DbName": "data",
+        "collectionName": "collection"
+    }
+}
