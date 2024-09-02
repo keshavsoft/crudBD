@@ -1,8 +1,10 @@
 import { StartFunc as StartFuncreadFile } from '../../forMongoDb/readFile/readFile.js';
 import { StartFunc as lastRow } from '../../forMongoDb/readFile/lastRow.js';
 
-let GetFunc = () => {
-    return StartFuncreadFile();
+let GetFunc = async () => {
+    let LocalFromLowDb = await StartFuncreadFile();
+
+    return await LocalFromLowDb;
 };
 
 let GetDataOnlyFunc = async () => {
