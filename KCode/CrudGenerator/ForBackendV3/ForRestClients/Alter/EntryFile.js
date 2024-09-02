@@ -3,9 +3,10 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const CommonAlter = "Alter";
+import { StartFunc as PutEndPoints } from "./PutEndPoints/EntryFile.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
-    LocalFuncForGetEndPoints({ inTablesCollection, inTo, inConfigJson });
+    PutEndPoints({ inTablesCollection, inTo, inConfigJson });
 };
 
 let LocalFuncForGetEndPoints = ({ inTablesCollection, inTo, inConfigJson }) => {
