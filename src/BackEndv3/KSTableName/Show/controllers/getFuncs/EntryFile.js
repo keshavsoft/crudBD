@@ -21,7 +21,6 @@ let GetFunc = async (req, res) => {
     };
 
     res.status(200).json(LocalFromRepo);
-
 };
 
 let GetDataOnlyFunc = async (req, res) => {
