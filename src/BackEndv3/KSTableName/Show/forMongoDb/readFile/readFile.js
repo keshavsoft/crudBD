@@ -13,8 +13,6 @@ let StartFunc = async () => {
         const password = startFuncForPassword();
         let url = startFuncForUrl();
         const dbName = configJson.mongoDbConfig.DbName;
-        // const LocalcollectionName = configJson.mongoDbConfig.collectionName;
-        // const LocalcollectionName = tableJson.tableName.slice(0,-5);
         const LocalcollectionName = path.parse(tableJson.tableName).name;
 
         url = url.replace("<password>", password);
@@ -22,13 +20,12 @@ let StartFunc = async () => {
         const client = new MongoClient(url);
 
         await client.connect();
-        // console.log('Connected successfully to server');
         const db = client.db(dbName);
         const collection = db.collection(LocalcollectionName);
         let serverData = await collection.find().toArray();
         LocalReturnData.JsonData = serverData;
         LocalReturnData.KTF = true;
-        // console.log('serverData successfully to server', serverData);
+
         return await LocalReturnData;
     } catch (error) {
         console.log("error : ", error);
