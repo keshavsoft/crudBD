@@ -69,10 +69,16 @@ This project focuses on automating crudBD operations for JSON files, making it e
     cd crudBD
    
    ```
-4. Run the batch file (For Windows)
+4. Create .env in the root location, and the below line to that file
    ```
    
-   BoilerPlate.bat
+    PORT=7019
+   
+   ```
+5. Run the batch file (For Windows)
+   ```
+   
+   fbd.bat
    
    ```
    This Above Command runs the following in Windows
