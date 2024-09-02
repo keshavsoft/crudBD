@@ -26,7 +26,7 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
 };
 
 const LocalFuncWriteToHome = ({ inFrom, inTo }) => {
-    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonDelete}`;
+    let LocalFileData = `DELETE http://localhost:${inFrom}/${CommonDelete}/{inPkToBeDeleted}`;
 
     fs.writeFileSync(`${inTo}/home.http`, LocalFileData);
 };
