@@ -4,7 +4,7 @@ const CommonAlter = "Alter";
 import { StartFunc as home } from "./EndPointsContent/home.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
-    let LocalTypeName = `${CommonAlter}/restClients/PostEndPoints`;
+    let LocalTypeName = `${CommonAlter}/restClients/PutEndPoints`;
     let LocalTo = inTo;
 
     let LocalTablesCollection = inTablesCollection;
