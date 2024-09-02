@@ -8,7 +8,7 @@ let GetFunc = () => {
 let GetDataOnlyFunc = async () => {
     let LocalFromLowDb = await StartFuncreadFile();
 
-    return LocalFromLowDb;
+    return await LocalFromLowDb;
 };
 
 let GetLastRowFunc = async () => {

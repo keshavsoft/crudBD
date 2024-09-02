@@ -45,7 +45,7 @@ let GetDataOnlyFunc = async () => {
     };
 
     if (ConfigJson.isMongoDb) {
-        return GetDataOnlyFuncDalsForMongoDb();
+        return await GetDataOnlyFuncDalsForMongoDb();
     };
 
     return GetDataOnlyFuncDal();

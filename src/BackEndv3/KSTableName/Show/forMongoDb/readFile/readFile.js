@@ -6,6 +6,9 @@ import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
 import tableJson from "../../../tableName.json" assert {type: 'json'};
 
 let StartFunc = async () => {
+    let LocalReturnData = {};
+    LocalReturnData.KTF = false;
+
     try {
         const password = startFuncForPassword();
         let url = startFuncForUrl();
@@ -23,8 +26,10 @@ let StartFunc = async () => {
         const db = client.db(dbName);
         const collection = db.collection(LocalcollectionName);
         let serverData = await collection.find().toArray();
+        LocalReturnData.JsonData = serverData;
+        LocalReturnData.KTF = true;
         // console.log('serverData successfully to server', serverData);
-        return await serverData;
+        return await LocalReturnData;
     } catch (error) {
         console.log("error : ", error);
         return await {

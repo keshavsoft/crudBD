@@ -49,7 +49,7 @@ let WsOnConnection = (ws, req) => {
     ws.on('message', (data, isBinary) => {
         CommonChatLog.push({ id: localWebSocketData.id, data, InOut: "In" });
 
-        // console.log("inWardMessage : ", data.toString(), clients.size, CommonLog[CommonLog.length - 1].data.toString());
+        console.log("inWardMessage : ", data.toString(), clients.size);
 
         CommonOnMessage({
             inData: data,
