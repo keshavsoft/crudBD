@@ -1,5 +1,5 @@
 {
-    "isMongoDb": false,
+    "isMongoDb": true,
     "isSequelize": false,
     "ToDataDetails": {
         "DataPk": 323,
