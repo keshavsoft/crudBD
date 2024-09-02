@@ -2,7 +2,7 @@ import { StartFunc as StartFuncPullData } from "./PullData/EntryFile.js";
 
 let StartFunc = ({ inDataToInsert, id, inKey }) => {
     let LocalinDataToInsert = inDataToInsert;
-    let localid = id;
+    let localid = parseInt(id);
     let LocalinKey = inKey;
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
     let LocalStartFuncPullData = StartFuncPullData();
@@ -22,6 +22,7 @@ let StartFunc = ({ inDataToInsert, id, inKey }) => {
     db.write();
 
     LocalReturnData.KTF = true;
+    LocalReturnData.pk = LocalItemsData.pk;
     return LocalReturnData;
 };
 
