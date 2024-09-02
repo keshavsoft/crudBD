@@ -1,7 +1,7 @@
-import { StartFunc as StartFunReadFileById } from '../../kLowDb/CommonFuncs/GenerateQrCodes.js';
+import { StartFunc as TodayOrdersWithQrs } from '../../kLowDb/ReadFileList/TodayOrdersWithQrs.js';
 
 let GetWithQrCodesFunc = ({ inBranch }) => {
-    let LocalFromLowDb = StartFunReadFileById({ inBranch });
+    let LocalFromLowDb = TodayOrdersWithQrs({ inBranch });
 
     return LocalFromLowDb;
 };
