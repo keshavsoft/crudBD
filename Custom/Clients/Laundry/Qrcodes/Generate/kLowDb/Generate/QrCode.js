@@ -1,11 +1,13 @@
-import { StartFunc as StartFuncReadBranchFile } from './readBranchFile.js';
-import { StartFunc as StartFuncwriteFileFromModal } from '../../../../../../../bin/QrCodes/Generate/kLowDb/WriteFileList/writeFile.js';
-import { StartFuncForBookings as StartFuncCheckQrCodes } from "../CheckQrCodes.js";
+import { StartFunc as StartFuncReadBranchFile } from '../CommonFuncs/readBranchFile.js';
+import { StartFunc as StartFuncwriteFileFromModal } from './WithChecking/StartFunc.js';
+import { StartFuncForBookings as StartFuncCheckQrCodes } from "./Check/CheckQrCodes.js";
 import { StartFunc as StartFuncNoOrderCheck } from "./Check/NoOrderCheck.js";
 import { StartFunc as StartFuncSettlementCheck } from "./Check/SettlementCheck.js";
 
-let StartFunc = ({ inTable, inId }) => {
-    let LocalTable = inTable;
+let StartFunc = ({ inBranch, inId }) => {
+    console.log("kkkkkk:",inBranch, inId );
+    
+    let LocalTable = inBranch;
     let LocalBookingPk = inId;
     let LocalReturnData = { KTF: false };
 
@@ -59,8 +61,8 @@ let LocalForEachFunc = ({ inGenerateReference, itemData, inBookingData }) => {
 
         let LocalSendData = {};
         LocalSendData.Pcs = i
-        LocalSendData = { ...inGenerateReference, ...itemData, ...inBookingData }
-        StartFuncwriteFileFromModal({ inDataToInsert: LocalSendData })
+        LocalSendData = { ...inGenerateReference, ...itemData, ...inBookingData };
+        StartFuncwriteFileFromModal({ inDataToInsert: LocalSendData });
 
     };
 };

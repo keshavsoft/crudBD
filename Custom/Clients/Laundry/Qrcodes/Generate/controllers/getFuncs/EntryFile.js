@@ -6,7 +6,7 @@ let GetIdFunc = async (req, res) => {
     let LocalId = LocalParams.inId;
 
 
-    let LocalFromRepo = await GetIdFuncRepo({ inBranch: LocalBranch,inId: LocalId });
+    let LocalFromRepo = await GetIdFuncRepo({ inBranch: LocalBranch, inId: LocalId });
     res.json(LocalFromRepo);
 };
 
