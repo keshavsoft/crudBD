@@ -24,7 +24,7 @@ let WsOnConnection = (ws, req) => {
 
     let localWebSocketData = clients.get(ws);
 
-    const LocalFuncSendMessage = ({ inMessage, inTypeJson }) => {
+    const LocalFuncSendMessage = ({ inMessage, inTypeJson = false }) => {
         CommonChatLog.push({ id: localWebSocketData.id, data: inMessage, InOut: "Out" });
 
         if (inTypeJson) {

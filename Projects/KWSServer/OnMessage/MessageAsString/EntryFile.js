@@ -39,6 +39,14 @@ const LocalFuncAiChat = ({ inDataAsString, inws, inClients, inChatLog, inSendFun
 
     console.log("LocalLastFind : ", LocalLastFind);
 
+    switch (LocalLastFind.data.Type) {
+        case "IsStudent":
+            console.log("LocalL---------------");
+            inSendFunc({ inMessage: "YourName" });
+            break;
+        default:
+            break;
+    };
 };
 
 export { StartFunc };
