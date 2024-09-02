@@ -7,7 +7,17 @@ const StartFunc = ({ inConfigJson, inTableNameWithExtension }) => {
     });
 
     for (const [key, value] of Object.entries(LocalColumnsSchema.fileData)) {
-        LocalColumnsSchemaToReturn[key] = "";
+        switch (value.type) {
+            case "STRING":
+                LocalColumnsSchemaToReturn[key] = "";
+                break;
+            case "INTEGER":
+                LocalColumnsSchemaToReturn[key] = 0;
+                break;
+            default:
+                break;
+        };
+
     };
 
     return LocalColumnsSchemaToReturn;

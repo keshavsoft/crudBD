@@ -1,3 +1,0 @@
-
-###Get all the rows from the database in this table
-DELETE http://localhost:7019/src/BackEndv2/ksSample/Delete/{inRowpk}
