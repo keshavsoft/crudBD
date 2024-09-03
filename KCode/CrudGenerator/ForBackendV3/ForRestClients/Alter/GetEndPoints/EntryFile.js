@@ -5,7 +5,7 @@ import { StartFunc as home } from "./EndPointsContent/home.js";
 import { StartFunc as ReturnHtml } from "./EndPointsContent/ReturnHtml.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
-    let LocalTypeName = `${CommonAlter}/restClients/PutEndPoints`;
+    let LocalTypeName = `${CommonAlter}/restClients/GetEndPoints`;
     let LocalTo = inTo;
 
     let LocalTablesCollection = inTablesCollection;
