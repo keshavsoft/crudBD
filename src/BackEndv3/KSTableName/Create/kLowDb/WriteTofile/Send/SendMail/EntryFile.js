@@ -1,8 +1,8 @@
 import { StartFunc as sendMailCC } from "./sendMailCC.js";
 
-let StartFunc = async ({ inDataToInsert, inDomainName, inDataPk, inpk }) => {
+let StartFunc = async ({  inDomainName, inDataInserted, inpk }) => {
      if ("Email" in inDataToInsert) {
-        return await sendMailCC({ CCEmail: inDataToInsert.Email, inDomainName, inDataPk, inpk })
+        return await sendMailCC({ CCEmail: inDataToInsert.Email, inDomainName, inDataInserted, inpk })
     }
 };
 

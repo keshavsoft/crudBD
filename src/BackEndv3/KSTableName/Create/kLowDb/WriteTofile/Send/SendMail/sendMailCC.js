@@ -8,7 +8,7 @@ const CommonHtmlPath = "./mail/Templates/Html/welcome.html";
 let tableName = path.parse(tableNameJson.tableName).name;
 dotenv.config();
 
-let StartFunc = async ({ inDataPk, inDomainName, CCEmail, inpk }) => {
+let StartFunc = async ({ inDataInserted, inDomainName, CCEmail, inpk }) => {
     console.log("CCEmail", CCEmail);
 
     if ("KS_MAIL_ID" in process.env === false) {
@@ -30,7 +30,7 @@ let StartFunc = async ({ inDataPk, inDomainName, CCEmail, inpk }) => {
 
     //let LocalRedirectUrl = `http://${inDomainName}/Login/bin/Users/ValidateEmail/${inDataPk}`;
     // let LocalRedirectUrl = `http://localhost:7019/binV2/${tableName}/Alter/${inpk}/isMailValidated/true`;
-    let LocalRedirectUrl = `http://${inDomainName}/binV2/${tableName}/Alter/${inpk}/isMailValidated/true`;
+    let LocalRedirectUrl = `${inDomainName}/binV3/${tableName}/Alter/${inpk}/isMailValidated/true`;
     console.log("inDomainName : ", inDomainName);
 
     let LocalUrlInserted = data.toString().replace("{{inRedirectUrl}}", LocalRedirectUrl);
@@ -40,8 +40,8 @@ let StartFunc = async ({ inDataPk, inDomainName, CCEmail, inpk }) => {
         from: `"KeshavSoft" ${process.env.KS_MAIL_ID}`,
         to: `${process.env.KS_TO_MAIL_ID}`,
         cc: CCEmail,
-        subject: "Hello ✔",
-        text: inDataPk.toString(),
+        subject: `Hello ${inDataInserted.StudentName}✔`,
+        text: inpk.toString(),
         html: LocalUrlInserted
     });
 };
