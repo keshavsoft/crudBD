@@ -77,6 +77,7 @@ let PostSendMailFunc = async ({ inPostBody, inDomainName }) => {
 
     return await PostSendMailFuncDal({ inPostBody, inDomainName });
 };
+
 let PostForTemplateFunc = async ({ inPostBody, inDomainName }) => {
     if (ConfigJson.isSequelize) {
         return PostFuncDalsForSequelize(inPostBody);
