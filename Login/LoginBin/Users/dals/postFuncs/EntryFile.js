@@ -3,9 +3,14 @@ import { StartFunc as StartFuncPullDataWithMail } from '../../kLowDb/PushData/Wi
 import { StartFunc as StartFuncPullDataEndUser } from "../../kLowDb/PushData/WithEmail.js";
 import { StartFunc as StartFuncSendMail } from "../../../../../mail/sendmail.js";
 import { StartFunc as StartFuncPullDataWithDataPk } from "../../kLowDb/PushData/WithDataPk.js";
+import { StartFunc as AsIs } from '../../kLowDb/AsIs.js';
 
 let PostFunc = ({ inUsername, inPassword }) => {
     return StartFuncPullData({ inUsername, inPassword });
+};
+
+let PostAsIsFunc = ({ inInsertData }) => {
+    return AsIs({ inInsertData });
 };
 
 let PostFuncWithMail = ({ inUsername, inPassword, inMail }) => {
@@ -29,4 +34,4 @@ let PostFuncWithDataPk = ({ inUsername, inPassword, inMail, inDataPk }) => {
     return StartFuncPullDataWithDataPk({ inUsername, inPassword, inMail, inDataPk });
 }
 
-export { PostFunc, PostFuncWithMail, PostFuncEndUser, PostFuncWithDataPk };
+export { PostFunc, PostFuncWithMail, PostFuncEndUser, PostFuncWithDataPk, PostAsIsFunc };

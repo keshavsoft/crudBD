@@ -6,5 +6,16 @@
     "Mail": "nknnkumar@yahoo.com",
     "DataPk": 318,
     "UuId": "e741bacb-f4a3-46fc-8462-4400c61c3384"
+  },
+  {
+    "UserName": "TransOrdersKakinada",
+    "Password": "K",
+    "Branch": "KKD",
+    "BranchMobile": "9999999999",
+    "UserMobile": "83411777771",
+    "isAdminValidated": false,
+    "isMailValidated": true,
+    "DataPk": 318,
+    "UuId": "90623f99-380d-4eb1-8174-65a399cfd498"
   }
 ]
