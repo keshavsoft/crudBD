@@ -4,6 +4,10 @@ let GetFunc = ({ inId, inKey, inValue }) => {
     return StartFuncUpdateRow({ inId, inKey, inValue });
 };
 
+let GetReturnHtmlFunc = ({ inId, inKey, inValue }) => {
+    return StartFuncUpdateRow({ inId, inKey, inValue });
+};
+
 export {
-    GetFunc
+    GetFunc, GetReturnHtmlFunc
 };
