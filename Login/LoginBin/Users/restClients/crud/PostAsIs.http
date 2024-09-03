@@ -1,0 +1,13 @@
+###Get for as is data
+POST http://localhost:7019/Login/bin/Users/AsIs
+Content-Type: application/json
+
+{
+"UserName": "",
+"Password": "",
+"Branch":"",
+"Mobile":"",
+"isAdminValidated":false
+}
+
+
