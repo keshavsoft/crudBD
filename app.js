@@ -39,6 +39,10 @@ app.use(express.json({ limit: '100mb' }));
 
 app.use('/', express.static(path.join(path.resolve(), 'public')));
 
+app.get("/k1", (req, res) => {
+    res.sendFile("./checkMail.html");
+})
+
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
 app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
