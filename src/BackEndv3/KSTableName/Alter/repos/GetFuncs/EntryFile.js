@@ -1,5 +1,6 @@
 import {
-  GetFunc as GetFuncDal
+  GetFunc as GetFuncDal,
+  GetReturnHtmlFunc as GetReturnHtmlFuncDal
 } from '../../dals/GetFuncs/EntryFile.js';
 
 import {
@@ -23,4 +24,16 @@ let GetFunc = async ({ inId, inKey, inValue }) => {
   return GetFuncDal({ inId, inKey, inValue });
 };
 
-export { GetFunc };
+let GetReturnHtmlFunc = async ({ inId, inKey, inValue }) => {
+  if (ConfigJson.isSequelize) {
+    return PutFuncDalsForSequelize({ inId, inKey, inValue });
+  };
+
+  if (ConfigJson.isMongoDb) {
+    return PutFuncDalsForMongoDB({ inId, inKey, inValue });
+  };
+
+  return GetReturnHtmlFuncDal({ inId, inKey, inValue });
+};
+
+export { GetFunc, GetReturnHtmlFunc };

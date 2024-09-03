@@ -2,7 +2,8 @@ import path, { resolve } from 'path'
 import { fileURLToPath } from 'url';
 
 import {
-    GetFunc as GetFuncRepo
+    GetFunc as GetFuncRepo,
+    GetReturnHtmlFunc as GetReturnHtmlFuncRepo
 } from "../../repos/GetFuncs/EntryFile.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,5 +36,32 @@ let GetFunc = async (req, res) => {
 
     // res.json(LocalFromRepo);
 };
+let GetReturnHtmlFunc = async (req, res) => {
 
-export { GetFunc };
+    let LocalIfFromParam = req.params;
+    let Localid = LocalIfFromParam.id;
+    let LocalKey = LocalIfFromParam.inKey;
+    let LocalValue = LocalIfFromParam.inValue;
+
+    let LocalFromRepo = await GetReturnHtmlFuncRepo({
+        inId: Localid,
+        inKey: LocalKey,
+        inValue: LocalValue,
+    });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    const LocalImageAbsolutePath = resolve(__dirname, "checkMail.html");
+    console.log("LocalImageAbsolutePath : ", LocalImageAbsolutePath);
+
+    res.sendFile(LocalImageAbsolutePath);
+
+    // http://join.keshavsoft.biz/binV3/StudentNames/Alter/63/isMailValidated/true
+
+    // res.json(LocalFromRepo);
+};
+
+export { GetFunc, GetReturnHtmlFunc };
