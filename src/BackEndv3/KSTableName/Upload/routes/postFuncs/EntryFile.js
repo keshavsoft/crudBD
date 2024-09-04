@@ -8,5 +8,6 @@ import {
 
 // Post - it's check foreign and unique check and it's collect Max pk and generate UuId And pk also
 router.post('/', PostFunc);
+router.post('/ImageUsingMulter', PostFunc);
 
 export { router };
