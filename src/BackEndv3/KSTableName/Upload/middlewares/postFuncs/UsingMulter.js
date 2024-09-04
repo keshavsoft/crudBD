@@ -9,11 +9,12 @@ var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         let LocalUrl = req.originalUrl;
         let LocalUrlArray = LocalUrl.split("/");
-        // console.log("aaaaaaaaa : ", req.originalUrl,LocalUrlArray);
+
         cb(null, `${ConfigJson.JsonPath}/${LocalUrlArray[2]}`);
-        // cb(null, "uploads");
     },
     filename: function (req, file, cb) {
+        let LocalFile = file;
+
         LocalFuncSaveData(req).then(PromiseData => {
             if (PromiseData === false) {
                 cb(null, false);
@@ -22,9 +23,19 @@ var storage = multer.diskStorage({
             req.KeshavSoft = {};
             req.KeshavSoft.insertedPk = PromiseData.pk;
 
-            cb(null, `${PromiseData.pk}.jpg`);
+            switch (mimetype) {
+                case "image/png":
+                    cb(null, `${PromiseData.pk}.png`);
+                    break;
+                case "application/pdf":
+                    cb(null, `${PromiseData.pk}.pdf`);
+                    break;
+                default:
+                    cb(null, LocalFile.originalname );
+                    break;
+            };
         });
-       
+
         console.log("aaaaaaaaaa");
     }
 });
