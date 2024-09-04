@@ -9,8 +9,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     Create({ inTablesCollection, inTo, inConfigJson });
     Alter({ inTablesCollection, inTo, inConfigJson });
     Delete({ inTablesCollection, inTo });
-    Upload({ inTablesCollection, inTo });
-
+    Upload({ inTablesCollection, inTo, inConfigJson });
 };
 
 export { StartFunc };
