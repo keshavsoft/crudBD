@@ -23,7 +23,7 @@ var storage = multer.diskStorage({
             req.KeshavSoft = {};
             req.KeshavSoft.insertedPk = PromiseData.pk;
 
-            switch (mimetype) {
+            switch (LocalFile.mimetype) {
                 case "image/png":
                     cb(null, `${PromiseData.pk}.png`);
                     break;
