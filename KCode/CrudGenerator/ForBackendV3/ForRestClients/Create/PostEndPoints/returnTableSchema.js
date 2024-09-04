@@ -12,6 +12,7 @@ const StartFunc = ({ inConfigJson, inTableNameWithExtension }) => {
                 LocalColumnsSchemaToReturn[key] = "";
                 break;
             case "INTEGER":
+            case "NUMBER":
                 LocalColumnsSchemaToReturn[key] = 0;
                 break;
             default:
