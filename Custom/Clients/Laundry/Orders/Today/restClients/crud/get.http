@@ -1,3 +1,6 @@
 
 ### Today
 GET http://localhost:7019/Custom/Clients/Laundry/Orders/Today/WithQrCodes/TransOrdersKakinada
+
+###
+GET http://localhost:7019/Custom/Clients/Laundry/Orders/Today/Reports/TransOrdersKakinada
