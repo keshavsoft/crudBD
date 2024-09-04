@@ -25,6 +25,7 @@ let PostFunc = async (inPostBody) => {
 
     return PostFuncDal(inPostBody);
 };
+
 let PostImageUsingMulterFunc = async (inPostBody) => {
     if (ConfigJson.isSequelize) {
         return await PostFuncDalsForSequelize(inPostBody);
@@ -36,6 +37,7 @@ let PostImageUsingMulterFunc = async (inPostBody) => {
 
     return PostImageUsingMulterFuncDal(inPostBody);
 };
+
 export {
     PostFunc, PostImageUsingMulterFunc
 };

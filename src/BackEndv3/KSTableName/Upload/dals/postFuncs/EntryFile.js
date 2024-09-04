@@ -3,6 +3,7 @@ import { StartFunc as StartFuncWriteTofile } from '../../kLowDb/WriteTofile/With
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
+
 let PostImageUsingMulterFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };

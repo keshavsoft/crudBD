@@ -1,5 +1,5 @@
 import multer from 'multer';
-import ConfigJson from '../../../Config.json' assert {type: 'json'};
+import ConfigJson from '../../../../Config.json' assert {type: 'json'};
 
 import {
     PostFunc as PostFuncRepo
@@ -20,15 +20,11 @@ var storage = multer.diskStorage({
             };
 
             req.KeshavSoft = {};
-            req.KeshavSoft.insertedPk = PromiseData;
+            req.KeshavSoft.insertedPk = PromiseData.pk;
 
-            cb(null, `${PromiseData}.jpg`);
+            cb(null, `${PromiseData.pk}.jpg`);
         });
-        // console.log(LocalId);
-
-        // req.KeshavSoft = {};
-        // req.KeshavSoft.InsertPk = LocalFromRepo.pk;
-
+       
         console.log("aaaaaaaaaa");
     }
 });
