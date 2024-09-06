@@ -186,7 +186,7 @@
                         },
                         "ItemSerial": {
                             "type": "NUMBER",
-                            "unique": true,
+                            "unique": false,
                             "allowNull": false
                         },
                         "Category": {
