@@ -3,7 +3,7 @@ const CommonCreate = "Create";
 import { StartFunc as returnTableSchema } from "../returnTableSchema.js";
 
 const StartFunc = ({ inFrom, inTo, inConfigJson, inTableNameWithExtension }) => {
-    let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}\r\n`;
+    let LocalFileData = `POST http://localhost:${inFrom}/${CommonCreate}/SendMail\r\n`;
     LocalFileData += `Content-Type: application/json\r\n`;
 
     let LocalColumnsSchema = returnTableSchema({
