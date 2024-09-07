@@ -23,7 +23,15 @@ let PostImageUsingMulterFunc = async (req, res) => {
 
     res.status(200).send(`${req.KeshavSoft.insertedPk}`);
 };
+let PostImageAndMailFunc = async (req, res) => {
+    if ("insertedPk" in req.KeshavSoft === false) {
+        res.status(500).send("Error from multer");
+        return;
+    };
+
+    res.status(200).send(`${req.KeshavSoft.insertedPk}`);
+};
 
 export {
-    PostFunc, PostImageUsingMulterFunc
+    PostFunc, PostImageUsingMulterFunc, PostImageAndMailFunc
 };
