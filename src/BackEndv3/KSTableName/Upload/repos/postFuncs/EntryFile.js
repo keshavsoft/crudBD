@@ -1,6 +1,7 @@
 import {
     PostFunc as PostFuncDal,
-    PostImageUsingMulterFunc as PostImageUsingMulterFuncDal
+    PostImageUsingMulterFunc as PostImageUsingMulterFuncDal,
+    PostImageAndMailFunc as PostImageAndMailFuncDal
 
 } from '../../dals/postFuncs/EntryFile.js';
 
@@ -38,6 +39,18 @@ let PostImageUsingMulterFunc = async (inPostBody) => {
     return PostImageUsingMulterFuncDal(inPostBody);
 };
 
+let PostImageAndMailFunc = async (inPostBody) => {
+    if (ConfigJson.isSequelize) {
+        return await PostFuncDalsForSequelize(inPostBody);
+    }
+
+    if (ConfigJson.isMongoDb) {
+        return PostFuncDalsForMongoDB(inPostBody);
+    }
+
+    return PostImageAndMailFuncDal(inPostBody);
+};
+
 export {
-    PostFunc, PostImageUsingMulterFunc
+    PostFunc, PostImageUsingMulterFunc, PostImageAndMailFunc
 };
