@@ -1,3 +1,4 @@
+import nodemailer from 'nodemailer';
 import {
     GetFunc as GetFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
@@ -16,6 +17,14 @@ let GetFunc = async (req, res) => {
 };
 
 let GetImageUsingMulterFunc = async (req, res) => {
+    if (!req.file||"insertedPk" in req.KeshavSoft === false) {
+        res.status(500).send("Error from multer");
+        return;
+    };
+
+    res.status(200).send(`${req.KeshavSoft.insertedPk}`);
+};
+let GetImageAndMailFunc = async (req, res) => {
     if ("insertedPk" in req.KeshavSoft === false) {
         res.status(500).send("Error from multer");
         return;
@@ -25,5 +34,5 @@ let GetImageUsingMulterFunc = async (req, res) => {
 };
 
 export {
-    GetFunc, GetImageUsingMulterFunc
+    GetFunc, GetImageUsingMulterFunc, GetImageAndMailFunc
 };
