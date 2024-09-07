@@ -33,5 +33,5 @@ let PostImageAndMailFunc = async (req, res) => {
 };
 
 export {
-    PostFunc, PostImageUsingMulterFunc,PostImageAndMailFunc
+    PostFunc, PostImageUsingMulterFunc, PostImageAndMailFunc
 };

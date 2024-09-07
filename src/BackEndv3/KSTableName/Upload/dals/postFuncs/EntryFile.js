@@ -4,6 +4,7 @@ let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
 
+
 let PostImageUsingMulterFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
