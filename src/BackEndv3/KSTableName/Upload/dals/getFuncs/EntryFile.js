@@ -7,10 +7,8 @@ let GetFunc = (inPostBody) => {
 let GetImageUsingMulterFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
-let GetImageAndMailFunc = (inPostBody) => {
-    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
-};
+
 
 export {
-    GetFunc, GetImageUsingMulterFunc, GetImageAndMailFunc
+    GetFunc, GetImageUsingMulterFunc
 };
