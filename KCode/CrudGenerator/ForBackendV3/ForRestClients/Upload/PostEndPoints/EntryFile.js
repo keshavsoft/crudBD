@@ -1,11 +1,10 @@
 import path from "path";
-import dotenv from 'dotenv';
-dotenv.config();
 
 const CommonUpload = "Upload";
 
 import { StartFunc as home } from "./EndPointsContent/home.js";
 import { StartFunc as ImageUsingMulter } from "./EndPointsContent/ImageUsingMulter.js";
+import { StartFunc as ImageAndMail } from "./EndPointsContent/ImageAndMail.js";
 
 let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
     let LocalTypeName = `${CommonUpload}/restClients/PostEndPoints`;
@@ -27,7 +26,15 @@ let StartFunc = ({ inTablesCollection, inTo, inConfigJson }) => {
             inConfigJson,
             inTableNameWithExtension: element.name
         });
+
         ImageUsingMulter({
+            inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
+            inTo: `${LocalFilePath}`,
+            inConfigJson,
+            inTableNameWithExtension: element.name
+        });
+
+        ImageAndMail({
             inFrom: `${process.env.PORT}/${LocalTo}/${LoopInsideFileName}`,
             inTo: `${LocalFilePath}`,
             inConfigJson,

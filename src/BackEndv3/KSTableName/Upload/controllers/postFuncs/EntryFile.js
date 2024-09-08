@@ -1,5 +1,6 @@
 import {
-    PostFunc as PostFuncRepo
+    PostFunc as PostFuncRepo,
+    PostImageAndMailFunc as PostImageAndMailFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 let PostFunc = async (req, res) => {
@@ -29,9 +30,21 @@ let PostImageAndMailFunc = async (req, res) => {
         return;
     };
 
+    let LocalBody = req.body;
+    var host = req.get('host');
+    let protocol = req.protocol;
+    let LocalDomainName = `${protocol}://${host}`;
+
+    PostImageAndMailFuncRepo({
+        inDomainName: LocalDomainName,
+        inDataToInsert: LocalBody,
+        inpk: req.KeshavSoft.insertedPk
+    });
+
     res.status(200).send(`${req.KeshavSoft.insertedPk}`);
 };
 
 export {
-    PostFunc, PostImageUsingMulterFunc, PostImageAndMailFunc
+    PostFunc, PostImageUsingMulterFunc,
+    PostImageAndMailFunc
 };
