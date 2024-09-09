@@ -1,6 +1,6 @@
 import { PostFunc as PostFuncDal } from '../../dals/postFuncs/EntryFile.js';
 
-let PostFunc = async ({ inBranch, inPostBody }) => {
+let PostFunc = ({ inBranch, inPostBody }) => {
     return PostFuncDal({ inBranch, inPostBody });
 };
 
