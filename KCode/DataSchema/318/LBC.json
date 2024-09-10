@@ -1,0 +1,22 @@
+{
+    "ItemInOrder": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "CustomerData": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "OrderData": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "AddOn": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "CheckOutData": {
+        "type": "OBJECT",
+        "allowNull": true
+    }
+}
