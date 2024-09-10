@@ -45,10 +45,9 @@ let StartFunc = ({ inDataToInsert }) => {
     };
 
     db.data.push(LocalDataWithUuid.InsertData);
-    db.write();
-
+    db.write();    
     LocalReturnData.KTF = true;
-    LocalReturnData.pk = LocalDataWithUuid.InsertData.pk;
+    LocalReturnData.ScanNo = LocalDataWithUuid.InsertData.QrCodeId;
 
     return LocalReturnData;
 };
