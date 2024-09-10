@@ -17,5 +17,16 @@
     "isMailValidated": true,
     "DataPk": 318,
     "UuId": "90623f99-380d-4eb1-8174-65a399cfd498"
+  },
+  {
+    "UserName": "ANR",
+    "Password": "ANR",
+    "Branch": "ANR",
+    "BranchMobile": "9676673574",
+    "UserMobile": "9676673574",
+    "isAdminValidated": false,
+    "isMailValidated": true,
+    "DataPk": 318,
+    "UuId": "13da2236-ea87-4e3f-910f-a22e2bf74310"
   }
 ]
