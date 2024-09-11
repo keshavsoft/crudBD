@@ -1,11 +1,16 @@
 {
     "ItemInOrder": {
         "type": "OBJECT",
-        "allowNull": true
+        "allowNull": true,
+        "defaultValue": {}
     },
     "CustomerData": {
         "type": "OBJECT",
-        "allowNull": true
+        "allowNull": true,
+        "defaultValue": {
+            "CustomerName": "",
+            "CustomerMobile": ""
+        }
     },
     "OrderData": {
         "type": "OBJECT",
