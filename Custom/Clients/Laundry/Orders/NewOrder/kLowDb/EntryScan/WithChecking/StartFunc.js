@@ -8,7 +8,7 @@ let StartFunc = ({ inBranch, inDataToInsert }) => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
     let LocalStartFuncPullData = StartFuncPullData({ inBranch });
 
-    if (LocalStartFuncPullData === false) {
+    if (LocalStartFuncPullData.KTF === false) {
         LocalReturnData.KReason = LocalStartFuncPullData.KReason;
         return LocalReturnData;
     };

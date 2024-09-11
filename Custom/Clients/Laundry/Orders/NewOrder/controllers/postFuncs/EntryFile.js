@@ -6,8 +6,12 @@ let PostFunc = (req, res) => {
     let LocalBody = req.body;
 
     let LocalFromRepo = PostFuncRepo({ inBranch: LocalBranch, inPostBody: LocalBody });
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
 
-    res.json(LocalFromRepo);
+    res.status(200).send(LocalFromRepo.pk.toString());
 };
 
 export { PostFunc };
