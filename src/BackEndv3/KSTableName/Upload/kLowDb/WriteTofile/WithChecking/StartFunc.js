@@ -30,6 +30,8 @@ let StartFunc = ({ inDataToInsert }) => {
 
     if (LocalStartFuncChecksQrCodeId.KTF === false) {
         LocalReturnData.KReason = LocalStartFuncChecksQrCodeId.KReason;
+        LocalReturnData.ErrorInfo = LocalStartFuncChecksQrCodeId.ErrorInfo;
+        
         return LocalReturnData;
     };
 

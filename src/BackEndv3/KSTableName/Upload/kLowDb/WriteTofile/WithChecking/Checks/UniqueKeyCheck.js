@@ -18,6 +18,11 @@ const StartFunc = ({ inData, inDataToInsert, inSchema }) => {
 
         if (LoopInsideFilter === undefined === false) {
             LocalReturnData.KReason = `Unique error : ${prop}`;
+            
+            LocalReturnData.ErrorInfo = {};
+            LocalReturnData.ErrorInfo.ColumnName = prop;
+            LocalReturnData.ErrorInfo.ErrorType = "unique";
+
             return LocalReturnData;
         };
     };
