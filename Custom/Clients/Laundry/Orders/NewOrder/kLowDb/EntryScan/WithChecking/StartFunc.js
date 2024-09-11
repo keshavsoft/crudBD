@@ -3,10 +3,10 @@ import { StartFunc as StartFuncUniqueKeyCheck } from "./Checks/UniqueKeyCheck.js
 import { StartFunc as checkReferences } from "./checkReferences.js";
 import { StartFunc as LocalFuncGeneratePk } from "./Generate.js";
 
-let StartFunc = ({ inDataToInsert }) => {
+let StartFunc = ({ inBranch, inDataToInsert }) => {
     let LocalinDataToInsert = inDataToInsert;
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
-    let LocalStartFuncPullData = StartFuncPullData();
+    let LocalStartFuncPullData = StartFuncPullData({ inBranch });
 
     if (LocalStartFuncPullData === false) {
         LocalReturnData.KReason = LocalStartFuncPullData.KReason;
@@ -45,9 +45,9 @@ let StartFunc = ({ inDataToInsert }) => {
     };
 
     db.data.push(LocalDataWithUuid.InsertData);
-    db.write();    
+    db.write();
     LocalReturnData.KTF = true;
-    LocalReturnData.ScanNo = LocalDataWithUuid.InsertData.QrCodeId;
+    LocalReturnData.pk = LocalDataWithUuid.InsertData.pk;
 
     return LocalReturnData;
 };
