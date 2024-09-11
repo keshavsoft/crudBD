@@ -2,10 +2,6 @@
     "QrCodeId": {
         "type": "INTEGER",
         "unique": true,
-        "references": {
-            "model": "QrCodes",
-            "key": "pk"
-        },
         "allowNull": false,
         "onUpdate": "cascade",
         "onDelete": "cascade"
