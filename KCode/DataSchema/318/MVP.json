@@ -9,14 +9,20 @@
     },
     "OrderData": {
         "type": "OBJECT",
-        "allowNull": true
+        "allowNull": true,
+        "defaultValue": {
+            "BranchName": "",
+            "Currentdateandtime": ""
+        }
     },
     "AddOn": {
         "type": "OBJECT",
-        "allowNull": true
+        "allowNull": true,
+        "defaultValue": {}
     },
     "CheckOutData": {
         "type": "OBJECT",
-        "allowNull": true
+        "allowNull": true,
+        "defaultValue": {}
     }
 }
