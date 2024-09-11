@@ -2,12 +2,12 @@ import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
 import Configjson from '../../../../Config.json' assert { type: 'json' };
 
-let StartFunc = () => {
+let StartFunc = ({ inTable }) => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/BranchScan.json`;
+    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${inTable}.json`;
 
     const defaultData = { error: "From KLowDb" }
 
@@ -15,17 +15,17 @@ let StartFunc = () => {
 
     return {
         dbObject: db,
-        TableSchema: LocalFuncForTableSchema()
+        TableSchema: LocalFuncForTableSchema({ inTable })
     };
 };
 
-let LocalFuncForTableSchema = () => {
+let LocalFuncForTableSchema = ({ inTable }) => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     LocalReturnData.KTF = false;
 
     let LocalSecondNeeded = Configjson.jsonConfig.tableAndColumns.children.find(element => {
-        return "children" in element === false && element.name === "BranchScan.json";
+        return "children" in element === false && element.name === `${inTable}.json`;
     });
 
     return LocalSecondNeeded;

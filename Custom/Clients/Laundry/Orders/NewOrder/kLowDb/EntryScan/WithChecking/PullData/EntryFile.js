@@ -1,11 +1,11 @@
 import { StartFunc as StartFuncReturnDbObjectWithSchema } from '../../../CommonFuncs/ReturnDbObjectWithSchema.js';
 
-let StartFunc = () => {
+let StartFunc = ({ inBranch }) => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     LocalReturnData.KTF = false;
 
-    const dbFromDbObjectWithSchema = StartFuncReturnDbObjectWithSchema();
+    const dbFromDbObjectWithSchema = StartFuncReturnDbObjectWithSchema({ inTable: inBranch });
 
     const db = dbFromDbObjectWithSchema.dbObject;
 
@@ -19,6 +19,14 @@ let StartFunc = () => {
         LocalReturnData.KReason = "Not array inside Json file...";
 
         return LocalReturnData;
+    };
+
+    if (db.data.length !== 0) {
+        let lastRowData = db.data[db.data.length - 1]
+        if (Object.values(lastRowData.ItemsInOrder).length === 0) {
+            LocalReturnData.KReason = "Last Order items empty.";
+            return LocalReturnData;
+        }
     };
 
     LocalReturnData.KTF = true;
