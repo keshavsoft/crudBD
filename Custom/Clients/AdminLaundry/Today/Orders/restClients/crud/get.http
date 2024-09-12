@@ -1,0 +1,2 @@
+### Qr Raise
+GET http://localhost:7019/Custom/Clients/Laundry/Qrcodes/Generate/TransOrdersKakinada/5
