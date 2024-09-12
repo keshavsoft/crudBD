@@ -4,5 +4,11 @@
     "Password": "Keshav",
     "isMailValidated": true,
     "DataPk": 327
+  },
+  {
+    "UserName": "k2",
+    "Password": "k1",
+    "isMailValidated": false,
+    "UuId": "d819cd70-0ccb-41c8-b24e-2f26aedfce4b"
   }
 ]
