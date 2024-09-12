@@ -1,5 +1,5 @@
 import { StartFunc as ReadFromFile } from '../../kLowDb/ReadFromFile/getFunc.js';
-import { StartFunc as getRowFunc } from '../../kLowDb/ReadFromFile/getRowFunc.js';
+import { StartFunc as SingleImage } from '../../kLowDb/ReadFromFile/SingleImage.js';
 
 let GetFunc = () => {
     let LocalFromLowDb = ReadFromFile();
@@ -8,7 +8,7 @@ let GetFunc = () => {
 };
 
 let GetRowDataFunc = ({ inId }) => {
-    let LocalFromLowDb = getRowFunc({ inId });
+    let LocalFromLowDb = SingleImage({ inKey: inId });
 
     if (LocalFromLowDb.KTF === false) {
         return LocalFromLowDb;
@@ -18,7 +18,5 @@ let GetRowDataFunc = ({ inId }) => {
 };
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc, GetLastRowFunc, GetFilterFunc
+    GetFunc, GetRowDataFunc
 };

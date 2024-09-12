@@ -12,7 +12,5 @@ let GetRowDataFunc = async ({ inId }) => {
 };
 
 export {
-    GetFunc, GetDataOnlyFunc, GetImagesFunc, GetBodyCheckFunc, GetFromModalFunc,
-    GetFromModalUuidFunc, GetWithJoinsFunc, GetDataSortByColumnFunc, GetRowDataFunc,
-    GetMaxRowFunc, GetLastRowFunc, GetFilterFunc
+    GetFunc, GetRowDataFunc
 };
