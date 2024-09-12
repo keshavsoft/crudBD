@@ -7,8 +7,8 @@ let GetFunc = async () => {
     return GetFuncDal();
 };
 
-let GetRowDataFunc = async ({ inId }) => {
-    return GetRowDataFuncDal({ inId });
+let GetRowDataFunc = async ({ inId, inResponse }) => {
+    return GetRowDataFuncDal({ inId, inResponse });
 };
 
 export {
