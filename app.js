@@ -48,7 +48,7 @@ app.use('/bin', routerFromBin);
 app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
 
 app.use('/binV2', routerFromBinV2);
-app.use('/binV3', routerFromBinV3);
+app.use('/binV3', MiddleWaresBinSecured, routerFromBinV3);
 
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
