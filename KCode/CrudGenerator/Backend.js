@@ -4,6 +4,7 @@ import { StartFunc as ForBackendSecured } from './ForBackendSecured/EntryFile.js
 
 import { StartFunc as ForBackendV2 } from './ForBackendV2/EntryFile.js';
 import { StartFunc as ForBackendV3 } from './ForBackendV3/EntryFile.js';
+import { StartFunc as ForBackendV4 } from './ForBackendV4/EntryFile.js';
 
 let StartFunc = ({ inFilesArray }) => {
     let LocalFilesArray = inFilesArray;
@@ -15,6 +16,7 @@ let StartFunc = ({ inFilesArray }) => {
     LocalFuncForBackEndv2({ inFilesArray: LocalFilesArray });
 
     LocalFuncForBackEndv3({ inFilesArray: LocalFilesArray });
+    LocalFuncForBackEndv4({ inFilesArray: LocalFilesArray });
 };
 
 let LocalFuncForBackEndSecured = ({ inFilesArray }) => {
@@ -72,4 +74,19 @@ let LocalFuncForBackEndv3 = ({ inFilesArray }) => {
 
     console.log(`Generated the endpoints in backend : ${CommonTo}`);
 };
+
+let LocalFuncForBackEndv4 = ({ inFilesArray }) => {
+    let LocalFilesArray = inFilesArray;
+    let CommonFrom = "src/BackEndv4";
+    let CommonTo = "binV4";
+
+    ForBackendV4({
+        inTablesCollection: LocalFilesArray,
+        inFrom: CommonFrom,
+        inTo: CommonTo
+    });
+
+    console.log(`Generated the endpoints in backend : ${CommonTo}`);
+};
+
 export { StartFunc };

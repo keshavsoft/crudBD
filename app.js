@@ -8,6 +8,7 @@ import { router as routerFromLogin } from "./Login/routes.js";
 
 import { router as routerFromBinV2 } from "./binV2/routes.js";
 import { router as routerFromBinV3 } from "./binV3/routes.js";
+import { router as routerFromBinV4 } from "./binV4/routes.js";
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
@@ -49,6 +50,7 @@ app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
 
 app.use('/binV2', routerFromBinV2);
 app.use('/binV3', MiddleWaresBinSecured, routerFromBinV3);
+app.use('/binV4', routerFromBinV4);
 
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
