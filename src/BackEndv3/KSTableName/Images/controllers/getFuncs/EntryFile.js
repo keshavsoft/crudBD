@@ -15,7 +15,7 @@ let GetFunc = async (req, res) => {
 
 let GetRowDataFunc = async (req, res) => {
     let localid = req.params.id
-    let LocalFromRepo = await GetRowDataFuncRepo({ inId: localid });
+    let LocalFromRepo = await GetRowDataFuncRepo({ inId: localid, inResponse: res });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);

@@ -7,8 +7,8 @@ let GetFunc = () => {
     return LocalFromLowDb;
 };
 
-let GetRowDataFunc = ({ inId }) => {
-    let LocalFromLowDb = SingleImage({ inKey: inId });
+let GetRowDataFunc = ({ inId,inResponse }) => {
+    let LocalFromLowDb = SingleImage({ inKey: inId ,inResponse});
 
     if (LocalFromLowDb.KTF === false) {
         return LocalFromLowDb;
