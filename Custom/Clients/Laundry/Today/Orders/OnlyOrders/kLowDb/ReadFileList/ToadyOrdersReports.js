@@ -10,9 +10,6 @@ let StartFunc = ({ inBranch }) => {
     const Orderdb = StartFuncCommonFuncs({ inBranchName: LocalBranchName });
     Orderdb.read();
 
-    const Qrdb = StartFuncQrCodes();
-    Qrdb.read();
-
     let LocalFilterBranchData = Orderdb.data.filter(e => {
         return new Date(e.OrderData.Currentdateandtime).toLocaleDateString('en-GB') == LocalFindValue;
     });

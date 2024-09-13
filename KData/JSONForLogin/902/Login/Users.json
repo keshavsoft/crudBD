@@ -6,5 +6,15 @@
     "Mail": "nknnkumar@yahoo.com",
     "UuId": 1,
     "DataPk": 330
+  },
+  {
+    "UserName": "ANR",
+    "Password": "ANR",
+    "Branch": "ANR",
+    "BranchMobile": "9676673574",
+    "UserMobile": "9676673574",
+    "isAdminValidated": false,
+    "isMailValidated": false,
+    "UuId": "c91aa9d4-6faf-4a2d-9316-b16c771a2618"
   }
 ]
