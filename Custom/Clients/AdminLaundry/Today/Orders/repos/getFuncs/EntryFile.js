@@ -1,7 +1,7 @@
-import { GetIdFunc as GetIdFuncDal } from '../../dals/getFuncs/EntryFile.js';
+import { GetFunc as GetFuncDal } from '../../dals/getFuncs/EntryFile.js';
 
-let GetIdFunc = async ({ inBranch, inId }) => {
-    return GetIdFuncDal({ inBranch, inId });
+let GetFunc = async () => {
+    return GetFuncDal();
 };
 
-export { GetIdFunc };
+export { GetFunc };

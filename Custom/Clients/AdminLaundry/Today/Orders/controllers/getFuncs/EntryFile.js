@@ -1,14 +1,10 @@
-import { GetIdFunc as GetIdFuncRepo } from '../../repos/getFuncs/EntryFile.js';
+import { GetFunc as GetFuncRepo } from '../../repos/getFuncs/EntryFile.js';
 
-let GetIdFunc = async (req, res) => {
-    let LocalParams = req.params;
-    let LocalBranch = LocalParams.inBranch;
-    let LocalId = LocalParams.inId;
+let GetFunc = async (req, res) => {
 
-
-    let LocalFromRepo = await GetIdFuncRepo({ inBranch: LocalBranch, inId: LocalId });
+    let LocalFromRepo = await GetFuncRepo();
     res.json(LocalFromRepo);
 };
 
 
-export { GetIdFunc };
+export { GetFunc };
