@@ -6,7 +6,7 @@ import { router as routerFromCommon } from "./Common/routes.js";
 import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
-import { router as routerFromBinV2 } from "./binV2/routes.js";
+// import { router as routerFromBinV2 } from "./binV2/routes.js";
 import { router as routerFromBinV3 } from "./binV3/routes.js";
 import { router as routerFromBinV4 } from "./binV4/routes.js";
 
@@ -48,7 +48,7 @@ app.get("/k1", (req, res) => {
 app.use('/bin', routerFromBin);
 app.use('/binSecured', MiddleWaresBinSecured, routerFrombinSecured);
 
-app.use('/binV2', routerFromBinV2);
+// app.use('/binV2', routerFromBinV2);
 app.use('/binV3', MiddleWaresBinSecured, routerFromBinV3);
 app.use('/binV4', routerFromBinV4);
 

@@ -1,7 +1,7 @@
 import express from 'express';
 
 import packageJSON from '../../package.json' assert {type: 'json'};
-import configJSON from '../../binV2/Config.json' assert {type: 'json'};
+import configJSON from '../../binV4/Config.json' assert {type: 'json'};
 
 var router = express.Router();
 
