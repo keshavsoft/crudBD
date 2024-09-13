@@ -8,5 +8,6 @@ import {
 
 router.get('/', GetFunc);
 router.get('/:id', GetRowDataFunc);
+router.get('/AnyExt/:id', GetRowDataFunc);
 
 export { router };
