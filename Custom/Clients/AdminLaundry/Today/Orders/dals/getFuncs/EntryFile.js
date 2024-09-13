@@ -1,11 +1,10 @@
-import { StartFunc as Generate } from '../../kLowDb/Generate/QrCode.js';
+//import { StartFunc as Generate } from '../../kLowDb/Generate/QrCode.js';
 
-let GetIdFunc = ({ inBranch, inId }) => {
-    console.log("inBranch, inId :",inBranch, inId );
-    
-    let LocalFromLowDb = Generate({ inBranch, inId });
+let GetFunc = () => {
+    console.log("pushpa");
 
-    return LocalFromLowDb;
+    //let LocalFromLowDb = Generate();
+    //return LocalFromLowDb;
 };
 
-export { GetIdFunc };
+export { GetFunc };
