@@ -1,5 +1,6 @@
 import {
-    GetFunc as GetFuncRepo, GetRowDataFunc as GetRowDataFuncRepo
+    GetFunc as GetFuncRepo, GetRowDataFunc as GetRowDataFuncRepo,
+    GetAnyExtFunc as GetAnyExtFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
@@ -19,6 +20,11 @@ let GetRowDataFunc = (req, res) => {
     GetRowDataFuncRepo({ inId: localid, inResponse: res });
 };
 
+let GetAnyExtFunc = (req, res) => {
+    let localid = req.params.id
+
+    GetAnyExtFuncRepo({ inId: localid });
+};
 export {
-    GetFunc, GetRowDataFunc
+    GetFunc, GetRowDataFunc, GetAnyExtFunc
 };
