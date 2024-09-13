@@ -11,6 +11,10 @@ let GetRowDataFunc = ({ inId, inResponse }) => {
     SingleImage({ inKey: inId, inResponse });
 };
 
+let GetAnyExtFunc = ({ inId }) => {
+    SingleImage({ inKey: inId });
+};
+
 export {
-    GetFunc, GetRowDataFunc
+    GetFunc, GetRowDataFunc, GetAnyExtFunc
 };
