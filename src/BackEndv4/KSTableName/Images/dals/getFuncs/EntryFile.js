@@ -1,10 +1,10 @@
-import { StartFunc as ReadFromFile } from '../../kLowDb/ReadFromFile/getFunc.js';
 import { StartFunc as SingleImage } from '../../kLowDb/ReadFromFile/SingleImage.js';
+import { StartFunc as anyExt } from '../../kLowDb/ReadFromFile/anyExt.js';
 
 let GetFunc = () => {
-    let LocalFromLowDb = ReadFromFile();
+    // let LocalFromLowDb = ReadFromFile();
 
-    return LocalFromLowDb;
+    return false;
 };
 
 let GetRowDataFunc = ({ inId, inResponse }) => {
@@ -12,7 +12,7 @@ let GetRowDataFunc = ({ inId, inResponse }) => {
 };
 
 let GetAnyExtFunc = ({ inId }) => {
-    SingleImage({ inKey: inId });
+    anyExt({ inKey: inId });
 };
 
 export {

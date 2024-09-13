@@ -2,7 +2,7 @@
     "isMongoDb": false,
     "isSequelize": false,
     "ToDataDetails": {
-        "DataPk": 318,
+        "DataPk": 327,
         "DataPath": "KData/JSON",
         "LoginPath": "KData/JSONForLogin",
         "DbName": "data",

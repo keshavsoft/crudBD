@@ -13,7 +13,8 @@ let StartFunc = ({ inFilesArray }) => {
 
     LocalFuncForBackEnd({ inFilesArray: LocalFilesArray });
     LocalFuncForBackEndSecured({ inFilesArray: LocalFilesArray });
-    LocalFuncForBackEndv2({ inFilesArray: LocalFilesArray });
+    
+    // LocalFuncForBackEndv2({ inFilesArray: LocalFilesArray });
 
     LocalFuncForBackEndv3({ inFilesArray: LocalFilesArray });
     LocalFuncForBackEndv4({ inFilesArray: LocalFilesArray });
