@@ -13,6 +13,7 @@ const StartFunc = ({ inConfigJson, inTableNameWithExtension }) => {
                 break;
             case "INTEGER":
             case "NUMBER":
+            case "TELEPHONE":
                 LocalColumnsSchemaToReturn[key] = 0;
                 break;
             default:
