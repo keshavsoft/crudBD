@@ -8,6 +8,7 @@ generate backend and database from json schema
 ## **Table of Contents** 📚
 - [Overview](#Overview)
 - [Installation](#installation)
+- [BackEnd Only](#BackEnd)
 - [Folder Structure](#folder-structure)
 - [Purpose of the Project](#purpose-of-the-project)
 - [Important Points](#important-points)
