@@ -98,6 +98,14 @@ This project focuses on automating crudBD operations for JSON files, making it e
       npm run start
    
    ```
+### <a name="BackEnd"></a>## **BackEnd Only** 🚀
+
+1. Delete all the folders starting with bin ( which is the BackEnd code).
+
+2. run the KCode/Backend.js
+   
+3. Now all the bin folders only are created ( which is the BackEnd code).
+
 ### <a name="folder-structure"></a>## **Folder Structure**
 
 ```plaintext
