@@ -99,7 +99,7 @@ This project focuses on automating crudBD operations for JSON files, making it e
       npm run start
    
    ```
-### <a name="BackEnd"></a>## **BackEnd Only** 🚀
+### <a name="BackEnd"></a>## **BackEnd** 🚀
 
 1. Delete all the folders starting with bin ( which is the BackEnd code).
 
