@@ -4,6 +4,7 @@ import { StartFunc as Alter } from './Alter/EntryFile.js';
 import { StartFunc as Delete } from './Delete/EntryFile.js';
 import { StartFunc as Upload } from './Upload/EntryFile.js';
 import { StartFunc as Images } from './Images/EntryFile.js';
+import { StartFunc as Search } from './Search/EntryFile.js';
 
 let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     Show({ inTablesCollection, inTo });
@@ -12,6 +13,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     Delete({ inTablesCollection, inTo });
     Upload({ inTablesCollection, inTo, inConfigJson });
     Images({ inTablesCollection, inTo, inConfigJson });
+    Search({ inTablesCollection, inTo });
 };
 
 export { StartFunc };
