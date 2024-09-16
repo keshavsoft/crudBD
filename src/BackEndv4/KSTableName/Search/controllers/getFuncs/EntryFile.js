@@ -12,7 +12,7 @@ let GetFunc = async (req, res) => {
         return;
     };
 
-    res.status(200).json(LocalFromRepo);
+    res.status(200).json(LocalFromRepo.JsonData);
 };
 
 export {
