@@ -7,16 +7,19 @@ let GetFunc = ({ inFilterObject }) => {
 
     return LocalFromLowDb;
 };
+
 let GetAsObjectFunc = ({ inFilterObject }) => {
     let LocalFromLowDb = AsObject({ inFilterObject });
 
     return LocalFromLowDb;
 };
-let GetAsArrayFunc = ({ inFilterObject }) => {
-    let LocalFromLowDb = AsArray({ inFilterObject });
+
+let GetAsArrayFunc = ({ inKey, inValue }) => {
+    let LocalFromLowDb = AsArray({ inKey, inValue });
 
     return LocalFromLowDb;
 };
+
 export {
     GetFunc, GetAsObjectFunc, GetAsArrayFunc
 };

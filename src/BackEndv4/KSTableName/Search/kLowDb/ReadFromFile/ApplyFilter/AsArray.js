@@ -1,8 +1,9 @@
 import { StartFunc as StartFuncPullData } from "../../PullData/EntryFile.js";
 import _ from "lodash";
 
-let StartFunc = ({ inFilterObject }) => {
-  let LocalFilterObject = inFilterObject;
+let StartFunc = ({ inKey, inValue }) => {
+  let LocalFilterKey = inKey;
+  let LocalFilterValue = inValue;
 
   let LocalReturnData = { KTF: false };
 
@@ -18,7 +19,7 @@ let StartFunc = ({ inFilterObject }) => {
   const LocalData = db.data;
 
   LocalReturnData.KTF = true;
-  LocalReturnData.JsonData = _.filter(LocalData, LocalFilterObject);
+  LocalReturnData.JsonData = _.filter(LocalData, [LocalFilterKey, LocalFilterValue]);
 
   return LocalReturnData;
 };

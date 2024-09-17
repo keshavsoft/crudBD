@@ -13,8 +13,10 @@ let GetAsObjectFunc = ({ inFilterObject }) => {
     return GetAsObjectFuncDal({ inFilterObject });
 };
 
-let GetAsArrayFunc = ({ inFilterObject }) => {
-    return GetAsArrayFuncDal({ inFilterObject });
+let GetAsArrayFunc = ({ inKey, inValue }) => {
+    return GetAsArrayFuncDal({
+        inKey, inValue
+    });
 };
 
 export {
