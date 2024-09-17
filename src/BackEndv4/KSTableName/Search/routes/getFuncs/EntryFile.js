@@ -3,11 +3,12 @@ import express from 'express';
 var router = express.Router();
 
 import {
-    GetFunc
-} from '../../controllers/getFuncs/EntryFile.js';
+    GetFunc, GetAsObjectFunc, GetAsArrayFunc
+} 
+from '../../controllers/getFuncs/EntryFile.js';
 
 router.get('/', GetFunc);
-router.get('/AsObject', GetFunc);
-router.get('/AsArray', GetFunc);
+router.get('/AsObject', GetAsObjectFunc);
+router.get('/AsArray', GetAsArrayFunc);
 
 export { router };

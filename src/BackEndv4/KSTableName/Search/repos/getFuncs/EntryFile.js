@@ -1,11 +1,22 @@
 import {
-    GetFunc as GetFuncDal
-} from '../../dals/getFuncs/EntryFile.js';
+    GetFunc as GetFuncDal,
+    GetAsObjectFunc as GetAsObjectFuncDal,
+    GetAsArrayFunc as GetAsArrayFuncDal
+}
+    from '../../dals/getFuncs/EntryFile.js';
 
 let GetFunc = ({ inFilterObject }) => {
     return GetFuncDal({ inFilterObject });
 };
 
+let GetAsObjectFunc = ({ inFilterObject }) => {
+    return GetAsObjectFuncDal({ inFilterObject });
+};
+
+let GetAsArrayFunc = ({ inFilterObject }) => {
+    return GetAsArrayFuncDal({ inFilterObject });
+};
+
 export {
-    GetFunc
+    GetFunc, GetAsObjectFunc, GetAsArrayFunc
 };
