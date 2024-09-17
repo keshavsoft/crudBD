@@ -1,0 +1,7 @@
+### Qr Raise
+POST  http://localhost:7019/Custom/Clients/Laundry/Qrcodes/EntryScan/TransOrdersKakinada
+Content-Type: application/json
+
+{
+   "Qrcodes": "2"
+}
