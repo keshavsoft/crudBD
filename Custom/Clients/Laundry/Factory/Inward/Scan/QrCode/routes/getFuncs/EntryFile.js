@@ -9,6 +9,6 @@ import {
 
 router.get('/:inFactory', GetFunc);
 router.get('/Pending/:inFactory', GetPendingFunc);
-router.get('/Scanned/:inFactory', GetScannedFunc);
+// router.get('/Scanned/:inFactory', GetScannedFunc);
 
 export { router };
