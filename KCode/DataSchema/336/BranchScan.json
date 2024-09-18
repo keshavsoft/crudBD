@@ -1,0 +1,57 @@
+{
+    "QrCodeId": {
+        "type": "INTEGER",
+        "unique": true,
+        "allowNull": false,
+        "onUpdate": "cascade",
+        "onDelete": "cascade"
+    },
+    "ItemName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "Rate": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "FactorySelected": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "VoucherRef": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "BranchName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "VoucherNumber": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "DCFactory": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "DCDate": {
+        "type": "DATE",
+        "allowNull": true
+    },
+    "DCDescription": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "OrderNumber": {
+        "type": "NUMBER",
+        "allowNull": true
+    },
+    "OrderDate": {
+        "type": "DATE",
+        "allowNull": true
+    },
+    "DeliveryDate": {
+        "type": "DATE",
+        "allowNull": true
+    }
+}

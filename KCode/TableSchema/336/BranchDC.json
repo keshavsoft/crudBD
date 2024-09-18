@@ -1,0 +1,82 @@
+{
+    "TableConfig": {
+      "HtmlConfig": {
+        "Header": {
+          "HeaderLi": {
+            "ShowMessages": false
+          }
+        },
+       
+        "main": {
+          "columns": {
+            "Date": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Date",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "Date",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "Date",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "Description": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Description",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "Description",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "Description",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "Factory": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "Factory",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "Factory"
+                  },
+                  "Alter": {
+                    "title": "Factory"
+                    
+                  }
+                }
+            },
+            "BranchName": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "BranchName",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "BranchName"
+                  },
+                  "Alter": {
+                    "title": "BranchName"
+                    
+                  }
+                }
+            }
+          }
+        }
+      }
+    }
+  }

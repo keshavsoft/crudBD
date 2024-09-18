@@ -1,0 +1,33 @@
+{
+    "ItemInOrder": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {}
+    },
+    "CustomerData": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {
+            "CustomerName": "",
+            "CustomerMobile": ""
+        }
+    },
+    "OrderData": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {
+            "BranchName": "",
+            "Currentdateandtime": ""
+        }
+    },
+    "AddOn": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {}
+    },
+    "CheckOutData": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {}
+    }
+}
