@@ -3,7 +3,10 @@ import {
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
-    let LocalFromRepo = GetFuncRepo();
+    let LocalParams = req.params;
+    let LocalFactory = LocalParams.inFactory;
+    let LocalFromRepo = GetFuncRepo({ inFactory: LocalFactory });
+    res.json(LocalFromRepo);
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
