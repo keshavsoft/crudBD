@@ -1,0 +1,51 @@
+{
+    "GenerateReference": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "ItemSerial": {
+        "type": "NUMBER",
+        "unique": false,
+        "allowNull": false
+    },
+    "Category": {
+        "type": "STRING",
+        "allowNull": false
+    },
+    "ItemName": {
+        "type": "STRING",
+        "allowNull": false
+    },
+    "location": {
+        "type": "STRING",
+        "allowNull": false
+    },
+    "Pcs": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "Rate": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "DisPer": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "DeliveryDateTime": {
+        "type": "DATE",
+        "allowNull": false
+    },
+    "Total": {
+        "type": "NUMBER",
+        "allowNull": false
+    },
+    "BookingData": {
+        "type": "OBJECT",
+        "allowNull": false
+    },
+    "OrderNumber": {
+        "type": "NUMBER",
+        "allowNull": false
+    }
+}
