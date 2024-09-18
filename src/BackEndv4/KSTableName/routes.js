@@ -10,6 +10,7 @@ import { router as Upload } from './Upload/routes.js';
 import { router as Mail } from './Mail/routes.js';
 import { router as Images } from './Images/routes.js';
 import { router as Search } from './Search/routes.js';
+import { router as Bulk } from './Bulk/routes.js';
 
 import { router as SubTable } from './SubTable/routes.js';
 
@@ -21,6 +22,7 @@ router.use('/Upload', Upload);
 router.use('/Mail', Mail);
 router.use('/Images', Images);
 router.use('/Search', Search);
+router.use('/Bulk', Bulk);
 
 router.use('/SubTable', SubTable);
 
