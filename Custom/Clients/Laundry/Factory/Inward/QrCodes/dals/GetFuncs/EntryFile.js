@@ -1,8 +1,7 @@
-import { StartFunc as EntryScan } from '../../kLowDb/EntryScan/Scan.js';
+import { StartFunc as All } from '../../kLowDb/ReadFileList/All.js';
 
 let GetFunc = ({ inFactory }) => {
-    console.log("infactory");
-    return EntryScan({ inFactory });
+    return All({ inFactory });
 
 };
 
