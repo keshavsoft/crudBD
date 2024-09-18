@@ -2,8 +2,8 @@ import express from 'express';
 
 var router = express.Router();
 
-import { router as routerFrompostFuncs } from './routes/postFuncs/EntryFile.js';
+import { router as routerFromQrCodeFuncs } from './routes/QrCode/EntryFile.js';
 
-router.use('/', routerFrompostFuncs);
+router.use('/', routerFromQrCodeFuncs);
 
 export { router };
