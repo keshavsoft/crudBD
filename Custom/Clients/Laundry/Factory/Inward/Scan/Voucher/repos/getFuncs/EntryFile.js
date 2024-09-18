@@ -2,8 +2,8 @@ import {
     GetFunc as GetFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
-let GetFunc = () => {
-    return GetFuncDal();
+let GetFunc = ({ inFactory }) => {
+    return GetFuncDal({ inFactory });
 };
 
 export {
