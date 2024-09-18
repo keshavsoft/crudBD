@@ -27,7 +27,9 @@ let StartFunc = ({ inFactory }) => {
         inScandata: LocalFilterBranchScan,
         inEntryScan: LocalFilterEntryScan
     });
-    let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
+    let localReturnData = getUnmatchedRecords({ inFromQrData: jVarLocalTransformedData, inEntryScan: LocalFilterEntryScan })
+
+    let LocalArrayReverseData = localReturnData.slice().reverse();
 
     return LocalArrayReverseData;
 };
@@ -54,6 +56,12 @@ let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
     return jVarLocalReturnObject;
 };
 
+let getUnmatchedRecords = ({ inFromQrData, inEntryScan }) => {
+    return inFromQrData.filter(loopQr =>
+        !inEntryScan.some(loopScan => loopScan.QrCodeId == loopQr.QrCodeId)
+    );
+};
+
 function TimeSpan({ DateTime }) {
     var diffMs = new Date() - new Date(DateTime);
     var diffMonths = Math.floor(diffMs / 2629800000); // approximate months (30.44 days)
@@ -73,3 +81,4 @@ function TimeSpan({ DateTime }) {
 };
 
 export { StartFunc };
+// StartFunc({ inFactory: "Vizag" })

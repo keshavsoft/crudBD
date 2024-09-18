@@ -27,7 +27,9 @@ let StartFunc = ({ inFactory }) => {
         inScandata: LocalFilterBranchScan,
         inEntryScan: LocalFilterEntryScan
     });
-    let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
+    let localReturnData = getmatchedRecords({ inFromQrData: jVarLocalTransformedData, inEntryScan: LocalFilterEntryScan })
+
+    let LocalArrayReverseData = localReturnData.slice().reverse();
 
     return LocalArrayReverseData;
 };
@@ -36,7 +38,6 @@ let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
     let jVarLocalReturnObject = inScandata.map(loopScan => {
         const matchedRecord = inQrData.find(loopQr => loopQr.pk == loopScan.QrCodeId);
         const match = inEntryScan.some(loopEntryScan => loopEntryScan.QrCodeId == loopScan.QrCodeId);
-
         return {
             OrderNumber: matchedRecord?.GenerateReference.ReferncePk,
             OrderDate: matchedRecord?.BookingData.OrderData.Currentdateandtime,
@@ -53,6 +54,12 @@ let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
         };
     }).filter(record => record.MatchedRecord !== null);
     return jVarLocalReturnObject;
+};
+
+let getmatchedRecords = ({ inFromQrData, inEntryScan }) => {
+    return inFromQrData.filter(loopQr =>
+        inEntryScan.some(loopScan => loopScan.QrCodeId == loopQr.QrCodeId)
+    );
 };
 
 function TimeSpan({ DateTime }) {
@@ -74,3 +81,4 @@ function TimeSpan({ DateTime }) {
 };
 
 export { StartFunc };
+// StartFunc({ inFactory: "Vizag" })
