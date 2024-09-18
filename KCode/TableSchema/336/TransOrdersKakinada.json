@@ -1,0 +1,97 @@
+{
+    "TableConfig": {
+      "HtmlConfig": {
+        "Header": {
+          "HeaderLi": {
+            "ShowMessages": false
+          }
+        },
+       
+        "main": {
+          "columns": {
+            "ItemInOrder": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "Date",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "ItemInOrder",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "ItemInOrder",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "CustomerData": {
+              "HtmlTags": {
+                "Show": {
+                  "title": "CustomerData",
+                  "isShown": true
+                },
+                "Create": {
+                  "title": "CustomerData",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                },
+                "Alter": {
+                  "title": "CustomerData",
+                  "AutoFocusTag": "autofocus",
+                  "RequiredTag": "required"
+                }
+              }
+            },
+            "OrderData": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "OrderData",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "OrderData"
+                  },
+                  "Alter": {
+                    "title": "OrderData"
+                    
+                  }
+                }
+            },
+            "AddOn": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "AddOn",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "AddOn"
+                  },
+                  "Alter": {
+                    "title": "AddOn"
+                    
+                  }
+                }
+            },
+            "CheckOutData": {
+                "HtmlTags": {
+                  "Show": {
+                    "title": "CheckOutData",
+                    "isShown": true
+                  },
+                  "Create": {
+                    "title": "CheckOutData"
+                  },
+                  "Alter": {
+                    "title": "CheckOutData"
+                    
+                  }
+                }
+            }
+          }
+        }
+      }
+    }
+  }

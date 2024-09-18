@@ -1,0 +1,28 @@
+{
+    "ItemInOrder": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "CustomerData": {
+        "type": "OBJECT",
+        "allowNull": true
+    },
+    "OrderData": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {
+            "BranchName": "",
+            "Currentdateandtime": ""
+        }
+    },
+    "AddOn": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {}
+    },
+    "CheckOutData": {
+        "type": "OBJECT",
+        "allowNull": true,
+        "defaultValue": {}
+    }
+}

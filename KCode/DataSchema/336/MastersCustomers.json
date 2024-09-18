@@ -1,0 +1,35 @@
+{
+    "CustomerName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "Mobile": {
+        "type": "NUMBER",
+        "unique": true,
+        "allowNull": true
+    },
+    "DOB": {
+        "type": "DATEONLY",
+        "allowNull": true
+    },
+    "GSTNumber": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "City": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "Occupation": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "CompanyName": {
+        "type": "STRING",
+        "allowNull": true
+    },
+    "BranchName": {
+        "type": "STRING",
+        "allowNull": true
+    }
+}

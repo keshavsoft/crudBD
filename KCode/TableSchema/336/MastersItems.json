@@ -1,0 +1,106 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Show",
+            "url": "ItemsShow.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "Category": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Category",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Category",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Category",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "ItemName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "ItemName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "ItemName",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "CateItemNamegory",
+                "isShown": true
+              }
+            }
+          },
+          "Pcs": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Pcs",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Pcs",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Pcs",
+                "isShown": true
+              }
+            }
+          },
+          "WashType": {
+            "HtmlTags": {
+              "Show": {
+                "title": "WashType",
+                "isShown": true
+              },
+              "Create": {
+                "title": "WashType",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "WashType",
+                "isShown": true
+              }
+            }
+          },
+          "WashRate": {
+            "HtmlTags": {
+              "Show": {
+                "title": "WashRate",
+                "isShown": true
+              },
+              "Create": {
+                "title": "WashRate",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "WashRate",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "TableConfig": {
+    "HtmlConfig": {
+      "Header": {
+        "HeaderLi": {
+          "ShowMessages": false
+        }
+      },
+      "SideBar": {
+        "children": [
+          {
+            "name": "Create",
+            "url": "CustomerNamesCreateSingle.html",
+            "icon": "bi bi-plus-circle"
+          },
+          {
+            "name": "Show",
+            "url": "CustomerNamesShow.html",
+            "icon": "bi bi-plus-circle"
+          }
+        ]
+      },
+      "main": {
+        "columns": {
+          "CustomerName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Customer Name",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Customer Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              },
+              "Alter": {
+                "title": "Customer Name",
+                "AutoFocusTag": "autofocus",
+                "RequiredTag": "required"
+              }
+            }
+          },
+          "Mobile": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Mobile",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Mobile",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Mobile",
+                "isShown": true
+              }
+            }
+          },
+          "DOB": {
+            "HtmlTags": {
+              "Show": {
+                "title": "DOB",
+                "isShown": true
+              },
+              "Create": {
+                "title": "DOB",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "DOB",
+                "isShown": true
+              }
+            }
+          },
+          "GSTNumber": {
+            "HtmlTags": {
+              "Show": {
+                "title": "GSTNumber",
+                "isShown": true
+              },
+              "Create": {
+                "title": "GSTNumber",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "GSTNumber",
+                "isShown": true
+              }
+            }
+          },
+          "City": {
+            "HtmlTags": {
+              "Show": {
+                "title": "City",
+                "isShown": true
+              },
+              "Create": {
+                "title": "City",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "City",
+                "isShown": true
+              }
+            }
+          },
+          "Occupation": {
+            "HtmlTags": {
+              "Show": {
+                "title": "Occupation",
+                "isShown": true
+              },
+              "Create": {
+                "title": "Occupation",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "Occupation",
+                "isShown": true
+              }
+            }
+          },
+          "CompanyName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "CompanyName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "CompanyName",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "CompanyName",
+                "isShown": true
+              }
+            }
+          },
+          "BranchName": {
+            "HtmlTags": {
+              "Show": {
+                "title": "BranchName",
+                "isShown": true
+              },
+              "Create": {
+                "title": "BranchName",
+                "isShown": true
+              },
+              "Alter": {
+                "title": "BranchName",
+                "isShown": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
