@@ -1,19 +1,19 @@
-import { StartFunc as BranchDc } from '../CommonFuncs/BranchDc.js';
-import { StartFunc as EntryScan } from '../CommonFuncs/EntryScan.js';
+import { StartFunc as EntryCancelDc } from '../CommonFuncs/EntryCancelDc.js';
+import { StartFunc as EntryCancelScan } from '../CommonFuncs/EntryCancelScan.js';
 
 let StartFunc = ({ inFactory }) => {
     // let LocalFindValue = new Date().toLocaleDateString('en-GB').replace(/\//g, '/');
     let LocalFactory = inFactory;
 
-    const BranchDcdb = BranchDc();
+    const BranchDcdb = EntryCancelDc();
     BranchDcdb.read();
 
-    const EntryScandb = EntryScan();
+    const EntryScandb = EntryCancelScan();
     EntryScandb.read();
 
-    let LocalFilterBranchDc = BranchDcdb.data.filter(e => e.Factory === LocalFactory);
+    let LocalFilterBranchDc = BranchDcdb.data.filter(e => e.FactoryName === LocalFactory);
 
-    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.DCFactory === LocalFactory);
+    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.FactorySelected === LocalFactory);
 
     let jVarLocalTransformedData = jFLocalMergeFunc({
         inBranchDc: LocalFilterBranchDc,
