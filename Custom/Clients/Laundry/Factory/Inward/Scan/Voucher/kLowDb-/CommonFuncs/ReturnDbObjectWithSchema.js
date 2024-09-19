@@ -1,15 +1,14 @@
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
-import Configjson from '../../../../../Config.json' assert { type: 'json' };
-
-// import tableNameJson from '../../../tableName.json' assert { type: 'json' };
+import Configjson from '../../../../../../Config.json' assert { type: 'json' };
+import tableNameJson from '../../../../../tableName.json' assert { type: 'json' };
 
 let StartFunc = () => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
-    let LocalTableName = "EntryScan.json"
+
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${LocalTableName}`;
+    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${tableNameJson.tableName}`;
 
     const defaultData = { error: "From KLowDb" }
 
@@ -17,17 +16,17 @@ let StartFunc = () => {
 
     return {
         dbObject: db,
-        TableSchema: LocalFuncForTableSchema(LocalTableName)
+        TableSchema: LocalFuncForTableSchema()
     };
 };
 
-let LocalFuncForTableSchema = (LocalTableName) => {
+let LocalFuncForTableSchema = () => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     LocalReturnData.KTF = false;
 
     let LocalSecondNeeded = Configjson.jsonConfig.tableAndColumns.children.find(element => {
-        return "children" in element === false && element.name === LocalTableName;
+        return "children" in element === false && element.name === tableNameJson.tableName;
     });
 
     return LocalSecondNeeded;
