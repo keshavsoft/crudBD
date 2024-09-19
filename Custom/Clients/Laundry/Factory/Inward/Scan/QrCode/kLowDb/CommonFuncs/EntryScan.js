@@ -1,6 +1,7 @@
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
 import Configjson from '../../../../../../Config.json' assert { type: 'json' };
+let CommonTableName = "EntryScan.json";
 
 let StartFunc = () => {
     let LocalDataPk = Configjson.jsonConfig.DataPk;
@@ -9,7 +10,7 @@ let StartFunc = () => {
 
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${LocalDataPk}/EntryScan.json`;
+    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${LocalDataPk}/${CommonTableName}`;
 
     const defaultData = { error: "From KLowDb" }
 
