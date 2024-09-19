@@ -1,6 +1,7 @@
 import { StartFunc as QrCodes } from '../CommonFuncs/QrCodes.js';
 import { StartFunc as BranchScan } from '../CommonFuncs/BranchScan.js';
 import { StartFunc as EntryScan } from '../CommonFuncs/EntryScan.js';
+import { StartFunc as EntryCancelScan } from '../CommonFuncs/EntryCancelScan.js';
 
 let StartFunc = ({ inFactory }) => {
     // let LocalFindValue = new Date().toLocaleDateString('en-GB').replace(/\//g, '/');
@@ -15,27 +16,34 @@ let StartFunc = ({ inFactory }) => {
     const EntryScandb = EntryScan();
     EntryScandb.read();
 
+    const EntryCancelScandb = EntryCancelScan();
+    EntryCancelScandb.read();
+
     let LocalFilterBranchScan = BranchScandb.data.filter(e => e.DCFactory === LocalFactory);
 
     let LocalFilterQr = Qrdb.data.filter(e => e.location === LocalFactory);
 
     let LocalFilterEntryScan = EntryScandb.data.filter(e => e.DCFactory === LocalFactory);
+    let LocalFilterCancelScan = EntryCancelScandb.data.filter(e => e.FactorySelected === LocalFactory);
 
 
     let jVarLocalTransformedData = jFLocalMergeFunc({
         inQrData: LocalFilterQr,
         inScandata: LocalFilterBranchScan,
-        inEntryScan: LocalFilterEntryScan
+        inEntryScan: LocalFilterEntryScan,
+        inEntryCancelScan: LocalFilterCancelScan
     });
     let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
 
     return LocalArrayReverseData;
 };
 
-let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
+let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan, inEntryCancelScan }) => {
+
     let jVarLocalReturnObject = inScandata.map(loopScan => {
         const matchedRecord = inQrData.find(loopQr => loopQr.pk == loopScan.QrCodeId);
         const match = inEntryScan.some(loopEntryScan => loopEntryScan.QrCodeId == loopScan.QrCodeId);
+        const CheckEntryReturn = inEntryCancelScan.some(loopEntryReturnScan => loopEntryReturnScan.QrCodeId == loopScan.QrCodeId);
 
         return {
             OrderNumber: matchedRecord?.GenerateReference.ReferncePk,
@@ -49,6 +57,7 @@ let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
             DCDate: loopScan.DCDate,
             BranchName: loopScan?.BranchName,
             Status: match,
+            EntryReturnStarus: CheckEntryReturn,
             TimeSpan: TimeSpan({ DateTime: loopScan.DateTime })
         };
     }).filter(record => record.MatchedRecord !== null);

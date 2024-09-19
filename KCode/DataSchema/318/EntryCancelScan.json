@@ -2,10 +2,6 @@
     "QrCodeId": {
         "type": "INTEGER",
         "unique": true,
-        "references": {
-            "model": "EntryScan",
-            "key": "QrCodeId"
-        },
         "allowNull": false,
         "onUpdate": "cascade",
         "onDelete": "cascade"
