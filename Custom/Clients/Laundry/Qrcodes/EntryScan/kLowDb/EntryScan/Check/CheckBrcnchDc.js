@@ -1,12 +1,10 @@
 import { StartFunc as StartFuncCommonFuncs } from '../../CommonFuncs/BranchDc.js';
 
-const StartFunc = ({ inTable, inDc }) => {
-    let LocalBranchName = inTable;
+const StartFunc = ({ inDc }) => {
     let LocalDc = inDc;
 
     let LocalReturnData = { KTF: false };
     const dbForQrCodes = StartFuncCommonFuncs();
-    // dbForQrCodes.JsonData;
 
     let LocalRowNeeded = dbForQrCodes.JsonData.find(e => e.pk == LocalDc);
 
