@@ -9,7 +9,9 @@ import path from 'path';
 let PostFunc = (inPostBody) => {
     return StartFuncWriteTofile({ inDataToInsert: inPostBody });
 };
-
+let MultiInsertWithCheckFunc = (inPostBody) => {
+    return StartFuncWriteTofile({ inDataToInsert: inPostBody });
+};
 export {
-    PostFunc
+    PostFunc, MultiInsertWithCheckFunc
 };
