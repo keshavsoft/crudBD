@@ -6,7 +6,7 @@ import Configjson from '../../../../../Config.json' assert { type: 'json' };
 
 let StartFunc = () => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
-    let LocalTableName = "EntryScan.json"
+    let LocalTableName = "EntryCancelScan.json"
     LocalReturnData.KTF = false;
 
     LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${LocalTableName}`;

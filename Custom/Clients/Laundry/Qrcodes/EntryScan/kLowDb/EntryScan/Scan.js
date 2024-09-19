@@ -17,7 +17,7 @@ let StartFunc = ({ inBranch, inDataInsert }) => {
         return LocalReturnData;
     };
 
-    let LocalCheckBrcnchDc = CheckBrcnchDc({ inTable: LocalTable, inDc: LocalDc });
+    let LocalCheckBrcnchDc = CheckBrcnchDc({ inDc: LocalDc });
 
     if (LocalCheckBrcnchDc.KTF === false) {
         LocalReturnData.KReason = LocalCheckBrcnchDc.KReason
