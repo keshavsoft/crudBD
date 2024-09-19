@@ -1,23 +1,32 @@
   {
     "StudentName": {
-      "type": "STRING"
+      "type": "STRING",
+      "isRequired": true
     },
     "Roll Number": {
       "type": "STRING"
     },
     "Mobile": {
       "type": "TELEPHONE",
-      "unique": true
+      "unique": true,
+      "isRequired": true
     },
     "AlternateMobile": {
       "type": "NUMBER",
       "allowNull": true
     },
     "Year of Birth": {
-      "type": "MONTH"
+      "type": "MONTH",
+      "isRequired": true
+    },
+    "DOB": {
+      "type": "Date",
+      "allowNull": true
     },
     "Email": {
-      "type": "STRING"
+      "type": "STRING",
+      "allowNull": false,
+      "isRequired": true
     },
     "10th Grade GPA": {
       "type": "NUMBER"
