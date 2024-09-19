@@ -25,17 +25,11 @@ let PostFunc = async (inPostBody) => {
 
     return PostFuncDal(inPostBody);
 };
-let MultiInsertWithCheckFunc = async (inPostBody) => {
-    if (ConfigJson.isSequelize) {
-        return await PostFuncDalsForSequelize(inPostBody);
-    };
 
-    if (ConfigJson.isMongoDb) {
-        return PostFuncDalsForMongoDB(inPostBody);
-    };
-
-    return MultiInsertWithCheckFuncDal(inPostBody);
+let MultiInsertWithCheckFunc = ({ inArrayToInsert }) => {
+    return MultiInsertWithCheckFuncDal({ inArrayToInsert });
 };
+
 export {
     PostFunc, MultiInsertWithCheckFunc
 };

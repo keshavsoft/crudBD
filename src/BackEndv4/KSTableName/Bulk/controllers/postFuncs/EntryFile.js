@@ -16,18 +16,20 @@ let PostFunc = async (req, res) => {
 
     res.status(200).send(LocalFromRepo.pk.toString());
 };
-let MultiInsertWithCheckFunc = async (req, res) => {
+
+let MultiInsertWithCheckFunc = (req, res) => {
     let LocalBody = req.body;
 
-    let LocalFromRepo = await MultiInsertWithCheckFuncRepo({ ...LocalBody });
+    let LocalFromRepo = MultiInsertWithCheckFuncRepo({ inArrayToInsert: LocalBody });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.status(200).send(LocalFromRepo.pk.toString());
+    res.status(200).send(LocalFromRepo.InsertedRows.toString());
 };
+
 export {
     PostFunc, MultiInsertWithCheckFunc
 };
