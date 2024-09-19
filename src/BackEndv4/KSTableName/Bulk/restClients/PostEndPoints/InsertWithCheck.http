@@ -1,0 +1,5 @@
+###copy the table schema from step 1 and paste in inside the array in the buttom of this file(GET)
+POST http://localhost:7019/src/BackEndV4/ksTableName/Bulk/MultiInsertWithCheck
+content-type: application/json
+
+[]

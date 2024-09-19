@@ -1,4 +1,4 @@
-import ModalDataJson from '../../Data.json' assert { type: 'json' };
+//import ModalDataJson from '../../Data.json' assert { type: 'json' };
 
 let PostFunc = (req, res, next) => {
     let LocalRequestBody = req.body;
@@ -7,7 +7,6 @@ let PostFunc = (req, res, next) => {
         res.status(404).json({
             KTF: false,
             KReason: "post requst body should contain : ",
-            body: ModalDataJson
         });
         return;
     };

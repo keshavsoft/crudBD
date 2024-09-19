@@ -1,6 +1,6 @@
 import {
-    PostFunc as PostFuncDal
-
+    PostFunc as PostFuncDal,
+    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -25,7 +25,17 @@ let PostFunc = async (inPostBody) => {
 
     return PostFuncDal(inPostBody);
 };
+let MultiInsertWithCheckFunc = async (inPostBody) => {
+    if (ConfigJson.isSequelize) {
+        return await PostFuncDalsForSequelize(inPostBody);
+    };
 
+    if (ConfigJson.isMongoDb) {
+        return PostFuncDalsForMongoDB(inPostBody);
+    };
+
+    return MultiInsertWithCheckFuncDal(inPostBody);
+};
 export {
-    PostFunc
+    PostFunc, MultiInsertWithCheckFunc
 };
