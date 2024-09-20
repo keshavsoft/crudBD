@@ -37,6 +37,21 @@
     "Graduation CGPA": {
       "type": "NUMBER"
     },
+    "Back-logs": {
+      "type": "NUMBER"
+    },
+    "Gender": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Branch": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "ResumeLink": {
+      "type": "STRING",
+      "allowNull": true
+    },
     "isMailValidated": {
       "type": "STRING",
       "defaultValue": false
