@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
-const CommonShowWithColumns = "ShowWithColumnes";
+const CommonShowWithColumns = "ShowWithColumns";
 
 let StartFunc = ({ inTablesCollection, inTo }) => {
     let LocalTypeName = `${CommonShowWithColumns}/restClients/GetEndPoints`;

@@ -3,7 +3,7 @@ import { router as routerFromBin } from "./bin/routes.js";
 import { router as routerFrombinSecured } from "./binSecured/routes.js";
 import { router as routerForUtility } from "./Utility/routes.js";
 import { router as routerFromCommon } from "./Common/routes.js";
-// import { router as routerFromCustom } from "./Custom/routes.js";
+import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
 // import { router as routerFromBinV2 } from "./binV2/routes.js";
@@ -19,6 +19,8 @@ import express from 'express';
 import http from 'http';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import cors from "cors";
+
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -41,8 +43,12 @@ app.use(express.json({ limit: '100mb' }));
 app.use('/', express.static(path.join(path.resolve(), 'public')));
 
 app.get("/k1", (req, res) => {
-    res.sendFile("./checkMail.html");
+    res.end("this is k1");
 })
+
+app.get("/k2", cors(), (req, res) => {
+    res.end("cors");
+});
 
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
@@ -54,7 +60,7 @@ app.use('/binV4', routerFromBinV4);
 
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
-// app.use('/Custom', routerFromCustom);
+app.use('/Custom', routerFromCustom);
 app.use('/Login', routerFromLogin);
 
 StartFuncKWSServer(server);
