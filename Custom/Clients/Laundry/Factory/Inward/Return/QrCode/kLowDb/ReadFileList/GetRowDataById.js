@@ -1,65 +1,70 @@
 import { StartFunc as QrCodes } from '../CommonFuncs/QrCodes.js';
-import { StartFunc as BranchScan } from '../CommonFuncs/BranchScan.js';
-import { StartFunc as EntryScan } from '../CommonFuncs/EntryScan.js';
+import { StartFunc as EntryScan } from '../CommonFuncs/EntryCancelScan.js';
+import { StartFunc as BranchDc } from '../CommonFuncs/EntryCancelDc.js';
 
-let StartFunc = ({ inFactory }) => {
+let StartFunc = ({ inFactory, inId }) => {
     // let LocalFindValue = new Date().toLocaleDateString('en-GB').replace(/\//g, '/');
     let LocalFactory = inFactory;
-
+    let LocalId = inId;
     const Qrdb = QrCodes();
     Qrdb.read();
 
-    const BranchScandb = BranchScan();
-    BranchScandb.read();
+    const BranchDcdb = BranchDc();
+    BranchDcdb.read();
 
     const EntryScandb = EntryScan();
     EntryScandb.read();
 
-    let LocalFilterBranchScan = BranchScandb.data.filter(e => e.DCFactory === LocalFactory);
+
+    let LocalFilterBranchDC = BranchDcdb.data.filter(e => e.pk == LocalId);
 
     let LocalFilterQr = Qrdb.data.filter(e => e.location === LocalFactory);
 
-    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.DCFactory === LocalFactory);
+    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.FactoryName === LocalFactory);
+
+    let LocalEntryScanAndDcMergeData = LoclaEntryScanAndDcMergeFunc({ inEntryScan: LocalFilterEntryScan, inBranchDc: LocalFilterBranchDC });
 
 
     let jVarLocalTransformedData = jFLocalMergeFunc({
         inQrData: LocalFilterQr,
-        inScandata: LocalFilterBranchScan,
-        inEntryScan: LocalFilterEntryScan
-    });
-    let localReturnData = getmatchedRecords({ inFromQrData: jVarLocalTransformedData, inEntryScan: LocalFilterEntryScan })
+        inEntryScan: LocalEntryScanAndDcMergeData
 
-    let LocalArrayReverseData = localReturnData.slice().reverse();
+    });
+
+    let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
 
     return LocalArrayReverseData;
 };
 
-let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan }) => {
-    let jVarLocalReturnObject = inScandata.map(loopScan => {
+let jFLocalMergeFunc = ({ inQrData, inEntryScan }) => {
+    let jVarLocalReturnObject = inEntryScan.map(loopScan => {
         const matchedRecord = inQrData.find(loopQr => loopQr.pk == loopScan.QrCodeId);
-        const match = inEntryScan.some(loopEntryScan => loopEntryScan.QrCodeId == loopScan.QrCodeId);
+
         return {
             OrderNumber: matchedRecord?.GenerateReference.ReferncePk,
-            OrderDate: matchedRecord?.BookingData.OrderData.Currentdateandtime,
-            DeliveryDate: matchedRecord?.DeliveryDateTime,
+            OrderDate: new Date(matchedRecord?.BookingData.OrderData.Currentdateandtime).toLocaleDateString('en-GB'),
+            DeliveryDate: new Date(matchedRecord?.DeliveryDateTime).toLocaleDateString('en-GB'),
             ItemName: matchedRecord?.ItemName,
             Rate: matchedRecord?.Rate,
 
             VoucherNumber: loopScan?.VoucherNumber,
             QrCodeId: loopScan.QrCodeId,
-            DCDate: loopScan.DCDate,
+            DCDate: new Date(loopScan?.Date).toLocaleDateString('en-GB'),
             BranchName: loopScan?.BranchName,
-            Status: match,
             TimeSpan: TimeSpan({ DateTime: loopScan.DateTime })
         };
     }).filter(record => record.MatchedRecord !== null);
     return jVarLocalReturnObject;
 };
 
-let getmatchedRecords = ({ inFromQrData, inEntryScan }) => {
-    return inFromQrData.filter(loopQr =>
-        inEntryScan.some(loopScan => loopScan.QrCodeId == loopQr.QrCodeId)
-    );
+const LoclaEntryScanAndDcMergeFunc = ({ inEntryScan, inBranchDc }) => {
+
+    let LocalMapData = inEntryScan.map(element => {
+
+        let locaFindData = inBranchDc.find(e => e.pk == element.VoucherNumber)
+        return { ...locaFindData, ...element }
+    });
+    return LocalMapData;
 };
 
 function TimeSpan({ DateTime }) {
