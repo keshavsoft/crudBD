@@ -23,8 +23,9 @@ let GetRowDataFunc = (req, res) => {
 let GetAnyExtFunc = (req, res) => {
     let localid = req.params.id
 
-    GetAnyExtFuncRepo({ inId: localid });
+    GetAnyExtFuncRepo({ inId: localid, inResponse: res });
 };
+
 export {
     GetFunc, GetRowDataFunc, GetAnyExtFunc
 };

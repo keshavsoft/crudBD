@@ -12,8 +12,8 @@ let GetRowDataFunc = ({ inId, inResponse }) => {
     return GetRowDataFuncDal({ inId, inResponse });
 };
 
-let GetAnyExtFunc = ({ inId }) => {
-    return GetAnyExtFuncDal({ inId });
+let GetAnyExtFunc = ({ inId, inResponse }) => {
+    return GetAnyExtFuncDal({ inId, inResponse });
 };
 
 export {
