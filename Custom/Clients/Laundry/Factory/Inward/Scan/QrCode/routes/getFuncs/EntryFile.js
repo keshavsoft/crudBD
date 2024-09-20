@@ -3,7 +3,7 @@ import express from 'express';
 var router = express.Router();
 
 import {
-    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc
+    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc
 }
     from '../../controllers/getFuncs/EntryFile.js';
 
