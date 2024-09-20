@@ -4,6 +4,10 @@ let GetFunc = ({ inFactory }) => {
     return GetVoucher({ inFactory });
 };
 
+let GetQrStatusFunc = ({ inFactory }) => {
+    return GetVoucher({ inFactory });
+};
+
 export {
-    GetFunc
+    GetFunc, GetQrStatusFunc
 };

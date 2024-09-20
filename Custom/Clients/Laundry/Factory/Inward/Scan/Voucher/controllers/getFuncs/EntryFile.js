@@ -1,5 +1,6 @@
 import {
-    GetFunc as GetFuncRepo
+    GetFunc as GetFuncRepo,
+    GetQrStatusFunc as GetQrStatusFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
@@ -10,6 +11,14 @@ let GetFunc = async (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
+let GetQrStatusFunc = async (req, res) => {
+    let LocalParams = req.params;
+    let LocalFactory = LocalParams.inFactory;
+    let LocalFromRepo = GetQrStatusFuncRepo({ inFactory: LocalFactory });
+
+    res.status(200).json(LocalFromRepo);
+};
+
 export {
-    GetFunc
+    GetFunc, GetQrStatusFunc
 };

@@ -8,16 +8,25 @@ let GetFunc = ({ inFactory }) => {
 
     return LocalFromLowDb;
 };
+
 let GetPendingFunc = ({ inFactory }) => {
     let LocalFromLowDb = Pending({ inFactory });
 
     return LocalFromLowDb;
 };
+
 let GetScannedFunc = ({ inFactory }) => {
     let LocalFromLowDb = Scanned({ inFactory });
 
     return LocalFromLowDb;
 };
+
+let GetRowDataFunc = ({ inFactory, inId }) => {
+    let LocalFromLowDb = Scanned({ inFactory, inId });
+
+    return LocalFromLowDb;
+};
+
 export {
-    GetFunc, GetPendingFunc, GetScannedFunc
+    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc
 };
