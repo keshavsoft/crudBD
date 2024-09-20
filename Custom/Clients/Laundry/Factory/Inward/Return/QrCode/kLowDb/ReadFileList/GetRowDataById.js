@@ -20,7 +20,7 @@ let StartFunc = ({ inFactory, inId }) => {
 
     let LocalFilterQr = Qrdb.data.filter(e => e.location === LocalFactory);
 
-    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.FactoryName === LocalFactory);
+    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.FactorySelected === LocalFactory);
 
     let LocalEntryScanAndDcMergeData = LoclaEntryScanAndDcMergeFunc({ inEntryScan: LocalFilterEntryScan, inBranchDc: LocalFilterBranchDC });
 

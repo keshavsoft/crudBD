@@ -1,3 +1,0 @@
-
-###Get all the rows from the database in this table
-GET  http://localhost:7019/Custom/Clients/Laundry/Factory/Inward/Scan/QrCode/Pending/Vizag
