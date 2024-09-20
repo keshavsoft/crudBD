@@ -14,6 +14,14 @@ let GetToFactoryFuncs = ({ inBranch }) => {
     return toFactory({ inBranch });
 };
 
+let GetFactoryScanFuncs = ({ inBranch }) => {
+    return toFactory({ inBranch });
+};
+
+let GetFactoryReturnFuncs = ({ inBranch }) => {
+    return toFactory({ inBranch });
+};
+
 export {
-    GetAllFuncs, GetInBranchFuncs, GetToFactoryFuncs
+    GetAllFuncs, GetInBranchFuncs, GetToFactoryFuncs, GetFactoryScanFuncs, GetFactoryReturnFuncs
 };
