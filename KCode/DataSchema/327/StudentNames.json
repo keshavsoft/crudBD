@@ -52,6 +52,10 @@
       "type": "STRING",
       "allowNull": true
     },
+    "CollegeName": {
+      "type": "STRING",
+      "allowNull": true
+    },
     "isMailValidated": {
       "type": "STRING",
       "defaultValue": false
