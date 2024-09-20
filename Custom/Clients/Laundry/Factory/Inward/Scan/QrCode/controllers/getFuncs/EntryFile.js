@@ -43,7 +43,7 @@ let GetReturnsFunc = async (req, res) => {
 let GetRowDataFunc = async (req, res) => {
     let LocalParams = req.params;
     let LocalFactory = LocalParams.inFactory;
-    let Localid = LocalParams.inid;
+    let Localid = LocalParams.id;
     let LocalFromRepo = GetRowDataFuncRepo({ inFactory: LocalFactory, inId: Localid, });
 
     res.status(200).json(LocalFromRepo);
@@ -51,11 +51,11 @@ let GetRowDataFunc = async (req, res) => {
 
 let GetRowQrDataFunc = async (req, res) => {
     let LocalParams = req.params;
-    let Localid = LocalParams.inid;
+    let Localid = LocalParams.id;
     let LocalFromRepo = GetRowQrDataFuncRepo({ inId: Localid, });
 
     if (LocalFromRepo.KTF === false) {
-        res.status(200).send(LocalFromRepo.KReason);
+        res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 

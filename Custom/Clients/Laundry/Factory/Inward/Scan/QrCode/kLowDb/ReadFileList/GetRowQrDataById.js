@@ -3,7 +3,7 @@ import { StartFunc as BranchScan } from '../CommonFuncs/BranchScan.js';
 
 let StartFunc = ({ inId }) => {
     let LocalId = inId;
-    let LocalReturnData = { KTF: true };
+    let LocalReturnData = { KTF: false };
 
     const Qrdb = QrCodes();
     Qrdb.read();
@@ -17,11 +17,12 @@ let StartFunc = ({ inId }) => {
         LocalReturnData.KReason = "No data"
         return LocalReturnData;
     };
+    
     LocalReturnData.KTF = true;
     LocalReturnData.JsonData = Qrdb.data.find(e => e.pk == LocalId);
 
     return LocalReturnData;
 };
 
-// export { StartFunc };
-StartFunc({ inId: "39" })
+export { StartFunc };
+// StartFunc({ inId: "39" })
