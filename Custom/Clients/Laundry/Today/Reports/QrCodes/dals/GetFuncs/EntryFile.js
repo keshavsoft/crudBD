@@ -1,11 +1,12 @@
 import { StartFunc as ToadyQrAllReports } from '../../kLowDb/ReadFileList/ToadyQrAllReports.js';
+import { StartFunc as InBranch } from '../../kLowDb/ReadFromFile/InBranch.js';
 
 let GetAllFuncs = ({ inBranch }) => {
     return ToadyQrAllReports({ inBranch });
 };
 
 let GetInBranchFuncs = ({ inBranch }) => {
-    return ToadyOrdersReports({ inBranch });
+    return InBranch({ inBranch });
 };
 
 let GetToFactoryFuncs = ({ inBranch }) => {
