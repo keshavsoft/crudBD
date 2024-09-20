@@ -6,7 +6,7 @@ let StartFunc = ({ inBranch }) => {
     let jVarLocalTransformedData = buildData({ inBranch: LocalBranchName });
 
     let jVarLocalUnScanned = jVarLocalTransformedData.filter(element => {
-        return element.Status === false;
+        return element.Status === true;
     });
 
     let LocalArrayReverseData = jVarLocalUnScanned.slice().reverse();
