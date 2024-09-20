@@ -12,7 +12,7 @@ let GetRowDataFunc = ({ inId, inResponse }) => {
 };
 
 let GetAnyExtFunc = ({ inId, inResponse }) => {
-    anyExt({ inId, inResponse });
+    anyExt({ inKey: inId, inResponse });
 };
 
 export {
