@@ -2,7 +2,8 @@ import {
     GetFunc as GetFuncDal,
     GetPendingFunc as GetPendingFuncDal,
     GetScannedFunc as GetScannedFuncDal,
-    GetRowDataFunc as GetRowDataFuncDal
+    GetRowDataFunc as GetRowDataFuncDal,
+    GetReturnsFunc as GetReturnsFuncDal
 } from '../../dals/getFuncs/EntryFile.js';
 
 let GetFunc = ({ inFactory }) => {
@@ -17,9 +18,13 @@ let GetScannedFunc = ({ inFactory }) => {
     return GetScannedFuncDal({ inFactory });
 };
 
+let GetReturnsFunc = ({ inFactory }) => {
+    return GetReturnsFuncDal({ inFactory });
+};
+
 let GetRowDataFunc = ({ inFactory, inId }) => {
     return GetRowDataFuncDal({ inFactory, inId });
 };
 export {
-    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc
+    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc
 };
