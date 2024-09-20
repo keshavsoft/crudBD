@@ -1,7 +1,6 @@
 import { StartFunc as QrCodes } from '../CommonFuncs/QrCodes.js';
-import { StartFunc as BranchScan } from '../CommonFuncs/BranchScan.js';
-import { StartFunc as EntryScan } from '../CommonFuncs/EntryScan.js';
 import { StartFunc as EntryCancelScan } from '../CommonFuncs/EntryCancelScan.js';
+import { StartFunc as EntryCancelDc } from '../CommonFuncs/EntryCancelDc.js';
 
 let StartFunc = ({ inFactory }) => {
     // let LocalFindValue = new Date().toLocaleDateString('en-GB').replace(/\//g, '/');
@@ -10,42 +9,34 @@ let StartFunc = ({ inFactory }) => {
     const Qrdb = QrCodes();
     Qrdb.read();
 
-    const BranchScandb = BranchScan();
-    BranchScandb.read();
-
-    const EntryScandb = EntryScan();
-    EntryScandb.read();
+    const EntryCancelDcdb = EntryCancelDc();
+    EntryCancelDcdb.read();
 
     const EntryCancelScandb = EntryCancelScan();
     EntryCancelScandb.read();
 
-    let LocalFilterBranchScan = BranchScandb.data.filter(e => e.DCFactory === LocalFactory);
+    let LocalFilterEntryCancelDc = EntryCancelDcdb.data.filter(e => e.FactoryName === LocalFactory);
 
     let LocalFilterQr = Qrdb.data.filter(e => e.location === LocalFactory);
 
-    let LocalFilterEntryScan = EntryScandb.data.filter(e => e.DCFactory === LocalFactory);
-    let LocalFilterCancelScan = EntryCancelScandb.data.filter(e => e.FactorySelected === LocalFactory);
+    let LocalFilterCancelScan = EntryCancelScandb.data.filter(e => e.FactoryName === LocalFactory);
 
+    let LoclaReturnScanAndDcMergeData = LoclaReturnScanAndDcMergeFunc({ inCancelScan: LocalFilterCancelScan, inCancelDc: LocalFilterEntryCancelDc });
 
     let jVarLocalTransformedData = jFLocalMergeFunc({
         inQrData: LocalFilterQr,
-        inScandata: LocalFilterBranchScan,
-        inEntryScan: LocalFilterEntryScan,
-        inEntryCancelScan: LocalFilterCancelScan
+        inEntryCancelScan: LoclaReturnScanAndDcMergeData
 
     });
-    let localReturnData = getmatchedRecords({ inFromQrData: jVarLocalTransformedData, inEntryScan: LocalFilterEntryScan })
 
-    let LocalArrayReverseData = localReturnData.slice().reverse();
+    let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
 
     return LocalArrayReverseData;
 };
 
-let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan, inEntryCancelScan }) => {
-    let jVarLocalReturnObject = inScandata.map(loopScan => {
+let jFLocalMergeFunc = ({ inQrData, inEntryCancelScan }) => {
+    let jVarLocalReturnObject = inEntryCancelScan.map(loopScan => {
         const matchedRecord = inQrData.find(loopQr => loopQr.pk == loopScan.QrCodeId);
-        const match = inEntryScan.some(loopEntryScan => loopEntryScan.QrCodeId == loopScan.QrCodeId);
-        const CheckEntryReturn = inEntryCancelScan.some(loopEntryReturnScan => loopEntryReturnScan.QrCodeId == loopScan.QrCodeId);
 
         return {
             OrderNumber: matchedRecord?.GenerateReference.ReferncePk,
@@ -56,20 +47,23 @@ let jFLocalMergeFunc = ({ inQrData, inScandata, inEntryScan, inEntryCancelScan }
 
             VoucherNumber: loopScan?.VoucherNumber,
             QrCodeId: loopScan.QrCodeId,
-            DCDate: new Date(loopScan?.DCDate).toLocaleDateString('en-GB'),
+            DCDate: new Date(loopScan?.Date).toLocaleDateString('en-GB'),
             BranchName: loopScan?.BranchName,
-            Status: match,
-            EntryReturnStarus: CheckEntryReturn,
             TimeSpan: TimeSpan({ DateTime: loopScan.DateTime })
         };
     }).filter(record => record.MatchedRecord !== null);
     return jVarLocalReturnObject;
 };
 
-let getmatchedRecords = ({ inFromQrData, inEntryScan }) => {
-    return inFromQrData.filter(loopQr =>
-        inEntryScan.some(loopScan => loopScan.QrCodeId == loopQr.QrCodeId)
-    );
+
+const LoclaReturnScanAndDcMergeFunc = ({ inCancelScan, inCancelDc }) => {
+
+    let LocalMapData = inCancelScan.map(element => {
+
+        let locaFindData = inCancelDc.find(e => e.pk == element.VoucherNumber)
+        return { ...locaFindData, ...element }
+    });
+    return LocalMapData;
 };
 
 function TimeSpan({ DateTime }) {
