@@ -3,7 +3,7 @@ import { router as routerFromBin } from "./bin/routes.js";
 import { router as routerFrombinSecured } from "./binSecured/routes.js";
 import { router as routerForUtility } from "./Utility/routes.js";
 import { router as routerFromCommon } from "./Common/routes.js";
-import { router as routerFromCustom } from "./Custom/routes.js";
+// import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
 // import { router as routerFromBinV2 } from "./binV2/routes.js";
@@ -54,7 +54,7 @@ app.use('/binV4', routerFromBinV4);
 
 app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
-app.use('/Custom', routerFromCustom);
+// app.use('/Custom', routerFromCustom);
 app.use('/Login', routerFromLogin);
 
 StartFuncKWSServer(server);

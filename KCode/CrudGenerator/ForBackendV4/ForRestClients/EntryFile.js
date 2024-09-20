@@ -6,6 +6,7 @@ import { StartFunc as Upload } from './Upload/EntryFile.js';
 import { StartFunc as Images } from './Images/EntryFile.js';
 import { StartFunc as Search } from './Search/EntryFile.js';
 import { StartFunc as Bulk } from './Bulk/EntryFile.js';
+import { StartFunc as ShowWithColumns } from './ShowWithColumns/EntryFile.js';
 
 let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     Show({ inTablesCollection, inTo });
@@ -16,6 +17,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom, inConfigJson }) => {
     Images({ inTablesCollection, inTo, inConfigJson });
     Search({ inTablesCollection, inTo });
     Bulk({ inTablesCollection, inTo, inConfigJson });
+    ShowWithColumns({ inTablesCollection, inTo });
 };
 
 export { StartFunc };
