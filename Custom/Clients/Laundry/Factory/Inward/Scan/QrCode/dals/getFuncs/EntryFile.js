@@ -3,6 +3,7 @@ import { StartFunc as Pending } from '../../kLowDb/ReadFileList/Pending.js';
 import { StartFunc as Scanned } from '../../kLowDb/ReadFileList/Scanned.js';
 import { StartFunc as Returns } from '../../kLowDb/ReadFileList/EntryRetuns.js';
 import { StartFunc as GetRowDataById } from '../../kLowDb/ReadFileList/GetRowDataById.js';
+import { StartFunc as GetRowQrDataById } from '../../kLowDb/ReadFileList/GetRowQrDataById.js';
 
 // import HomeJson from './home.json' with {type: 'json'};
 
@@ -36,6 +37,12 @@ let GetRowDataFunc = ({ inFactory, inId }) => {
     return LocalFromLowDb;
 };
 
+let GetRowQrDataFunc = ({ inId }) => {
+    let LocalFromLowDb = GetRowQrDataById({ inId });
+
+    return LocalFromLowDb;
+};
+
 export {
-    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc
+    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc, GetRowQrDataFunc
 };

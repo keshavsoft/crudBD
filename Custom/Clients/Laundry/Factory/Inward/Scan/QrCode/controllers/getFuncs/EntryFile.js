@@ -3,7 +3,9 @@ import {
     GetPendingFunc as GetPendingFuncRepo,
     GetScannedFunc as GetScannedFuncRepo,
     GetRowDataFunc as GetRowDataFuncRepo,
-    GetReturnsFunc as GetReturnsFuncRepo
+    GetReturnsFunc as GetReturnsFuncRepo,
+    GetRowQrDataFunc as GetRowQrDataFuncRepo,
+
 } from '../../repos/getFuncs/EntryFile.js';
 
 let GetFunc = async (req, res) => {
@@ -47,6 +49,19 @@ let GetRowDataFunc = async (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
+let GetRowQrDataFunc = async (req, res) => {
+    let LocalParams = req.params;
+    let Localid = LocalParams.inid;
+    let LocalFromRepo = GetRowQrDataFuncRepo({ inId: Localid, });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(200).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.status(200).json(LocalFromRepo.JsonData);
+};
+
 export {
-    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc
+    GetFunc, GetPendingFunc, GetScannedFunc, GetRowDataFunc, GetReturnsFunc, GetRowQrDataFunc
 };
