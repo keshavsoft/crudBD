@@ -1,11 +1,10 @@
 import Configjson from '../../../../Config.json' assert { type: 'json' };
 import tableNameJson from '../../../tableName.json' assert { type: 'json' };
+import fs from "fs";
 
 import path, { resolve } from 'path';
 
 let StartFunc = ({ inKey, inResponse }) => {
-  const LocalFilePath = `${inKey}.png`;
-
   const localPath = path.parse(tableNameJson.tableName).name;
   const LocalFolderPath = `${Configjson.jsonConfig.DataPath}/${Configjson.jsonConfig.DataPk}/${localPath}`;
   let filenames = fs.readdirSync(LocalFolderPath);
