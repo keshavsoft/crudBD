@@ -6,6 +6,8 @@ import { router as routerFromCommon } from "./Common/routes.js";
 import { router as routerFromCustom } from "./Custom/routes.js";
 import { router as routerFromLogin } from "./Login/routes.js";
 
+import { router as Cors } from "./Cors/routes.js";
+
 // import { router as routerFromBinV2 } from "./binV2/routes.js";
 import { router as routerFromBinV3 } from "./binV3/routes.js";
 import { router as routerFromBinV4 } from "./binV4/routes.js";
@@ -19,7 +21,6 @@ import express from 'express';
 import http from 'http';
 import path from 'path';
 import cookieParser from 'cookie-parser';
-import cors from "cors";
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -46,9 +47,11 @@ app.get("/k1", (req, res) => {
     res.end("this is k1");
 })
 
-app.get("/k2", cors(), (req, res) => {
-    res.end("cors");
-});
+const CommonCorsFunc = (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+};
 
 // app.use('/src', routerFromSrc);
 app.use('/bin', routerFromBin);
@@ -62,6 +65,7 @@ app.use('/utility', routerForUtility);
 app.use('/Common', routerFromCommon);
 app.use('/Custom', routerFromCustom);
 app.use('/Login', routerFromLogin);
+app.use('/Cors', CommonCorsFunc, Cors);
 
 StartFuncKWSServer(server);
 
