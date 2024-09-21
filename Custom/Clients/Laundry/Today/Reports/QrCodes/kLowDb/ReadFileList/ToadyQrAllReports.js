@@ -16,14 +16,13 @@ let StartFunc = ({ inBranch }) => {
     let LocalFilterQr = Qrdb.data.filter(e => {
         return new Date(e.BookingData.OrderData.Currentdateandtime).toLocaleDateString('en-GB') == LocalFindValue && e.BookingData.OrderData.BranchName === LocalBranchName;
     });
-    console.log("LocalFilterQr:", LocalFilterQr);
+    // console.log("LocalFilterQr:", LocalFilterQr);
 
 
     let LocalFilterBranchScan = BranchScandb.data.filter(e => {
         return new Date(e.DateTime).toLocaleDateString('en-GB') == LocalFindValue && e.BranchName === LocalBranchName;
     });
-    console.log("LocalFilterBranchScan:", LocalFilterBranchScan);
-
+    // console.log("LocalFilterBranchScan:", LocalFilterBranchScan);
 
     let jVarLocalTransformedData = jFLocalMergeFunc({ inQrData: LocalFilterQr, inScandata: LocalFilterBranchScan });
     let LocalArrayReverseData = jVarLocalTransformedData.slice().reverse();
